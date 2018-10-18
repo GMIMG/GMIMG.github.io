@@ -1,0 +1,16 @@
+// Width of the content area
+$toc-relative:     1400px !default;
+$content-width:    1000px !default;//,800px
+$on-palm:          600px !default;
+$on-laptop:        800px !default;
+
+//Use media queries like this:
+
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}

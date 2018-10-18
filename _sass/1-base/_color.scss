@@ -1,0 +1,27 @@
+$red:      #ac4142;
+$orange:   #d28445;
+$yellow:   #f4bf75;
+$green:    #90a959;
+$cyan:     #75b5aa;
+$blue:     #6a9fb5;
+$magenta:  #aa759f;
+$brown:    #8f5536;
+$default:  #505050;
+$white:      #fff;
+$lightgrey:  #eee;
+$black:      #000;
+$grey-color:       #828282 !default;
+$grey-color-light: lighten($grey-color, 40%) !default;
+$grey-color-dark:  darken($grey-color, 25%) !default;
+
+$theme-color: $blue;
+
+/* Font stack */
+$post-date-color: #9a9a9a;
+$title-color: #313131;
+$masthead-title-small-color: #c0c0c0;
+
+
+$text-color:       #111 !default;
+$background-color: #fdfdfd !default;
+$brand-color:      #2a7ae2 !default;

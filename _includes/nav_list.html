@@ -1,0 +1,82 @@
+{%- assign navigation = site.data.navigation[include.nav] -%}
+<nav class="nav__list">
+  {%- if page.sidebar.title %}
+  <h3 class="nav__title">{{- page.sidebar.title -}}</h3>
+  {%- endif %}
+
+  <ul class="nav__items">
+    {%- for nav in navigation %}
+      <li>
+        {% comment %} internal/external URL check {% endcomment %}
+        {%- if nav.url contains "://" %}
+          {%- assign nav_url = nav.url -%}
+        {%- else %}
+          {%- assign nav_url = nav.url | relative_url -%}
+        {%- endif %}
+
+        {%- if nav_url %}
+        <a href="{{ nav_url }}" onclick="location.reload()">
+        {%- else %}
+        <a href="{{ root_url }}/{{ site.category_dir }}#{{ nav.title }}" onclick="location.reload()">
+        {%- endif %}
+        <span class="nav__sub-title">{{- nav.title -}}</span>
+        </a>
+
+        {%- if nav.children != null %}
+        <ul>
+          {% for child in nav.children %}
+            {% comment %} internal/external URL check {% endcomment %}
+            {%- if child.url contains "://" %}
+              {%- assign child_url = child.url -%}
+            {%- else %}
+              {%- assign child_url = child.url | relative_url -%}
+            {%- endif %}
+
+            {% comment %} set "active" class on current page {% endcomment %}
+            {%- if child.url == page.url %}
+              {%- assign active = "active" -%}
+            {%- else %}
+              {%- assign active = "" -%}
+            {%- endif %}
+
+            <li>
+              {%- if child_url %}
+              <a href="{{ child_url }}" class="{{ active }}" onclick="location.reload()">{{ child.title }}</a>
+              {%- else %}
+              <a href="{{ root_url }}/{{ site.category_dir }}#{{ child.title }}" class="{{ active }}" onclick="location.reload()">{{ child.title }}</a>
+              {%- endif %}
+
+              {% if child.children != null %}
+                <ul>
+                  {% for childchild in child.children %}
+                    {% comment %} internal/external URL check {% endcomment %}
+                    {% if childchild.url contains "://" %}
+                      {% assign childchild_url = childchild.url %}
+                    {% else %}
+                      {% assign childchild_url = childchild.url | relative_url %}
+                    {% endif %}
+
+                    {% comment %} set "active" class on current page {% endcomment %}
+                    {%- if childchild.url == page.url %}
+                      {%- assign active = "active" -%}
+                    {%- else %}
+                      {%- assign active = "" -%}
+                    {%- endif %}
+                    <li>
+                    {%- if childchild_url %}
+                    <a href="{{ childchild_url }}" class="{{ active }}" onclick="location.reload()">{{ childchild.title }}</a>
+                    {%- else %}
+                    <a href="{{ root_url }}/{{ site.category_dir }}#{{ childchild.title }}" class="{{ active }}" onclick="location.reload()">{{ childchild.title }}</a>
+                    {%- endif %}
+                    </li>
+                  {%- endfor %}
+                </ul>
+              {%- endif %}
+            </li>
+          {%- endfor %}
+        </ul>
+        {%- endif %}
+      </li>
+    {%- endfor %}
+  </ul>
+</nav>

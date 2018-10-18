@@ -1,0 +1,29 @@
+<header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+      <!--{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%} '%Y:%B:%A:%d:%S:%R'-->
+        {{ page.date | date_to_string }} <!--date: date_format-->
+      </time>
+      {%- if page.author %}
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
+      {%- endif %}
+    </p>
+    <div class="post-header-categories">
+      <span>Category: </span>
+      {%- assign category = page.categories -%}
+      <a href="/{{ site.category_dir }}#{{ category | first }}">{{category}}</a>
+    </div>
+    <div class="post-header-tags">
+      <span>Tags: </span>
+      {%- for tag in page.tags %}
+        <a href="/{{ site.tag_dir }}#{{tag|slugize}}">{{-tag-}}</a>
+        {%- unless forloop.last -%}<span>, </span>{%- endunless -%}
+      {%- endfor %}
+    </div>
+    {%- if page.last_modified %}
+    <div class="post-last-modified">
+        <span>last_modified : {{ page.last_modified | date_to_string }}</span>
+    </div>
+    {%- endif %}
+</header>

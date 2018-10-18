@@ -1,0 +1,34 @@
+---
+layout: page
+permalink: /category/
+sidebar:
+  nav: "main"
+---
+{% assign esc_title="{{ postjson.title }}" %}
+{% assign esc_date="{{ postjson.date }}" %}
+{% assign esc_ctgname="{{ hash }}" %}
+<div id="post-list">
+  <h2 id="{{ category | first }}" class="post-title">Category : {{ esc_ctgname }}</h2>
+  <ul>
+    <li v-for="postjson in posts" v-if="postjson.categories.indexOf(hash) != -1">
+      <time>{{ esc_date }}</time>
+      <a v-bind:href="postjson.url">{{ esc_title }}</a>
+    </li>
+  </ul>
+</div>
+<script>
+  var hash = decodeURI(window.location.hash.substr(1));
+  var postList = new Vue({
+    el: '#post-list',
+    data: {
+      posts: []
+    }
+  });
+  axios.get('/posts.json')
+  .then(function (response) {
+    postList.posts = response.data.posts;
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+</script>

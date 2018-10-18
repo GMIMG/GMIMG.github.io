@@ -1,0 +1,47 @@
+.sidebar {
+    float: left;
+    width: 25%;
+    background-color: #f1f1f1; /* white-gray */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    margin: 15px 0px;
+    .sidebar-item {
+        padding-top: $spacing-unit/2;
+        padding-bottom: $spacing-unit/2;
+        a{
+            text-decoration: none;
+            color: $grey-color;
+        }
+        .sidebar-item-tltle {
+            color: $black;
+        }
+    }
+    ul ul{
+        margin-left: 15px;
+    }
+
+    @media screen and (max-width: $content-width) {
+        #sidebar-item-tag{
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: $content-width) {
+    .sidebar {
+        width:100%; 
+        max-width:100%;
+    }
+}
+
+.nav__list{
+    a {
+        //padding: 2px 3px;
+        display: block;
+        font-size: 80%;
+    }
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+    color: $grey-color-dark;
+}

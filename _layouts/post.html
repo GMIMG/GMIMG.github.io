@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  {% include post-header.html %}
+    {%- if page.toc %}
+    <aside>
+      <div class="toc_container">
+        <div class="toc_title">
+            <span><strong>Index</strong></span>
+        </div>
+      {% include toc.html html=content %}
+      </div>
+    </aside>
+    {%- endif %}
+  <div class="post-content-markdown" itemprop="articleBody"> 
+    {{ content }} <!--markdown-->
+  </div>
+  {%- if site.disqus.shortname %}
+    {% include disqus_comments.html %}
+  {%- endif %}
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</article>

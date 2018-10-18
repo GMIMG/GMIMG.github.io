@@ -1,0 +1,20 @@
+# main links
+main:
+  - title: "Programming"
+    #url: /terms/
+    children:
+      - title: "Computer_science"
+      - title: "Language"
+        children:
+          - title: "Python"
+      - title: "Git"
+  - title: "Hardware"
+  - title: "Blog"
+  - title: "Class"
+    children:
+      - title: "Data_communications"
+      - title: "C++"
+      - title: "Database"
+      - title: "Applied_Robot_Design"
+  - title: "etc"
+  - title: "None"

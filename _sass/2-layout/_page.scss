@@ -1,0 +1,26 @@
+.page-content {
+    flex: 1 0 auto;
+  }
+  .page-heading {
+    @include relative-font-size(2);
+  }
+  .post-list-heading {
+    @include relative-font-size(1.75);
+  }
+  .post-list {
+    margin-left: 0;
+    list-style: none;
+
+    .description {
+      display: block;
+      font-size: 80%
+    }
+  }
+  .post-meta {
+    font-size: $small-font-size;
+    color: $grey-color;
+  }
+  .post-link {
+    //display: block;
+    //@include relative-font-size(1.5);
+  }
