@@ -4,20 +4,20 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Rd | GMIMG</title>
+<title>C++ Structure and Classs | GMIMG</title>
 <meta name="generator" content="Jekyll v3.7.4" />
-<meta property="og:title" content="Rd" />
+<meta property="og:title" content="C++ Structure and Classs" />
 <meta name="author" content="Gmimg" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Mechagrammer" />
-<meta property="og:description" content="Mechagrammer" />
-<link rel="canonical" href="http://localhost:4000/posts/rd" />
-<meta property="og:url" content="http://localhost:4000/posts/rd" />
+<meta name="description" content="Structure" />
+<meta property="og:description" content="Structure" />
+<link rel="canonical" href="http://localhost:4000/posts/C++-Structure-and-Classs" />
+<meta property="og:url" content="http://localhost:4000/posts/C++-Structure-and-Classs" />
 <meta property="og:site_name" content="GMIMG" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-09-11T00:00:00+09:00" />
+<meta property="article:published_time" content="2018-10-16T00:00:00+09:00" />
 <script type="application/ld+json">
-{"description":"Mechagrammer","author":{"@type":"Person","name":"Gmimg"},"@type":"BlogPosting","url":"http://localhost:4000/posts/rd","headline":"Rd","dateModified":"2018-09-11T00:00:00+09:00","datePublished":"2018-09-11T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/rd"},"@context":"http://schema.org"}</script>
+{"description":"Structure","author":{"@type":"Person","name":"Gmimg"},"@type":"BlogPosting","url":"http://localhost:4000/posts/C++-Structure-and-Classs","headline":"C++ Structure and Classs","dateModified":"2018-10-16T00:00:00+09:00","datePublished":"2018-10-16T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/C++-Structure-and-Classs"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css">
   <!-- CSS -->
@@ -60,20 +60,22 @@
 </script>
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Rd</h1>
+    <h1 class="post-title p-name" itemprop="name headline">C++ Structure and Classs</h1>
     <p class="post-meta">
-      <time class="dt-published" datetime="2018-09-11T00:00:00+09:00" itemprop="datePublished">
+      <time class="dt-published" datetime="2018-10-16T00:00:00+09:00" itemprop="datePublished">
       <!--'%Y:%B:%A:%d:%S:%R'-->
-        11 Sep 2018 <!--date: date_format-->
+        16 Oct 2018 <!--date: date_format-->
       </time>
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Gmimg</span></span>
     </p>
     <div class="post-header-categories">
-      <span>Category: </span><a href="/category/#Applied_Robot_Design">Applied_Robot_Design</a>
+      <span>Category: </span><a href="/category/#C++">C++</a>
     </div>
     <div class="post-header-tags">
       <span>Tags: </span>
-        <a href="/tags/#Applied_Robot_Design">Applied_Robot_Design</a>
+        <a href="/tags/#C++">C++</a><span>, </span>
+        <a href="/tags/#Structure">Structure</a><span>, </span>
+        <a href="/tags/#Class">Class</a>
     </div>
 </header>
     <aside>
@@ -81,19 +83,71 @@
         <div class="toc_title">
             <span><strong>Index</strong></span>
         </div>
-      
+      <ul>
+  <li><a href="#structure">Structure</a></li>
+  <li><a href="#classes">Classes</a></li>
+</ul>
       </div>
     </aside>
   <div class="post-content-markdown" itemprop="articleBody"> 
-    
+    <h1 id="structure">Structure</h1>
+
+<p>Array와 비슷하지만 different types 의 값의 모음이다.</p>
+
+<p>먼저 전역적(global)으로 정의해야한다</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">struct</span> <span class="n">WeatherData</span>
+<span class="p">{</span>
+  <span class="kt">double</span> <span class="n">temperature</span><span class="p">;</span>
+  <span class="kt">double</span> <span class="n">windVelocity</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">number</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">Weather1</span><span class="p">,</span> <span class="n">Weather2</span><span class="p">;</span>
+
+<span class="n">Weather1</span><span class="p">.</span><span class="n">temperature</span> <span class="o">=</span> <span class="mf">23.3</span><span class="p">;</span>
+<span class="n">WeatherData</span> <span class="n">Weather3</span> <span class="o">=</span> <span class="p">{</span><span class="mf">32.1</span><span class="p">,</span> <span class="mf">5.1</span><span class="p">,</span> <span class="mi">3</span><span class="p">};</span>
+</code></pre></div></div>
+
+<h1 id="classes">Classes</h1>
+
+<p>Structure와 비슷하지만 Member Function이 추가됨</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Class</span> <span class="n">DayOfYear</span>
+<span class="p">{</span>
+  <span class="k">public</span><span class="o">:</span>
+        <span class="kt">void</span> <span class="n">output</span><span class="p">();</span>
+        <span class="kt">int</span> <span class="n">month</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">day</span>
+  <span class="k">private</span><span class="o">:</span>
+        <span class="n">t</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<p>Dot operator는 member of particular object를 지정할때 사용, Scope resolution operator(::)는 class의 function 지정할때 사용.</p>
+
+<p>Class is full-fledged type</p>
+
+<p>Can have variables of a class type
+-&gt; simply call them “object”</p>
+
+<p>OOP의 원리</p>
+<ul>
+  <li>Inheritance (상속)</li>
+  <li>Abstract (추상화)
+무엇을 하는지와, 어떻게 수행하는지 구별.</li>
+  <li>Encapsulation (캡슐화)
+내부표현을 사용자가 알 수 없다.(Information Hiding)</li>
+  <li>Polymorphism(다형성)</li>
+</ul>
+
  <!--markdown-->
   </div>
     
     <div id="disqus_thread"></div>
     <script>
         var disqus_config = function () {
-        this.page.url = 'http://localhost:4000/posts/rd';
-        this.page.identifier = 'Rd';
+        this.page.url = 'http://localhost:4000/posts/C++-Structure-and-Classs';
+        this.page.identifier = 'C++ Structure and Classs';
         };
         (function() {
         var d = document, s = d.createElement('script');
@@ -104,7 +158,7 @@
     </script>
     <noscript>Disqus에서 제공하는 댓글 기능을 이용하시려면 <a href="https://disqus.com/?ref_noscript">여기로 가셔서 javascript를 활성화해주세요.</a></noscript>
 
-  <a class="u-url" href="/posts/rd" hidden></a>
+  <a class="u-url" href="/posts/C++-Structure-and-Classs" hidden></a>
 </article>
       </div>
     </main>

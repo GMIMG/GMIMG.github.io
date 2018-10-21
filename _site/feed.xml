@@ -1,4 +1,52 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-10-14T04:23:42+09:00</updated><id>http://localhost:4000/</id><title type="html">GMIMG</title><subtitle>Mechagrammer</subtitle><author><name>Jimin Hwang</name></author><entry><title type="html">Sass</title><link href="http://localhost:4000/posts/gmimg" rel="alternate" type="text/html" title="Sass" /><published>2018-10-04T00:00:00+09:00</published><updated>2018-10-04T00:00:00+09:00</updated><id>http://localhost:4000/posts/gmimg</id><content type="html" xml:base="http://localhost:4000/posts/gmimg">&lt;h1 id=&quot;123&quot;&gt;123&lt;/h1&gt;</content><author><name>Gmimg</name></author><category term="None" /><category term="Argorism" /><category term="Bat" /><category term="Blogging" /><category term="Programming" /><category term="Sass" /><category term="scss" /><category term="css" /><category term="Web" /><category term="Python" /><summary type="html">123</summary></entry><entry><title type="html">데이터베이스 조작</title><link href="http://localhost:4000/posts/control_database" rel="alternate" type="text/html" title="데이터베이스 조작" /><published>2018-10-03T00:00:00+09:00</published><updated>2018-10-03T00:00:00+09:00</updated><id>http://localhost:4000/posts/control_database</id><content type="html" xml:base="http://localhost:4000/posts/control_database">&lt;h1 id=&quot;데이터베이스-조작&quot;&gt;데이터베이스 조작&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-10-21T13:16:55+09:00</updated><id>http://localhost:4000/</id><title type="html">GMIMG</title><subtitle>Mechagrammer</subtitle><author><name>Jimin Hwang</name></author><entry><title type="html">C++ Structure and Classs</title><link href="http://localhost:4000/posts/C++-Structure-and-Classs" rel="alternate" type="text/html" title="C++ Structure and Classs" /><published>2018-10-16T00:00:00+09:00</published><updated>2018-10-16T00:00:00+09:00</updated><id>http://localhost:4000/posts/C++%20Structure%20and%20Classs</id><content type="html" xml:base="http://localhost:4000/posts/C++-Structure-and-Classs">&lt;h1 id=&quot;structure&quot;&gt;Structure&lt;/h1&gt;
+
+&lt;p&gt;Array와 비슷하지만 different types 의 값의 모음이다.&lt;/p&gt;
+
+&lt;p&gt;먼저 전역적(global)으로 정의해야한다&lt;/p&gt;
+
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;WeatherData&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;temperature&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;windVelocity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Weather1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Weather2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;Weather1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;temperature&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;23.3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;WeatherData&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Weather3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;32.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;5.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;classes&quot;&gt;Classes&lt;/h1&gt;
+
+&lt;p&gt;Structure와 비슷하지만 Member Function이 추가됨&lt;/p&gt;
+
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;Class&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DayOfYear&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;month&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;day&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;private&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Dot operator는 member of particular object를 지정할때 사용, Scope resolution operator(::)는 class의 function 지정할때 사용.&lt;/p&gt;
+
+&lt;p&gt;Class is full-fledged type&lt;/p&gt;
+
+&lt;p&gt;Can have variables of a class type
+-&amp;gt; simply call them “object”&lt;/p&gt;
+
+&lt;p&gt;OOP의 원리&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Inheritance (상속)&lt;/li&gt;
+  &lt;li&gt;Abstract (추상화)
+무엇을 하는지와, 어떻게 수행하는지 구별.&lt;/li&gt;
+  &lt;li&gt;Encapsulation (캡슐화)
+내부표현을 사용자가 알 수 없다.(Information Hiding)&lt;/li&gt;
+  &lt;li&gt;Polymorphism(다형성)&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Gmimg</name></author><category term="C++" /><category term="C++" /><category term="Structure" /><category term="Class" /><summary type="html">Structure</summary></entry><entry><title type="html">Sass</title><link href="http://localhost:4000/posts/gmimg" rel="alternate" type="text/html" title="Sass" /><published>2018-10-04T00:00:00+09:00</published><updated>2018-10-04T00:00:00+09:00</updated><id>http://localhost:4000/posts/gmimg</id><content type="html" xml:base="http://localhost:4000/posts/gmimg">&lt;h1 id=&quot;123&quot;&gt;123&lt;/h1&gt;</content><author><name>Gmimg</name></author><category term="None" /><category term="Argorism" /><category term="Bat" /><category term="Blogging" /><category term="Programming" /><category term="Sass" /><category term="scss" /><category term="css" /><category term="Web" /><category term="Python" /><summary type="html">123</summary></entry><entry><title type="html">데이터베이스 조작</title><link href="http://localhost:4000/posts/control_database" rel="alternate" type="text/html" title="데이터베이스 조작" /><published>2018-10-03T00:00:00+09:00</published><updated>2018-10-03T00:00:00+09:00</updated><id>http://localhost:4000/posts/control_database</id><content type="html" xml:base="http://localhost:4000/posts/control_database">&lt;h1 id=&quot;데이터베이스-조작&quot;&gt;데이터베이스 조작&lt;/h1&gt;
 
 &lt;ol&gt;
   &lt;li&gt;SQL DML&lt;/li&gt;
@@ -18,19 +66,27 @@
 &lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;테이블명&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Query&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;조건&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;들&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;ORDER&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;BY&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;column&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;표현식}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;ASC&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;DESC&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Gmimg</name></author><category term="Database" /><category term="Database" /><category term="SQL" /><category term="DML" /><category term="뷰" /><summary type="html">데이터베이스 조작</summary></entry><entry><title type="html">Rd</title><link href="http://localhost:4000/posts/rd" rel="alternate" type="text/html" title="Rd" /><published>2018-10-02T00:00:00+09:00</published><updated>2018-10-02T00:00:00+09:00</updated><id>http://localhost:4000/posts/rd</id><content type="html" xml:base="http://localhost:4000/posts/rd"></content><author><name>Gmimg</name></author><category term="Applied_Robot_Design" /><category term="Applied_Robot_Design" /><summary type="html"></summary></entry><entry><title type="html">C++ Parameter and overloading</title><link href="http://localhost:4000/posts/c+" rel="alternate" type="text/html" title="C++ Parameter and overloading" /><published>2018-10-02T00:00:00+09:00</published><updated>2018-10-02T00:00:00+09:00</updated><id>http://localhost:4000/posts/c+</id><content type="html" xml:base="http://localhost:4000/posts/c+">&lt;h1 id=&quot;call-by-value--call-by-reference&quot;&gt;Call-by-value &amp;amp; Call-by reference&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Gmimg</name></author><category term="Database" /><category term="Database" /><category term="SQL" /><category term="DML" /><category term="뷰" /><summary type="html">데이터베이스 조작</summary></entry><entry><title type="html">Rd3</title><link href="http://localhost:4000/posts/rd3" rel="alternate" type="text/html" title="Rd3" /><published>2018-10-02T00:00:00+09:00</published><updated>2018-10-02T00:00:00+09:00</updated><id>http://localhost:4000/posts/rd3</id><content type="html" xml:base="http://localhost:4000/posts/rd3"></content><author><name>Gmimg</name></author><category term="Applied_Robot_Design" /><category term="Applied_Robot_Design" /><summary type="html"></summary></entry><entry><title type="html">C++ Parameter and overloading</title><link href="http://localhost:4000/posts/C++-Parameter-and-overloading" rel="alternate" type="text/html" title="C++ Parameter and overloading" /><published>2018-10-02T00:00:00+09:00</published><updated>2018-10-02T00:00:00+09:00</updated><id>http://localhost:4000/posts/C++%20Parameter%20and%20overloading</id><content type="html" xml:base="http://localhost:4000/posts/C++-Parameter-and-overloading">&lt;h1 id=&quot;call-by-value--call-by-reference&quot;&gt;Call-by-value &amp;amp; Call-by reference&lt;/h1&gt;
 
-&lt;p&gt;-&amp;gt; Mechanism&lt;/p&gt;
+&lt;p&gt;교재&lt;/p&gt;
 
-&lt;p&gt;인수(Argument)(매개변수)(Parameter) : 함수에게 특정 항목의 위치를 식별하는데 필요한 변수나 상수를 제공한다. 이를 전체적인 틀인 함수가 정보를 토대로 함수를 실행시키고 산출합니다.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;With call-by-value parameters, only the value of the argument is plugged in.&lt;br /&gt;
+With call-by-reference parameters, the argument is a variable, and the variable itself is plugged in.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;매개변수(Parameter) : 함수에게 특정 항목의 위치를 식별하는데 필요한 변수나 상수를 제공한다. 이를 전체적인 틀인 함수가 정보를 토대로 함수를 실행시키고 산출합니다.&lt;/p&gt;
+
+&lt;p&gt;parameter는 formal paramter(형식 매개 변수)와 actual parameter(실제 매개 변수)로 나눈다.
+formal parameter는 함수 선언부에서 쓰이는 parameter를 의미.
+actual parameter는 실제 함수가 호출될 때 formal parameter 자리에 들어갈 실제(actual) parameter를 의미. 즉 formal parameter는 actual parameter의 Place holder 역할이고 서브루틴이나 프로시저를 호출하면 formal parameter에 actual parameter를 full-in한다.&lt;/p&gt;
+
+&lt;p&gt;교재에선 actual parameter를 argument 용어로 사용함.&lt;/p&gt;
+
+&lt;p&gt;A parameter is a variable in a method definition. When a method is called, the arguments are the data you pass into the method’s parameters.&lt;/p&gt;
 
 &lt;p&gt;Formal parameter(가인수) -&amp;gt; 함수 선언(declaration)나 정의(definition)에 쓰임&lt;br /&gt;
-Arguments(실인수) -&amp;gt; 함수를 호출(call)할때, formal parameter를 fill-in할 때&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;가인수(Formal parameter) : 함수에 정의되어진 인수&lt;/li&gt;
-  &lt;li&gt;실인수(Actual parameter) : 함수를 호출할 때 전달되는 데이터 값 또는 인수 값&lt;/li&gt;
-&lt;/ul&gt;
+Arguments(인수) -&amp;gt; 함수를 호출(call)할때, formal parameter를 fill-in하는 데이터 값&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&quot;language-C++&quot;&gt;double foo(int bar);
 //에서 (int bar)라는 이름 자체는 가인수이고 
@@ -158,7 +214,73 @@ Drivers : 어떤 모듈을 테스트하기 위한 메인함수 형태&lt;/p&gt;
 
 &lt;p&gt;invoke : 호출하다.
 선언(declare)
-정의(definition)&lt;/p&gt;</content><author><name>Gmimg</name></author><category term="C++" /><category term="C++" /><category term="Call-by-value" /><category term="Call-by reference" /><category term="Overloading" /><summary type="html">Call-by-value &amp;amp; Call-by reference</summary></entry><entry><title type="html">Da</title><link href="http://localhost:4000/posts/da" rel="alternate" type="text/html" title="Da" /><published>2018-10-02T00:00:00+09:00</published><updated>2018-10-02T00:00:00+09:00</updated><id>http://localhost:4000/posts/da</id><content type="html" xml:base="http://localhost:4000/posts/da"></content><author><name>Gmimg</name></author><category term="Data_communications" /><category term="Data_communications" /><summary type="html"></summary></entry><entry><title type="html">Digital Transmission</title><link href="http://localhost:4000/posts/da" rel="alternate" type="text/html" title="Digital Transmission" /><published>2018-10-01T00:00:00+09:00</published><updated>2018-10-01T00:00:00+09:00</updated><id>http://localhost:4000/posts/da</id><content type="html" xml:base="http://localhost:4000/posts/da">&lt;h1 id=&quot;digital-transmission&quot;&gt;Digital Transmission&lt;/h1&gt;
+정의(definition)&lt;/p&gt;</content><author><name>Gmimg</name></author><category term="C++" /><category term="C++" /><category term="Call-by-value" /><category term="Call-by reference" /><category term="Overloading" /><summary type="html">Call-by-value &amp;amp; Call-by reference</summary></entry><entry><title type="html">Analog Transmission</title><link href="http://localhost:4000/posts/Analog-Transmission" rel="alternate" type="text/html" title="Analog Transmission" /><published>2018-10-02T00:00:00+09:00</published><updated>2018-10-02T00:00:00+09:00</updated><id>http://localhost:4000/posts/Analog%20Transmission</id><content type="html" xml:base="http://localhost:4000/posts/Analog-Transmission">&lt;h1 id=&quot;analog-transmission&quot;&gt;Analog Transmission&lt;/h1&gt;
+
+&lt;h2 id=&quot;digital-to-analog-conversion&quot;&gt;Digital-to-analog conversion&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Amplitude shift keying (ASK)&lt;/li&gt;
+  &lt;li&gt;Frequency shift keying (FSK)&lt;/li&gt;
+  &lt;li&gt;Phase shift keying (PSK)&lt;/li&gt;
+  &lt;li&gt;Quadrature amplitude modulation (QAM)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Data rate (bit rate, N bps) &amp;amp; signal rate (baud rate, s baud/sec)&lt;/p&gt;
+
+&lt;p&gt;S = N x 1/r baud&lt;/p&gt;
+
+&lt;p&gt;r: the number of data elements carried in one signal element&lt;/p&gt;
+
+&lt;p&gt;FSK를 제외하고 bandwidth는 신호속도에 비례한다.&lt;/p&gt;
+
+&lt;p&gt;아나로그를 전송하기 위해 고주파 신호를 생성하고 이를 Carrier signal이라고 한다. 수신 장치는 그 주파수에 맞춰 조정한다.&lt;/p&gt;
+
+&lt;p&gt;Carrier signal을 (진폭, 주파수, 위상)중 하나이상을 변조한 Modulated signal을 보낸다.&lt;/p&gt;
+
+&lt;h3 id=&quot;amplitude-shift-keyin-g-ask&quot;&gt;Amplitude shift keyin g (ASK)&lt;/h3&gt;
+
+&lt;p&gt;디지털 신호에 Carrier signal을 Multiplier 해줘서 보낸다.
+&lt;img src=&quot;/assets/img/ASK.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;frequency-shift-keying-fsk&quot;&gt;Frequency shift keying (FSK)&lt;/h3&gt;
+
+&lt;p&gt;주파수가 여러개 필요. 안정적이지만 느림.&lt;/p&gt;
+
+&lt;h3 id=&quot;phase-shift-keying-psk&quot;&gt;Phase shift keying (PSK)&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;BASK&lt;/li&gt;
+  &lt;li&gt;BPSK&lt;/li&gt;
+  &lt;li&gt;QPSK&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;요즘은 ASK와 함께 쓰는 QAM 방식을 주로씀&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;**Constellation Diagram&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;f는 주어져있고, A와 P를 좌표로 나타냄.&lt;/p&gt;
+
+&lt;p&gt;Length : amplitude&lt;/p&gt;
+
+&lt;p&gt;Angle : phase&lt;/p&gt;
+
+&lt;p&gt;1의 점이 1QAM이라고 볼 수 있다.&lt;/p&gt;
+
+&lt;h3 id=&quot;quadrature-amplitude-modulation-qam&quot;&gt;Quadrature Amplitude Modulation (QAM)&lt;/h3&gt;
+
+&lt;p&gt;직교 진폭 변조&lt;/p&gt;
+
+&lt;p&gt;ASK와 PSK를 결합한느낌.&lt;/p&gt;
+
+&lt;p&gt;대역폭은 같다.&lt;/p&gt;
+
+&lt;h2 id=&quot;analog-to-analog-conversion&quot;&gt;Analog-to-analog conversion&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Amplitude modulation (AM)&lt;/li&gt;
+  &lt;li&gt;Frequency modulation (FM)&lt;/li&gt;
+  &lt;li&gt;Phase modulation (PM)&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Gmimg</name></author><category term="Data_communications" /><category term="Data_communications" /><summary type="html">Analog Transmission</summary></entry><entry><title type="html">Digital Transmission</title><link href="http://localhost:4000/posts/Digital-Transmission" rel="alternate" type="text/html" title="Digital Transmission" /><published>2018-10-01T00:00:00+09:00</published><updated>2018-10-01T00:00:00+09:00</updated><id>http://localhost:4000/posts/Digital%20Transmission</id><content type="html" xml:base="http://localhost:4000/posts/Digital-Transmission">&lt;h1 id=&quot;digital-transmission&quot;&gt;Digital Transmission&lt;/h1&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Digital-to-digital&lt;/li&gt;
@@ -199,21 +321,20 @@ Drivers : 어떤 모듈을 테스트하기 위한 메인함수 형태&lt;/p&gt;
 S_ave = c x N x (1/r) baud&lt;br /&gt;
 c: case factor (0 &amp;lt;= c &amp;lt;= 1)&lt;/p&gt;
 
-&lt;p&gt;Baud rate와 Band width는 비례한다&lt;/p&gt;
-
-&lt;p&gt;B_min= c x N x (1/r)&lt;/p&gt;
+&lt;p&gt;Baud rate와 Band width는 비례한다.&lt;br /&gt;
+B_min= c x N x (1/r)&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;문제점&lt;/code&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Baseline Wandering
+  &lt;li&gt;Baseline Wandering&lt;br /&gt;
 0이 연속으로 나올때 구분&lt;br /&gt;
 drift in the baseline&lt;br /&gt;
 difficult for the receiver to decode correctly.&lt;/li&gt;
-  &lt;li&gt;DC Components
+  &lt;li&gt;DC Components&lt;br /&gt;
 Frequencies around zero&lt;br /&gt;
 주파수가 0에 가까워지면(연속적인 신호) DC가 되어 구리선으로 보내기 힘들어진다.&lt;/li&gt;
-  &lt;li&gt;Self-synchronization
+  &lt;li&gt;Self-synchronization&lt;br /&gt;
 receiver’s bit intervals must correspond exactly to the sender’s bit intervals&lt;br /&gt;
 송신자와 수진자의 비트간격이 정확하게 일치해야한다.&lt;/li&gt;
 &lt;/ul&gt;
@@ -231,26 +352,21 @@ How many extra bits per second does the receiver receive if the data rate is 1 k
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;Unipolar(단극)&lt;/p&gt;
-
-    &lt;p&gt;All the signal levels are on one side of the time axis, either above or below&lt;/p&gt;
-
-    &lt;p&gt;NRZ(Non-Return-to-Zero) : Signal does not return to zero at the middle of the bit.&lt;/p&gt;
+    &lt;p&gt;Unipolar(단극)&lt;br /&gt;
+All the signal levels are on one side of the time axis, either above or below&lt;br /&gt;
+NRZ(Non-Return-to-Zero) : Signal does not return to zero at the middle of the bit.&lt;/p&gt;
 
     &lt;p&gt;&lt;img src=&quot;/assets/img/unipolar.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Polar&lt;/p&gt;
-
-    &lt;p&gt;Voltages are on both sides of the time axis.&lt;/p&gt;
-
-    &lt;p&gt;Unipolar보다 에너지 효율이 좋음.&lt;/p&gt;
+    &lt;p&gt;Polar&lt;br /&gt;
+Voltages are on both sides of the time axis.&lt;br /&gt;
+Unipolar보다 에너지 효율이 좋음.&lt;/p&gt;
 
     &lt;p&gt;&lt;img src=&quot;/assets/img/polar.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
 
-    &lt;p&gt;NRZ-L : 0과 1이 반대의 level을가짐.&lt;/p&gt;
-
-    &lt;p&gt;NRZ-I : 0이면 그대로 1이면 신호를 역전시킴&lt;/p&gt;
+    &lt;p&gt;NRZ-L : 0과 1이 반대의 level을가짐.&lt;br /&gt;
+NRZ-I : 0이면 그대로 1이면 신호를 역전시킴&lt;/p&gt;
 
     &lt;p&gt;The main problem with NRZ encoding occurs when the sender and receiver clocks are not synchronized. The receiver does not know when one bit has ended and the next bit is starting. -&amp;gt;&lt;/p&gt;
 
@@ -271,27 +387,32 @@ No DC component problem.&lt;br /&gt;
 
     &lt;p&gt;&lt;img src=&quot;/assets/img/biphase.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;Bipolar(양극)
+  &lt;li&gt;Bipolar(양극)&lt;br /&gt;
 DC component는 없으나 동기화문제가 있음.
     &lt;ul&gt;
-      &lt;li&gt;AMI(Alternate mark invesion)
+      &lt;li&gt;AMI(Alternate mark invesion)&lt;br /&gt;
 0은 volage 0, 1은 번갈아서 1역전&lt;/li&gt;
-      &lt;li&gt;Pseudoternary
+      &lt;li&gt;Pseudoternary&lt;br /&gt;
 AMI의 반대&lt;/li&gt;
     &lt;/ul&gt;
 
     &lt;p&gt;&lt;img src=&quot;/assets/img/bipolar.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Multilevel
-전압의 level을 나눠 date를 보내줌.&lt;br /&gt;
-1 baud당 보내는 bit의 수를 증가시킴.&lt;br /&gt;
-mBnL : m data elements, n signal elements &lt;code class=&quot;highlighter-rouge&quot;&gt;2^m &amp;lt;= L^n&lt;/code&gt;
+    &lt;p&gt;Multilevel&lt;/p&gt;
+
+    &lt;p&gt;전압의 level을 나눠 date를 보내줌. 1 baud당 보내는 bit의 수를 증가시킴.&lt;br /&gt;
+mBnL : m data elements, n signal elements &lt;code class=&quot;highlighter-rouge&quot;&gt;2^m &amp;lt;= L^n&lt;/code&gt;&lt;br /&gt;
 2B1Q =&amp;gt; 2^2 bits, 4^1 signal&lt;br /&gt;
 8B6T =&amp;gt; 2^8 bits, 3^6 signal -&amp;gt; 남은 signal은 synchronization, error detection, and DC balance&lt;/p&gt;
 
-    &lt;p&gt;&lt;img src=&quot;/assets/img/2B1Q.jpg&quot; alt=&quot;Alt text&quot; /&gt;
-&lt;img src=&quot;/assets/img/8B6T.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
+    &lt;p&gt;2B1Q&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/assets/img/2B1Q.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
+
+    &lt;p&gt;8B6T&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/assets/img/8B6T.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;Multitransition&lt;/li&gt;
 &lt;/ul&gt;
@@ -310,12 +431,12 @@ mBnL : m data elements, n signal elements &lt;code class=&quot;highlighter-rouge
 &lt;ul&gt;
   &lt;li&gt;Pulse code modulation(PCM)
     &lt;ul&gt;
-      &lt;li&gt;sampling
+      &lt;li&gt;sampling&lt;br /&gt;
 sine파는 2개의 sampling으로 복원가능&lt;br /&gt;
 이상적으로 최대 주파수의 2배를 sampling&lt;/li&gt;
-      &lt;li&gt;quantizing
+      &lt;li&gt;quantizing&lt;br /&gt;
 실수를 잘라줌&lt;/li&gt;
-      &lt;li&gt;encoding
+      &lt;li&gt;encoding&lt;br /&gt;
 디지털화해줌&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
@@ -325,13 +446,13 @@ sine파는 2개의 sampling으로 복원가능&lt;br /&gt;
 &lt;h2 id=&quot;transmission-modes&quot;&gt;transmission modes&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;parallel
+  &lt;li&gt;parallel&lt;br /&gt;
 속도가 빠름&lt;/li&gt;
   &lt;li&gt;serial transmission
     &lt;ul&gt;
-      &lt;li&gt;Asynchronous
+      &lt;li&gt;Asynchronous&lt;br /&gt;
 키보드처럼 시작-끝 반복, 데이터 단위가 작음.&lt;/li&gt;
-      &lt;li&gt;Synchronous
+      &lt;li&gt;Synchronous&lt;br /&gt;
 연속적인 Data&lt;/li&gt;
       &lt;li&gt;Isochronous&lt;/li&gt;
     &lt;/ul&gt;
@@ -561,4 +682,4 @@ REVOKE 역할(ROLE) FROM 사용자;&lt;/p&gt;
 
 &lt;p&gt;desc table로 테이블 속성 확인&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/constraint.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;</content><author><name>Gmimg</name></author><category term="Database" /><category term="Database" /><category term="Table_space" /><category term="DDL" /><summary type="html">데이터베이스 정의</summary></entry><entry><title type="html">Rd</title><link href="http://localhost:4000/posts/rd" rel="alternate" type="text/html" title="Rd" /><published>2018-09-18T00:00:00+09:00</published><updated>2018-09-18T00:00:00+09:00</updated><id>http://localhost:4000/posts/rd</id><content type="html" xml:base="http://localhost:4000/posts/rd"></content><author><name>Gmimg</name></author><category term="Applied_Robot_Design" /><category term="Applied_Robot_Design" /><summary type="html"></summary></entry></feed>
+&lt;p&gt;&lt;img src=&quot;/assets/img/constraint.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;</content><author><name>Gmimg</name></author><category term="Database" /><category term="Database" /><category term="Table_space" /><category term="DDL" /><summary type="html">데이터베이스 정의</summary></entry></feed>
