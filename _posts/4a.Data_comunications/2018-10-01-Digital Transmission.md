@@ -40,20 +40,19 @@ Relationship between data rate (N) and signal rate (S)
 S_ave = c x N x (1/r) baud  
 c: case factor (0 <= c <= 1)
 
-Baud rate와 Band width는 비례한다
-
+Baud rate와 Band width는 비례한다.  
 B_min= c x N x (1/r)
 
 `문제점`
 
-- Baseline Wandering
+- Baseline Wandering  
   0이 연속으로 나올때 구분  
   drift in the baseline  
   difficult for the receiver to decode correctly.
-- DC Components
+- DC Components  
   Frequencies around zero  
   주파수가 0에 가까워지면(연속적인 신호) DC가 되어 구리선으로 보내기 힘들어진다.
-- Self-synchronization
+- Self-synchronization  
   receiver’s bit intervals must correspond exactly to the sender’s bit intervals  
   송신자와 수진자의 비트간격이 정확하게 일치해야한다.
 
@@ -66,24 +65,19 @@ B_min= c x N x (1/r)
 
 Line coding scheme
 
-- Unipolar(단극)
-
-  All the signal levels are on one side of the time axis, either above or below
-
+- Unipolar(단극)  
+  All the signal levels are on one side of the time axis, either above or below  
   NRZ(Non-Return-to-Zero) : Signal does not return to zero at the middle of the bit.
 
   ![Alt text](/assets/img/unipolar.jpg)
 
-- Polar
-
-  Voltages are on both sides of the time axis.
-
+- Polar  
+  Voltages are on both sides of the time axis.  
   Unipolar보다 에너지 효율이 좋음.
 
   ![Alt text](/assets/img/polar.jpg)
 
-  NRZ-L : 0과 1이 반대의 level을가짐.
-
+  NRZ-L : 0과 1이 반대의 level을가짐.  
   NRZ-I : 0이면 그대로 1이면 신호를 역전시킴
 
   The main problem with NRZ encoding occurs when the sender and receiver clocks are not synchronized. The receiver does not know when one bit has ended and the next bit is starting. ->  
@@ -103,23 +97,28 @@ Line coding scheme
 
   ![Alt text](/assets/img/biphase.jpg)
 
-- Bipolar(양극)
+- Bipolar(양극)  
   DC component는 없으나 동기화문제가 있음.
-  - AMI(Alternate mark invesion)
-  0은 volage 0, 1은 번갈아서 1역전
-  - Pseudoternary
-  AMI의 반대
+  - AMI(Alternate mark invesion)  
+    0은 volage 0, 1은 번갈아서 1역전
+  - Pseudoternary  
+    AMI의 반대
 
   ![Alt text](/assets/img/bipolar.jpg)
 
 - Multilevel
-  전압의 level을 나눠 date를 보내줌.  
-  1 baud당 보내는 bit의 수를 증가시킴.  
-  mBnL : m data elements, n signal elements `2^m <= L^n`
+
+  전압의 level을 나눠 date를 보내줌. 1 baud당 보내는 bit의 수를 증가시킴.  
+  mBnL : m data elements, n signal elements `2^m <= L^n`  
   2B1Q => 2^2 bits, 4^1 signal  
   8B6T => 2^8 bits, 3^6 signal -> 남은 signal은 synchronization, error detection, and DC balance
 
+  2B1Q
+
   ![Alt text](/assets/img/2B1Q.jpg)
+
+  8B6T
+
   ![Alt text](/assets/img/8B6T.jpg)
 
 - Multitransition
@@ -129,30 +128,30 @@ line coding summary
 
 ### block coding
 
-
 ### Scrambling
 
 규칙을 만들어서 기존 error를(baseline같은) 잡아줌
 
 ## Analog-to-digital
 
-- Pulse code modulation(PCM)
-  - sampling
+- Pulse code modulation(PCM)  
+  - sampling  
     sine파는 2개의 sampling으로 복원가능  
     이상적으로 최대 주파수의 2배를 sampling
-  - quantizing
+  - quantizing  
     실수를 잘라줌
-  - encoding
+  - encoding  
     디지털화해줌
+
 - Delta modulation
 
 ## transmission modes
 
-- parallel
+- parallel  
   속도가 빠름
-- serial transmission
-  - Asynchronous
+- serial transmission  
+  - Asynchronous  
     키보드처럼 시작-끝 반복, 데이터 단위가 작음.
-  - Synchronous
+  - Synchronous  
     연속적인 Data
   - Isochronous

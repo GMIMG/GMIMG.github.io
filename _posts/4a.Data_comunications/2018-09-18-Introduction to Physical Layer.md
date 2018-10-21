@@ -12,9 +12,9 @@ tags:
 
 ## Data and signal
 
-- analog
+- analog  
   연속적인 신호
-- digital
+- digital  
   0과 1로 이루어져있음
 
 주기적인 아날로그 신호

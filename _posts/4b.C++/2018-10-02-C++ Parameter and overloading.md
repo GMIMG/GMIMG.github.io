@@ -10,23 +10,23 @@ tags:
 
 # Call-by-value & Call-by reference
 
--> Mechanism
+교재
 
-인수(Argument)(매개변수)(Parameter) : 함수에게 특정 항목의 위치를 식별하는데 필요한 변수나 상수를 제공한다. 이를 전체적인 틀인 함수가 정보를 토대로 함수를 실행시키고 산출합니다.
+>With call-by-value parameters, only the value of the argument is plugged in.  
+>With call-by-reference parameters, the argument is a variable, and the variable itself is plugged in.
 
-parameter는 formal paramter와 actual parameter로 나눈다.
-formal paramter는 함수 선언부에서 쓰이는 parameter를 의미.
-actual parameter는 실제 함수가 호출될 때 formal parameter 자리에 들어갈 실제(actual) parameter를 의미.
+매개변수(Parameter) : 함수에게 특정 항목의 위치를 식별하는데 필요한 변수나 상수를 제공한다. 이를 전체적인 틀인 함수가 정보를 토대로 함수를 실행시키고 산출합니다.
+
+parameter는 formal paramter(형식 매개 변수)와 actual parameter(실제 매개 변수)로 나눈다.
+formal parameter는 함수 선언부에서 쓰이는 parameter를 의미.
+actual parameter는 실제 함수가 호출될 때 formal parameter 자리에 들어갈 실제(actual) parameter를 의미. 즉 formal parameter는 actual parameter의 Place holder 역할이고 서브루틴이나 프로시저를 호출하면 formal parameter에 actual parameter를 full-in한다.
+
+교재에선 actual parameter를 argument 용어로 사용함.
 
 A parameter is a variable in a method definition. When a method is called, the arguments are the data you pass into the method's parameters.
 
-
 Formal parameter(가인수) -> 함수 선언(declaration)나 정의(definition)에 쓰임  
-Arguments(실인수) -> 함수를 호출(call)할때, formal parameter를 fill-in할 때
-
-- 가인수(Formal parameter) : 함수에 정의되어진 인수
-- 실인수(Actual parameter) : 함수를 호출할 때 전달되는 데이터 값 또는 인수 값
-
+Arguments(인수) -> 함수를 호출(call)할때, formal parameter를 fill-in하는 데이터 값
 
 ~~~C++
 double foo(int bar);
