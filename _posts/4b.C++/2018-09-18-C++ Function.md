@@ -2,7 +2,7 @@
 title: C++ Function
 category: C++
 tags:
-  - C++
+
 ---
 
 # Flow of Control

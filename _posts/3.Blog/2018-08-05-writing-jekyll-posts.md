@@ -3,7 +3,6 @@ title: Writing jekyll posts
 category: Blog
 tags:
   - Jekyll
-  - Blogging
 ---
 
 # Blog 생성

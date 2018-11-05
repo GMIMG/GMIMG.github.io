@@ -2,7 +2,6 @@
 title: Git
 category: Git
 tags:
-  - Git
 ---
 
 # Software Engineering

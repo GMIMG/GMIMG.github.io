@@ -2,7 +2,7 @@
 title: Analog Transmission
 category: Data_communications
 tags:
-  - Data_communications
+  - Transmission
 ---
 
 # Analog Transmission

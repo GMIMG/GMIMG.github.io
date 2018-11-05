@@ -14,7 +14,8 @@
 }
 @media screen and (min-width: $toc-relative) {
     .toc_container {
-        position: absolute;
+        position: fixed;
+        top: 60px;
         font-size: 80%;
         right: 20px;
         border-radius: 20px;

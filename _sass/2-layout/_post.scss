@@ -33,16 +33,3 @@
     @include relative-font-size(1.25);
   }
 }
-
-.post-content-col {
-  float: left;
-  width: 70%;
-  padding: $spacing-unit 0;
-}
-
-
-@media screen and (max-width: $content-width) {
-  .post-content-col {
-    width: 100%;
-  }
-}

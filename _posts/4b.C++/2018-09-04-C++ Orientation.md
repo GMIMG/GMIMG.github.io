@@ -2,7 +2,7 @@
 title: C++ Orientation
 category: C++
 tags:
-  - C++
+
 ---
 
 # C++

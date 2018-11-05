@@ -1,8 +1,8 @@
 ---
-category: Data_comunications
+category: Data_communications
 tags:
-- Error Detection
-- Error Correction
+  - Error Detection
+  - Error Correction
 ---
 
 - Block coding

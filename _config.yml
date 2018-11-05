@@ -17,6 +17,7 @@ disqus:
   shortname: GMIMG
 rss: Subscribe
 markdown: kramdown
+mathjax : true
 plugins:
   - jekyll-sitemap
   - jekyll-feed

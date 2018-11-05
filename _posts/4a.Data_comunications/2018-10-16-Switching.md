@@ -2,7 +2,7 @@
 title: Switching
 category: Data_communications
 tags:
-  - Data_communications
+  - switching
 ---
 
 # Switching

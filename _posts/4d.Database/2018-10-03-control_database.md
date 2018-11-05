@@ -2,7 +2,6 @@
 title: 데이터베이스 조작
 category: Database
 tags:
-  - Database
   - SQL
   - DML
   - 뷰

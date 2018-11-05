@@ -22,7 +22,10 @@ $site-icon-size: 36px;
     color: $grey-color-dark;
   }
 }
-
+.site-post-category {
+  font-size: 50%;
+  //float: right;
+}
 .site-nav {
   float: right;
   line-height: $base-line-height * $base-font-size * 2.25;
@@ -127,5 +130,5 @@ $site-icon-size: 36px;
 
 
 .copyright {
-  font-size: 80%;
+  font-size: 70%;
 }

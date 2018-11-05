@@ -6,15 +6,13 @@ sidebar: "main"
 {% assign esc_title="{{ postjson.title }}" %}
 {% assign esc_date="{{ postjson.date }}" %}
 {% assign esc_ctgname="{{ hash }}" %}
-<div id="post-list">
-  <h2 id="{{ tag | first }}" class="post-title" >Tag : {{ esc_ctgname }}</h2>
-  <ul>
-    <li v-for="postjson in posts" v-if="postjson.tags.indexOf(hash) != -1">
-      <time>{{ esc_date }}</time>
-      <a v-bind:href="postjson.url">{{ esc_title }}</a>
-    </li>
-  </ul>
-</div>
+<ul id="post-list" class="post-list">
+  <h2 id="{{ tag | first }}" class="post-title">{{ esc_ctgname }}</h2>
+  <li v-for="postjson in posts" v-if="postjson.tags.indexOf(hash) != -1" class="post-list-li">
+    <time class="post-date">{{ esc_date }}</time>
+    <a class="post-link" v-bind:href="postjson.url">{{ esc_title }}</a>
+  </li>
+</ul>
 <script>
   var hash = decodeURI(window.location.hash.substr(1));
   var postList = new Vue({

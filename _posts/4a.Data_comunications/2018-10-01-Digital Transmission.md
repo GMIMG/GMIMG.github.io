@@ -2,7 +2,7 @@
 title: Digital Transmission
 category: Data_communications
 tags:
-  - Data_communications
+  - Transmission
 ---
 
 # Digital Transmission

@@ -1,13 +1,9 @@
 ---
-title: Orientation data communication
+title: Data communication
 search: true
-excerpt: 180904데이터통신
-categories: 
-  - Data_communications
+categories: Data_communications
 tags: 
-  - class
   - Data_communications
-#classes: wide
 ---
 
 # Orientation

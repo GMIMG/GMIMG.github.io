@@ -2,7 +2,6 @@
 title: Bandwidth Utilization
 category: Data_communications
 tags:
-  - Data_communications
   - Multiplexing
   - Spectrum_spreading
 ---

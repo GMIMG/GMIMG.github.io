@@ -2,7 +2,6 @@
 title: 명령프롬프트(cmd)
 category: Programming
 tags:
-  - Programming
   - Cmd
   - Bat
 ---
@@ -54,7 +53,7 @@ pushd "%CD%"
 2)바로 가기 만들기 - 속성 - 관리자 권한
 
 
-3) 레지스트리편집(위험)
+1) 레지스트리편집(위험)
 배치파일 실행시 항상 관리자 권한을 주고자 한다면 
 
 HKEY_LOCAL_MACHINE\SOFTWARE\Classes\cmdfile\shell 의 기본값을 runas로 바꿔주시면 됩니다.

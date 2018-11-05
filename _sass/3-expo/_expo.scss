@@ -28,7 +28,7 @@
         background: $theme-color;
         color: $white;
       }
-      @include transition(all .1s ease-in-out);
+      //@include transition(all .1s ease-in-out);
   }
 
     .expo-section {
@@ -38,7 +38,7 @@
         list-style-position: inside;
         margin-left: 20px;
         li {
-          @include transition(all .1s ease-in-out);
+          //@include transition(all .1s ease-in-out);
           padding-left: 0px;
           &:hover {
             list-style-type: disc;

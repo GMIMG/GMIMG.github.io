@@ -2,7 +2,6 @@
 title: Git_advanced
 category: Git
 tags:
-  - Git
 ---
 
 fetch

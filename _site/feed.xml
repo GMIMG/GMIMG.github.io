@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko_KR"><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko_KR" /><updated>2018-11-05T21:25:47+09:00</updated><id>http://localhost:4000/</id><title type="html">GMIMG</title><subtitle>Mechagrammer</subtitle><author><name>Jimin Hwang</name></author><entry><title type="html">Error detection and correction</title><link href="http://localhost:4000/posts/Error-Detection-and-Correction" rel="alternate" type="text/html" title="Error detection and correction" /><published>2018-10-30T00:00:00+09:00</published><updated>2018-10-30T00:00:00+09:00</updated><id>http://localhost:4000/posts/Error%20Detection%20and%20Correction</id><content type="html" xml:base="http://localhost:4000/posts/Error-Detection-and-Correction">&lt;ul&gt;
+  &lt;li&gt;Block coding&lt;/li&gt;
+  &lt;li&gt;Cyclic coding&lt;/li&gt;
+  &lt;li&gt;Checksum&lt;/li&gt;
+  &lt;li&gt;Forward error correction&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Error =&amp;gt; bit가 깨짐&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Single-bit error&lt;/li&gt;
+  &lt;li&gt;Burst error&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Redundancy&lt;/code&gt; : Error 탐지를 위해 부가적으로 붙이는 bit&lt;/p&gt;
+
+&lt;h1 id=&quot;block-coding&quot;&gt;Block coding&lt;/h1&gt;
+
+&lt;p&gt;Codewords(n) = datawords(k) + redundant(r)&lt;/p&gt;
+
+&lt;p&gt;2^n - 2^k = codeword가 남아서 invalid 코드를 판단한다.&lt;/p&gt;
+
+&lt;p&gt;Hamming Distance : 두 bits를 exclusive or해서 1의 갯수를 샌것 (즉, 두 words의 거리)&lt;/p&gt;
+
+&lt;h2 id=&quot;linear-block-codes&quot;&gt;Linear Block Codes&lt;/h2&gt;
+
+&lt;p&gt;각 비트를 exclusive or 해서 redundancy를 붙여줌.&lt;/p&gt;
+
+&lt;p&gt;ex) 00 -&amp;gt; 000, 10 -&amp;gt; 101, 01 -&amp;gt; 011, 11 -&amp;gt; 110&lt;/p&gt;
+
+&lt;p&gt;Minimum Hanning distance is 2.&lt;/p&gt;
+
+&lt;h2 id=&quot;parity-check-code&quot;&gt;Parity-check code&lt;/h2&gt;
+
+&lt;p&gt;하나의 linear bock code&lt;/p&gt;
+
+&lt;p&gt;detect an odd number of errors&lt;/p&gt;
+
+&lt;h1 id=&quot;cyclic-coding&quot;&gt;Cyclic coding&lt;/h1&gt;
+
+&lt;h2 id=&quot;crc&quot;&gt;CRC&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/CRC.jpg&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/CRC2.jpg&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;어떤값을 나눠서 남은 나머지를 붙여서 보냄&lt;/p&gt;
+
+&lt;p&gt;수신측과 송신측은 어떤 값을 나눴는지 미리 정해야함.&lt;/p&gt;
+
+&lt;p&gt;수신측에서 받은 codeword를 그수로 나누면 나누어 떨어져야한다.&lt;/p&gt;
+
+&lt;h3 id=&quot;polynomial&quot;&gt;Polynomial&lt;/h3&gt;
+
+&lt;p&gt;binary -&amp;gt; 다항식으로 차수를 적용&lt;/p&gt;
+
+&lt;p&gt;Generator 생성에 유리&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;**dataword를 주고 CRC값 찾기
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;checksum&quot;&gt;Checksum&lt;/h1&gt;
+
+&lt;p&gt;블럭을 일정한 bit인 여러 유닛으로 나누어 다 더한값을 Redundancy로 사용&lt;/p&gt;
+
+&lt;p&gt;유닛의 범위를 넘어가면 넘어간 범위를 그냥 더해줌&lt;/p&gt;
+
+&lt;p&gt;**풀어볼것&lt;/p&gt;
+
+&lt;h1 id=&quot;chunk-interleaving&quot;&gt;Chunk Interleaving&lt;/h1&gt;
+
+&lt;p&gt;패킷별로 보내는게 아니라 다른 유닛으로 보내준다 -&amp;gt; 미디어전송에 유리(손실돼도 큰 지장 없음)&lt;/p&gt;</content><author><name>Gmimg</name></author><category term="Data_communications" /><category term="Error Detection" /><category term="Error Correction" /><summary type="html">Block coding Cyclic coding Checksum Forward error correction Error =&amp;gt; bit가 깨짐</summary></entry><entry><title type="html">Intruduction to data Link layer</title><link href="http://localhost:4000/posts/Intruduction-to-Data-LInk-layer" rel="alternate" type="text/html" title="Intruduction to data Link layer" /><published>2018-10-28T00:00:00+09:00</published><updated>2018-10-28T00:00:00+09:00</updated><id>http://localhost:4000/posts/Intruduction%20to%20Data-LInk%20layer</id><content type="html" xml:base="http://localhost:4000/posts/Intruduction-to-Data-LInk-layer">&lt;p&gt;links and nodes&lt;/p&gt;
+
+&lt;h1 id=&quot;data-link-layer&quot;&gt;Data-link layer&lt;/h1&gt;
+
+&lt;p&gt;Communication at the data-link layer is node-to-node.&lt;/p&gt;
+
+&lt;h2 id=&quot;services&quot;&gt;Services&lt;/h2&gt;
+
+&lt;p&gt;The datalink layer provides &lt;code class=&quot;highlighter-rouge&quot;&gt;services&lt;/code&gt; to the network layer. It also receives services from the physical layer.&lt;/p&gt;
+
+&lt;p&gt;데이터링크층은 데이터그램을 다음노드로 전달한다.&lt;/p&gt;
+
+&lt;p&gt;Sending node의 Data-link layer는 네트워크로부터 받은 데이터그램을 encapsulate 하는게 필요하다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Framing&lt;/p&gt;
+
+    &lt;p&gt;데이터링크 층에서 첫 번째로 제공되는 서비스는 framing이다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Flow control&lt;/p&gt;
+
+    &lt;p&gt;만약 소비되는 프레임속도보다 제공되는 프레임의 속도가 높으면 멈추거나 속도를 늦추라고 요구한다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Error control&lt;/li&gt;
+  &lt;li&gt;congestion control&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;link&quot;&gt;Link&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;point-to-point link&lt;/li&gt;
+  &lt;li&gt;Broadcast link&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;sublayers&quot;&gt;Sublayers&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Data link control (DLC) sublayer&lt;/li&gt;
+  &lt;li&gt;Media access control (MAC) sublayer
+Data-link layer of a broadcast link&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;link-layer-addressing&quot;&gt;Link-layer addressing&lt;/h1&gt;
+
+&lt;p&gt;Mac address(physical aaress)(link address)는 장치를 지날때마다 바뀌지만 IP address는 목적지에 도착할 때 까지 바뀌지 않는다. 즉 맥주소는 최종목적지가 아닌 바로 다음 목적지를 가리킨다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Unicast address&lt;/li&gt;
+  &lt;li&gt;Multicast address&lt;/li&gt;
+  &lt;li&gt;Broadcast address&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;address-resolution-protocol-arp&quot;&gt;Address Resolution Protocol (ARP)&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/ARP.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/ARP2.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/ARP3.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/ARP_example.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/ARP_example1.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/ARP_example2.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/ARP_example3.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/ARP_example4.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;</content><author><name>Gmimg</name></author><category term="Data_communications" /><category term="Data-link layer" /><summary type="html">links and nodes</summary></entry><entry><title type="html">C++ Structure and Classs</title><link href="http://localhost:4000/posts/C++-Structure-and-Classs" rel="alternate" type="text/html" title="C++ Structure and Classs" /><published>2018-10-16T00:00:00+09:00</published><updated>2018-10-16T00:00:00+09:00</updated><id>http://localhost:4000/posts/C++%20Structure%20and%20Classs</id><content type="html" xml:base="http://localhost:4000/posts/C++-Structure-and-Classs">&lt;h1 id=&quot;structure&quot;&gt;Structure&lt;/h1&gt;
+
+&lt;p&gt;Array와 비슷하지만 different types 의 값의 모음이다.&lt;/p&gt;
+
+&lt;p&gt;먼저 전역적(global)으로 정의해야한다&lt;/p&gt;
+
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;WeatherData&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;temperature&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;windVelocity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Weather1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Weather2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;Weather1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;temperature&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;23.3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;WeatherData&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Weather3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;32.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;5.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;classes&quot;&gt;Classes&lt;/h1&gt;
+
+&lt;p&gt;Structure와 비슷하지만 Member Function이 추가됨&lt;/p&gt;
+
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;Class&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DayOfYear&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;month&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;day&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;private&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Dot operator는 member of particular object를 지정할때 사용, Scope resolution operator(::)는 class의 function 지정할때 사용.&lt;/p&gt;
+
+&lt;p&gt;Class is full-fledged type&lt;/p&gt;
+
+&lt;p&gt;Can have variables of a class type
+-&amp;gt; simply call them “object”&lt;/p&gt;
+
+&lt;p&gt;OOP의 원리&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Inheritance (상속)&lt;/li&gt;
+  &lt;li&gt;Abstract (추상화)
+무엇을 하는지와, 어떻게 수행하는지 구별.&lt;/li&gt;
+  &lt;li&gt;Encapsulation (캡슐화)
+내부표현을 사용자가 알 수 없다.(Information Hiding)&lt;/li&gt;
+  &lt;li&gt;Polymorphism(다형성)&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Gmimg</name></author><category term="C++" /><category term="Structure" /><category term="Class" /><summary type="html">Structure</summary></entry><entry><title type="html">Switching</title><link href="http://localhost:4000/posts/Switching" rel="alternate" type="text/html" title="Switching" /><published>2018-10-16T00:00:00+09:00</published><updated>2018-10-16T00:00:00+09:00</updated><id>http://localhost:4000/posts/Switching</id><content type="html" xml:base="http://localhost:4000/posts/Switching">&lt;h1 id=&quot;switching&quot;&gt;Switching&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Circuit switching&lt;/li&gt;
+  &lt;li&gt;Packet switching
+    &lt;ul&gt;
+      &lt;li&gt;Virtual-circuit approach&lt;/li&gt;
+      &lt;li&gt;Datagram approach&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Message switching&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;circuit-switched-network&quot;&gt;Circuit-switched network&lt;/h2&gt;
+
+&lt;p&gt;connected by physical links&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Setup phase
+    &lt;ul&gt;
+      &lt;li&gt;dedicated circuit&lt;/li&gt;
+      &lt;li&gt;Resources: such as channel (bandwidth in FDM and time slots in TDM), switch buffers, switch processing time, and switch input/output ports 할당&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Data-transfer phase
+    &lt;ul&gt;
+      &lt;li&gt;No addressing&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Teardown phase(disconnect)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;장점 : 연결되어 있을때 Delay 가없음.&lt;br /&gt;
+단점 : 효율적이지 않음. 빈데이터가 있어도 연결돼있음.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/Circuit_delay.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;packet-switched-network&quot;&gt;Packet-switched network&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;No resource allocation&lt;/li&gt;
+  &lt;li&gt;No reserved bandwidth&lt;/li&gt;
+  &lt;li&gt;No scheduled processing time&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Lack of reservation may create delay&lt;/p&gt;
+
+&lt;h3 id=&quot;datagram-network&quot;&gt;Datagram network&lt;/h3&gt;
+
+&lt;p&gt;서로 다른 길로 들어와서 TCP가 재정렬함.&lt;/p&gt;
+
+&lt;p&gt;No setup or teardown phases.&lt;/p&gt;
+
+&lt;p&gt;Routing Table 생성&lt;/p&gt;
+
+&lt;p&gt;Every packet in a datagram network carries a header that contains the destination address of the packet.&lt;/p&gt;
+
+&lt;p&gt;virtual-circuit network보단 delay가 적다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/Datagram_delay.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;virtual-circuit-networks&quot;&gt;Virtual-Circuit Networks&lt;/h3&gt;
+
+&lt;p&gt;Setup and teardown phases + Data transfer phase&lt;/p&gt;
+
+&lt;p&gt;Same path&lt;/p&gt;
+
+&lt;p&gt;Virtual-Circuit Identifier (VCI)&lt;/p&gt;
+
+&lt;p&gt;All switches need to have a table entry for this virtual circuit.&lt;br /&gt;
+Each switch changes the VCI and routes the frame.&lt;/p&gt;
+
+&lt;p&gt;Setup request frame 이 Routing table로 따라 보내면 Acknowledgment Frame이 돌아오면서 VCI를 설정해줘서 switching table이 만들어진다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/Virtual_circuit_delay.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;</content><author><name>Gmimg</name></author><category term="Data_communications" /><category term="switching" /><summary type="html">Switching</summary></entry><entry><title type="html">Transmission media</title><link href="http://localhost:4000/posts/Transmission-Media" rel="alternate" type="text/html" title="Transmission media" /><published>2018-10-11T00:00:00+09:00</published><updated>2018-10-11T00:00:00+09:00</updated><id>http://localhost:4000/posts/Transmission%20Media</id><content type="html" xml:base="http://localhost:4000/posts/Transmission-Media">&lt;h1 id=&quot;transmission-media&quot;&gt;Transmission media&lt;/h1&gt;
+
+&lt;p&gt;located below the physical layer and are directly controlled by the physical layer.&lt;/p&gt;
+
+&lt;p&gt;Carry information from a source to a destination.&lt;/p&gt;
+
+&lt;p&gt;Free space, metallic cable, or fiber-optic cable&lt;/p&gt;
+
+&lt;h2 id=&quot;guided-media&quot;&gt;Guided media&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Twisted-pair cables&lt;/li&gt;
+  &lt;li&gt;Coaxial cables&lt;/li&gt;
+  &lt;li&gt;(Fiber-optic cable)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Provide a conduit(도관) from one device to another.&lt;/p&gt;
+
+&lt;p&gt;Signal traveling directed and contained by the physical limits of medium.&lt;/p&gt;
+
+&lt;h3 id=&quot;twisted-pair-cable&quot;&gt;Twisted-Pair Cable&lt;/h3&gt;
+
+&lt;p&gt;Voice and data communications&lt;/p&gt;
+
+&lt;p&gt;One of the sires is used to carry signals to the receiver&lt;/p&gt;
+
+&lt;p&gt;The other is used only as a ground reference.&lt;/p&gt;
+
+&lt;p&gt;crosstalk(noise 발생)&lt;/p&gt;
+
+&lt;p&gt;꼬아줌으로서 balance 유지 -&amp;gt; 외부영향을 두선 모두 동등하게 받음&lt;/p&gt;
+
+&lt;p&gt;noise가 cancle.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Unshielded twisted-pair (UTP)&lt;/li&gt;
+  &lt;li&gt;Shielded twisted-pair(STP)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;coaxial-cable&quot;&gt;Coaxial cable&lt;/h3&gt;
+
+&lt;p&gt;Carries signal of higher frequency ranges&lt;/p&gt;
+
+&lt;p&gt;Cable TV networks and traditional Ethernet LANs&lt;/p&gt;
+
+&lt;h3 id=&quot;fiber-optic-cables&quot;&gt;Fiber-optic cables&lt;/h3&gt;
+
+&lt;p&gt;Bacbone networks, cable TV networks, and Fast Ethernet networks&lt;/p&gt;
+
+&lt;p&gt;장점&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Higher bandwidth&lt;/li&gt;
+  &lt;li&gt;Less signal attenuation&lt;/li&gt;
+  &lt;li&gt;light weight&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;단점&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;installation and maintenance&lt;/li&gt;
+  &lt;li&gt;cost&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;unguided-media&quot;&gt;unguided media&lt;/h2&gt;
+
+&lt;p&gt;Transport electromagnetic waves without the use of a physical conductor(free space)&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Radio waves&lt;br /&gt;
+  Multicast communications, such as radio, television, paging systems&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Microwaves&lt;br /&gt;
+  cellular phone, satellite, and wireless LAN&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;(Infrared)&lt;br /&gt;
+  short-ange communication such as those between a PC, a peripheral device, indoor LAN, and remote control&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Gmimg</name></author><category term="Data_communications" /><category term="Transmission" /><summary type="html">Transmission media</summary></entry><entry><title type="html">Bandwidth Utilization</title><link href="http://localhost:4000/posts/Bandwidth-Utilization" rel="alternate" type="text/html" title="Bandwidth Utilization" /><published>2018-10-11T00:00:00+09:00</published><updated>2018-10-11T00:00:00+09:00</updated><id>http://localhost:4000/posts/Bandwidth%20Utilization</id><content type="html" xml:base="http://localhost:4000/posts/Bandwidth-Utilization">&lt;h1 id=&quot;multiplexing&quot;&gt;Multiplexing&lt;/h1&gt;
+
+&lt;p&gt;멀티플렉싱은 단일 데이터 링크를 통해 여러 신호를 동시에 전송할 수있는 기술 집합입니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;frequency-division ultiplexing (FDM)
+여러 주파수 합쳐서(mux) 보낸뒤 filter로 demux한다.&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/assets/img/FDM_mux.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/img/FDM_demux.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
+
+    &lt;p&gt;예제(No Guard band)&lt;br /&gt;
+&lt;img src=&quot;/assets/img/FDM_exp.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;wavelength division multiplexing (WDM)&lt;br /&gt;
+광케이블을 프리즘으로 합치고 나눠서 multiplexing 한다. (FDM과 유사)&lt;br /&gt;
+&lt;img src=&quot;/assets/img/FDM_exp.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;time-division multiplexing (TDM)&lt;br /&gt;
+시간단위로 나눠서 -&amp;gt; 단일코어 멀티프로세싱과 유사&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Synchronous TDM&lt;br /&gt;
+한 라인에서 빈공간이 생기면 그만큼 비효율적
+One or more synchronization bits are usually added to the beginning of each frame.&lt;br /&gt;
+&lt;img src=&quot;/assets/img/Synchronous_TDM.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Statistical TDM&lt;br /&gt;
+헤더를 붙여서 보냄&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;spectrum-spreadingss&quot;&gt;Spectrum spreading(SS)&lt;/h1&gt;
+
+&lt;p&gt;무선 응용 프로그램(LAN and WANs)에 사용됩니다.&lt;br /&gt;
+확장된 스펙트럼을 사용하여 원본을 보다 안전한 전송을 위해 보호 봉투에 보관할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;먼저 서로 다른 채널을 결합하기 전에보다 안전한 전송을 위해 신호의 대역폭을 분산시킵니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Frequency hopping spread spectrum (FHSS)&lt;br /&gt;
+A pseudorandome cod generator를 이용하여 랜덤 패턴을 만드로 Frequency table에 매칭시켜 주파수를 맞춘다.&lt;/li&gt;
+  &lt;li&gt;direct sequence spread spectruemm (DSSS)
+Original signal의 bit를 Spreading code를 이용해 Spread signal로 만들어 정보를 보호 할 수 있게한다.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Gmimg</name></author><category term="Data_communications" /><category term="Multiplexing" /><category term="Spectrum_spreading" /><summary type="html">Multiplexing</summary></entry><entry><title type="html">데이터베이스 조작</title><link href="http://localhost:4000/posts/control_database" rel="alternate" type="text/html" title="데이터베이스 조작" /><published>2018-10-03T00:00:00+09:00</published><updated>2018-10-03T00:00:00+09:00</updated><id>http://localhost:4000/posts/control_database</id><content type="html" xml:base="http://localhost:4000/posts/control_database">&lt;h1 id=&quot;데이터베이스-조작&quot;&gt;데이터베이스 조작&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;SQL DML&lt;/li&gt;
+  &lt;li&gt;SQL 질의어&lt;/li&gt;
+  &lt;li&gt;뷰&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;dmldata-manipulation-language&quot;&gt;DML(Data Manipulation Language)&lt;/h2&gt;
+
+&lt;p&gt;SQL의 데이터 조작어&lt;/p&gt;
+
+&lt;p&gt;INSERT INTO 테이블 [(column [, column…])] VALUES  (값 [,값]) ;&lt;/p&gt;
+
+&lt;p&gt;NULL값은 &lt;code class=&quot;highlighter-rouge&quot;&gt;[빈칸]&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;''&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;null&lt;/code&gt;로&lt;/p&gt;
+
+&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;distinct&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;column&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;alias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]...&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;테이블명&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Query&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;조건&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;들&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;ORDER&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;BY&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;column&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;표현식}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;ASC&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;DESC&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Gmimg</name></author><category term="Database" /><category term="SQL" /><category term="DML" /><category term="뷰" /><summary type="html">데이터베이스 조작</summary></entry><entry><title type="html">C++ Parameter and overloading</title><link href="http://localhost:4000/posts/C++-Parameter-and-overloading" rel="alternate" type="text/html" title="C++ Parameter and overloading" /><published>2018-10-02T00:00:00+09:00</published><updated>2018-10-02T00:00:00+09:00</updated><id>http://localhost:4000/posts/C++%20Parameter%20and%20overloading</id><content type="html" xml:base="http://localhost:4000/posts/C++-Parameter-and-overloading">&lt;h1 id=&quot;call-by-value--call-by-reference&quot;&gt;Call-by-value &amp;amp; Call-by reference&lt;/h1&gt;
+
+&lt;p&gt;교재&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;With call-by-value parameters, only the value of the argument is plugged in.&lt;br /&gt;
+With call-by-reference parameters, the argument is a variable, and the variable itself is plugged in.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;매개변수(Parameter) : 함수에게 특정 항목의 위치를 식별하는데 필요한 변수나 상수를 제공한다. 이를 전체적인 틀인 함수가 정보를 토대로 함수를 실행시키고 산출합니다.&lt;/p&gt;
+
+&lt;p&gt;parameter는 formal paramter(형식 매개 변수)와 actual parameter(실제 매개 변수)로 나눈다.
+formal parameter는 함수 선언부에서 쓰이는 parameter를 의미.
+actual parameter는 실제 함수가 호출될 때 formal parameter 자리에 들어갈 실제(actual) parameter를 의미. 즉 formal parameter는 actual parameter의 Place holder 역할이고 서브루틴이나 프로시저를 호출하면 formal parameter에 actual parameter를 full-in한다.&lt;/p&gt;
+
+&lt;p&gt;교재에선 actual parameter를 argument 용어로 사용함.&lt;/p&gt;
+
+&lt;p&gt;A parameter is a variable in a method definition. When a method is called, the arguments are the data you pass into the method’s parameters.&lt;/p&gt;
+
+&lt;p&gt;Formal parameter(가인수) -&amp;gt; 함수 선언(declaration)나 정의(definition)에 쓰임&lt;br /&gt;
+Arguments(인수) -&amp;gt; 함수를 호출(call)할때, formal parameter를 fill-in하는 데이터 값&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C++&quot;&gt;double foo(int bar);
+//에서 (int bar)라는 이름 자체는 가인수이고 
+//bar이라는 인수가 가르키는 값(포인터)이 실인수 이다.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;call-by-value-parameter&quot;&gt;call-by-value parameter&lt;/h2&gt;
+
+&lt;p&gt;call-by-value parameter는 함수안에서 선언(declaration)되는 지역 변수이다.
+함수는 실인수에 접근할 수 없다.&lt;/p&gt;
+
+&lt;h2 id=&quot;call-by-reference-parameter&quot;&gt;call-by-reference parameter&lt;/h2&gt;
+
+&lt;p&gt;caller의 실인수에 접근을 제공한다. 즉 서브루틴에서 밖의 인수값을 바꾼다.
+C++ 에선 가인수의 type 다음에 &amp;amp;을 붙여서 사용한다.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C++&quot;&gt;ex) int foo(int&amp;amp; bar);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;getNumbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//Reads two integers from the keyboard.
+&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;swapValues&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;variable1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;variable2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//Interchanges the values of variable1 and variable2.
+&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;showResults&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;output1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;output2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//Shows the values of variable1 and variable2, in that order.
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;intmain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;firstNum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;secondNum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;getNumbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;firstNum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;secondNum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;swapValues&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;firstNum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;secondNum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;showResults&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;firstNum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;secondNum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;getNumbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Enter two integers: &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;cin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input1&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;swapValues&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;variable1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;variable2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;variable1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;variable1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;variable2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;variable2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;showResults&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;output1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;output2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;In reverse order the numbers are: &quot;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;output1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;output2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Sample Dialogue
+Enter two integers: 5 6
+In reverse order the numbers are: 6 5&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;reference는 실인수의 memory의 위치(주소)를 언급한다.
+Reference arguments는 좋을 때도 있지만 데이터보호측면에서 위험하다.
+데이터를 보호하기위해 const를 이용한다.&lt;/p&gt;
+
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;par1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;overloading&quot;&gt;Overloading&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Same function name Different parameter lists&lt;/li&gt;
+  &lt;li&gt;Two separate function definitions&lt;/li&gt;
+  &lt;li&gt;…&lt;/li&gt;
+  &lt;li&gt;반환형식으로 구분된 함수는 오버로드 되지않음.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;resolving-overloading&quot;&gt;Resolving Overloading&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Exact match
+  실인수의 갯수와 type이 정의와 정확하게 match하는지 판단하고&lt;/li&gt;
+  &lt;li&gt;맞지 않으면 type conversion을 통해 맞춘다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;debugging&quot;&gt;Debugging&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Lots of cout&lt;/li&gt;
+  &lt;li&gt;Compiler Debugger&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ko.wikipedia.org/wiki/Assert.h&quot;&gt;assert Macro&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;-&amp;gt; Assertion is a statement that is either ture or false.
+프로그램이 실행될 때 assert() 는 조건에 오류가 있을 경우 표준오류(stderr)를 통해 실패한 호출의 정보를 출력하고, abort()를 호출한다.
+쉽게말해 추정에러내용과 함께 프로그램을 정지시킴.&lt;/p&gt;
+
+&lt;p&gt;stderr - 소스파일명: 소스라인넘버: 소스함수: false로 추정된 텍스트&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+#include &amp;lt;assert.h&amp;gt;
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test_assert&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;assert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+   &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;test_assert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;i = %d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Stubs : 프로그램이 완성되지 않았을 때 임시로 돌아가게 만들어 놓은 상태
+Drivers : 어떤 모듈을 테스트하기 위한 메인함수 형태&lt;/p&gt;
+
+&lt;p&gt;invoke : 호출하다.
+선언(declare)
+정의(definition)&lt;/p&gt;</content><author><name>Gmimg</name></author><category term="C++" /><category term="Call-by-value" /><category term="Call-by reference" /><category term="Overloading" /><summary type="html">Call-by-value &amp;amp; Call-by reference</summary></entry><entry><title type="html">Analog Transmission</title><link href="http://localhost:4000/posts/Analog-Transmission" rel="alternate" type="text/html" title="Analog Transmission" /><published>2018-10-02T00:00:00+09:00</published><updated>2018-10-02T00:00:00+09:00</updated><id>http://localhost:4000/posts/Analog%20Transmission</id><content type="html" xml:base="http://localhost:4000/posts/Analog-Transmission">&lt;h1 id=&quot;analog-transmission&quot;&gt;Analog Transmission&lt;/h1&gt;
+
+&lt;h2 id=&quot;digital-to-analog-conversion&quot;&gt;Digital-to-analog conversion&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Amplitude shift keying (ASK)&lt;/li&gt;
+  &lt;li&gt;Frequency shift keying (FSK)&lt;/li&gt;
+  &lt;li&gt;Phase shift keying (PSK)&lt;/li&gt;
+  &lt;li&gt;Quadrature amplitude modulation (QAM)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Data rate (bit rate, N bps) &amp;amp; signal rate (baud rate, s baud/sec)&lt;/p&gt;
+
+&lt;p&gt;S = N x 1/r baud&lt;/p&gt;
+
+&lt;p&gt;r: the number of data elements carried in one signal element&lt;/p&gt;
+
+&lt;p&gt;FSK를 제외하고 bandwidth는 신호속도에 비례한다.&lt;/p&gt;
+
+&lt;p&gt;아나로그를 전송하기 위해 고주파 신호를 생성하고 이를 Carrier signal이라고 한다. 수신 장치는 그 주파수에 맞춰 조정한다.&lt;/p&gt;
+
+&lt;p&gt;Carrier signal을 (진폭, 주파수, 위상)중 하나이상을 변조한 Modulated signal을 보낸다.&lt;/p&gt;
+
+&lt;h3 id=&quot;amplitude-shift-keyin-g-ask&quot;&gt;Amplitude shift keyin g (ASK)&lt;/h3&gt;
+
+&lt;p&gt;디지털 신호에 Carrier signal을 Multiplier 해줘서 보낸다.
+&lt;img src=&quot;/assets/img/ASK.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;frequency-shift-keying-fsk&quot;&gt;Frequency shift keying (FSK)&lt;/h3&gt;
+
+&lt;p&gt;주파수가 여러개 필요. 안정적이지만 느림.&lt;/p&gt;
+
+&lt;h3 id=&quot;phase-shift-keying-psk&quot;&gt;Phase shift keying (PSK)&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;BASK&lt;/li&gt;
+  &lt;li&gt;BPSK&lt;/li&gt;
+  &lt;li&gt;QPSK&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;요즘은 ASK와 함께 쓰는 QAM 방식을 주로씀&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;**Constellation Diagram&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;f는 주어져있고, A와 P를 좌표로 나타냄.&lt;/p&gt;
+
+&lt;p&gt;Length : amplitude&lt;/p&gt;
+
+&lt;p&gt;Angle : phase&lt;/p&gt;
+
+&lt;p&gt;1의 점이 1QAM이라고 볼 수 있다.&lt;/p&gt;
+
+&lt;h3 id=&quot;quadrature-amplitude-modulation-qam&quot;&gt;Quadrature Amplitude Modulation (QAM)&lt;/h3&gt;
+
+&lt;p&gt;직교 진폭 변조&lt;/p&gt;
+
+&lt;p&gt;ASK와 PSK를 결합한느낌.&lt;/p&gt;
+
+&lt;p&gt;대역폭은 같다.&lt;/p&gt;
+
+&lt;h2 id=&quot;analog-to-analog-conversion&quot;&gt;Analog-to-analog conversion&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Amplitude modulation (AM)&lt;/li&gt;
+  &lt;li&gt;Frequency modulation (FM)&lt;/li&gt;
+  &lt;li&gt;Phase modulation (PM)&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Gmimg</name></author><category term="Data_communications" /><category term="Transmission" /><summary type="html">Analog Transmission</summary></entry><entry><title type="html">Digital Transmission</title><link href="http://localhost:4000/posts/Digital-Transmission" rel="alternate" type="text/html" title="Digital Transmission" /><published>2018-10-01T00:00:00+09:00</published><updated>2018-10-01T00:00:00+09:00</updated><id>http://localhost:4000/posts/Digital%20Transmission</id><content type="html" xml:base="http://localhost:4000/posts/Digital-Transmission">&lt;h1 id=&quot;digital-transmission&quot;&gt;Digital Transmission&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Digital-to-digital&lt;/li&gt;
+  &lt;li&gt;Analog-to-digital&lt;/li&gt;
+  &lt;li&gt;transmission modes&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;digital-to-digital&quot;&gt;Digital-to-digital&lt;/h2&gt;
+
+&lt;p&gt;Digital signal -&amp;gt; Digital data&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;line coding&lt;/li&gt;
+  &lt;li&gt;block coding&lt;/li&gt;
+  &lt;li&gt;scrambling&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;line-coding&quot;&gt;Line coding&lt;/h3&gt;
+
+&lt;p&gt;converts a sequence of bits to a digital signal&lt;/p&gt;
+
+&lt;p&gt;Data =&amp;gt; ‘incoding’ =&amp;gt; Line coding =&amp;gt; ‘decoding’ =&amp;gt; Data&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Data element: the smallest entity that can represent a piece of information; this is the bit; Data rate (bps) -&amp;gt; 0과 1의 갯수&lt;/li&gt;
+  &lt;li&gt;Signal element: the shortest unit (timewise) of a digital signal; signal rate (baud rate) -&amp;gt; 전압의 높낮이 갯수&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;*구분할줄 알아야함&lt;/p&gt;
+
+&lt;p&gt;Define a ratio &lt;code class=&quot;highlighter-rouge&quot;&gt;r&lt;/code&gt; which is the &lt;code class=&quot;highlighter-rouge&quot;&gt;number of data elements carried by each signal element&lt;/code&gt; (1개의 signal element로 몇개의 bit를 표현할 수 있는지)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/line_coding1.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Relationship between data rate (N) and signal rate (S)&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;S = N/r&lt;/code&gt;&lt;br /&gt;
+S_ave = c x N x (1/r) baud&lt;br /&gt;
+c: case factor (0 &amp;lt;= c &amp;lt;= 1)&lt;/p&gt;
+
+&lt;p&gt;Baud rate와 Band width는 비례한다.&lt;br /&gt;
+B_min= c x N x (1/r)&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;문제점&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Baseline Wandering&lt;br /&gt;
+0이 연속으로 나올때 구분&lt;br /&gt;
+drift in the baseline&lt;br /&gt;
+difficult for the receiver to decode correctly.&lt;/li&gt;
+  &lt;li&gt;DC Components&lt;br /&gt;
+Frequencies around zero&lt;br /&gt;
+주파수가 0에 가까워지면(연속적인 신호) DC가 되어 구리선으로 보내기 힘들어진다.&lt;/li&gt;
+  &lt;li&gt;Self-synchronization&lt;br /&gt;
+receiver’s bit intervals must correspond exactly to the sender’s bit intervals&lt;br /&gt;
+송신자와 수진자의 비트간격이 정확하게 일치해야한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;lack of synchronization&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;example)&lt;br /&gt;
+Receiver clock is 0.1 percent faster.
+How many extra bits per second does the receiver receive if the data rate is 1 kbps?&lt;br /&gt;
+1000 bits sent -&amp;gt; 1001 bits receive&lt;br /&gt;
+1000000 bits sent -&amp;gt; 1001000 bits receive&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Line coding scheme&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Unipolar(단극)&lt;br /&gt;
+All the signal levels are on one side of the time axis, either above or below&lt;br /&gt;
+NRZ(Non-Return-to-Zero) : Signal does not return to zero at the middle of the bit.&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/assets/img/unipolar.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Polar&lt;br /&gt;
+Voltages are on both sides of the time axis.&lt;br /&gt;
+Unipolar보다 에너지 효율이 좋음.&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/assets/img/polar.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
+
+    &lt;p&gt;NRZ-L : 0과 1이 반대의 level을가짐.&lt;br /&gt;
+NRZ-I : 0이면 그대로 1이면 신호를 역전시킴&lt;/p&gt;
+
+    &lt;p&gt;The main problem with NRZ encoding occurs when the sender and receiver clocks are not synchronized. The receiver does not know when one bit has ended and the next bit is starting. -&amp;gt;&lt;/p&gt;
+
+    &lt;p&gt;RZ(Return-to-Zero) : 무조건 중간에 0으로 돌아감. 수신기가 송신기의 bit시작 타이밍을 알수있다.(동기화)&lt;br /&gt;
+uses three values: positive, negative, and zero.&lt;br /&gt;
+1의 데이터를 2의 signal로 보내기 때문에 NRZ 보다 더 고주파 성분이 필요하다.&lt;br /&gt;
+No DC component problem.&lt;br /&gt;
+요즘 사용하진 않음&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/assets/img/RZ.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
+
+    &lt;p&gt;biphase : RZ + NRZ-L&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Manchester : 전압이 상반기동안은 일정하고 하반기에 다른레벨로 이동한다. 중간의 비트전환이 동기화를 제공.&lt;/li&gt;
+      &lt;li&gt;Differential Manchester
+중간에 비트전환을 해주고, 다음비트가 0이면 비트시작을 반전하고 1이면 그대로간다.&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/assets/img/biphase.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Bipolar(양극)&lt;br /&gt;
+DC component는 없으나 동기화문제가 있음.
+    &lt;ul&gt;
+      &lt;li&gt;AMI(Alternate mark invesion)&lt;br /&gt;
+0은 volage 0, 1은 번갈아서 1역전&lt;/li&gt;
+      &lt;li&gt;Pseudoternary&lt;br /&gt;
+AMI의 반대&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/assets/img/bipolar.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Multilevel&lt;/p&gt;
+
+    &lt;p&gt;전압의 level을 나눠 date를 보내줌. 1 baud당 보내는 bit의 수를 증가시킴.&lt;br /&gt;
+mBnL : m data elements, n signal elements &lt;code class=&quot;highlighter-rouge&quot;&gt;2^m &amp;lt;= L^n&lt;/code&gt;&lt;br /&gt;
+2B1Q =&amp;gt; 2^2 bits, 4^1 signal&lt;br /&gt;
+8B6T =&amp;gt; 2^8 bits, 3^6 signal -&amp;gt; 남은 signal은 synchronization, error detection, and DC balance&lt;/p&gt;
+
+    &lt;p&gt;2B1Q&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/assets/img/2B1Q.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
+
+    &lt;p&gt;8B6T&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/assets/img/8B6T.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Multitransition&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;line coding summary
+&lt;img src=&quot;/assets/img/line_coding2.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;block-coding&quot;&gt;block coding&lt;/h3&gt;
+
+&lt;h3 id=&quot;scrambling&quot;&gt;Scrambling&lt;/h3&gt;
+
+&lt;p&gt;규칙을 만들어서 기존 error를(baseline같은) 잡아줌&lt;/p&gt;
+
+&lt;h2 id=&quot;analog-to-digital&quot;&gt;Analog-to-digital&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Pulse code modulation(PCM)
+    &lt;ul&gt;
+      &lt;li&gt;sampling&lt;br /&gt;
+sine파는 2개의 sampling으로 복원가능&lt;br /&gt;
+이상적으로 최대 주파수의 2배를 sampling&lt;/li&gt;
+      &lt;li&gt;quantizing&lt;br /&gt;
+실수를 잘라줌&lt;/li&gt;
+      &lt;li&gt;encoding&lt;br /&gt;
+디지털화해줌&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Delta modulation&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;transmission-modes&quot;&gt;transmission modes&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;parallel&lt;br /&gt;
+속도가 빠름&lt;/li&gt;
+  &lt;li&gt;serial transmission
+    &lt;ul&gt;
+      &lt;li&gt;Asynchronous&lt;br /&gt;
+키보드처럼 시작-끝 반복, 데이터 단위가 작음.&lt;/li&gt;
+      &lt;li&gt;Synchronous&lt;br /&gt;
+연속적인 Data&lt;/li&gt;
+      &lt;li&gt;Isochronous&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Gmimg</name></author><category term="Data_communications" /><category term="Transmission" /><summary type="html">Digital Transmission</summary></entry></feed>

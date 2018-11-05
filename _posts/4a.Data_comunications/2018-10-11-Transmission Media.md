@@ -2,7 +2,7 @@
 title: Transmission media
 category: Data_communications
 tags:
-  - Data_communications
+  - Transmission
 ---
 
 # Transmission media

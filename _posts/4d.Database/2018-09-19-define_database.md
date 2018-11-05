@@ -2,7 +2,6 @@
 title: 데이터베이스 정의
 category: Database
 tags:
-  - Database
   - Table_space
   - DDL
 ---

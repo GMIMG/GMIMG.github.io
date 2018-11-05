@@ -28,13 +28,12 @@
     .sidebar {
         width:100%; 
         max-width:100%;
-        padding: 10px 10px;
-        #sidebar-item-tag{
-            //display: none;
+        padding: 10px 0px;
+        #sidebar-item-tag, #sidebar-item-category {
+            padding: 0 10px;
         }
         .sidebar-item {
             padding: 0;
-            position: relative;
             float: left;
             width: 50%;
         }

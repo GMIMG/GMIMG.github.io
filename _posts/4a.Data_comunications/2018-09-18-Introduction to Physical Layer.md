@@ -1,11 +1,8 @@
 ---
 title: Introduction to Physical Layer
-excerpt: 180918데이터통신
-categories: 
-  - Data_communications
+categories: Data_communications
 tags: 
-  - class
-  - Data_communications
+  - Physical Layer
 ---
 
 # Introduction to Physical Layer

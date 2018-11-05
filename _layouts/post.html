@@ -2,6 +2,10 @@
 layout: default
 ---
 <article class="post">
+  {% if site.mathjax == true %}
+  <!--mathjax-->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+  {% endif %}
   {% include post-header.html %}
     {%- if page.toc %}
     <aside>

@@ -6,7 +6,10 @@ layout: default
   {%- for post in site.posts -%}
   <li class="post-list-list">
     <span class="post-date">{{ post.date | date_to_string }}</span>
-    <a class="post-link" href="{{ post.url | relative_url }}">{{- post.title | escape -}}</a>
+    <a class="post-link" href="{{ post.url | relative_url }}">
+      {{- post.title | escape -}}
+      <!--span class="site-post-category"> {{post.categories}}</span-->
+    </a>
   </li>
   {%- endfor -%}
 </ul>

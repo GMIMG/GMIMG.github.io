@@ -4,9 +4,6 @@ category: Computer_science
 tags:
   - Process
   - Thread
-  - Computer
-  - Computer_science
-  - Computer_engineering
 ---
 
 # process & thread

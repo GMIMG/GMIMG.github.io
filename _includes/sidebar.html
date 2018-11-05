@@ -1,32 +1,36 @@
 <div class="sidebar">
   <!--category list-->
-  <div id="sidebar-item-category" class="sidebar-item">
-    <a href="/categories" class="sidebar-item-tltle">Categories</a>
+  <div class="sidebar-item">
+    <div id="sidebar-item-category">
+      <a href="/categories" class="sidebar-item-tltle">Categories</a>
       {%- include nav_list.html nav=page.sidebar -%}
+    </div>
   </div>
   <!--tag list-->
-  <div id="sidebar-item-tag" class="sidebar-item">
-    <a href="/tags" class="sidebar-item-tltle">Tags</a>
-    {%- assign max_size = 0 -%}
-    {%- for tag in site.tags %}
-    {%- assign tag_last_size = tag | last | size -%}
-      {%- if tag_last_size > max_size -%}
-        {%- assign max_size = tag_last_size -%}
-      {%- endif -%}
-    {%- endfor %}
-    <div class="sidebar-tag-cloud">
-      {%- assign sorted_tags = site.tags | sort -%}
-      {%- for tag in sorted_tags %}
-      {%- assign percent_for_size = tag | last | size | times: 50 | divided_by: max_size -%}
-      {%- assign tag-font-size = percent_for_size | plus: 75 -%}
-      {%- assign percent_for_color = tag | last | size | times: 9 | divided_by: max_size -%}
-      {%- assign tag-font-color = 9 | minus: percent_for_color -%}
-      <span style="font-size: {{ tag-font-size }}%;">
-        <a href="{{ root_url }}/tag#{{ tag | first | slugize }}" onclick="location.reload()" style="color: #{{tag-font-color}}{{tag-font-color}}{{tag-font-color}};">
-          {{- tag | first -}}
-        </a>
-      </span>
+  <div class="sidebar-item">
+    <div id="sidebar-item-tag">
+      <a href="/tags" class="sidebar-item-tltle">Tags</a>
+      {%- assign max_size = 0 -%}
+      {%- for tag in site.tags %}
+      {%- assign tag_last_size = tag | last | size -%}
+        {%- if tag_last_size > max_size -%}
+          {%- assign max_size = tag_last_size -%}
+        {%- endif -%}
       {%- endfor %}
+      <div class="sidebar-tag-cloud">
+        {%- assign sorted_tags = site.tags | sort -%}
+        {%- for tag in sorted_tags %}
+        {%- assign percent_for_size = tag | last | size | times: 50 | divided_by: max_size -%}
+        {%- assign tag-font-size = percent_for_size | plus: 75 -%}
+        {%- assign percent_for_color = tag | last | size | times: 9 | divided_by: max_size -%}
+        {%- assign tag-font-color = 9 | minus: percent_for_color -%}
+        <span style="font-size: {{ tag-font-size }}%;">
+          <a href="{{ root_url }}/tag#{{ tag | first | slugize }}" onclick="location.reload()" style="color: #{{tag-font-color}}{{tag-font-color}}{{tag-font-color}};">
+            {{- tag | first -}}
+          </a>
+        </span>
+        {%- endfor %}
+      </div>
     </div>
   </div>
 </div>

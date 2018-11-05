@@ -6,7 +6,7 @@
     {% for post in site.posts %}
     {
       "title": "{{ post.title }}",
-      "date": "{{ post.date | date: "%Y-%m-%d"}}",
+      "date": "{{ post.date | date_to_string}}",
       "categories": {{ post.categories | jsonify }},
       "tags": {{ post.tags | jsonify }},
       "url": "{{ post.url }}"

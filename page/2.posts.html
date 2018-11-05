@@ -5,16 +5,14 @@ title: Posts browser
 sidebar: "main"
 ---
 {%- assign prepost_date = post.date %}
-<div class="post-list">
-  <ul class="post-list-ul">
-    {%- for post in site.posts -%}
-    <li class="post-list-li">
-      <span class="post-date">{{ post.date | date_to_string }}</span>
-      <a class="post-link" href="{{ post.url | relative_url }}">{{- post.title | escape -}}</a>
-      {%- if post.description %}
-      <span class="description">{{ post.description }}</span>
-      {%- endif %}
-    </li>
-    {%- endfor -%}
-  </ul>
-</div>
+<ul class="post-list">
+  {%- for post in site.posts -%}
+  <li class="post-list-li">
+    <span class="post-date">{{ post.date | date_to_string }}</span>
+    <a class="post-link" href="{{ post.url | relative_url }}">{{- post.title | escape -}}</a>
+    {%- if post.description %}
+    <span class="description">{{ post.description }}</span>
+    {%- endif %}
+  </li>
+  {%- endfor -%}
+</ul>

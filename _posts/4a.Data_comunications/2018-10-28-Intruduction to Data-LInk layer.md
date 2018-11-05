@@ -1,7 +1,6 @@
 ---
 category: Data_communications
 tags:
-  - Data_communications
   - Data-link layer
 ---
 

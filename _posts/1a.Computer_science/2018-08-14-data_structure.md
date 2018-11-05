@@ -3,9 +3,6 @@ title: data_structure
 category: Computer_science
 tags:
   - Data_structure
-  - Computer
-  - Computer_science
-  - Computer_engineering
 ---
 
 # 자료구조
