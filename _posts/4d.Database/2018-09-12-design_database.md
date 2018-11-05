@@ -31,7 +31,7 @@ E-R 모델
 
 `주키와 외래키`
 
-![Alt text](/assets/img/PK_FK.JPG)
+![Alt text](/assets/img/PK_FK.jpg)
 
 # 데이터베이스 시동과 접속
 

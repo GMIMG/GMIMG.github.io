@@ -1,23 +1,7 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 title: GMIMG
 author: Jimin Hwang
 email: gming7281@gmail.com
-description: >-
-  Mechagrammer
+description: Mechagrammer
 introduction: >-
   Hello. I'm Seoultech univesity student in South Korea.
   My english is so terrible but trying ;)
@@ -25,26 +9,21 @@ introduction: >-
   I am dreaming to be a good developer.
   This blog is writing that today I learned.
 baseurl: ""
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-#twitter_username: None
+url: ""
+#twitter_username: 
 #facebook_username: 
-github_username:  GMIMG
+github_username: GMIMG
 disqus:
   shortname: GMIMG
-
-# Build settings
+rss: Subscribe
 markdown: kramdown
 plugins:
+  - jekyll-sitemap
   - jekyll-feed
   - jekyll-paginate
-#  - jekyll-last-modified-at
-exclude:
-   - Gemfile
-   - Gemfile.lock
-
-#timezone: Asia/Seoul
+lang: ko_KR
 permalink: /posts/:title
-paginate: 10
+paginate: 15
 paginate_path: "/posts/:num/"
 category_dir: category/
 tag_dir: tags/
@@ -61,12 +40,9 @@ defaults:
       search: true #false
       comments: true #false
       toc: true
-      sidebar:
-        nav: "main"
 
-  - scope:
-      path: "page"
-      type: 
-    values:
-      sidebar:
-        nav: "main"
+  #- scope:
+  # _page
+    #  path: "page"
+    #  type: 
+    #values:

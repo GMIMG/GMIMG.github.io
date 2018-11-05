@@ -1,24 +1,20 @@
 ---
-layout: page
+layout: 2col-page
 permalink: /posts/
-title: Posts
-sidebar:
-  nav: "main"
+title: Posts browser
+sidebar: "main"
 ---
-<header class="post-header">
-  <h1 class="post-title">{{ page.title | escape }}</h1>
-</header>
-{%- if site.posts.size > 0 -%}
 {%- assign prepost_date = post.date %}
-<ul class="post-list">
-  {%- for post in site.posts -%}
-  <li class="post-list-list">
-    <span class="post-date">{{ post.date | date_to_string }}</span>
-    <a class="post-link" href="{{ post.url | relative_url }}">{{- post.title | escape -}}</a>
-
-      <p class="description">{{ post.description }}</p>
-  </li>
-  {%- endfor -%}
-</ul>
-<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-{%- endif -%}
+<div class="post-list">
+  <ul class="post-list-ul">
+    {%- for post in site.posts -%}
+    <li class="post-list-li">
+      <span class="post-date">{{ post.date | date_to_string }}</span>
+      <a class="post-link" href="{{ post.url | relative_url }}">{{- post.title | escape -}}</a>
+      {%- if post.description %}
+      <span class="description">{{ post.description }}</span>
+      {%- endif %}
+    </li>
+    {%- endfor -%}
+  </ul>
+</div>

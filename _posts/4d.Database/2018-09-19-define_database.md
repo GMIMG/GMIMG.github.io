@@ -19,19 +19,24 @@ tags:
 
 ## 테이블 스페이스 정의
 
+~~~sql
 create tablespace firstbank datafile 'c:\app\sksuk\oradata\orcl\first01.dbf' size 10M;
+~~~
 
 ## 사용자 계정
 
+~~~sql
 CREATE USER user IDENTIFIED  
 [BY password | EXTERNALLY]  
 [DEFAULT TABLESPACE tablespace]  
 [TEMPORARY TABLESPACE tablespace]  
 [QUOTA [integer [K | M] | UNLIMITED] ON tablespace]  
 [PROFILE profile]
+~~~
 
 ## 권한
 
+~~~sql
 GRANT [시스템 권한] TO [User] WITH ADMIN OPTION;
 
 REVOKE [시스템 권한] FROM [User];
@@ -39,13 +44,16 @@ REVOKE [시스템 권한] FROM [User];
 GRANT [객체권한] (컬럼 1, 컬럼 2…) ON [객체명 | ALL] TO [사용자명 |PUBLIC] WITH GRANT OPTION;
 
 REVOKE [객체권한] ON [객체명] FROM [사용자명 | PUBLIC] CASCADE CONSTRAINTS;
+~~~
 
 ## 역할
 
+~~~sql
 CREATE ROLE 역할명 [NOT IDENTIFIED | IDENTIFIED BY [암호명]];  
 ALTER ROLE 역할이름  [NOT IDENTIFIED | IDENTIFIED BY [암호]];  
 GRANT 역할(ROLE) TO 사용자;  
 REVOKE 역할(ROLE) FROM 사용자;
+~~~
 
 종류
 
@@ -64,12 +72,14 @@ DDL : CREATE, ALTER, DROP, RENAME, TRUNCATE
 
 테이블생성
 
+~~~sql
 CREATE TABLE [schema].table_name  
   (column_name Datatype [DEFAULT 식] [column 제약 조건] ,  
   ...  
   [table 제약 조건]);
+~~~
 
-```sql
+~~~sql
 SQL> CREATE TABLE customer(
   2> c_no  VARCHAR2(14) NOT NULL,
   3> c_name  VARCHAR2(20) NOT NULL,
@@ -77,7 +87,7 @@ SQL> CREATE TABLE customer(
   5> c_phone          VARCHAR2(16),
   6> c_dist  CHAR(2),
   7> CONSTRAINT cu_no_pk PRIMARY KEY(c_no));
-```
+~~~
 
 desc table로 테이블 속성 확인
 

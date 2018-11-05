@@ -1,0 +1,31 @@
+---
+layout: page
+permalink: /tags/
+---
+<div class="expo">
+  <div class="expo-tag-list">
+    {%- assign sorted_tags = site.tags | sort -%}
+    {%- for tag in sorted_tags %}
+    <a href="#{{ tag | first | slugize }}" class="post-tag">{{ tag | first }}</a>
+    {%- endfor %}
+  </div>
+  <hr/>
+  <div class="expo-section">
+    {%- for tag in sorted_tags %}
+      {%- assign tag_name = tag | first -%}
+      <a name="{{ tag_name | slugize }}"></a>
+      <h3 id="#{{ tag_name | slugize }}">{{ tag_name }}</h3>
+      <ul class="expo-posts">
+      {%- for post in site.tags[tag_name] %}
+      <li>
+        <a href="{{ root_url }}{{ post.url }}">{{- post.title -}}</a>
+        <small class="expo-post-date">{{- post.date | date_to_string -}}</small>
+      </li>
+      {%- endfor %}
+      <div class="expo-back-to-top">
+        <a href="#">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
+      </div>
+      </ul>
+    {%- endfor %}
+  </div>
+</div>

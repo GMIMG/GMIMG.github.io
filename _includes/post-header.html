@@ -2,8 +2,7 @@
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
     <p class="post-meta">
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-      <!--{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%} '%Y:%B:%A:%d:%S:%R'-->
-        {{ page.date | date_to_string }} <!--date: date_format-->
+        {{ page.date | date_to_string }}
       </time>
       {%- if page.author %}
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>

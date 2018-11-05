@@ -3,15 +3,11 @@
       content:"";
       display:block;
     }
-
     .expo-tag-list {
       margin-top: 20px;
       margin-bottom: 20px;
       text-align: center;
     }
-
-
-
     .post-tag {
       display: inline-block;
       background: rgba($theme-color, 0.15);
@@ -19,12 +15,12 @@
       margin: .2em .3em;
       border-radius: 4px;
       color: $theme-color;
-      font-size: 0.9rem;
-      font-family: $font-sans;
+      font-size: 90%;
+      //font-family: $font-sans;
 
       &:before {
         content: "\f02b";
-        font-family: $font-font-awesome;
+        font-family: $font-awesome;
         padding-right: .5em;
       }
       &:hover {
@@ -40,10 +36,10 @@
       ul {
         list-style-type: circle;
         list-style-position: inside;
-        padding: 0;
+        margin-left: 20px;
         li {
           @include transition(all .1s ease-in-out);
-          padding: 0 1rem;
+          padding-left: 0px;
           &:hover {
             list-style-type: disc;
             padding: 0 .5rem;
@@ -55,7 +51,6 @@
       }
 
       .expo-section-category{
-
         span{
           cursor: pointer;
           color: $grey-color;
@@ -81,22 +76,19 @@
         font-size: 80%;
         color: $post-date-color;
       }
-      font-family: $font-sans;
+      //font-family: $font-sans;
+    }
+
+
+    @media screen and (max-width: $on-palm) {
+      font-size: 80%;
+      .expo-back-to-top {
+        display: None;
+      }
+      .post-tag {
+        margin: 0;
+      }
     }
 
   }
   
-
-.sidebar-tag-cloud {
-  list-style: none;
-  padding: 0;
-  text-align: justify;
-  display: inline-block;
-  margin: 0 12px 12px 0;
-}
-
-@media screen and (max-width: $on-palm) {
-  .expo-back-to-top {
-    display: None;
-  }
-}

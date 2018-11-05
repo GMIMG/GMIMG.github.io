@@ -1,0 +1,84 @@
+---
+layout: page
+permalink: /categories/
+---
+<header class="post-header">
+	<h1 class="post-title">{{ page.title | escape }}</h1>
+</header>
+{%- assign navigation = site.data.navigation.main -%}
+{%- assign sorted_categories = site.categories | sort -%}
+<div class="expo">
+	<button id="showbutton"onclick="showhidePostAll()">Show all</button>
+	<div class="expo-section">
+		<nav class="expo-section-category">
+		{%- for nav in navigation %}
+			<h2><span onclick="showPost('{{nav.title}}')">{{ nav.title }}</span></h2>
+			<ul id="{{ nav.title }}" class="expo-category-posts">
+			{%- for post in site.categories[nav.title] %}
+				<li>
+					<a href="{{ root_url }}{{ post.url }}"> {{- post.title -}}</a>
+					<small class="post-date">{{- post.date | date_to_string -}}</small>
+				</li>
+			{%- endfor %}
+			
+			{%- if nav.children != null %}
+				<ul>
+					{%- for child in nav.children %}
+						<h3><span onclick="showPost('{{child.title}}')">{{ child.title }}</span></h3>
+						<ul id="{{ child.title }}" class="expo-category-posts">
+						{%- for childpost in site.categories[child.title] %}
+							<li>
+								<a href="{{ root_url }}{{ childpost.url }}"> {{- childpost.title -}}</a>
+								<small class="post-date">{{- childpost.date | date_to_string -}}</small>
+							</li>
+						{%- endfor %}
+						</ul>
+						{%- if child.children != null %}
+							<ul>
+							{%- for childchild in child.children %}
+								<h4><span onclick="showPost('{{childchild.title}}')">{{ childchild.title }}</span></h4>
+								<ul id="{{ childchild.title }}" class="expo-category-posts">
+								{%- for childchildpost in site.categories[childchild.title] %}
+									<li>
+										<a href="{{ root_url }}{{ childchildpost.url }}"> {{- childchildpost.title -}}</a>
+										<small class="post-date">{{- childchildpost.date | date_to_string -}}</small>
+									</li>
+								{%- endfor %}
+								</ul>
+							{%- endfor %}
+							</ul>
+						{%- endif %}
+					{%- endfor %}
+				</ul>
+			{%- endif %}
+			</ul>
+		{%- endfor %}
+	</nav>
+</div>
+
+<script>
+	function showPost(selector) {
+		var x = document.getElementById(selector);
+		if (x.style.display === "block") {
+			x.style.display = "none";
+		} else {
+			x.style.display = "block";
+		}
+	}
+	function showhidePostAll() {
+		if (document.getElementById("showbutton").innerHTML === 'Show all'){
+			var y = document.getElementsByClassName('expo-category-posts');
+			for (var i=0; i<y.length; i++) {
+				y[i].style.display = "block";
+			}
+			document.getElementById("showbutton").innerHTML = 'Hide all';
+		}
+		else {
+			var y = document.getElementsByClassName('expo-category-posts');
+			for (var i=0; i<y.length; i++) {
+				y[i].style.display = "None";
+			}
+			document.getElementById("showbutton").innerHTML = 'Show all';
+		}
+	}
+</script>
