@@ -1,0 +1,1 @@
+DISQUSWIDGETS.getCount({reset: true});

@@ -173,6 +173,10 @@
 <lastmod>2018-10-16T00:00:00+09:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/posts/C++-Constructor-and-Other-tools</loc>
+<lastmod>2018-10-16T00:00:00+09:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/posts/C++-Structure-and-Classs</loc>
 <lastmod>2018-10-16T00:00:00+09:00</lastmod>
 </url>
@@ -183,6 +187,14 @@
 <url>
 <loc>http://localhost:4000/posts/Error-Detection-and-Correction</loc>
 <lastmod>2018-10-30T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/posts/C++-Operator-Overloading</loc>
+<lastmod>2018-10-30T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/posts/Data-Link-Control</loc>
+<lastmod>2018-11-06T00:00:00+09:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/about/</loc>

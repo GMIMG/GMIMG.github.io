@@ -2,10 +2,6 @@
 layout: default
 ---
 <article class="post">
-  {% if site.mathjax == true %}
-  <!--mathjax-->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
-  {% endif %}
   {% include post-header.html %}
     {%- if page.toc %}
     <aside>
@@ -17,7 +13,7 @@ layout: default
       </div>
     </aside>
     {%- endif %}
-  <div class="post-content-markdown" itemprop="articleBody">
+  <div class="post-content" itemprop="articleBody">
     {{ content }} 
   </div>
   {%- if site.disqus.shortname %}

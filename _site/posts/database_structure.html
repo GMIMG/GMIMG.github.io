@@ -65,11 +65,7 @@
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
         <article class="post">
-  
-  <!--mathjax-->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
-  
-  <header class="post-header">
+  <div class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">Database programming</h1>
     <p class="post-meta">
       <time class="dt-published" datetime="2018-09-05T00:00:00+09:00" itemprop="datePublished">
@@ -83,7 +79,7 @@
     <div class="post-header-tags">
       <span>Tags: </span>
     </div>
-</header>
+  </div>
     <aside>
       <div class="toc_container">
         <div class="toc_title">
@@ -114,7 +110,7 @@
 </ul>
       </div>
     </aside>
-  <div class="post-content-markdown" itemprop="articleBody">
+  <div class="post-content" itemprop="articleBody">
     <h1 id="데이터베이스-프로그래밍">데이터베이스 프로그래밍</h1>
 
 <p>교재 : 데이터베이스 프로그래밍, 학산미디어, 석상기</p>
@@ -275,17 +271,14 @@ SGA를 관리하는 메커니즘 파라메터 정보 등 오라클 오브젝트 
     
 <div id="disqus_thread"></div>
 <script>
-    var disqus_config = function () {
-    this.page.url = 'http://localhost:4000/posts/database_structure';
-    this.page.identifier = 'Database programming';
-    };
-    (function() {
-    var d = document, s = d.createElement('script');
-    s.src = 'https://gming.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://gmimg.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
 </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
   <a class="u-url" href="/posts/database_structure" hidden></a>
 </article>
@@ -318,5 +311,9 @@ SGA를 관리하는 메커니즘 파라메터 정보 등 오라클 오브젝트 
     </p>
   </div>
 </footer>
+  <!--mathjax-->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+  <!--discus comments count-->
+  <script id="dsq-count-scr" src="//gmimg.disqus.com/count.js" async></script>
   </body>
 </html>

@@ -65,11 +65,7 @@
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
         <article class="post">
-  
-  <!--mathjax-->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
-  
-  <header class="post-header">
+  <div class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">블로그에서 사용하는 문법 정리</h1>
     <p class="post-meta">
       <time class="dt-published" datetime="2018-09-10T00:00:00+09:00" itemprop="datePublished">
@@ -84,7 +80,7 @@
       <span>Tags: </span>
         <a href="/tags/#Markdown">Markdown</a>
     </div>
-</header>
+  </div>
     <aside>
       <div class="toc_container">
         <div class="toc_title">
@@ -132,7 +128,7 @@
 </ul>
       </div>
     </aside>
-  <div class="post-content-markdown" itemprop="articleBody">
+  <div class="post-content" itemprop="articleBody">
     <ul>
   <li><a href="https://ko.wikipedia.org/wiki/%EC%9C%84%ED%82%A4%EB%B0%B1%EA%B3%BC:TeX_%EB%AC%B8%EB%B2%95">특수문자</a></li>
 </ul>
@@ -421,17 +417,14 @@ You can also add the .notice class to a div element.
     
 <div id="disqus_thread"></div>
 <script>
-    var disqus_config = function () {
-    this.page.url = 'http://localhost:4000/posts/elements';
-    this.page.identifier = '블로그에서 사용하는 문법 정리';
-    };
-    (function() {
-    var d = document, s = d.createElement('script');
-    s.src = 'https://gming.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://gmimg.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
 </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
   <a class="u-url" href="/posts/elements" hidden></a>
 </article>
@@ -464,5 +457,9 @@ You can also add the .notice class to a div element.
     </p>
   </div>
 </footer>
+  <!--mathjax-->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+  <!--discus comments count-->
+  <script id="dsq-count-scr" src="//gmimg.disqus.com/count.js" async></script>
   </body>
 </html>

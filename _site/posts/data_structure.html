@@ -65,11 +65,7 @@
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
         <article class="post">
-  
-  <!--mathjax-->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
-  
-  <header class="post-header">
+  <div class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">data_structure</h1>
     <p class="post-meta">
       <time class="dt-published" datetime="2018-08-14T00:00:00+09:00" itemprop="datePublished">
@@ -84,7 +80,7 @@
       <span>Tags: </span>
         <a href="/tags/#Data_structure">Data_structure</a>
     </div>
-</header>
+  </div>
     <aside>
       <div class="toc_container">
         <div class="toc_title">
@@ -113,7 +109,7 @@
 </ul>
       </div>
     </aside>
-  <div class="post-content-markdown" itemprop="articleBody">
+  <div class="post-content" itemprop="articleBody">
     <h1 id="자료구조">자료구조</h1>
 
 <ul>
@@ -326,17 +322,14 @@ worst case</p>
     
 <div id="disqus_thread"></div>
 <script>
-    var disqus_config = function () {
-    this.page.url = 'http://localhost:4000/posts/data_structure';
-    this.page.identifier = 'data_structure';
-    };
-    (function() {
-    var d = document, s = d.createElement('script');
-    s.src = 'https://gming.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://gmimg.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
 </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
   <a class="u-url" href="/posts/data_structure" hidden></a>
 </article>
@@ -369,5 +362,9 @@ worst case</p>
     </p>
   </div>
 </footer>
+  <!--mathjax-->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+  <!--discus comments count-->
+  <script id="dsq-count-scr" src="//gmimg.disqus.com/count.js" async></script>
   </body>
 </html>

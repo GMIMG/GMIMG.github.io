@@ -1,4 +1,389 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko_KR"><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko_KR" /><updated>2018-11-05T21:25:47+09:00</updated><id>http://localhost:4000/</id><title type="html">GMIMG</title><subtitle>Mechagrammer</subtitle><author><name>Jimin Hwang</name></author><entry><title type="html">Error detection and correction</title><link href="http://localhost:4000/posts/Error-Detection-and-Correction" rel="alternate" type="text/html" title="Error detection and correction" /><published>2018-10-30T00:00:00+09:00</published><updated>2018-10-30T00:00:00+09:00</updated><id>http://localhost:4000/posts/Error%20Detection%20and%20Correction</id><content type="html" xml:base="http://localhost:4000/posts/Error-Detection-and-Correction">&lt;ul&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko_KR"><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko_KR" /><updated>2018-11-08T01:01:52+09:00</updated><id>http://localhost:4000/</id><title type="html">GMIMG</title><subtitle>Mechagrammer</subtitle><author><name>Jimin Hwang</name></author><entry><title type="html">Data link control</title><link href="http://localhost:4000/posts/Data-Link-Control" rel="alternate" type="text/html" title="Data link control" /><published>2018-11-06T00:00:00+09:00</published><updated>2018-11-06T00:00:00+09:00</updated><id>http://localhost:4000/posts/Data%20Link%20Control</id><content type="html" xml:base="http://localhost:4000/posts/Data-Link-Control">&lt;h1 id=&quot;data-link-control&quot;&gt;Data Link Control&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;general serviece DLC Sublayer&lt;/li&gt;
+  &lt;li&gt;Data link protocols&lt;/li&gt;
+  &lt;li&gt;HDLC&lt;/li&gt;
+  &lt;li&gt;PPP&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;## 
+|—|
+|DLC|
+|—|
+|MAC|
+|—|
+|PHY|
+|—|&lt;/p&gt;
+
+&lt;p&gt;PHY-&amp;gt; 1계층 -&amp;gt; bit synchronization&lt;br /&gt;
+DLC,MAC -&amp;gt; 2계층 -&amp;gt; pack bits into ‘frames’&lt;/p&gt;
+
+&lt;p&gt;frames 에는 sender와 recevier의 addresses가 정의된다. Fixed-size framing과 Variable-size framing으로 나뉜다.&lt;/p&gt;
+
+&lt;p&gt;##&lt;/p&gt;
+
+&lt;h3 id=&quot;charater-orientedbyte-oriented-framing&quot;&gt;Charater-Oriented(byte-oriented) Framing&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Flag&lt;/td&gt;
+      &lt;td&gt;Header&lt;/td&gt;
+      &lt;td&gt;DATA from upper layer&lt;/td&gt;
+      &lt;td&gt;Trailer&lt;/td&gt;
+      &lt;td&gt;Flag&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;byte단위로 보내준다. 8-bit Charater로 data를 보낸다. Header는 8bits의 배수이다.
+내용에 Flag와 같은 패턴의 bit가 들어갔을 때 ESC(special byte)를 해당 bit앞에 붙여줌, ESC가 들어가도 ESC를 붙여준다. 
+Trailer에는 CRC가 들어간다.&lt;/p&gt;
+
+&lt;h3 id=&quot;bit-oriented-framing&quot;&gt;Bit-Oriented Framing&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Flag&lt;/td&gt;
+      &lt;td&gt;Header&lt;/td&gt;
+      &lt;td&gt;DATA from upper layer&lt;/td&gt;
+      &lt;td&gt;Trailer&lt;/td&gt;
+      &lt;td&gt;Flag&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Data에 Flag와 같은 패턴의 bit가 들어갔을 때 extra bits를 붙여준다.&lt;/p&gt;
+
+&lt;p&gt;‘Flow Control’&lt;/p&gt;
+
+&lt;p&gt;Balancing between proudction and consumption rates. Feedback from the receiving node to the sending node to stop or slow down pushing frames.&lt;/p&gt;
+
+&lt;p&gt;-&amp;gt; Buffers가 발생&lt;/p&gt;
+
+&lt;p&gt;‘Error Control’&lt;/p&gt;
+
+&lt;p&gt;CRC is added to the frame by the sender and checked by the receiver.&lt;/p&gt;
+
+&lt;p&gt;보통 수신자에서 송신자로 보내는 Acknowledgment(ACK)로 둘을 한꺼번에 하게된다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Connection-Oriented Protocol&lt;/p&gt;
+
+    &lt;p&gt;계속 Data를 주고받으며 연결이 되어있어야 한다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Connectionless Protocol&lt;/p&gt;
+
+    &lt;p&gt;Wifi같이 필요할 때에 Data를 주고받으며 연결이 된다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;data-link-layer-protocols&quot;&gt;Data-link layer protocols&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Simple&lt;/li&gt;
+  &lt;li&gt;Stop-and-Wait&lt;/li&gt;
+  &lt;li&gt;Go-Back-N&lt;/li&gt;
+  &lt;li&gt;Selective-Report&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Protocol을 표현하는 방법은 다음과 같다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;FSM (Finite state machine)&lt;/p&gt;
+
+    &lt;p&gt;FSM은 오직 ready state만 가지고있다. sending machine은 request가 오기전까지 ready state에 남아있다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;MSC (Message sequence chart)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;stop-and-wait&quot;&gt;Stop-and-Wait&lt;/h3&gt;
+
+&lt;p&gt;Using both flow and error control. Sender sends one frame at a time and waits for an acknowledgment before sending the next one.&lt;/p&gt;</content><author><name>Gmimg</name></author><category term="None" /><summary type="html">Data Link Control</summary></entry><entry><title type="html">C++ operator overloading</title><link href="http://localhost:4000/posts/C++-Operator-Overloading" rel="alternate" type="text/html" title="C++ operator overloading" /><published>2018-10-30T00:00:00+09:00</published><updated>2018-10-30T00:00:00+09:00</updated><id>http://localhost:4000/posts/C++%20Operator%20Overloading</id><content type="html" xml:base="http://localhost:4000/posts/C++-Operator-Overloading">&lt;ol&gt;
+  &lt;li&gt;Operator overloading&lt;/li&gt;
+  &lt;li&gt;Friend function, friend class&lt;/li&gt;
+  &lt;li&gt;Reference (&amp;amp;)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;operator-overloading&quot;&gt;Operator overloading&lt;/h1&gt;
+
+&lt;p&gt;+, -, %, ++, –, », «, and []. Operator 는 사실 function과 같다. +(x,7) 에서 +는 함수 이름, x와 7은 arguments이고 Function “+”는 arguments의 sum을 return한다. 그리고 이는 x + 7 이라는 syntax로 호출 할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;+, -, = , %, ==, /, * 과 같은 연산자가 이미 C++에 built-in 되어있으며 우리는 이를 overload 할 수 있다.[Parameter and overloading 참조] (단, 당연히 유사한 기능을 할 때 overload하는게 좋다.)&lt;/p&gt;
+
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//example declaration
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Money&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;operator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Money&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;amount1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Money&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;amount2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;constant를 사용하는 이유 : 클래스의 객체에서 기본 할당 연산자는 두 객체를 같은 객체로 만들지 않고 하나의 객체에서 다른 객체로만 구성원 변수의 값을 복사합니다. Constant functions not allowed to alter class member data. Constant objects can ONLY call constant member functions. Any member function that will NOT modify data should be made const. Use keyword const after function declaration and heading.&lt;/p&gt;
+
+&lt;p&gt;unary operation(단항 연산자) : y= -x, x++ 같은 항이 하나인 연산을 말한다.&lt;/p&gt;
+
+&lt;h2 id=&quot;friend-function-of-a-class&quot;&gt;Friend function of a class&lt;/h2&gt;
+
+&lt;p&gt;멤버 함수가 아니다. private 멤버에 직접적인 접근을 가진다. overhead 없어서 더욱 효율적이다. 모든 함수에 사용할 수 있고, Operator overload에 주로 사용한다. Avoids need to call accessor/mutator member functions&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/C++/Friend_function.jpg&quot; alt=&quot;Friend function&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;references참조&quot;&gt;References(참조)&lt;/h2&gt;
+
+&lt;p&gt;변수에 별칭을 지정합니다. Name of a storage location. Similar to “pointer”.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C++&quot;&gt;//class, operator overloading 예제
+#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;cstdlib&amp;gt;
+#include &amp;lt;cmath&amp;gt;
+using namespace std;
+//Class for amounts of money in U.S. currency.
+class Money
+{
+public:
+	Money();
+	Money(double amount);
+	Money(int theDollars, int theCents);
+	Money(int theDollars);
+	double getAmount() const;
+	int getDollars() const;
+	int getCents() const;
+
+	friend bool operator&amp;lt;(const Money&amp;amp; amt1, const Money&amp;amp; amt2);
+	friend bool operator&amp;lt;=(const Money&amp;amp; amt1, const Money&amp;amp; amt2);
+	friend bool operator&amp;gt;(const Money&amp;amp; amt1, const Money&amp;amp; amt2);
+	friend bool operator&amp;gt;=(const Money&amp;amp; amt1, const Money&amp;amp; amt2);
+	const Money percent(int percentFigure) const;
+	//Returns percentFigure percent of Money.
+	//Example: If percentFigure is 10, a Money object is returned that
+	//represents 0.1 of the amount of money of the calling object
+	//If purse is a Money object representing $100.20, purse.percent(10)
+	//is a Money object representing $10.02.
+
+	friend const Money operator +(const Money&amp;amp; amount1, const Money&amp;amp; amount2);
+	friend const Money operator -(const Money&amp;amp; amount1, const Money&amp;amp; amount2);
+	friend bool operator ==(const Money&amp;amp; amount1, const Money&amp;amp; amount2);
+	friend const Money operator -(const Money&amp;amp; amount);
+	friend ostream&amp;amp; operator &amp;lt;&amp;lt;(ostream&amp;amp; outputStream, const Money&amp;amp; amount);
+	friend istream&amp;amp; operator &amp;gt;&amp;gt;(istream&amp;amp; inputStream, Money&amp;amp; amount);
+private:
+	int dollars; //A negative amount is represented as negative dollars and
+	int cents; //negative cents. Negative $4.50 is represented as -4 and -50
+	int dollarsPart(double amount) const;
+	int centsPart(double amount) const;
+	int round(double number) const;
+};
+int main()
+{
+	int percen;
+	Money yourAmount, myAmount(10, 9);
+	cout &amp;lt;&amp;lt; &quot;Enter an amount of money: &quot;;
+	cin &amp;gt;&amp;gt; yourAmount;
+	cout &amp;lt;&amp;lt; &quot;a percent you wish to take of your amount\n&quot;;
+	cin &amp;gt;&amp;gt; percen;
+
+	Money yourperAmount = yourAmount.percent(percen);
+	cout &amp;lt;&amp;lt; &quot;Your amount is &quot; &amp;lt;&amp;lt; yourAmount &amp;lt;&amp;lt; endl;
+	cout &amp;lt;&amp;lt; &quot;My amount is &quot; &amp;lt;&amp;lt; myAmount &amp;lt;&amp;lt; endl;
+
+	cout &amp;lt;&amp;lt; percen &amp;lt;&amp;lt; &quot;% of your amount is&quot; &amp;lt;&amp;lt; yourperAmount &amp;lt;&amp;lt; endl;
+	cout &amp;lt;&amp;lt; &quot;15% of your amount is&quot; &amp;lt;&amp;lt; myAmount.percent(15) &amp;lt;&amp;lt; endl &amp;lt;&amp;lt; endl;
+
+	if (yourAmount == myAmount)
+		cout &amp;lt;&amp;lt; &quot;We have the same amounts.\n&quot;;
+	else
+		cout &amp;lt;&amp;lt; &quot;One of us is richer.\n&quot;;
+	Money ourAmount = yourAmount + myAmount;
+	cout &amp;lt;&amp;lt; yourAmount &amp;lt;&amp;lt; &quot; + &quot; &amp;lt;&amp;lt; myAmount
+		&amp;lt;&amp;lt; &quot; equals &quot; &amp;lt;&amp;lt; ourAmount &amp;lt;&amp;lt; endl;
+	Money diffAmount = yourAmount - myAmount;
+	cout &amp;lt;&amp;lt; yourAmount &amp;lt;&amp;lt; &quot; - &quot; &amp;lt;&amp;lt; myAmount
+		&amp;lt;&amp;lt; &quot; equals &quot; &amp;lt;&amp;lt; diffAmount &amp;lt;&amp;lt; endl;
+
+	if (ourAmount &amp;gt;= diffAmount)
+	{
+		cout &amp;lt;&amp;lt; &quot;Your amount is greater than or equal to my Amount&quot; &amp;lt;&amp;lt; endl;
+		cout &amp;lt;&amp;lt; &quot;The sum of our Amounts is greater than the difference.&quot; &amp;lt;&amp;lt; endl;
+	}
+	if (ourAmount &amp;gt; diffAmount)
+	{
+		cout &amp;lt;&amp;lt; &quot;Your amount is greater than my Amount&quot; &amp;lt;&amp;lt; endl;
+		cout &amp;lt;&amp;lt; &quot;The sum of our Amounts is greater than the difference.&quot; &amp;lt;&amp;lt; endl;
+	}
+	if (ourAmount &amp;lt;= diffAmount)
+	{
+		cout &amp;lt;&amp;lt; &quot;My amount is greater than or equal to your Amount&quot; &amp;lt;&amp;lt; endl;
+		cout &amp;lt;&amp;lt; &quot;The sum of our Amounts is greater than the difference.&quot; &amp;lt;&amp;lt; endl;
+	}
+	if (ourAmount &amp;lt;= diffAmount)
+	{
+		cout &amp;lt;&amp;lt; &quot;My amount is greater than or equal to your Amount&quot; &amp;lt;&amp;lt; endl;
+		cout &amp;lt;&amp;lt; &quot;The sum of our Amounts is greater than the difference.&quot; &amp;lt;&amp;lt; endl;
+	}
+	return 0;
+}
+bool operator ==(const Money&amp;amp; amount1, const Money&amp;amp; amount2)
+{
+	return ((amount1.dollars == amount2.dollars)
+		&amp;amp;&amp;amp; (amount1.cents == amount2.cents));
+}
+bool operator&amp;lt;(const Money&amp;amp; amt1, const Money&amp;amp; amt2)
+{
+	return ((amt1.dollars &amp;lt; amt2.dollars)
+		|| ((amt1.dollars == amt2.dollars) &amp;amp;&amp;amp; (amt1.cents &amp;lt; amt2.cents)));
+}
+bool operator&amp;lt;=(const Money&amp;amp; amt1, const Money&amp;amp; amt2)
+{
+	return (((amt1.dollars == amt2.dollars) &amp;amp;&amp;amp; (amt1.cents == amt2.cents))
+		|| (amt1.dollars &amp;lt; amt2.dollars)
+		|| ((amt1.dollars == amt2.dollars) &amp;amp;&amp;amp; (amt1.cents &amp;lt; amt2.cents)));
+}
+bool operator&amp;gt;(const Money&amp;amp; amt1, const Money&amp;amp; amt2)
+{
+	return ((amt1.dollars &amp;gt; amt2.dollars)
+		|| ((amt1.dollars == amt2.dollars) &amp;amp;&amp;amp; (amt1.cents &amp;gt; amt2.cents)));
+}
+bool operator&amp;gt;=(const Money&amp;amp; amt1, const Money&amp;amp; amt2)
+{
+	return (((amt1.dollars == amt2.dollars) &amp;amp;&amp;amp; (amt1.cents == amt2.cents))
+		|| (amt1.dollars &amp;gt; amt2.dollars)
+		|| ((amt1.dollars == amt2.dollars) &amp;amp;&amp;amp; (amt1.cents &amp;gt; amt2.cents)));
+}
+const Money Money::percent(int percentFigure) const
+{
+	double percent = 0.01*percentFigure;
+
+	double old = getAmount();
+	double newmon = old * percent;
+	int dollor = int(newmon);
+	int cent = int(newmon*100) % 100;
+	Money newmoney(dollor, cent);
+	return newmoney;
+}
+
+ostream&amp;amp; operator &amp;lt;&amp;lt;(ostream&amp;amp; outputStream, const Money&amp;amp; amount)
+{
+	int absDollars = abs(amount.dollars);
+	int absCents = abs(amount.cents);
+	if (amount.dollars &amp;lt; 0 || amount.cents &amp;lt; 0)
+		//accounts for dollars == 0 or cents == 0
+		outputStream &amp;lt;&amp;lt; &quot;$-&quot;;
+	else
+		outputStream &amp;lt;&amp;lt; '$';
+	outputStream &amp;lt;&amp;lt; absDollars;
+	if (absCents &amp;gt;= 10)
+		outputStream &amp;lt;&amp;lt; '.' &amp;lt;&amp;lt; absCents;
+	else
+		outputStream &amp;lt;&amp;lt; '.' &amp;lt;&amp;lt; '0' &amp;lt;&amp;lt; absCents;
+	return outputStream;
+}
+//Uses iostream and cstdlib:
+istream&amp;amp; operator &amp;gt;&amp;gt;(istream&amp;amp; inputStream, Money&amp;amp; amount)
+{
+	char dollarSign;
+	inputStream &amp;gt;&amp;gt; dollarSign; //hopefully
+	if (dollarSign != '$')
+	{
+		cout &amp;lt;&amp;lt; &quot;No dollar sign in Money input.\n&quot;;
+		exit(1);
+	}
+	double amountAsDouble;
+	inputStream &amp;gt;&amp;gt; amountAsDouble;
+	amount.dollars = amount.dollarsPart(amountAsDouble);
+	amount.cents = amount.centsPart(amountAsDouble);
+	return inputStream;
+}
+const Money operator +(const Money&amp;amp; amount1, const Money&amp;amp; amount2)
+{
+	int allCents1 = amount1.cents + amount1.dollars * 100;
+	int allCents2 = amount2.cents + amount2.dollars * 100;
+	int sumAllCents = allCents1 + allCents2;
+	int absAllCents = abs(sumAllCents); //Money can be negative.
+	int finalDollars = absAllCents / 100;
+	int finalCents = absAllCents % 100;
+	if (sumAllCents &amp;lt; 0)
+	{
+		finalDollars = -finalDollars;
+		finalCents = -finalCents;
+	}
+	return Money(finalDollars, finalCents);
+}
+//Uses cstdlib:
+const Money operator -(const Money&amp;amp; amount1, const Money&amp;amp; amount2)
+{
+	int allCents1 = amount1.cents + amount1.dollars * 100;
+	int allCents2 = amount2.cents + amount2.dollars * 100;
+	int diffAllCents = allCents1 - allCents2;
+	int absAllCents = abs(diffAllCents);
+	int finalDollars = absAllCents / 100;
+	int finalCents = absAllCents % 100;
+	if (diffAllCents &amp;lt; 0)
+	{
+		finalDollars = -finalDollars;
+		finalCents = -finalCents;
+	}
+	return Money(finalDollars, finalCents);
+}
+const Money operator -(const Money&amp;amp; amount)
+{
+	return Money(-amount.dollars, -amount.cents);
+}
+Money::Money() : dollars(0), cents(0)
+{/*Body intentionally empty.*/
+}
+Money::Money(double amount)
+: dollars(dollarsPart(amount)), cents(centsPart(amount))
+{/*Body intentionally empty*/
+}
+Money::Money(int theDollars)
+: dollars(theDollars), cents(0)
+{/*Body intentionally empty*/
+}
+//Uses cstdlib:
+Money::Money(int theDollars, int theCents)
+{
+	if ((theDollars &amp;lt; 0 &amp;amp;&amp;amp; theCents &amp;gt; 0) || (theDollars &amp;gt; 0 &amp;amp;&amp;amp; theCents &amp;lt; 0))
+	{
+		cout &amp;lt;&amp;lt; &quot;Inconsistent money data.\n&quot;;
+		exit(1);
+	}
+	dollars = theDollars;
+	cents = theCents;
+}
+double Money::getAmount() const
+{
+	return (dollars + cents*0.01);
+}
+int Money::getDollars() const
+{
+	return dollars;
+}
+int Money::getCents() const
+{
+	return cents;
+}
+int Money::dollarsPart(double amount) const
+{
+	return static_cast&amp;lt;int&amp;gt;(amount);
+}
+int Money::centsPart(double amount) const
+{
+	double doubleCents = amount * 100;
+	int intCents = (round(fabs(doubleCents))) % 100;//% can misbehave on negatives
+	if (amount &amp;lt; 0)
+		intCents = -intCents;
+	return intCents;
+}
+int Money::round(double number) const
+{
+	return static_cast&amp;lt;int&amp;gt;(floor(number + 0.5));
+}
+&lt;/code&gt;&lt;/pre&gt;</content><author><name>Gmimg</name></author><category term="C++" /><summary type="html">Operator overloading Friend function, friend class Reference (&amp;amp;)</summary></entry><entry><title type="html">Error detection and correction</title><link href="http://localhost:4000/posts/Error-Detection-and-Correction" rel="alternate" type="text/html" title="Error detection and correction" /><published>2018-10-30T00:00:00+09:00</published><updated>2018-10-30T00:00:00+09:00</updated><id>http://localhost:4000/posts/Error%20Detection%20and%20Correction</id><content type="html" xml:base="http://localhost:4000/posts/Error-Detection-and-Correction">&lt;ul&gt;
   &lt;li&gt;Block coding&lt;/li&gt;
   &lt;li&gt;Cyclic coding&lt;/li&gt;
   &lt;li&gt;Checksum&lt;/li&gt;
@@ -187,7 +572,101 @@ Data-link layer of a broadcast link&lt;/li&gt;
   &lt;li&gt;Encapsulation (캡슐화)
 내부표현을 사용자가 알 수 없다.(Information Hiding)&lt;/li&gt;
   &lt;li&gt;Polymorphism(다형성)&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Gmimg</name></author><category term="C++" /><category term="Structure" /><category term="Class" /><summary type="html">Structure</summary></entry><entry><title type="html">Switching</title><link href="http://localhost:4000/posts/Switching" rel="alternate" type="text/html" title="Switching" /><published>2018-10-16T00:00:00+09:00</published><updated>2018-10-16T00:00:00+09:00</updated><id>http://localhost:4000/posts/Switching</id><content type="html" xml:base="http://localhost:4000/posts/Switching">&lt;h1 id=&quot;switching&quot;&gt;Switching&lt;/h1&gt;
+&lt;/ul&gt;</content><author><name>Gmimg</name></author><category term="C++" /><category term="Structure" /><category term="Class" /><summary type="html">Structure</summary></entry><entry><title type="html">C++ Constructor and Other tools</title><link href="http://localhost:4000/posts/C++-Constructor-and-Other-tools" rel="alternate" type="text/html" title="C++ Constructor and Other tools" /><published>2018-10-16T00:00:00+09:00</published><updated>2018-10-16T00:00:00+09:00</updated><id>http://localhost:4000/posts/C++%20Constructor%20and%20Other%20tools</id><content type="html" xml:base="http://localhost:4000/posts/C++-Constructor-and-Other-tools">&lt;h1 id=&quot;constructors&quot;&gt;Constructors&lt;/h1&gt;
+
+&lt;p&gt;Initialization of objects&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Initialize some or all member variables&lt;/li&gt;
+  &lt;li&gt;Same name as class itself&lt;/li&gt;
+  &lt;li&gt;Declaration has no return-type(not even void)&lt;/li&gt;
+  &lt;li&gt;In public section&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;DayOfYear&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; 
+    &lt;span class=&quot;n&quot;&gt;DayOfYear&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;monthValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dayValue&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;c1&quot;&gt;//Constructor initializes month and day 
+&lt;/span&gt;    &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;private&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;month&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;day&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;testData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;DayOfYear&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;date1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;date2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;21&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;date3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DayofYear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;31&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;date1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;date3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+
+&lt;span class=&quot;n&quot;&gt;DayOfYear&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;::&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DayOfYear&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;monthValue&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dayValue&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;testDate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;month&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;monthValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;day&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dayValue&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//available like next
+//DayOfYear :: DayOfYear (int monthValue , int dayValue )
+//            : month(monthValue), day(dayValue)
+//{
+//  testDate();
+//}
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DayOfYear&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;::&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;testDate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;month&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Illegal month value! &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;exit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;day&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;31&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Illegal day value! &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;exit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DayOfYear&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Enter the month as a number: &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;cin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;month&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Enter the day of month: &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;cin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;day&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;month&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;month&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;day&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;day&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;31&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Illegal date! Program aborted. &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;exit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DayOfYear&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;month&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;day&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;constant-parameter&quot;&gt;Constant parameter&lt;/h1&gt;
+
+&lt;p&gt;place keyword &lt;code class=&quot;highlighter-rouge&quot;&gt;const&lt;/code&gt; before type&lt;/p&gt;
+
+&lt;p&gt;“read-only”&lt;/p&gt;
+
+&lt;p&gt;const + call by reference 와 call by value의 차이
+&lt;a href=&quot;https://hashcode.co.kr/questions/2212/c-const-reference-%EB%B3%80%EC%88%98%EC%99%80-%EA%B7%B8%EB%83%A5-%EB%B3%80%EC%88%98%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90&quot;&gt;참고&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;statics&quot;&gt;statics&lt;/h1&gt;
+
+&lt;h1 id=&quot;vector&quot;&gt;Vector&lt;/h1&gt;
+
+&lt;p&gt;arrays that grow and shrink&lt;/p&gt;</content><author><name>Gmimg</name></author><category term="C++" /><category term="Constructor" /><summary type="html">Constructors</summary></entry><entry><title type="html">Switching</title><link href="http://localhost:4000/posts/Switching" rel="alternate" type="text/html" title="Switching" /><published>2018-10-16T00:00:00+09:00</published><updated>2018-10-16T00:00:00+09:00</updated><id>http://localhost:4000/posts/Switching</id><content type="html" xml:base="http://localhost:4000/posts/Switching">&lt;h1 id=&quot;switching&quot;&gt;Switching&lt;/h1&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Circuit switching&lt;/li&gt;
@@ -411,395 +890,4 @@ Original signal의 bit를 Spreading code를 이용해 Spread signal로 만들어
 &lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;테이블명&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Query&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;조건&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;들&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;ORDER&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;BY&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;column&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;표현식}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;ASC&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;DESC&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Gmimg</name></author><category term="Database" /><category term="SQL" /><category term="DML" /><category term="뷰" /><summary type="html">데이터베이스 조작</summary></entry><entry><title type="html">C++ Parameter and overloading</title><link href="http://localhost:4000/posts/C++-Parameter-and-overloading" rel="alternate" type="text/html" title="C++ Parameter and overloading" /><published>2018-10-02T00:00:00+09:00</published><updated>2018-10-02T00:00:00+09:00</updated><id>http://localhost:4000/posts/C++%20Parameter%20and%20overloading</id><content type="html" xml:base="http://localhost:4000/posts/C++-Parameter-and-overloading">&lt;h1 id=&quot;call-by-value--call-by-reference&quot;&gt;Call-by-value &amp;amp; Call-by reference&lt;/h1&gt;
-
-&lt;p&gt;교재&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;With call-by-value parameters, only the value of the argument is plugged in.&lt;br /&gt;
-With call-by-reference parameters, the argument is a variable, and the variable itself is plugged in.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;매개변수(Parameter) : 함수에게 특정 항목의 위치를 식별하는데 필요한 변수나 상수를 제공한다. 이를 전체적인 틀인 함수가 정보를 토대로 함수를 실행시키고 산출합니다.&lt;/p&gt;
-
-&lt;p&gt;parameter는 formal paramter(형식 매개 변수)와 actual parameter(실제 매개 변수)로 나눈다.
-formal parameter는 함수 선언부에서 쓰이는 parameter를 의미.
-actual parameter는 실제 함수가 호출될 때 formal parameter 자리에 들어갈 실제(actual) parameter를 의미. 즉 formal parameter는 actual parameter의 Place holder 역할이고 서브루틴이나 프로시저를 호출하면 formal parameter에 actual parameter를 full-in한다.&lt;/p&gt;
-
-&lt;p&gt;교재에선 actual parameter를 argument 용어로 사용함.&lt;/p&gt;
-
-&lt;p&gt;A parameter is a variable in a method definition. When a method is called, the arguments are the data you pass into the method’s parameters.&lt;/p&gt;
-
-&lt;p&gt;Formal parameter(가인수) -&amp;gt; 함수 선언(declaration)나 정의(definition)에 쓰임&lt;br /&gt;
-Arguments(인수) -&amp;gt; 함수를 호출(call)할때, formal parameter를 fill-in하는 데이터 값&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-C++&quot;&gt;double foo(int bar);
-//에서 (int bar)라는 이름 자체는 가인수이고 
-//bar이라는 인수가 가르키는 값(포인터)이 실인수 이다.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;call-by-value-parameter&quot;&gt;call-by-value parameter&lt;/h2&gt;
-
-&lt;p&gt;call-by-value parameter는 함수안에서 선언(declaration)되는 지역 변수이다.
-함수는 실인수에 접근할 수 없다.&lt;/p&gt;
-
-&lt;h2 id=&quot;call-by-reference-parameter&quot;&gt;call-by-reference parameter&lt;/h2&gt;
-
-&lt;p&gt;caller의 실인수에 접근을 제공한다. 즉 서브루틴에서 밖의 인수값을 바꾼다.
-C++ 에선 가인수의 type 다음에 &amp;amp;을 붙여서 사용한다.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-C++&quot;&gt;ex) int foo(int&amp;amp; bar);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;getNumbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//Reads two integers from the keyboard.
-&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;swapValues&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;variable1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;variable2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//Interchanges the values of variable1 and variable2.
-&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;showResults&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;output1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;output2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//Shows the values of variable1 and variable2, in that order.
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;intmain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;firstNum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;secondNum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;getNumbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;firstNum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;secondNum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;swapValues&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;firstNum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;secondNum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;showResults&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;firstNum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;secondNum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;getNumbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Enter two integers: &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;cin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input1&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;swapValues&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;variable1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;variable2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;variable1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;variable1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;variable2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;variable2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;showResults&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;output1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;output2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;In reverse order the numbers are: &quot;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;output1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;output2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Sample Dialogue
-Enter two integers: 5 6
-In reverse order the numbers are: 6 5&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;reference는 실인수의 memory의 위치(주소)를 언급한다.
-Reference arguments는 좋을 때도 있지만 데이터보호측면에서 위험하다.
-데이터를 보호하기위해 const를 이용한다.&lt;/p&gt;
-
-&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;par1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;overloading&quot;&gt;Overloading&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Same function name Different parameter lists&lt;/li&gt;
-  &lt;li&gt;Two separate function definitions&lt;/li&gt;
-  &lt;li&gt;…&lt;/li&gt;
-  &lt;li&gt;반환형식으로 구분된 함수는 오버로드 되지않음.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;resolving-overloading&quot;&gt;Resolving Overloading&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Exact match
-  실인수의 갯수와 type이 정의와 정확하게 match하는지 판단하고&lt;/li&gt;
-  &lt;li&gt;맞지 않으면 type conversion을 통해 맞춘다.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&quot;debugging&quot;&gt;Debugging&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Lots of cout&lt;/li&gt;
-  &lt;li&gt;Compiler Debugger&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://ko.wikipedia.org/wiki/Assert.h&quot;&gt;assert Macro&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;-&amp;gt; Assertion is a statement that is either ture or false.
-프로그램이 실행될 때 assert() 는 조건에 오류가 있을 경우 표준오류(stderr)를 통해 실패한 호출의 정보를 출력하고, abort()를 호출한다.
-쉽게말해 추정에러내용과 함께 프로그램을 정지시킴.&lt;/p&gt;
-
-&lt;p&gt;stderr - 소스파일명: 소스라인넘버: 소스함수: false로 추정된 텍스트&lt;/p&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
-#include &amp;lt;assert.h&amp;gt;
-&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test_assert&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-   &lt;span class=&quot;n&quot;&gt;assert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-   &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;test_assert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;i = %d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Stubs : 프로그램이 완성되지 않았을 때 임시로 돌아가게 만들어 놓은 상태
-Drivers : 어떤 모듈을 테스트하기 위한 메인함수 형태&lt;/p&gt;
-
-&lt;p&gt;invoke : 호출하다.
-선언(declare)
-정의(definition)&lt;/p&gt;</content><author><name>Gmimg</name></author><category term="C++" /><category term="Call-by-value" /><category term="Call-by reference" /><category term="Overloading" /><summary type="html">Call-by-value &amp;amp; Call-by reference</summary></entry><entry><title type="html">Analog Transmission</title><link href="http://localhost:4000/posts/Analog-Transmission" rel="alternate" type="text/html" title="Analog Transmission" /><published>2018-10-02T00:00:00+09:00</published><updated>2018-10-02T00:00:00+09:00</updated><id>http://localhost:4000/posts/Analog%20Transmission</id><content type="html" xml:base="http://localhost:4000/posts/Analog-Transmission">&lt;h1 id=&quot;analog-transmission&quot;&gt;Analog Transmission&lt;/h1&gt;
-
-&lt;h2 id=&quot;digital-to-analog-conversion&quot;&gt;Digital-to-analog conversion&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Amplitude shift keying (ASK)&lt;/li&gt;
-  &lt;li&gt;Frequency shift keying (FSK)&lt;/li&gt;
-  &lt;li&gt;Phase shift keying (PSK)&lt;/li&gt;
-  &lt;li&gt;Quadrature amplitude modulation (QAM)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Data rate (bit rate, N bps) &amp;amp; signal rate (baud rate, s baud/sec)&lt;/p&gt;
-
-&lt;p&gt;S = N x 1/r baud&lt;/p&gt;
-
-&lt;p&gt;r: the number of data elements carried in one signal element&lt;/p&gt;
-
-&lt;p&gt;FSK를 제외하고 bandwidth는 신호속도에 비례한다.&lt;/p&gt;
-
-&lt;p&gt;아나로그를 전송하기 위해 고주파 신호를 생성하고 이를 Carrier signal이라고 한다. 수신 장치는 그 주파수에 맞춰 조정한다.&lt;/p&gt;
-
-&lt;p&gt;Carrier signal을 (진폭, 주파수, 위상)중 하나이상을 변조한 Modulated signal을 보낸다.&lt;/p&gt;
-
-&lt;h3 id=&quot;amplitude-shift-keyin-g-ask&quot;&gt;Amplitude shift keyin g (ASK)&lt;/h3&gt;
-
-&lt;p&gt;디지털 신호에 Carrier signal을 Multiplier 해줘서 보낸다.
-&lt;img src=&quot;/assets/img/ASK.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;frequency-shift-keying-fsk&quot;&gt;Frequency shift keying (FSK)&lt;/h3&gt;
-
-&lt;p&gt;주파수가 여러개 필요. 안정적이지만 느림.&lt;/p&gt;
-
-&lt;h3 id=&quot;phase-shift-keying-psk&quot;&gt;Phase shift keying (PSK)&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;BASK&lt;/li&gt;
-  &lt;li&gt;BPSK&lt;/li&gt;
-  &lt;li&gt;QPSK&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;요즘은 ASK와 함께 쓰는 QAM 방식을 주로씀&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;**Constellation Diagram&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;f는 주어져있고, A와 P를 좌표로 나타냄.&lt;/p&gt;
-
-&lt;p&gt;Length : amplitude&lt;/p&gt;
-
-&lt;p&gt;Angle : phase&lt;/p&gt;
-
-&lt;p&gt;1의 점이 1QAM이라고 볼 수 있다.&lt;/p&gt;
-
-&lt;h3 id=&quot;quadrature-amplitude-modulation-qam&quot;&gt;Quadrature Amplitude Modulation (QAM)&lt;/h3&gt;
-
-&lt;p&gt;직교 진폭 변조&lt;/p&gt;
-
-&lt;p&gt;ASK와 PSK를 결합한느낌.&lt;/p&gt;
-
-&lt;p&gt;대역폭은 같다.&lt;/p&gt;
-
-&lt;h2 id=&quot;analog-to-analog-conversion&quot;&gt;Analog-to-analog conversion&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Amplitude modulation (AM)&lt;/li&gt;
-  &lt;li&gt;Frequency modulation (FM)&lt;/li&gt;
-  &lt;li&gt;Phase modulation (PM)&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Gmimg</name></author><category term="Data_communications" /><category term="Transmission" /><summary type="html">Analog Transmission</summary></entry><entry><title type="html">Digital Transmission</title><link href="http://localhost:4000/posts/Digital-Transmission" rel="alternate" type="text/html" title="Digital Transmission" /><published>2018-10-01T00:00:00+09:00</published><updated>2018-10-01T00:00:00+09:00</updated><id>http://localhost:4000/posts/Digital%20Transmission</id><content type="html" xml:base="http://localhost:4000/posts/Digital-Transmission">&lt;h1 id=&quot;digital-transmission&quot;&gt;Digital Transmission&lt;/h1&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Digital-to-digital&lt;/li&gt;
-  &lt;li&gt;Analog-to-digital&lt;/li&gt;
-  &lt;li&gt;transmission modes&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;digital-to-digital&quot;&gt;Digital-to-digital&lt;/h2&gt;
-
-&lt;p&gt;Digital signal -&amp;gt; Digital data&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;line coding&lt;/li&gt;
-  &lt;li&gt;block coding&lt;/li&gt;
-  &lt;li&gt;scrambling&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;line-coding&quot;&gt;Line coding&lt;/h3&gt;
-
-&lt;p&gt;converts a sequence of bits to a digital signal&lt;/p&gt;
-
-&lt;p&gt;Data =&amp;gt; ‘incoding’ =&amp;gt; Line coding =&amp;gt; ‘decoding’ =&amp;gt; Data&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Data element: the smallest entity that can represent a piece of information; this is the bit; Data rate (bps) -&amp;gt; 0과 1의 갯수&lt;/li&gt;
-  &lt;li&gt;Signal element: the shortest unit (timewise) of a digital signal; signal rate (baud rate) -&amp;gt; 전압의 높낮이 갯수&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;*구분할줄 알아야함&lt;/p&gt;
-
-&lt;p&gt;Define a ratio &lt;code class=&quot;highlighter-rouge&quot;&gt;r&lt;/code&gt; which is the &lt;code class=&quot;highlighter-rouge&quot;&gt;number of data elements carried by each signal element&lt;/code&gt; (1개의 signal element로 몇개의 bit를 표현할 수 있는지)&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/line_coding1.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Relationship between data rate (N) and signal rate (S)&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;S = N/r&lt;/code&gt;&lt;br /&gt;
-S_ave = c x N x (1/r) baud&lt;br /&gt;
-c: case factor (0 &amp;lt;= c &amp;lt;= 1)&lt;/p&gt;
-
-&lt;p&gt;Baud rate와 Band width는 비례한다.&lt;br /&gt;
-B_min= c x N x (1/r)&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;문제점&lt;/code&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Baseline Wandering&lt;br /&gt;
-0이 연속으로 나올때 구분&lt;br /&gt;
-drift in the baseline&lt;br /&gt;
-difficult for the receiver to decode correctly.&lt;/li&gt;
-  &lt;li&gt;DC Components&lt;br /&gt;
-Frequencies around zero&lt;br /&gt;
-주파수가 0에 가까워지면(연속적인 신호) DC가 되어 구리선으로 보내기 힘들어진다.&lt;/li&gt;
-  &lt;li&gt;Self-synchronization&lt;br /&gt;
-receiver’s bit intervals must correspond exactly to the sender’s bit intervals&lt;br /&gt;
-송신자와 수진자의 비트간격이 정확하게 일치해야한다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;lack of synchronization&lt;/code&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;example)&lt;br /&gt;
-Receiver clock is 0.1 percent faster.
-How many extra bits per second does the receiver receive if the data rate is 1 kbps?&lt;br /&gt;
-1000 bits sent -&amp;gt; 1001 bits receive&lt;br /&gt;
-1000000 bits sent -&amp;gt; 1001000 bits receive&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Line coding scheme&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Unipolar(단극)&lt;br /&gt;
-All the signal levels are on one side of the time axis, either above or below&lt;br /&gt;
-NRZ(Non-Return-to-Zero) : Signal does not return to zero at the middle of the bit.&lt;/p&gt;
-
-    &lt;p&gt;&lt;img src=&quot;/assets/img/unipolar.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Polar&lt;br /&gt;
-Voltages are on both sides of the time axis.&lt;br /&gt;
-Unipolar보다 에너지 효율이 좋음.&lt;/p&gt;
-
-    &lt;p&gt;&lt;img src=&quot;/assets/img/polar.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
-
-    &lt;p&gt;NRZ-L : 0과 1이 반대의 level을가짐.&lt;br /&gt;
-NRZ-I : 0이면 그대로 1이면 신호를 역전시킴&lt;/p&gt;
-
-    &lt;p&gt;The main problem with NRZ encoding occurs when the sender and receiver clocks are not synchronized. The receiver does not know when one bit has ended and the next bit is starting. -&amp;gt;&lt;/p&gt;
-
-    &lt;p&gt;RZ(Return-to-Zero) : 무조건 중간에 0으로 돌아감. 수신기가 송신기의 bit시작 타이밍을 알수있다.(동기화)&lt;br /&gt;
-uses three values: positive, negative, and zero.&lt;br /&gt;
-1의 데이터를 2의 signal로 보내기 때문에 NRZ 보다 더 고주파 성분이 필요하다.&lt;br /&gt;
-No DC component problem.&lt;br /&gt;
-요즘 사용하진 않음&lt;/p&gt;
-
-    &lt;p&gt;&lt;img src=&quot;/assets/img/RZ.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
-
-    &lt;p&gt;biphase : RZ + NRZ-L&lt;/p&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Manchester : 전압이 상반기동안은 일정하고 하반기에 다른레벨로 이동한다. 중간의 비트전환이 동기화를 제공.&lt;/li&gt;
-      &lt;li&gt;Differential Manchester
-중간에 비트전환을 해주고, 다음비트가 0이면 비트시작을 반전하고 1이면 그대로간다.&lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;p&gt;&lt;img src=&quot;/assets/img/biphase.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Bipolar(양극)&lt;br /&gt;
-DC component는 없으나 동기화문제가 있음.
-    &lt;ul&gt;
-      &lt;li&gt;AMI(Alternate mark invesion)&lt;br /&gt;
-0은 volage 0, 1은 번갈아서 1역전&lt;/li&gt;
-      &lt;li&gt;Pseudoternary&lt;br /&gt;
-AMI의 반대&lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;p&gt;&lt;img src=&quot;/assets/img/bipolar.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Multilevel&lt;/p&gt;
-
-    &lt;p&gt;전압의 level을 나눠 date를 보내줌. 1 baud당 보내는 bit의 수를 증가시킴.&lt;br /&gt;
-mBnL : m data elements, n signal elements &lt;code class=&quot;highlighter-rouge&quot;&gt;2^m &amp;lt;= L^n&lt;/code&gt;&lt;br /&gt;
-2B1Q =&amp;gt; 2^2 bits, 4^1 signal&lt;br /&gt;
-8B6T =&amp;gt; 2^8 bits, 3^6 signal -&amp;gt; 남은 signal은 synchronization, error detection, and DC balance&lt;/p&gt;
-
-    &lt;p&gt;2B1Q&lt;/p&gt;
-
-    &lt;p&gt;&lt;img src=&quot;/assets/img/2B1Q.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
-
-    &lt;p&gt;8B6T&lt;/p&gt;
-
-    &lt;p&gt;&lt;img src=&quot;/assets/img/8B6T.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Multitransition&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;line coding summary
-&lt;img src=&quot;/assets/img/line_coding2.jpg&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;block-coding&quot;&gt;block coding&lt;/h3&gt;
-
-&lt;h3 id=&quot;scrambling&quot;&gt;Scrambling&lt;/h3&gt;
-
-&lt;p&gt;규칙을 만들어서 기존 error를(baseline같은) 잡아줌&lt;/p&gt;
-
-&lt;h2 id=&quot;analog-to-digital&quot;&gt;Analog-to-digital&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Pulse code modulation(PCM)
-    &lt;ul&gt;
-      &lt;li&gt;sampling&lt;br /&gt;
-sine파는 2개의 sampling으로 복원가능&lt;br /&gt;
-이상적으로 최대 주파수의 2배를 sampling&lt;/li&gt;
-      &lt;li&gt;quantizing&lt;br /&gt;
-실수를 잘라줌&lt;/li&gt;
-      &lt;li&gt;encoding&lt;br /&gt;
-디지털화해줌&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Delta modulation&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;transmission-modes&quot;&gt;transmission modes&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;parallel&lt;br /&gt;
-속도가 빠름&lt;/li&gt;
-  &lt;li&gt;serial transmission
-    &lt;ul&gt;
-      &lt;li&gt;Asynchronous&lt;br /&gt;
-키보드처럼 시작-끝 반복, 데이터 단위가 작음.&lt;/li&gt;
-      &lt;li&gt;Synchronous&lt;br /&gt;
-연속적인 Data&lt;/li&gt;
-      &lt;li&gt;Isochronous&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Gmimg</name></author><category term="Data_communications" /><category term="Transmission" /><summary type="html">Digital Transmission</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Gmimg</name></author><category term="Database" /><category term="SQL" /><category term="DML" /><category term="뷰" /><summary type="html">데이터베이스 조작</summary></entry></feed>
