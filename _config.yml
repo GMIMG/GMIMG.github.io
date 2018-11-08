@@ -27,7 +27,7 @@ permalink: /posts/:title
 paginate: 15
 paginate_path: "/posts/:num/"
 category_dir: category/
-tag_dir: tags/
+tag_dir: tag/
 
 defaults:
   # _posts
@@ -37,13 +37,14 @@ defaults:
     values:
       author: Gmimg
       layout: post
-      category: None
       search: true #false
       comments: true #false
       toc: true
-
-  #- scope:
+      #category: None
+      
   # _page
-    #  path: "page"
-    #  type: 
-    #values:
+  - scope:
+      path: "page"
+      type: 
+    values:
+      sidebar: "main"

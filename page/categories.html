@@ -21,7 +21,7 @@ permalink: /categories/
 				</li>
 			{%- endfor %}
 			
-			{%- if nav.children != null %}
+			{%- if nav.children != empty %}
 				<ul>
 					{%- for child in nav.children %}
 						<h3><span onclick="showPost('{{child.title}}')">{{ child.title }}</span></h3>
@@ -33,7 +33,7 @@ permalink: /categories/
 							</li>
 						{%- endfor %}
 						</ul>
-						{%- if child.children != null %}
+						{%- if child.children != empty %}
 							<ul>
 							{%- for childchild in child.children %}
 								<h4><span onclick="showPost('{{childchild.title}}')">{{ childchild.title }}</span></h4>
@@ -53,6 +53,18 @@ permalink: /categories/
 			{%- endif %}
 			</ul>
 		{%- endfor %}
+		<!--posts for none_category-->
+		<h2><span onclick="showPost('None')">None</span></h2>
+		<ul id="None" class="expo-category-posts">
+			{%- for post in site.posts %}
+				{%- if post.categories == empty %}
+				<li>
+					<a href="{{ root_url }}{{ post.url }}"> {{- post.title -}}</a>
+					<small class="post-date">{{- post.date | date_to_string -}}</small>
+				</li>
+				{%- endif %}
+			{%- endfor %}
+		</ul>
 	</nav>
 </div>
 

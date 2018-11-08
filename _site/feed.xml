@@ -1,4 +1,35 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko_KR"><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko_KR" /><updated>2018-11-08T01:01:52+09:00</updated><id>http://localhost:4000/</id><title type="html">GMIMG</title><subtitle>Mechagrammer</subtitle><author><name>Jimin Hwang</name></author><entry><title type="html">Data link control</title><link href="http://localhost:4000/posts/Data-Link-Control" rel="alternate" type="text/html" title="Data link control" /><published>2018-11-06T00:00:00+09:00</published><updated>2018-11-06T00:00:00+09:00</updated><id>http://localhost:4000/posts/Data%20Link%20Control</id><content type="html" xml:base="http://localhost:4000/posts/Data-Link-Control">&lt;h1 id=&quot;data-link-control&quot;&gt;Data Link Control&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko_KR"><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko_KR" /><updated>2018-11-09T07:12:09+09:00</updated><id>http://localhost:4000/</id><title type="html">GMIMG</title><subtitle>Mechagrammer</subtitle><author><name>Jimin Hwang</name></author><entry><title type="html">Jekyll</title><link href="http://localhost:4000/posts/jekyll" rel="alternate" type="text/html" title="Jekyll" /><published>2018-11-07T00:00:00+09:00</published><updated>2018-11-07T00:00:00+09:00</updated><id>http://localhost:4000/posts/jekyll</id><content type="html" xml:base="http://localhost:4000/posts/jekyll">&lt;h1 id=&quot;뭥미&quot;&gt;뭥미&lt;/h1&gt;
+&lt;!--
+~~~
+https://www.mattcrampton.com/blog/checking_if_a_variable_is_set_in_jekyll/
+
+
+
+
+
+
+
+
+
+
+https://github.com/Shopify/liquid/issues/223#issuecomment-376816247
+
+
+To summarize, here's a table of the boolean value of various values (jekyll 3.7.3, liquid 4.0.0):
+
+Operator	nil	&quot;&quot;	&quot; &quot;
+var	false	true	true
+var == blank	false	false	false
+var == empty	false	true	false
+var == &quot;&quot;	false	true	false
+var == nil	true	false	false
+Generated with statements like false
+
+- Empty strings are &quot;truthy&quot;, unlike in most languages
+- No operator returns true for both undefined (nil) and empty strings. Use 'or' as suggested above (var == nil or var == empty)
+- blank doesn't seem to work for strings. By analogy to the rails blank? operator, I would have expected both &quot;&quot; and &quot; &quot; to be blank, but liquid seems to only define it for certain custom datatypes.
+~~~
+--&gt;</content><author><name>Gmimg</name></author><category term="jekyll" /><summary type="html">뭥미 &amp;lt;!– ~~~ https://www.mattcrampton.com/blog/checking_if_a_variable_is_set_in_jekyll/</summary></entry><entry><title type="html">Data link control</title><link href="http://localhost:4000/posts/Data-Link-Control" rel="alternate" type="text/html" title="Data link control" /><published>2018-11-06T00:00:00+09:00</published><updated>2018-11-06T00:00:00+09:00</updated><id>http://localhost:4000/posts/Data%20Link%20Control</id><content type="html" xml:base="http://localhost:4000/posts/Data-Link-Control">&lt;h1 id=&quot;data-link-control&quot;&gt;Data Link Control&lt;/h1&gt;
 
 &lt;ol&gt;
   &lt;li&gt;general serviece DLC Sublayer&lt;/li&gt;
@@ -106,7 +137,7 @@ Trailer에는 CRC가 들어간다.&lt;/p&gt;
 
 &lt;h3 id=&quot;stop-and-wait&quot;&gt;Stop-and-Wait&lt;/h3&gt;
 
-&lt;p&gt;Using both flow and error control. Sender sends one frame at a time and waits for an acknowledgment before sending the next one.&lt;/p&gt;</content><author><name>Gmimg</name></author><category term="None" /><summary type="html">Data Link Control</summary></entry><entry><title type="html">C++ operator overloading</title><link href="http://localhost:4000/posts/C++-Operator-Overloading" rel="alternate" type="text/html" title="C++ operator overloading" /><published>2018-10-30T00:00:00+09:00</published><updated>2018-10-30T00:00:00+09:00</updated><id>http://localhost:4000/posts/C++%20Operator%20Overloading</id><content type="html" xml:base="http://localhost:4000/posts/C++-Operator-Overloading">&lt;ol&gt;
+&lt;p&gt;Using both flow and error control. Sender sends one frame at a time and waits for an acknowledgment before sending the next one.&lt;/p&gt;</content><author><name>Gmimg</name></author><category term="Data_communications" /><summary type="html">Data Link Control</summary></entry><entry><title type="html">C++ operator overloading</title><link href="http://localhost:4000/posts/C++-Operator-Overloading" rel="alternate" type="text/html" title="C++ operator overloading" /><published>2018-10-30T00:00:00+09:00</published><updated>2018-10-30T00:00:00+09:00</updated><id>http://localhost:4000/posts/C++%20Operator%20Overloading</id><content type="html" xml:base="http://localhost:4000/posts/C++-Operator-Overloading">&lt;ol&gt;
   &lt;li&gt;Operator overloading&lt;/li&gt;
   &lt;li&gt;Friend function, friend class&lt;/li&gt;
   &lt;li&gt;Reference (&amp;amp;)&lt;/li&gt;
@@ -870,24 +901,4 @@ One or more synchronization bits are usually added to the beginning of each fram
 A pseudorandome cod generator를 이용하여 랜덤 패턴을 만드로 Frequency table에 매칭시켜 주파수를 맞춘다.&lt;/li&gt;
   &lt;li&gt;direct sequence spread spectruemm (DSSS)
 Original signal의 bit를 Spreading code를 이용해 Spread signal로 만들어 정보를 보호 할 수 있게한다.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Gmimg</name></author><category term="Data_communications" /><category term="Multiplexing" /><category term="Spectrum_spreading" /><summary type="html">Multiplexing</summary></entry><entry><title type="html">데이터베이스 조작</title><link href="http://localhost:4000/posts/control_database" rel="alternate" type="text/html" title="데이터베이스 조작" /><published>2018-10-03T00:00:00+09:00</published><updated>2018-10-03T00:00:00+09:00</updated><id>http://localhost:4000/posts/control_database</id><content type="html" xml:base="http://localhost:4000/posts/control_database">&lt;h1 id=&quot;데이터베이스-조작&quot;&gt;데이터베이스 조작&lt;/h1&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;SQL DML&lt;/li&gt;
-  &lt;li&gt;SQL 질의어&lt;/li&gt;
-  &lt;li&gt;뷰&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;dmldata-manipulation-language&quot;&gt;DML(Data Manipulation Language)&lt;/h2&gt;
-
-&lt;p&gt;SQL의 데이터 조작어&lt;/p&gt;
-
-&lt;p&gt;INSERT INTO 테이블 [(column [, column…])] VALUES  (값 [,값]) ;&lt;/p&gt;
-
-&lt;p&gt;NULL값은 &lt;code class=&quot;highlighter-rouge&quot;&gt;[빈칸]&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;''&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;null&lt;/code&gt;로&lt;/p&gt;
-
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;distinct&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;column&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;alias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]...&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;테이블명&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;WHERE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Query&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;조건&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;들&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;ORDER&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;BY&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;column&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;표현식}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;ASC&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;DESC&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Gmimg</name></author><category term="Database" /><category term="SQL" /><category term="DML" /><category term="뷰" /><summary type="html">데이터베이스 조작</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Gmimg</name></author><category term="Data_communications" /><category term="Multiplexing" /><category term="Spectrum_spreading" /><summary type="html">Multiplexing</summary></entry></feed>

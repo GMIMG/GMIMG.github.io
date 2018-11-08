@@ -1,6 +1,6 @@
 ---
 title: Introduction to Physical Layer
-categories: Data_communications
+category: Data_communications
 tags: 
   - Physical Layer
 ---

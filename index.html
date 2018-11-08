@@ -1,35 +1,29 @@
 ---
 layout: default
 ---
+
+
 {%- assign prepost_date = post.date %}
 <ul class="main-post-list">
   {%- for post in site.posts -%}
   <li class="post-list-list">
     <span class="post-date">{{ post.date | date_to_string }}</span>
-    <a class="post-link" href="{{ post.url | relative_url }}">
+    <span>
+      <a class="post-link" href="{{ post.url | relative_url }}">
       {{- post.title | escape -}}
-      <!--span class="site-post-category"> {{post.categories}}</span-->
-    </a>
-
-<a href="{{ post.url | relative_url }}#disqus_thread" data-disqus-identifier="{{ page.id }}"></a>
-
-    <!--
-      <div class="comments-box">
-
-          <svg class="comments-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-          viewBox="0 0 58 58" style="enable-background:new 0 0 58 58;" xml:space="preserve"><g>
-          <path style="fill:#546A79;" d="M29,1.5c-16.016,0-29,11.641-29,26c0,5.292,1.768,10.211,4.796,14.318
-            C4.398,46.563,3.254,53.246,0,56.5c0,0,9.943-1.395,16.677-5.462c0.007,0.003,0.015,0.006,0.022,0.009
-            c2.764-1.801,5.532-3.656,6.105-4.126c0.3-0.421,0.879-0.548,1.33-0.277c0.296,0.178,0.483,0.503,0.489,0.848
-            c0.01,0.622-0.005,0.784-5.585,4.421C22.146,52.933,25.498,53.5,29,53.5c16.016,0,29-11.641,29-26S45.016,1.5,29,1.5z"/>
-          </svg>
       
-      <div class="comments-count"><a href="{{ post.url | relative_url }}#disqus_thread" data-disqus-identifier="{{ page.id }}"></a>
-      </div>
-    </div>
--->
+      </a>
 
-    
+      <span class="containerBox">
+        <svg style="display:inline-block;height: 100%;" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px"
+          viewBox="0 0 58 58" xml:space="preserve"><g>
+          <path style="fill:#ccc;" d="M29,1.5c-16.016,0-29,11.641-29,26c0,5.292,1.768,10.211,4.796,14.318C4.398,46.563,3.254,53.246,0,56.5c0,0,9.943-1.395,16.677-5.462c0.007,0.003,0.015,0.006,0.022,0.009c2.764-1.801,5.532-3.656,6.105-4.126c0.3-0.421,0.879-0.548,1.33-0.277c0.296,0.178,0.483,0.503,0.489,0.848c0.01,0.622-0.005,0.784-5.585,4.421C22.146,52.933,25.498,53.5,29,53.5c16.016,0,29-11.641,29-26S45.016,1.5,29,1.5z"/>
+          <text x="9px" y="0px"><a href="{{ post.url | relative_url }}#disqus_thread">0</a></text>
+        </svg>
+        <a href="{{ post.url | relative_url }}#disqus_thread">0</a>
+      </span>
+      <span class="site-post-category"> {{post.categories}}</span>
+    </span>
   </li>
   {%- endfor -%}
 </ul>

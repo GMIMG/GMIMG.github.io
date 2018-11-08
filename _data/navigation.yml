@@ -1,4 +1,5 @@
 # main links
+# enable sub_sub_category(two children)
 main:
   - title: "Programming"
     #url: /terms/
@@ -17,4 +18,4 @@ main:
       - title: "Database"
       - title: "Applied_Robot_Design"
   - title: "etc"
-  - title: "None"
+  #- title: "None"

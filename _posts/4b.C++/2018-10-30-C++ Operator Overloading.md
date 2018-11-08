@@ -1,6 +1,5 @@
 ---
 category : C++
-tags:
 
 ---
 

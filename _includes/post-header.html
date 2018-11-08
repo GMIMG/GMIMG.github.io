@@ -9,12 +9,14 @@
       {%- endif %}
     </p>
     <div class="post-header-categories">
+      {%- if page.categories != empty %}
       <span>Category: </span>
       {%- assign category = page.categories -%}
       <a href="/{{ site.category_dir }}#{{ category | first }}">{{category}}</a>
+      {%- endif %}
     </div>
     <div class="post-header-tags">
-      {%- if page.tags %}
+      {%- if page.tags != empty %}
       <span>Tags: </span>
       {%- for tag in page.tags %}
         <a href="/{{ site.tag_dir }}#{{tag|slugize}}">{{-tag-}}</a>

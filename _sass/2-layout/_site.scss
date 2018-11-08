@@ -26,6 +26,9 @@ $site-icon-size: 36px;
   font-size: 50%;
   //float: right;
 }
+
+
+
 .site-nav {
   float: right;
   line-height: $base-line-height * $base-font-size * 2.25;
@@ -49,7 +52,7 @@ $site-icon-size: 36px;
 
   @media screen and (max-width: $on-palm) {
     position: absolute;
-    top: 9px;
+    top: 6px;
     right: $spacing-unit / 2;
     background-color: $background-color;
     border: 1px solid $grey-color-light;
@@ -96,66 +99,94 @@ $site-icon-size: 36px;
 }
 
 
+.main-area {
+  position: relative;
+}
+.copyright {
+  font-size: 70%;
+}
+
+
 .site-search {
   position: absolute;
-  top: 9px;
+  top: 6px;
   right: $spacing-unit / 2;
-  background-color: $background-color;
   border: 1px solid $grey-color-light;
   border-radius: 5px;
-  float: right;
-  line-height: $base-line-height * $base-font-size * 2.25;
-  z-index: 1; /* Stay on top */
-
-
   .search-icon {
-    display: block;
-    float: right;
+    position: relative;
     width: 36px;
-    height: 26px;
-    line-height: 0;
-    padding-top: 10px;
+    height: 36px;
     text-align: center;
+    line-height: 36px;
+    cursor: pointer;
     > svg {
       fill: $grey-color-dark;
     }
   }
 }
-
-
-
-.comments-box {
-  position: relative;
-
-}
-.comments-icon {
-  position: relative;
-  //display: inline-block;
-  font-size: 50%;
-  width: 18px;
-  height: 13px;
-  text-align: center;
-  > svg {
-    fill: $grey-color-dark;
+.svg-search, .svg-menu {
+  display: inline-block;
+  vertical-align: middle;
   }
-}
-.comments-count {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: inline;
-  //z-index: 2;
-  text-align: center;
-}
 
-
-
-
-.main-area {
+.containerBox {
   position: relative;
+  display: inline-block;
+  text-align: center;
+  font-size: 75%;
 }
 
-
-.copyright {
-  font-size: 70%;
+/*
+.text-box {
+  display: inline-block;
+  color: #fff;
+  text-align: center;    
 }
+.text-box:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+ }
+
+.middle{
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+}
+.icon{
+  position: absolute;
+  display: inline-block;
+  color: #fff;
+  vertical-align: middle;
+}
+
+<h1>
+    64px ABC
+    <div class="icon baseline">
+      <svg width="48" height="48" viewBox="0 0 48 48">
+         <path id="icon-info" d="M22 34h4V22h-4v12zm2-30C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4zm0 36c-8.82 0-16-7.18-16-16S15.18 8 24 8s16 7.18 16 16-7.18 16-16 16zm-2-22h4v-4h-4v4z">
+        </path>
+      </svg>
+    </div>
+    xyz
+    <div class="icon baseline">
+      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+        <path id="icon-open" d="M38 38H10V10h14V6H10c-2.21 0-4 1.79-4 4v28c0 2.21 1.79 4 4 4h28c2.21 0 4-1.79 4-4V24h-4v14zM28 6v4h7.17L15.51 29.66l2.83 2.83L38 12.83V20h4V6H28z"/>
+      </svg>
+    </div>
+  </h1>
+
+
+
+
+  <span>gming
+<div class="icon baseline">
+    <svg width="48" height="48" viewBox="0 0 48 48">
+       <path id="icon-info" d="M22 34h4V22h-4v12zm2-30C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4zm0 36c-8.82 0-16-7.18-16-16S15.18 8 24 8s16 7.18 16 16-7.18 16-16 16zm-2-22h4v-4h-4v4z">
+      </path>
+    </svg>
+  </div>
+</span>
+*/

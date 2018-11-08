@@ -1,7 +1,7 @@
 ---
 title: Data communication
 search: true
-categories: Data_communications
+category: Data_communications
 tags: 
   - Data_communications
 ---
