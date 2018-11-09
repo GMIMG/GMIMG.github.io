@@ -132,6 +132,11 @@ table td { border: 1px solid #e8e8e8; }
 .post-content h3, .post-content-col h3 { font-size: 19.5pt; }
 .post-content h4, .post-content-col h4 { font-size: 15pt; }
 
+#disqus_thread iframe { padding: 20px; }
+#disqus_thread iframe html { min-height: 500px; }
+#disqus_thread iframe #layout { padding: 60px 0; }
+#disqus_thread iframe .serif { padding: 60px 0; }
+
 .sidebar { float: left; width: 30%; background-color: #f1f1f1; /* white-gray */ overflow-x: hidden; /* Disable horizontal scroll */ margin: 20px 0px; }
 .sidebar .sidebar-item { padding: 15px 15px; }
 .sidebar .sidebar-item a { text-decoration: none; color: #828282; }

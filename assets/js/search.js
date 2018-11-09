@@ -4,14 +4,18 @@
   
       if (results.length) { // Are there any results?
         var appendString = '';
-  
+        appendString += '<ul class="post-list">';
         for (var i = 0; i < results.length; i++) {  // Iterate over the results
           var item = store[results[i].ref];
-          appendString += '<div class="search__result"><a href="' + item.url + '"><h5 class="post-title">' + item.title + '</h5></a>';
-          appendString += '<div class="post-description"><small class="post-date">' + item.published_at + '</small></div>';
-          appendString += '</div>'
+          appendString += '<li class="post-list-list">'
+          appendString += '<span class="post-date">' + item.published_at + ' </span>';
+          appendString += '<a class="post-link" href="' + item.url + '">' + item.title + '</a>';
+          appendString += '<span class="site-post-category"> ' + item.category.slice(7,item.category.length-7) + '</span>';
+          //appendString += '<p class="post-description"></p>';
+          appendString += '</li>';
         }
-  
+        appendString += '</ul>';
+
         searchResults.innerHTML = appendString;
       } else {
         searchResults.innerHTML = '<li>No results found</li>';

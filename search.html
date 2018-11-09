@@ -13,7 +13,7 @@ layout: default
       "{{ post.url | slugify }}": {
         "title": "{{ post.title | xml_escape }}",
         "category": "{{ post.categories | xml_escape }}",
-        "published_at" : "{{post.date | date: '%b %d, %y' }}",
+        "published_at" : "{{ post.date | date_to_string}}",
         "url": "{{ post.url | xml_escape }}"
       }
       {% unless forloop.last %},{% endunless %}
