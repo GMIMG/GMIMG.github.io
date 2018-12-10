@@ -84,14 +84,24 @@
         </div>
         <ul>
   <li><a href="#data-link-control">Data Link Control</a>
-      - {:.} <a href="#charater-orientedbyte-oriented-framing">Charater-Oriented(byte-oriented) Framing</a>
-      - {:.} <a href="#bit-oriented-framing">Bit-Oriented Framing</a>
     <ul>
+      <li><a href="#general-service-dlc-sublayer">General service DLC Sublayer</a>
+        <ul>
+          <li><a href="#charater-orientedbyte-oriented-framing">Charater-Oriented(byte-oriented) Framing</a></li>
+          <li><a href="#bit-oriented-framing">Bit-Oriented Framing</a></li>
+        </ul>
+      </li>
       <li><a href="#data-link-layer-protocols">Data-link layer protocols</a>
         <ul>
           <li><a href="#stop-and-wait">Stop-and-Wait</a></li>
         </ul>
       </li>
+      <li><a href="#hdlc">HDLC</a>
+        <ul>
+          <li><a href="#framing">Framing</a></li>
+        </ul>
+      </li>
+      <li><a href="#point-to-point-protocol-ppp">Point-to-Point Protocol (PPP)</a></li>
     </ul>
   </li>
 </ul>
@@ -107,35 +117,33 @@
   <li>PPP</li>
 </ol>
 
-<p>## 
-|—|
-|DLC|
-|—|
-|MAC|
-|—|
-|PHY|
-|—|</p>
-
-<p>PHY-&gt; 1계층 -&gt; bit synchronization<br />
-DLC,MAC -&gt; 2계층 -&gt; pack bits into ‘frames’</p>
-
-<p>frames 에는 sender와 recevier의 addresses가 정의된다. Fixed-size framing과 Variable-size framing으로 나뉜다.</p>
-
-<p>##</p>
-
-<h3 id="charater-orientedbyte-oriented-framing">Charater-Oriented(byte-oriented) Framing</h3>
+<h2 id="general-service-dlc-sublayer">General service DLC Sublayer</h2>
 
 <table>
+  <thead>
+    <tr>
+      <th style="text-align: center">DLC</th>
+    </tr>
+  </thead>
   <tbody>
     <tr>
-      <td>Flag</td>
-      <td>Header</td>
-      <td>DATA from upper layer</td>
-      <td>Trailer</td>
-      <td>Flag</td>
+      <td style="text-align: center">MAC</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">PHY</td>
     </tr>
   </tbody>
 </table>
+
+<p>DLC,MAC -&gt; 2계층 -&gt; pack bits into ‘frames’
+PHY-&gt; 1계층 -&gt; bit synchronization</p>
+
+<p>frames 에는 sender와 recevier의 addresses가 정의된다. Fixed-size framing과 Variable-size framing으로 나뉜다.</p>
+
+<p>| Flag | Header | DATA from upper layer | Trailer | Flag |
+|:—-:|——–|———————–|———|——|</p>
+
+<h3 id="charater-orientedbyte-oriented-framing">Charater-Oriented(byte-oriented) Framing</h3>
 
 <p>byte단위로 보내준다. 8-bit Charater로 data를 보낸다. Header는 8bits의 배수이다.
 내용에 Flag와 같은 패턴의 bit가 들어갔을 때 ESC(special byte)를 해당 bit앞에 붙여줌, ESC가 들어가도 ESC를 붙여준다. 
@@ -143,19 +151,9 @@ Trailer에는 CRC가 들어간다.</p>
 
 <h3 id="bit-oriented-framing">Bit-Oriented Framing</h3>
 
-<table>
-  <tbody>
-    <tr>
-      <td>Flag</td>
-      <td>Header</td>
-      <td>DATA from upper layer</td>
-      <td>Trailer</td>
-      <td>Flag</td>
-    </tr>
-  </tbody>
-</table>
+<p>‘Bit stuffing and unstuffing’</p>
 
-<p>Data에 Flag와 같은 패턴의 bit가 들어갔을 때 extra bits를 붙여준다.</p>
+<p>Data에 Flag와 같은 패턴의 bit가 들어갔을 때 extra bits를 붙여준다. Flag가 01111110인 경우(FDLC, PPP) 11111이 나왔을때 다음에 0비트를 붙여서 송신해서 Flag와 같은 패턴이 나올 수 없게 방지한다.</p>
 
 <p>‘Flow Control’</p>
 
@@ -208,6 +206,100 @@ Trailer에는 CRC가 들어간다.</p>
 
 <p>Using both flow and error control. Sender sends one frame at a time and waits for an acknowledgment before sending the next one.</p>
 
+<p><img src="/assets/img/Data_communication/StopAndWaitFSM.JPG" alt="StopAndWaitFSM" /></p>
+
+<p><img src="/assets/img/Data_communication/StopAndWaitMSC.JPG" alt="StopAndWaitFSM" /></p>
+
+<p>Sequence and ACK에 Numbering을 하여 duplicate packets을 방지 한다.</p>
+
+<p>‘Piggybacking’</p>
+
+<p>양방향 통신에서 ack자체의 헤더와 CRC가 큰 data를 차지해서 send data안에 ack 자리를 내주어 같이보냄.</p>
+
+<h2 id="hdlc">HDLC</h2>
+
+<p>High-level Data Link Control (HDLC) is a bit-oriented protocl for communication over point-to-point and multipoint links. It implements the Stop-and-Wait protocol</p>
+
+<p>Configuration and Transfer Modes</p>
+
+<ul>
+  <li>
+    <p>Normal response mode (NRM)</p>
+
+    <p>요청과을 하면 대답을 하는 방식</p>
+  </li>
+  <li>
+    <p>Asynchronous balanced mode (ABM)</p>
+
+    <p>요청과 대답을 동시에 보냄</p>
+  </li>
+</ul>
+
+<h3 id="framing">Framing</h3>
+
+<ul>
+  <li>
+    <p>Information frames (I-frames)</p>
+
+    <p>Used to data-link user data and control information relating to user data (piggybacking)</p>
+  </li>
+  <li>
+    <p>Supervisory frames (S-frames)</p>
+
+    <p>Used only to transport contol information</p>
+  </li>
+  <li>
+    <p>Unnumbered frames (U-frames)</p>
+
+    <p>Reserved for system management<br />
+information carried by U-frames is intended for managing the link itself</p>
+  </li>
+</ul>
+
+<p>| Flag | Address | Control | (Information) | FCS | Flag |
+|:—-:|———|———|—————|—–|——|</p>
+
+<ul>
+  <li>
+    <p>Flag field</p>
+
+    <p>synchronization pattern</p>
+  </li>
+  <li>
+    <p>Address field</p>
+
+    <p>the address of the secondary station.</p>
+
+    <ul>
+      <li>primary station : to address</li>
+      <li>secondary station : from address</li>
+    </ul>
+  </li>
+  <li>
+    <p>Control field</p>
+
+    <p>flow and error control</p>
+  </li>
+  <li>
+    <p>Information field</p>
+
+    <p>user’s data</p>
+  </li>
+  <li>
+    <p>FCS field</p>
+
+    <p>2- or 4-byte CRC</p>
+  </li>
+</ul>
+
+<h2 id="point-to-point-protocol-ppp">Point-to-Point Protocol (PPP)</h2>
+
+<p>| Flag | Address | Control | Protocol | Payload | FCS | Flag |
+|:—-:|———|———|———-|———|—–|——|</p>
+
+<p>PPP defines the format of the frame to be exchanged between devices.</p>
+
+<p>PPP does not provide flow contol.</p>
  
   </div>
     

@@ -137,7 +137,7 @@ table td { border: 1px solid #e8e8e8; }
 #disqus_thread iframe #layout { padding: 60px 0; }
 #disqus_thread iframe .serif { padding: 60px 0; }
 
-.sidebar { float: left; width: 30%; background-color: #f1f1f1; /* white-gray */ overflow-x: hidden; /* Disable horizontal scroll */ margin: 20px 0px; }
+.sidebar { float: left; width: 30%; border-radius: 15px; background-color: #f1f1f1; /* white-gray */ overflow-x: hidden; /* Disable horizontal scroll */ margin: 20px 0px; }
 .sidebar .sidebar-item { padding: 15px 15px; }
 .sidebar .sidebar-item a { text-decoration: none; color: #828282; }
 .sidebar .sidebar-item .sidebar-item-tltle { color: #000; }

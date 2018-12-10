@@ -32,7 +32,7 @@ Data => 'incoding' => Line coding => 'decoding' => Data
 
 Define a ratio `r` which is the `number of data elements carried by each signal element` (1개의 signal element로 몇개의 bit를 표현할 수 있는지)
 
-![Alt text](/assets/img/line_coding1.jpg)
+![Alt text](/assets/img/line_coding1.JPG)
 
 Relationship between data rate (N) and signal rate (S)
 
@@ -69,13 +69,13 @@ Line coding scheme
   All the signal levels are on one side of the time axis, either above or below  
   NRZ(Non-Return-to-Zero) : Signal does not return to zero at the middle of the bit.
 
-  ![Alt text](/assets/img/unipolar.jpg)
+  ![Alt text](/assets/img/unipolar.JPG)
 
 - Polar  
   Voltages are on both sides of the time axis.  
   Unipolar보다 에너지 효율이 좋음.
 
-  ![Alt text](/assets/img/polar.jpg)
+  ![Alt text](/assets/img/polar.JPG)
 
   NRZ-L : 0과 1이 반대의 level을가짐.  
   NRZ-I : 0이면 그대로 1이면 신호를 역전시킴
@@ -88,14 +88,14 @@ Line coding scheme
   No DC component problem.  
   요즘 사용하진 않음
 
-  ![Alt text](/assets/img/RZ.jpg)  
+  ![Alt text](/assets/img/RZ.JPG)  
 
   biphase : RZ + NRZ-L
   - Manchester : 전압이 상반기동안은 일정하고 하반기에 다른레벨로 이동한다. 중간의 비트전환이 동기화를 제공.
   - Differential Manchester
   중간에 비트전환을 해주고, 다음비트가 0이면 비트시작을 반전하고 1이면 그대로간다.
 
-  ![Alt text](/assets/img/biphase.jpg)
+  ![Alt text](/assets/img/biphase.JPG)
 
 - Bipolar(양극)  
   DC component는 없으나 동기화문제가 있음.
@@ -104,7 +104,7 @@ Line coding scheme
   - Pseudoternary  
     AMI의 반대
 
-  ![Alt text](/assets/img/bipolar.jpg)
+  ![Alt text](/assets/img/bipolar.JPG)
 
 - Multilevel
 
@@ -115,16 +115,16 @@ Line coding scheme
 
   2B1Q
 
-  ![Alt text](/assets/img/2B1Q.jpg)
+  ![Alt text](/assets/img/2B1Q.JPG)
 
   8B6T
 
-  ![Alt text](/assets/img/8B6T.jpg)
+  ![Alt text](/assets/img/8B6T.JPG)
 
 - Multitransition
 
 line coding summary
-![Alt text](/assets/img/line_coding2.jpg)
+![Alt text](/assets/img/line_coding2.JPG)
 
 ### block coding
 

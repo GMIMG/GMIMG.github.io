@@ -22,21 +22,21 @@ E-R 모델
 
 에트리뷰트 : 엔티티가 가지는 속성
 
-![Alt text](/assets/img/erd.jpg)
+![Alt text](/assets/img/erd.JPG)
 
 `테이블 설계`
 
-![Alt text](/assets/img/design_table.jpg)
+![Alt text](/assets/img/design_table.JPG)
 
 `주키와 외래키`
 
-![Alt text](/assets/img/PK_FK.jpg)
+![Alt text](/assets/img/PK_FK.JPG)
 
 # 데이터베이스 시동과 접속
 
 Startup 옵션
 
-![Alt text](/assets/img/startup.jpg)
+![Alt text](/assets/img/startup.JPG)
 
 NOMOUNT 단계  
  init<SID>.ora 파라미터 파일을 읽어서 데이터베이스가 사용하게 될 메모리 영역의 크기, 사용자 접속 수, 프로세스 수, 생성 가능한 파일 수 등을 결정
@@ -50,12 +50,12 @@ OPEN 단계
 
 Sql plus 특징
 
-![Alt text](/assets/img/sqlplus.jpg)
+![Alt text](/assets/img/sqlplus.JPG)
 
 sql plus 명령어
 
-![Alt text](/assets/img/plus_commend.jpg)
+![Alt text](/assets/img/plus_commend.JPG)
 
 Set 명령
 
-![Alt text](/assets/img/set_commend.jpg)
+![Alt text](/assets/img/set_commend.JPG)

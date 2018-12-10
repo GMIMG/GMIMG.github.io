@@ -49,3 +49,5 @@ ed., Pearson, 2013 이책이 더 좋지만 5->1계층으로감(학교 과정과 
 `For communication networks`
 
 Programming, mathematics, Algorithm, English, and any issues in vogue
+
+©copyright CIEL 2015

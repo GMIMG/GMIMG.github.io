@@ -14,7 +14,7 @@ tags:
 4. 테이블 정의
 5. 데이터 사전
 
-![Alt text](/assets/img/database_set.jpg)
+![Alt text](/assets/img/database_set.JPG)
 
 ## 테이블 스페이스 정의
 
@@ -90,4 +90,4 @@ SQL> CREATE TABLE customer(
 
 desc table로 테이블 속성 확인
 
-![Alt text](/assets/img/constraint.jpg)
+![Alt text](/assets/img/constraint.JPG)

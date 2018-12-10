@@ -29,7 +29,7 @@ Carrier signal을 (진폭, 주파수, 위상)중 하나이상을 변조한 Modul
 ### Amplitude shift keyin g (ASK)
 
 디지털 신호에 Carrier signal을 Multiplier 해줘서 보낸다.
-![Alt text](/assets/img/ASK.jpg)
+![Alt text](/assets/img/ASK.JPG)
 
 ### Frequency shift keying (FSK)
 

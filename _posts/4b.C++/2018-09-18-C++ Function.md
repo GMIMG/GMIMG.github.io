@@ -7,7 +7,7 @@ tags:
 
 # Flow of Control
 
-[![Alt text](/assets/img/short-circuit.jpg)][cplusplus]
+[![Alt text](/assets/img/short-circuit.JPG)][cplusplus]
 
 ~~~c++
 //case문 예제

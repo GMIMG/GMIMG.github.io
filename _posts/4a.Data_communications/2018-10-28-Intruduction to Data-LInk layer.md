@@ -51,18 +51,18 @@ Mac address(physical aaress)(link address)는 장치를 지날때마다 바뀌�
 
 ## Address Resolution Protocol (ARP)
 
-![Alt text](/assets/img/ARP.jpg)
+![Alt text](/assets/img/ARP.JPG)
 
-![Alt text](/assets/img/ARP2.jpg)
+![Alt text](/assets/img/ARP2.JPG)
 
-![Alt text](/assets/img/ARP3.jpg)
+![Alt text](/assets/img/ARP3.JPG)
 
-![Alt text](/assets/img/ARP_example.jpg)
+![Alt text](/assets/img/ARP_example.JPG)
 
-![Alt text](/assets/img/ARP_example1.jpg)
+![Alt text](/assets/img/ARP_example1.JPG)
 
-![Alt text](/assets/img/ARP_example2.jpg)
+![Alt text](/assets/img/ARP_example2.JPG)
 
-![Alt text](/assets/img/ARP_example3.jpg)
+![Alt text](/assets/img/ARP_example3.JPG)
 
-![Alt text](/assets/img/ARP_example4.jpg)
+![Alt text](/assets/img/ARP_example4.JPG)

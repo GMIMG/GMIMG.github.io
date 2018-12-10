@@ -43,9 +43,9 @@ detect an odd number of errors
 
 ## CRC
 
-![alt text](/assets/img/CRC.jpg)
+![alt text](/assets/img/CRC.JPG)
 
-![alt text](/assets/img/CRC2.jpg)
+![alt text](/assets/img/CRC2.JPG)
 
 어떤값을 나눠서 남은 나머지를 붙여서 보냄
 
