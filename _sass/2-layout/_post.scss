@@ -35,20 +35,3 @@
 }
 
 
-
-#disqus_thread {
-  iframe {
-    padding: 20px;
-    html{
-      min-height: 500px;
-    }
-
-    #layout {
-      padding: $spacing-unit*2 0;
-    }
-    .serif {
-      padding: $spacing-unit*2 0;
-    }
-  }
-
-}
