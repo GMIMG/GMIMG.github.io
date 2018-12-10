@@ -213,8 +213,16 @@
 <lastmod>2018-11-13T00:00:00+09:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/posts/wireless-LANs</loc>
+<lastmod>2018-11-20T00:00:00+09:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/posts/C++-Inheritance</loc>
 <lastmod>2018-11-20T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/posts/C++-Polymorphism-and-Virtual-Functions</loc>
+<lastmod>2018-12-04T00:00:00+09:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/about/</loc>

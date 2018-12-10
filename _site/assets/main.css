@@ -132,11 +132,6 @@ table td { border: 1px solid #e8e8e8; }
 .post-content h3, .post-content-col h3 { font-size: 19.5pt; }
 .post-content h4, .post-content-col h4 { font-size: 15pt; }
 
-#disqus_thread iframe { padding: 20px; }
-#disqus_thread iframe html { min-height: 500px; }
-#disqus_thread iframe #layout { padding: 60px 0; }
-#disqus_thread iframe .serif { padding: 60px 0; }
-
 .sidebar { float: left; width: 30%; border-radius: 15px; background-color: #f1f1f1; /* white-gray */ overflow-x: hidden; /* Disable horizontal scroll */ margin: 20px 0px; }
 .sidebar .sidebar-item { padding: 15px 15px; }
 .sidebar .sidebar-item a { text-decoration: none; color: #828282; }
@@ -188,7 +183,8 @@ table td { border: 1px solid #e8e8e8; }
 
 .post-content-col { float: left; width: 70%; }
 
-@media screen and (max-width: 800px) { .post-content-col { width: 100%; } }
+@media screen and (max-width: 800px) { .post-content-col { width: 100%; }
+  .containerBox, .site-post-category { display: none; } }
 .expo :target:before { content: ""; display: block; }
 .expo .expo-tag-list { margin-top: 20px; margin-bottom: 20px; text-align: center; }
 .expo .post-tag { display: inline-block; background: rgba(106, 159, 181, 0.15); padding: 0 .5rem; margin: .2em .3em; border-radius: 4px; color: #6a9fb5; font-size: 90%; }

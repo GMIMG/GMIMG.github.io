@@ -5,10 +5,8 @@ main:
     #url: /terms/
     children:
       - title: "Computer_science"
-      - title: "Language"
-        children:
-          - title: "Python"
       - title: "Git"
+      - title: "Python"
   - title: "Hardware"
   - title: "Blog"
   - title: "Class"
