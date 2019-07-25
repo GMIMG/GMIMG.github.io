@@ -22,7 +22,7 @@ Each station can transmit when it desires on the condition that it follows the p
 
 'Pure ALOHA'
 
-Each station sends a frame whenever it has a frame to send (multiple access), but possibility of collision. If collided needto resend the frames that have been destroyed during transmission. Pure ALOHA protocol relies on acknowledgments from the receiver. If the acknowledgment does not arrive after a time-out period. the station assumes that the frame (or the acknowledgment) has been destoryed and resends the frame.
+Each station sends a frame whenever it has a frame to send (multiple access), but possibility of collision. If collided need to resend the frames that have been destroyed during transmission. Pure ALOHA protocol relies on acknowledgments from the receiver. If the acknowledgment does not arrive after a time-out period. the station assumes that the frame (or the acknowledgment) has been destoryed and resends the frame.
 
 'Binary exponential backoff'
 
