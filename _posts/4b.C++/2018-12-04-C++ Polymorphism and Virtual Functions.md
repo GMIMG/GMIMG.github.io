@@ -1,5 +1,5 @@
 ---
-category : Data_communications
+category : C++
 ---
 
 # Virtual function

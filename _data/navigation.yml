@@ -15,5 +15,10 @@ main:
       - title: "C++"
       - title: "Database"
       - title: "Applied_Robot_Design"
+  - title: "Embedded"
+    children:
+      - title: "C"
+      - title: "?"
+      - title: "?"
   - title: "etc"
   #- title: "None"
