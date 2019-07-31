@@ -55,35 +55,35 @@ defaults:
 
 
 
-_data
-사이트 전반에 대한 데이터
-navigation.yml : 포스트의 카테고리를 관리하는 YAML (최대 두단계의 자손 카테고리까지 가능)
+# _data
+# 사이트 전반에 대한 데이터
+# navigation.yml : 포스트의 카테고리를 관리하는 YAML (최대 두단계의 자손 카테고리까지 가능)
 
-_includes
-disqus.html : disqus(댓글서비스)에서 제공하는 형식
+# _includes
+# disqus.html : disqus(댓글서비스)에서 제공하는 형식
 
-_layouts
-defalt.html : 
-page.html :
-post.html :
+# _layouts
+# defalt.html : 
+# page.html :
+# post.html :
 
-_posts
-포스트를 저장하는곳 (카테고리별로 폴더별로 묶어서 저장하면 관리하기 편함)
+# _posts
+# 포스트를 저장하는곳 (카테고리별로 폴더별로 묶어서 저장하면 관리하기 편함)
 
-_sass
-사이트 전반의 SCSS 전처리기 저장소
-0-plugins : 웹상에 배포된 플러그인 저장
-1-base :  
-2-layout :
-3-expo :
-gmimg.scss : 폴더관리
+# _sass
+# 사이트 전반의 SCSS 전처리기 저장소
+# 0-plugins : 웹상에 배포된 플러그인 저장
+# 1-base :  
+# 2-layout :
+# 3-expo :
+# gmimg.scss : 폴더관리
 
-_site
-jekyll local서버 컴파일(?)
+# _site
+# jekyll local서버 컴파일(?)
 
-assets
-포스팅에 필요한 이미지 및 기타 애셋
+# assets
+# 포스팅에 필요한 이미지 및 기타 애셋
 
-page
-사이트 페이지의 구성
+# page
+# 사이트 페이지의 구성
 
