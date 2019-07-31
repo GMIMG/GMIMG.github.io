@@ -66,9 +66,6 @@ $site-icon-size: 36px;
       height: 36px;
       z-index: 2;
       cursor: pointer;
-      line-height: 0;
-      //padding-top: 10px;
-      text-align: center;
     }
     .menu-icon {
       display: block;
@@ -78,9 +75,9 @@ $site-icon-size: 36px;
       line-height: 0;
       padding-top: 10px;
       text-align: center;
-      //> svg {
-      //  fill: $grey-color-dark;
-      //}
+      > svg {
+        fill: $grey-color-dark;
+      }
     }
     input ~ .trigger {
       clear: both;
@@ -123,9 +120,9 @@ $site-icon-size: 36px;
     text-align: center;
     line-height: 36px;
     cursor: pointer;
-    //> svg {
-    //  fill: $grey-color-dark;
-    //}
+    > svg {
+      fill: $grey-color-dark;
+    }
   }
 }
 .svg-search, .svg-menu {

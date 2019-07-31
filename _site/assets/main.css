@@ -79,8 +79,9 @@ table td { border: 1px solid #e8e8e8; }
 .site-nav .page-link { color: #111; line-height: 1.5; }
 .site-nav .page-link:not(:last-child) { margin-right: 20px; }
 @media screen and (max-width: 600px) { .site-nav { position: absolute; top: 6px; right: 15px; background-color: #fdfdfd; border: 1px solid #e8e8e8; border-radius: 5px; text-align: right; }
-  .site-nav label[for="nav-trigger"] { display: block; float: right; width: 36px; height: 36px; z-index: 2; cursor: pointer; line-height: 0; text-align: center; }
+  .site-nav label[for="nav-trigger"] { display: block; float: right; width: 36px; height: 36px; z-index: 2; cursor: pointer; }
   .site-nav .menu-icon { display: block; float: right; width: 36px; height: 26px; line-height: 0; padding-top: 10px; text-align: center; }
+  .site-nav .menu-icon > svg { fill: #424242; }
   .site-nav input ~ .trigger { clear: both; display: none; }
   .site-nav input:checked ~ .trigger { display: block; padding-bottom: 5px; }
   .site-nav .page-link { display: block; padding: 5px 10px; margin-left: 20px; }
@@ -92,6 +93,7 @@ table td { border: 1px solid #e8e8e8; }
 
 .site-search { position: absolute; top: 6px; right: 15px; border: 1px solid #e8e8e8; border-radius: 5px; }
 .site-search .search-icon { position: relative; width: 36px; height: 36px; text-align: center; line-height: 36px; cursor: pointer; }
+.site-search .search-icon > svg { fill: #424242; }
 
 .svg-search, .svg-menu { display: inline-block; vertical-align: middle; }
 
