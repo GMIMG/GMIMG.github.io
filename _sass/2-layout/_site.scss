@@ -66,6 +66,9 @@ $site-icon-size: 36px;
       height: 36px;
       z-index: 2;
       cursor: pointer;
+      line-height: 0;
+      //padding-top: 10px;
+      text-align: center;
     }
     .menu-icon {
       display: block;

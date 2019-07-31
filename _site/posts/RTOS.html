@@ -11,20 +11,20 @@
 </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Wireless lans | GMIMG</title>
+<title>Rtos | GMIMG</title>
 <meta name="generator" content="Jekyll v3.7.4" />
-<meta property="og:title" content="Wireless lans" />
+<meta property="og:title" content="Rtos" />
 <meta name="author" content="Gmimg" />
 <meta property="og:locale" content="ko_kr" />
-<meta name="description" content="Wireless LANs" />
-<meta property="og:description" content="Wireless LANs" />
-<link rel="canonical" href="http://localhost:4000/posts/wireless-LANs" />
-<meta property="og:url" content="http://localhost:4000/posts/wireless-LANs" />
+<meta name="description" content="RTOS Porting &amp; Programming" />
+<meta property="og:description" content="RTOS Porting &amp; Programming" />
+<link rel="canonical" href="http://localhost:4000/posts/RTOS" />
+<meta property="og:url" content="http://localhost:4000/posts/RTOS" />
 <meta property="og:site_name" content="GMIMG" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-11-20T00:00:00+09:00" />
+<meta property="article:published_time" content="2019-07-29T00:00:00+09:00" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/posts/wireless-LANs","headline":"Wireless lans","dateModified":"2018-11-20T00:00:00+09:00","datePublished":"2018-11-20T00:00:00+09:00","author":{"@type":"Person","name":"Gmimg"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/wireless-LANs"},"description":"Wireless LANs","@type":"BlogPosting","@context":"http://schema.org"}</script>
+{"url":"http://localhost:4000/posts/RTOS","headline":"Rtos","dateModified":"2019-07-29T00:00:00+09:00","datePublished":"2019-07-29T00:00:00+09:00","author":{"@type":"Person","name":"Gmimg"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/RTOS"},"description":"RTOS Porting &amp; Programming","@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css">
   <!--font-->
@@ -65,130 +65,185 @@
       <div class="wrapper">
         <article class="post">
   <div class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Wireless lans</h1>
+    <h1 class="post-title p-name" itemprop="name headline">Rtos</h1>
     <p class="post-meta">
-      <time class="dt-published" datetime="2018-11-20T00:00:00+09:00" itemprop="datePublished">
-        20 Nov 2018
+      <time class="dt-published" datetime="2019-07-29T00:00:00+09:00" itemprop="datePublished">
+        29 Jul 2019
       </time>
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Gmimg</span></span>
     </p>
     <div class="post-header-categories">
-      <span>Category: </span><a href="/category/#Data_communications">Data_communications</a>
     </div>
     <div class="post-header-tags">
     </div>
   </div>
   <div class="post-content" itemprop="articleBody">
-    <h1 id="wireless-lans">Wireless LANs</h1>
+    <h1 id="rtos-porting--programming">RTOS Porting &amp; Programming</h1>
 
-<h2 id="introduction">Introduction</h2>
+<h2 id="임베디드-시스템-및-rtos-개요">임베디드 시스템 및 RTOS 개요</h2>
 
-<h3 id="characteristics">Characteristics</h3>
+<p><strong>임베디드 시스템</strong></p>
+
+<p>특정한 목적을 수행하기 위해 필요한 하드웨어와 소프트웨어를 가지고 있는 시스템.</p>
+
+<p><strong>Real-Time(실시간) 시스템</strong></p>
+
+<p>주어진 입력 조건을 정해진 <em>시간 내에</em> 처리하는 시스템</p>
+
+<h3 id="arm-프로세서"><a href="https://ko.wikipedia.org/wiki/ARM_%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98">ARM 프로세서</a></h3>
+
+<p><strong>Advanced RISC Machine</strong></p>
+
+<h4 id="arm-보드의-최대강점">ARM 보드의 최대강점</h4>
 
 <ul>
   <li>
-    <p>감쇠</p>
-
-    <p>모든 방향으로 분산되기 때문에 강도가 빠르게 감소</p>
+    <p>저전력 프로세서</p>
   </li>
   <li>
-    <p>간섭</p>
-
-    <p>동일한 주파수 대역을 사용하는 경우 신호 수신이 힘듦</p>
-  </li>
-  <li>
-    <p>다중 경로 전파</p>
-
-    <p>반사되는 신호때문에 동일한 발신자로부터 하나 이상의 신호를 수신 할 수 있음.</p>
-  </li>
-  <li>
-    <p>오류</p>
+    <p>많은 반도체 회사들과 License를 맺고 ARM 기반 프로세서 생산</p>
   </li>
 </ul>
 
-<h3 id="access-control">Access Control</h3>
+<h4 id="cortex-profile-종류별-특성">Cortex Profile 종류별 특성</h4>
 
 <ul>
   <li>
-    <p>CSMA/CD</p>
+    <p>Cortex-A : Application용 - 스마트폰</p>
+  </li>
+  <li>
+    <p>Cortex-R : Real time용 (Embedded) - 자동차, 항공, 산업용</p>
+  </li>
+  <li>
+    <p>Cortex-M : Microcontroller(MICOM) - 저가 시스템</p>
+  </li>
+</ul>
 
-    <ol>
-      <li>
-        <p>충돌이 감지되면</p>
+<h4 id="arm-프로세서의-구조">ARM 프로세서의 구조</h4>
 
-        <p>프레임이 수신되지 않았으므로 다시 보내야 함을 의미합니다.</p>
-      </li>
-      <li>
-        <p>충돌이 감지되지 않으면</p>
+<p>ALU를 포함하는 CPU 격의 <strong>ARM CORE</strong>,</p>
 
-        <p>프레임이 수신되었음을 ack로 알립니다.</p>
-      </li>
-    </ol>
+<p>Cache, NVIC 등 Coprocessors를 포함하는 <strong>ARM Processor</strong>,</p>
 
-    <p>다음과 같은 세가지 이유로 CSMA/CD는 Wireless LANs에 적합하지 않다.</p>
+<p>제조사에서 만드는 I.C, DMA, UART, LCD, Timer, RTC 등 Peripherals을 포함하는 <strong>SoC</strong></p>
 
+<h4 id="임베디드-시스템에서의-운영체제-필요성">임베디드 시스템에서의 운영체제 필요성</h4>
+
+<ul>
+  <li>개발자가 직접 작성하는 펌웨어로 구현이 어려운 기능
     <ul>
-      <li>동시에 sending과 또는 receiving</li>
-      <li>Hidden station problem</li>
-      <li>경로 손실, 신호 페이딩(fading)으로 인한 매우 약한 감쇄</li>
+      <li>네트워크</li>
+      <li>멀티미디어</li>
+      <li>다른 시스템과 호환성을 위한 기능(File system)</li>
     </ul>
   </li>
-  <li>
-    <p>CSMA/CA</p>
-
-    <p>반송파 감지 다중 접속</p>
-  </li>
+  <li>리얼타임의 필요성 부각(정해진 시간내에 처리)</li>
+  <li>멀티태스킹 기능 필요</li>
 </ul>
 
-<h2 id="ieee-80211">IEEE 802.11</h2>
-
-<p>IEEE 802.11, which covers the physical and data-link layers. Sometimes called wireless Ethernet</p>
+<h3 id="운영체제">운영체제</h3>
 
 <ul>
   <li>
-    <p>Basic sericee set (BSS)</p>
-
-    <p>와이파이처럼 하나의 AP에 연결 또는 직접연결</p>
+    <p>제한된 시스템 자원을 효율적으로 사용할 수 있도록 관리</p>
   </li>
   <li>
-    <p>Extended service set (ESS)</p>
-
-    <p>두개 이상의 BSS를 AP로 구성</p>
+    <p>컴퓨터 시스템과 사용자간의 인터페이스 기능을 담당하여 사용자에게 편의 제공</p>
+  </li>
+  <li>
+    <p>컴퓨터 시스템의 전반적인 동작을 제어하고 조정하는 시스템 프로그램들의 집합</p>
   </li>
 </ul>
 
-<p><img src="/assets/img/Data_communication/IEEE802.11.JPG" alt="img" /></p>
+<h2 id="실시간-시스템-개념">실시간 시스템 개념</h2>
 
-<p>‘Network Allocation Vector’ (네트워크 할당 벡터) (NAV)</p>
+<p>펌웨어로 처리시 단점 1. 응답시간에 영향을 줌 2. 우선순위가 없음.</p>
 
-<p><img src="/assets/img/Data_communication/IEEE802.11MAC.JPG" alt="img" /></p>
+<p><strong>RTOS 사용 이유</strong></p>
 
-<p>Source에서 DIFS시간동안 탐색하고 RTS를 Destination을 보낸다 여기에 채널 점유 시간을 포함합니다. 그러면 Destination에서 SIFS동안 기다렸다가 모든 기기에 CTS로 응답하면 Source가 아닌 기기들은 NAV로 아무 동작을 하지않는다. 그러고 Source와 Destination간의 Data 정보 교환을 한다.</p>
+<ul>
+  <li>
+    <p>실시간 이벤트에 대한 응답시간 향상</p>
+  </li>
+  <li>운선순위 부여하여 중요한 처리를 우선적으로 진행</li>
+  <li>시스템 확장 편의성</li>
+  <li>개발 효율성</li>
+  <li>커널이 제공하는 추가기능</li>
+  <li>유지보수</li>
+</ul>
 
-<p>DIFS : 아무도 안쓰는지 확인하는 시간
-Handshaking : RTS or CTS를 합친 시간</p>
+<h3 id="태스크">태스크</h3>
 
-<p><em>Hidden-Station Problem</em></p>
+<ul>
+  <li>
+    <p>태스크 우선순위</p>
+  </li>
+  <li>
+    <p>태스크 스택</p>
 
-<p>The solution to the hidden station problem is the use of the handshake frames (RTS and CTS)</p>
+    <ul>
+      <li>
+        <p>잠시동안 저장공간 사용</p>
+      </li>
+      <li>
+        <p>태스크에서 사용하는 레지스터 등 보존</p>
+      </li>
+      <li>
+        <p>태스크 상태(Dormant, Ready, Running, Wating)</p>
+      </li>
+    </ul>
+  </li>
+</ul>
 
-<p><img src="/assets/img/Data_communication/IEEE802.11Problem2.JPG" alt="img" /></p>
+<p><img src="C:\Users\JMDESKTOP\OneDrive - seoultech.ac.kr\GitHub\GMIMG.github.io\_posts\Untitled Diagram (1).jpg" alt="Untitled Diagram (1)" /></p>
 
-<p>‘Point Coordination Function’ (PCF)</p>
+<p>Scheduler : 가장 높은 우선순위의 태스크를 선택하는 방식</p>
 
-<p>AP가 스테이션에 대해 폴링을 수행, 차례대로 폴링되어 AP에 데이터를 전송.</p>
+<p>preemptive Kernel(선점형 커널) : 특정 태스크의 수행을 중단 시키고 다른 태스크를 수행시킬 수 있는 커널</p>
 
-<p>Addressing mechanisms</p>
+<p>Reentrancy(재진입성) : 코드의 재진입이 가능(중단 후 재실행 가능)</p>
 
-<p><img src="/assets/img/Data_communication/IEEE802.11Addressing.JPG" alt="img" /></p>
+<p>Concurrency(동시성 문제) : 동시에 공유자원에 액세스 했을 때 발생할 수 있는 문제</p>
 
-<p><img src="/assets/img/Data_communication/IEEE802.11Addressing2.JPG" alt="img" /></p>
+<p>동시성 문제 해결법 -&gt; Mutual Exclusion</p>
 
-<p><em>Exposed Station Problem</em></p>
+<p>Mutual Exclusion</p>
 
-<p><img src="/assets/img/Data_communication/IEEE802.11Problem.JPG" alt="img" /></p>
+<ol>
+  <li>
+    <p>Critical Section(Region)</p>
 
-<h2 id="bluetooth">Bluetooth</h2>
+    <p>인터럽트를 포함한 다른 코드의 수행에 의해 중단 되어서는 안되는 영역</p>
+
+    <p>간단하지만 인터럽트 금지 시간이 길어지면 문제 발생</p>
+  </li>
+  <li>
+    <p>공유자원 사용하는 동안 Scheduling 금지</p>
+
+    <p>높은 우선순위의 태스크가 CPU를 점유하는 시점이 지연될 수 있음</p>
+  </li>
+  <li>
+    <p>Semaphore(공용키) 사용</p>
+
+    <p>우선순위가 높아도 Semaphore를 다른 태스크가 가지고 있으면 Wait상태가 됨</p>
+
+    <p>공유자원의 access time이 짧은 경우 위의 두 방법이 더 효과적일 수 있음</p>
+
+    <p>멀티코어에서는 위미가 없음, (스핀락 사용)</p>
+  </li>
+</ol>
+
+<p>Deadlock : 다른 태스크에서 사용 중인 자원을 무한히 기다리는 상태</p>
+
+<p>Deadlock방지</p>
+
+<ul>
+  <li>순서대로 자원 획득, 역순으로 자원 양도</li>
+  <li>타임아웃을 지정</li>
+</ul>
+
+<p>Interrupts</p>
+
  
   </div>
     
@@ -203,7 +258,7 @@ s.setAttribute('data-timestamp', +new Date());
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-  <a class="u-url" href="/posts/wireless-LANs" hidden></a>
+  <a class="u-url" href="/posts/RTOS" hidden></a>
 </article>
       </div>
     </main>

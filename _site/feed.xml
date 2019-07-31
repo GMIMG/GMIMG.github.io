@@ -1,4 +1,302 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko_KR"><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko_KR" /><updated>2019-07-27T16:26:18+09:00</updated><id>http://localhost:4000/</id><title type="html">GMIMG</title><subtitle>Mechagrammer</subtitle><author><name>Jimin Hwang</name></author><entry><title type="html">C lang</title><link href="http://localhost:4000/posts/c-lang" rel="alternate" type="text/html" title="C lang" /><published>2019-07-27T00:00:00+09:00</published><updated>2019-07-27T00:00:00+09:00</updated><id>http://localhost:4000/posts/c%20lang</id><content type="html" xml:base="http://localhost:4000/posts/c-lang">&lt;h1 id=&quot;embedded-c-programming&quot;&gt;Embedded C Programming&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko_kr"><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko_kr" /><updated>2019-07-31T21:45:46+09:00</updated><id>http://localhost:4000/</id><title type="html">GMIMG</title><subtitle>Mechagrammer</subtitle><author><name>Jimin Hwang</name></author><entry><title type="html">Rtos</title><link href="http://localhost:4000/posts/RTOS" rel="alternate" type="text/html" title="Rtos" /><published>2019-07-29T00:00:00+09:00</published><updated>2019-07-29T00:00:00+09:00</updated><id>http://localhost:4000/posts/RTOS</id><content type="html" xml:base="http://localhost:4000/posts/RTOS">&lt;h1 id=&quot;rtos-porting--programming&quot;&gt;RTOS Porting &amp;amp; Programming&lt;/h1&gt;
+
+&lt;h2 id=&quot;임베디드-시스템-및-rtos-개요&quot;&gt;임베디드 시스템 및 RTOS 개요&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;임베디드 시스템&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;특정한 목적을 수행하기 위해 필요한 하드웨어와 소프트웨어를 가지고 있는 시스템.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Real-Time(실시간) 시스템&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;주어진 입력 조건을 정해진 &lt;em&gt;시간 내에&lt;/em&gt; 처리하는 시스템&lt;/p&gt;
+
+&lt;h3 id=&quot;arm-프로세서&quot;&gt;&lt;a href=&quot;https://ko.wikipedia.org/wiki/ARM_%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98&quot;&gt;ARM 프로세서&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Advanced RISC Machine&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;arm-보드의-최대강점&quot;&gt;ARM 보드의 최대강점&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;저전력 프로세서&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;많은 반도체 회사들과 License를 맺고 ARM 기반 프로세서 생산&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;cortex-profile-종류별-특성&quot;&gt;Cortex Profile 종류별 특성&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Cortex-A : Application용 - 스마트폰&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Cortex-R : Real time용 (Embedded) - 자동차, 항공, 산업용&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Cortex-M : Microcontroller(MICOM) - 저가 시스템&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;arm-프로세서의-구조&quot;&gt;ARM 프로세서의 구조&lt;/h4&gt;
+
+&lt;p&gt;ALU를 포함하는 CPU 격의 &lt;strong&gt;ARM CORE&lt;/strong&gt;,&lt;/p&gt;
+
+&lt;p&gt;Cache, NVIC 등 Coprocessors를 포함하는 &lt;strong&gt;ARM Processor&lt;/strong&gt;,&lt;/p&gt;
+
+&lt;p&gt;제조사에서 만드는 I.C, DMA, UART, LCD, Timer, RTC 등 Peripherals을 포함하는 &lt;strong&gt;SoC&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;임베디드-시스템에서의-운영체제-필요성&quot;&gt;임베디드 시스템에서의 운영체제 필요성&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;개발자가 직접 작성하는 펌웨어로 구현이 어려운 기능
+    &lt;ul&gt;
+      &lt;li&gt;네트워크&lt;/li&gt;
+      &lt;li&gt;멀티미디어&lt;/li&gt;
+      &lt;li&gt;다른 시스템과 호환성을 위한 기능(File system)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;리얼타임의 필요성 부각(정해진 시간내에 처리)&lt;/li&gt;
+  &lt;li&gt;멀티태스킹 기능 필요&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;운영체제&quot;&gt;운영체제&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;제한된 시스템 자원을 효율적으로 사용할 수 있도록 관리&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;컴퓨터 시스템과 사용자간의 인터페이스 기능을 담당하여 사용자에게 편의 제공&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;컴퓨터 시스템의 전반적인 동작을 제어하고 조정하는 시스템 프로그램들의 집합&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;실시간-시스템-개념&quot;&gt;실시간 시스템 개념&lt;/h2&gt;
+
+&lt;p&gt;펌웨어로 처리시 단점 1. 응답시간에 영향을 줌 2. 우선순위가 없음.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;RTOS 사용 이유&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;실시간 이벤트에 대한 응답시간 향상&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;운선순위 부여하여 중요한 처리를 우선적으로 진행&lt;/li&gt;
+  &lt;li&gt;시스템 확장 편의성&lt;/li&gt;
+  &lt;li&gt;개발 효율성&lt;/li&gt;
+  &lt;li&gt;커널이 제공하는 추가기능&lt;/li&gt;
+  &lt;li&gt;유지보수&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;태스크&quot;&gt;태스크&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;태스크 우선순위&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;태스크 스택&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;잠시동안 저장공간 사용&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;태스크에서 사용하는 레지스터 등 보존&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;태스크 상태(Dormant, Ready, Running, Wating)&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;C:\Users\JMDESKTOP\OneDrive - seoultech.ac.kr\GitHub\GMIMG.github.io\_posts\Untitled Diagram (1).jpg&quot; alt=&quot;Untitled Diagram (1)&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Scheduler : 가장 높은 우선순위의 태스크를 선택하는 방식&lt;/p&gt;
+
+&lt;p&gt;preemptive Kernel(선점형 커널) : 특정 태스크의 수행을 중단 시키고 다른 태스크를 수행시킬 수 있는 커널&lt;/p&gt;
+
+&lt;p&gt;Reentrancy(재진입성) : 코드의 재진입이 가능(중단 후 재실행 가능)&lt;/p&gt;
+
+&lt;p&gt;Concurrency(동시성 문제) : 동시에 공유자원에 액세스 했을 때 발생할 수 있는 문제&lt;/p&gt;
+
+&lt;p&gt;동시성 문제 해결법 -&amp;gt; Mutual Exclusion&lt;/p&gt;
+
+&lt;p&gt;Mutual Exclusion&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Critical Section(Region)&lt;/p&gt;
+
+    &lt;p&gt;인터럽트를 포함한 다른 코드의 수행에 의해 중단 되어서는 안되는 영역&lt;/p&gt;
+
+    &lt;p&gt;간단하지만 인터럽트 금지 시간이 길어지면 문제 발생&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;공유자원 사용하는 동안 Scheduling 금지&lt;/p&gt;
+
+    &lt;p&gt;높은 우선순위의 태스크가 CPU를 점유하는 시점이 지연될 수 있음&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Semaphore(공용키) 사용&lt;/p&gt;
+
+    &lt;p&gt;우선순위가 높아도 Semaphore를 다른 태스크가 가지고 있으면 Wait상태가 됨&lt;/p&gt;
+
+    &lt;p&gt;공유자원의 access time이 짧은 경우 위의 두 방법이 더 효과적일 수 있음&lt;/p&gt;
+
+    &lt;p&gt;멀티코어에서는 위미가 없음, (스핀락 사용)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Deadlock : 다른 태스크에서 사용 중인 자원을 무한히 기다리는 상태&lt;/p&gt;
+
+&lt;p&gt;Deadlock방지&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;순서대로 자원 획득, 역순으로 자원 양도&lt;/li&gt;
+  &lt;li&gt;타임아웃을 지정&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Interrupts&lt;/p&gt;</content><author><name>Gmimg</name></author><summary type="html">RTOS Porting &amp;amp; Programming</summary></entry><entry><title type="html">추천교재</title><link href="http://localhost:4000/posts/%EC%B6%94%EC%B2%9C%EA%B5%90%EC%9E%AC" rel="alternate" type="text/html" title="추천교재" /><published>2019-07-27T00:00:00+09:00</published><updated>2019-07-27T00:00:00+09:00</updated><id>http://localhost:4000/posts/%EC%B6%94%EC%B2%9C%EA%B5%90%EC%9E%AC</id><content type="html" xml:base="http://localhost:4000/posts/%EC%B6%94%EC%B2%9C%EA%B5%90%EC%9E%AC">&lt;ul class=&quot;task-list&quot;&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Clean Code&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;윤성우의 열혈 자료구조&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;
+    &lt;p&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;&lt;a href=&quot;http://order.kyobobook.co.kr/cart/cartListMain#&quot;&gt;C로 배우는 알고리즘 1&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;C++ STL&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Effective C++&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;
+    &lt;p&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;알고리즘 문제 해결 전략 세트&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;
+    &lt;p&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Clean Software&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;
+    &lt;p&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;GoF의 디자인 패턴&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;
+    &lt;p&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Code Complete&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;
+    &lt;p&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;생각하는 프로그래밍&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;
+    &lt;p&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;리팩토링 : 코드 품질을 개선하는 객체지향 사고법&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;
+    &lt;p&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Inntroduction to Algorithms&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;
+    &lt;p&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;컴퓨터 프로그램의 구조와 해석&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;
+    &lt;p&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;컴퓨터시스템구조&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;
+    &lt;p&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;운영체제&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;
+    &lt;p&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;컴퓨터 구조 및 설계&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;
+    &lt;p&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;임베디드 레시피&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;
+    &lt;p&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;ARM 리눅스 커널&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;
+    &lt;p&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;해커의 기쁨&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;
+    &lt;p&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;&lt;a href=&quot;http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=899792&quot;&gt;인사이드 머신&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;
+    &lt;p&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;&lt;a href=&quot;http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=18480581&quot;&gt;리눅스 커널 심층 분석&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;
+    &lt;p&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;&lt;a href=&quot;http://order.kyobobook.co.kr/cart/cartListMain#&quot;&gt;임베디드 리눅스 프로그래밍 완전정복&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;&lt;a href=&quot;http://order.kyobobook.co.kr/cart/cartListMain#&quot;&gt;코드로 알아보는 ARM 리눅스 커널&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Gmimg</name></author><summary type="html">Clean Code 윤성우의 열혈 자료구조 C로 배우는 알고리즘 1</summary></entry><entry><title type="html">앞으로의 학습계획</title><link href="http://localhost:4000/posts/%EC%95%9E%EC%9C%BC%EB%A1%9C%EC%9D%98-%ED%95%99%EC%8A%B5%EA%B3%84%ED%9A%8D" rel="alternate" type="text/html" title="앞으로의 학습계획" /><published>2019-07-27T00:00:00+09:00</published><updated>2019-07-27T00:00:00+09:00</updated><id>http://localhost:4000/posts/%EC%95%9E%EC%9C%BC%EB%A1%9C%EC%9D%98%20%ED%95%99%EC%8A%B5%EA%B3%84%ED%9A%8D</id><content type="html" xml:base="http://localhost:4000/posts/%EC%95%9E%EC%9C%BC%EB%A1%9C%EC%9D%98-%ED%95%99%EC%8A%B5%EA%B3%84%ED%9A%8D">&lt;p&gt;나는 지금까지 공부를 하는데에 철학이 없었다.&lt;/p&gt;
+
+&lt;p&gt;학습의 형식에만 중점을 두고 어떻게하면 내가 노력을 했는지에 대해 보여주기에 집중했다. (지금 글을 쓰고있는 이유도 그중 하나). 좋은 책을 검색하고 (읽지는 않고) 모으기만 하고있다.&lt;/p&gt;
+
+&lt;p&gt;생각하고 생각하고 또 생각하자&lt;/p&gt;
+
+&lt;p&gt;임베디드 개발자가 되기로한 이유는 뭐가 있을까?&lt;/p&gt;
+
+&lt;p&gt;내 전공과의 연계성&lt;/p&gt;
+
+&lt;p&gt;전문성에대한 매력&lt;/p&gt;
+
+&lt;p&gt;연차가 쌓일수록 노하우&lt;/p&gt;
+
+&lt;p&gt;소주가 아닌 위스키&lt;/p&gt;
+
+&lt;p&gt;글을 잘 쓰는 방법&lt;/p&gt;
+
+&lt;p&gt;먼저 기업의 채용공고를 보고 지원자격과 우대사항에대해 정리한다.&lt;/p&gt;
+
+&lt;p&gt;알고리즘 공부&lt;/p&gt;
+
+&lt;p&gt;코딩을 하기전에 프로그램 설계를 완벽하게 하기.&lt;/p&gt;
+
+&lt;p&gt;여러 알고리즘을 짜기보단 하나를 짜더라도 내가 짠 코드를 철저하게 분석한다.&lt;/p&gt;
+
+&lt;p&gt;착각하는것.&lt;/p&gt;
+
+&lt;p&gt;언어는 수단&lt;/p&gt;
+
+&lt;p&gt;C 언어 와 C++ 현직자 수준으로 내가 머리속으로 생각한 것을 자유자재로 구현할 정도로&lt;/p&gt;
+
+&lt;p&gt;나만의 노하우 쌓기&lt;/p&gt;
+
+&lt;p&gt;코드 품질 높이기&lt;/p&gt;
+
+&lt;p&gt;이후 생산성을 높이기 위해 파이썬으로 다양한 활동&lt;/p&gt;
+
+&lt;p&gt;컴퓨터 (시스템) 구조&lt;/p&gt;
+
+&lt;p&gt;Operating System 공부&lt;/p&gt;
+
+&lt;p&gt;깃허브에 꾸준히 업로드하기.&lt;/p&gt;
+
+&lt;p&gt;나에대한 메타인지&lt;/p&gt;
+
+&lt;p&gt;컴퓨터 구조&lt;/p&gt;
+
+&lt;p&gt;https://covenant.tistory.com/103?category=773722&lt;/p&gt;
+
+&lt;p&gt;운영체제 공부&lt;/p&gt;
+
+&lt;p&gt;https://covenant.tistory.com/100?category=773722&lt;/p&gt;
+
+&lt;p&gt;http://www.kocw.net/home/search/kemView.do?kemId=978503&lt;/p&gt;
+
+&lt;p&gt;http://www.kocw.net/home/m/search/kemView.do?kemId=998138&lt;/p&gt;
+
+&lt;p&gt;http://blog.naver.com/PostList.nhn?blogId=hjyang0&amp;amp;parentCategoryNo=6&lt;/p&gt;
+
+&lt;p&gt;http://snui.snu.ac.kr/ocw/index.php?mode=view&amp;amp;id=623#class_room-tab&lt;/p&gt;</content><author><name>Gmimg</name></author><summary type="html">나는 지금까지 공부를 하는데에 철학이 없었다.</summary></entry><entry><title type="html">To do</title><link href="http://localhost:4000/posts/To-Do" rel="alternate" type="text/html" title="To do" /><published>2019-07-27T00:00:00+09:00</published><updated>2019-07-27T00:00:00+09:00</updated><id>http://localhost:4000/posts/To%20Do</id><content type="html" xml:base="http://localhost:4000/posts/To-Do">&lt;ul&gt;
+  &lt;li&gt;190722&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;운영체제 공부&lt;/p&gt;
+
+&lt;p&gt;https://covenant.tistory.com/100?category=773722&lt;/p&gt;
+
+&lt;p&gt;http://www.kocw.net/home/search/kemView.do?kemId=978503&lt;/p&gt;
+
+&lt;p&gt;http://www.kocw.net/home/m/search/kemView.do?kemId=998138&lt;/p&gt;
+
+&lt;p&gt;http://blog.naver.com/PostList.nhn?blogId=hjyang0&amp;amp;parentCategoryNo=6&lt;/p&gt;
+
+&lt;p&gt;http://snui.snu.ac.kr/ocw/index.php?mode=view&amp;amp;id=623#class_room-tab&lt;/p&gt;</content><author><name>Gmimg</name></author><summary type="html">190722</summary></entry><entry><title type="html">C lang</title><link href="http://localhost:4000/posts/C-lang" rel="alternate" type="text/html" title="C lang" /><published>2019-07-27T00:00:00+09:00</published><updated>2019-07-27T00:00:00+09:00</updated><id>http://localhost:4000/posts/C%20lang</id><content type="html" xml:base="http://localhost:4000/posts/C-lang">&lt;h1 id=&quot;embedded-c-programming&quot;&gt;Embedded C Programming&lt;/h1&gt;
 
 &lt;h2 id=&quot;들어가며&quot;&gt;들어가며&lt;/h2&gt;
 
@@ -422,11 +720,194 @@ void main(void)
 
 &lt;h2 id=&quot;디버깅&quot;&gt;디버깅&lt;/h2&gt;
 
-&lt;p&gt;디버깅은 간단하게 F5(디버깅), F9(중단점), F10(프로시저단위실행), F11(한단계씩 코드실행) 와 조사식, 메모리 덤프로 진행한다.&lt;/p&gt;
+&lt;p&gt;IDE 마다 다른 디버깅 모드를 지원한다. VS에서 디버깅은 간단하게 F5(디버깅), F9(중단점), F10(프로시저단위실행), F11(한단계씩 코드실행) 와 조사식, 메모리 덤프로 진행한다.&lt;/p&gt;
 
 &lt;p&gt;직접해보는게 더 빨리 익힐 수 있다.&lt;/p&gt;
 
 &lt;h2 id=&quot;연산자&quot;&gt;연산자&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://dojang.io/mod/page/view.php?id=188&quot;&gt;연산자 우선순위&lt;/a&gt; 를 잘 알면 여러줄의 코드를 짧게 줄일 수 있고, 연산 효율을 높일 수 있다.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;우선순위&lt;/th&gt;
+      &lt;th&gt;연산자&lt;/th&gt;
+      &lt;th&gt;설명&lt;/th&gt;
+      &lt;th&gt;결합 방향&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;(postfix) &lt;code class=&quot;highlighter-rouge&quot;&gt;++&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;--&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;후위 증가와 감소&lt;/td&gt;
+      &lt;td&gt;→&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;()&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;함수 호출&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;[]&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;배열 첨자&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;.&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;참조로 요소 선택&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-&amp;gt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;포인터를 통해 요소 선택&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;(prefix) &lt;code class=&quot;highlighter-rouge&quot;&gt;++&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;--&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;전위 증가와 감소&lt;/td&gt;
+      &lt;td&gt;←&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;(sign) &lt;code class=&quot;highlighter-rouge&quot;&gt;+&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;-&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;단항 증가감소 연산자&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;!&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;~&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;논리 NOT, 비트NOT&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;(type)&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;타입 캐스트&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;역참조&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;주소값&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sizeof&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;자료형의 크기&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;/&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;%&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;곱셈 나눗셈 나머지&lt;/td&gt;
+      &lt;td&gt;→&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;+&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;-&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;덧셈 뺄셈&lt;/td&gt;
+      &lt;td&gt;→&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;&amp;lt;&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&amp;gt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;비트 왼쪽 쉬프트와 오른쪽 쉬프트&lt;/td&gt;
+      &lt;td&gt;→&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;=&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;=&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;작음, 작거나 같음, 큼, 크거나 같음&lt;/td&gt;
+      &lt;td&gt;→&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;==&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;!=&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;관계 = 와 ≠&lt;/td&gt;
+      &lt;td&gt;→&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;비트 AND&lt;/td&gt;
+      &lt;td&gt;→&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;9&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;^&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;비트 XOR&lt;/td&gt;
+      &lt;td&gt;→&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;10&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;비트 OR&lt;/td&gt;
+      &lt;td&gt;→&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;11&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&amp;amp;&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;논리 AND&lt;/td&gt;
+      &lt;td&gt;→&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;12&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;||&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;논리 OR&lt;/td&gt;
+      &lt;td&gt;→&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;13&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;? :&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;삼항 연산자&lt;/td&gt;
+      &lt;td&gt;←&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;14&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;=&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;직접 할당&lt;/td&gt;
+      &lt;td&gt;←&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;+=&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;-=&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;*=&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;/=&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;%=&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;덧셈, 뺄셈, 곱셈, 나눗셈, 나머지 연산 후 할당&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;&amp;lt;=&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&amp;gt;=&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;비트를 왼쪽, 오른쪽으로 시프트한 후 할당&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;=&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;^=&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;|=&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;비트 AND, XOR, OR 연산 후 할당&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;15&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;,&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;콤마&lt;/td&gt;
+      &lt;td&gt;→&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
 &lt;p&gt;% 의 피연산자는 양의 정수이어야함 (음수면 컴파일러 의존) 실수를 피연산자로 취할 수 없음.&lt;/p&gt;
 
@@ -451,8 +932,6 @@ void main(void)
 &lt;h3 id=&quot;if문&quot;&gt;if문&lt;/h3&gt;
 
 &lt;p&gt;if(조건식) 실행문;&lt;/p&gt;
-
-&lt;p&gt;! : 논리부정 연산자&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;숏서킷 원리&lt;/strong&gt;&lt;/p&gt;
 
@@ -504,244 +983,19 @@ void main(void)
 
 &lt;h2 id=&quot;유효범위와-기억클래스&quot;&gt;유효범위와 기억클래스&lt;/h2&gt;
 
-&lt;p&gt;컴파일과정&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;컴파일과정&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;연산자-1&quot;&gt;연산자&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;C:\Users\JMDESKTOP\OneDrive - seoultech.ac.kr\GitHub\GMIMG.github.io\_posts\compile.jpg&quot; alt=&quot;compile&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://ko.cppreference.com/w/cpp/language/operator_precedence&quot;&gt;연산자 우선순위&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;변수의 선언&lt;/p&gt;
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;우선순위&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;연산자&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;설명&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;결합방향&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;::&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Scope resolution (c++)&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;좌 → 우&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;++&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;--&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;후위 증가와 감소&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;()&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;함수호출&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;[]&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;배열 첨자&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;.&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;참조로 요소 선택&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;-&amp;gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;포인터를 통해 요소 선택&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;++&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;--&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;전위 증가와 감소&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;우 → 좌&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;+ -&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;단항 부호 연산자&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;!&lt;code class=&quot;highlighter-rouge&quot;&gt; &lt;/code&gt;~&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;논리 NOT, 비트단위 NOT&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;(&lt;em&gt;type&lt;/em&gt;)&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;타입 캐스트&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;*&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;역참조&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;&amp;amp;&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;주소값&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;sizeof&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Size-of 연산자&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;new&lt;code class=&quot;highlighter-rouge&quot;&gt;, &lt;/code&gt;new[]&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;동적 메모리 할당 (c++)&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;delete&lt;code class=&quot;highlighter-rouge&quot;&gt;, &lt;/code&gt;delete[]&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;동적 메모리 해제 (c++)&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;.*&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;-&amp;gt;*&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;멤버 접근&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;좌 → 우&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;/&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;%&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;곱셈, 나눗셈, 나머지&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;6&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;+&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;−&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;더하기, 빼기&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;7&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;&amp;lt;&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&amp;gt;&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;비트 왼쪽 쉬프트와 오른쪽 쉬프트&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;8&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;=&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;관계 연산자 &amp;lt; 와 ≤&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;&amp;gt; &amp;gt;=&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;관계 연산자 &amp;gt; 와 ≥&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;9&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;==&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;!=&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;관계 = 와 ≠&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;10&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;비트 AND&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;11&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;^&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;비트 XOR (exclusive or)&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;12&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;비트 OR (inclusive or)&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;13&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&amp;amp;&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;논리 AND&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;14&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;||&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;논리 OR&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;15&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;?:&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;조건 연산자 (삼항 연산자)&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;우 → 좌&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;=&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;직접 할당 (C++ 클래스를 위해 기본 제공)&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;+=&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;−=&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;합과 차 할당&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;*=&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;/=&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;%=&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;곱, 몫, 나머지 할당&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;&amp;lt;=&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&amp;gt;=&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;비트 왼쪽 쉬프트와 오른쪽 쉬프트 후 할당&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;=&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;^=&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;|=&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;비트연산 AND, XOR, OR 연산 후 할당&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;16&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;throw&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;(예외를 위한)Throw 연산자&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;17&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;,&lt;/code&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;콤마&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;좌 → 우&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+&lt;p&gt;specifier + modifier + identifier ;&lt;/p&gt;
 
-&lt;p&gt;https://dojang.io/mod/page/view.php?id=188&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;C:\Users\JMDESKTOP\OneDrive - seoultech.ac.kr\GitHub\GMIMG.github.io\_posts\주석 2019-07-29 010819.png&quot; alt=&quot;주석 2019-07-29 010819&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;운영체제 공부&lt;/p&gt;
+&lt;p&gt;C언어 공부에 좋은 사이트&lt;/p&gt;
 
-&lt;p&gt;https://covenant.tistory.com/100&lt;/p&gt;
-
-&lt;p&gt;컴퓨터 구조&lt;/p&gt;
-
-&lt;p&gt;https://covenant.tistory.com/103?category=773722&lt;/p&gt;</content><author><name>Gmimg</name></author><summary type="html">Embedded C Programming</summary></entry><entry><title type="html">C++ 이산수학 2주차</title><link href="http://localhost:4000/posts/C++-%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-2%EC%A3%BC%EC%B0%A8" rel="alternate" type="text/html" title="C++ 이산수학 2주차" /><published>2019-03-29T00:00:00+09:00</published><updated>2019-03-29T00:00:00+09:00</updated><id>http://localhost:4000/posts/C++%20%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99%202%EC%A3%BC%EC%B0%A8</id><content type="html" xml:base="http://localhost:4000/posts/C++-%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-2%EC%A3%BC%EC%B0%A8">&lt;p&gt;이산수학을 들으면서 까먹었던 c++ 사용법을 다시 공부하게 됐다. 1차 과제는 생각한 숫자를 n장의 카드에서 있나 없나 확인으로 맞추는 과제였는데 배열의 동적할당 정도 사용한것 같다.&lt;/p&gt;
+&lt;p&gt;http://tcpschool.com/c/intro&lt;/p&gt;</content><author><name>Gmimg</name></author><summary type="html">Embedded C Programming</summary></entry><entry><title type="html">C tip</title><link href="http://localhost:4000/posts/C-TIP" rel="alternate" type="text/html" title="C tip" /><published>2019-07-27T00:00:00+09:00</published><updated>2019-07-27T00:00:00+09:00</updated><id>http://localhost:4000/posts/C%20TIP</id><content type="html" xml:base="http://localhost:4000/posts/C-TIP"></content><author><name>Gmimg</name></author><summary type="html"></summary></entry><entry><title type="html">C++ 이산수학 2주차</title><link href="http://localhost:4000/posts/C++-%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-2%EC%A3%BC%EC%B0%A8" rel="alternate" type="text/html" title="C++ 이산수학 2주차" /><published>2019-03-29T00:00:00+09:00</published><updated>2019-03-29T00:00:00+09:00</updated><id>http://localhost:4000/posts/C++%20%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99%202%EC%A3%BC%EC%B0%A8</id><content type="html" xml:base="http://localhost:4000/posts/C++-%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-2%EC%A3%BC%EC%B0%A8">&lt;p&gt;이산수학을 들으면서 까먹었던 c++ 사용법을 다시 공부하게 됐다. 1차 과제는 생각한 숫자를 n장의 카드에서 있나 없나 확인으로 맞추는 과제였는데 배열의 동적할당 정도 사용한것 같다.&lt;/p&gt;
 
 &lt;p&gt;이번 2차 과제는&lt;/p&gt;
 
@@ -976,485 +1230,4 @@ HourlyEmployee :: HourlyEmployee(string theName, string theNumber, double theWag
 
 &lt;h1 id=&quot;protected&quot;&gt;Protected&lt;/h1&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/C++/InhariteProtected.JPG&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;</content><author><name>Gmimg</name></author><category term="C++" /><category term="Inheritance" /><summary type="html">Inheritance class DERIVED_CLASS: public BASE_CLASS</summary></entry><entry><title type="html">Wireless lans</title><link href="http://localhost:4000/posts/wireless-LANs" rel="alternate" type="text/html" title="Wireless lans" /><published>2018-11-20T00:00:00+09:00</published><updated>2018-11-20T00:00:00+09:00</updated><id>http://localhost:4000/posts/wireless%20LANs</id><content type="html" xml:base="http://localhost:4000/posts/wireless-LANs">&lt;h1 id=&quot;wireless-lans&quot;&gt;Wireless LANs&lt;/h1&gt;
-
-&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
-
-&lt;h3 id=&quot;characteristics&quot;&gt;Characteristics&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;감쇠&lt;/p&gt;
-
-    &lt;p&gt;모든 방향으로 분산되기 때문에 강도가 빠르게 감소&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;간섭&lt;/p&gt;
-
-    &lt;p&gt;동일한 주파수 대역을 사용하는 경우 신호 수신이 힘듦&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;다중 경로 전파&lt;/p&gt;
-
-    &lt;p&gt;반사되는 신호때문에 동일한 발신자로부터 하나 이상의 신호를 수신 할 수 있음.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;오류&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;access-control&quot;&gt;Access Control&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;CSMA/CD&lt;/p&gt;
-
-    &lt;ol&gt;
-      &lt;li&gt;
-        &lt;p&gt;충돌이 감지되면&lt;/p&gt;
-
-        &lt;p&gt;프레임이 수신되지 않았으므로 다시 보내야 함을 의미합니다.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;충돌이 감지되지 않으면&lt;/p&gt;
-
-        &lt;p&gt;프레임이 수신되었음을 ack로 알립니다.&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ol&gt;
-
-    &lt;p&gt;다음과 같은 세가지 이유로 CSMA/CD는 Wireless LANs에 적합하지 않다.&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;동시에 sending과 또는 receiving&lt;/li&gt;
-      &lt;li&gt;Hidden station problem&lt;/li&gt;
-      &lt;li&gt;경로 손실, 신호 페이딩(fading)으로 인한 매우 약한 감쇄&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;CSMA/CA&lt;/p&gt;
-
-    &lt;p&gt;반송파 감지 다중 접속&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;ieee-80211&quot;&gt;IEEE 802.11&lt;/h2&gt;
-
-&lt;p&gt;IEEE 802.11, which covers the physical and data-link layers. Sometimes called wireless Ethernet&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Basic sericee set (BSS)&lt;/p&gt;
-
-    &lt;p&gt;와이파이처럼 하나의 AP에 연결 또는 직접연결&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Extended service set (ESS)&lt;/p&gt;
-
-    &lt;p&gt;두개 이상의 BSS를 AP로 구성&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/Data_communication/IEEE802.11.JPG&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;‘Network Allocation Vector’ (네트워크 할당 벡터) (NAV)&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/Data_communication/IEEE802.11MAC.JPG&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Source에서 DIFS시간동안 탐색하고 RTS를 Destination을 보낸다 여기에 채널 점유 시간을 포함합니다. 그러면 Destination에서 SIFS동안 기다렸다가 모든 기기에 CTS로 응답하면 Source가 아닌 기기들은 NAV로 아무 동작을 하지않는다. 그러고 Source와 Destination간의 Data 정보 교환을 한다.&lt;/p&gt;
-
-&lt;p&gt;DIFS : 아무도 안쓰는지 확인하는 시간
-Handshaking : RTS or CTS를 합친 시간&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Hidden-Station Problem&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;The solution to the hidden station problem is the use of the handshake frames (RTS and CTS)&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/Data_communication/IEEE802.11Problem2.JPG&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;‘Point Coordination Function’ (PCF)&lt;/p&gt;
-
-&lt;p&gt;AP가 스테이션에 대해 폴링을 수행, 차례대로 폴링되어 AP에 데이터를 전송.&lt;/p&gt;
-
-&lt;p&gt;Addressing mechanisms&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/Data_communication/IEEE802.11Addressing.JPG&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/Data_communication/IEEE802.11Addressing2.JPG&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Exposed Station Problem&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/Data_communication/IEEE802.11Problem.JPG&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;bluetooth&quot;&gt;Bluetooth&lt;/h2&gt;</content><author><name>Gmimg</name></author><category term="Data_communications" /><summary type="html">Wireless LANs</summary></entry><entry><title type="html">Wired LANs Ethernet &amp;amp; Other Wired Networks</title><link href="http://localhost:4000/posts/Wired-LANs" rel="alternate" type="text/html" title="Wired LANs Ethernet &amp; Other Wired Networks" /><published>2018-11-13T00:00:00+09:00</published><updated>2018-11-13T00:00:00+09:00</updated><id>http://localhost:4000/posts/Wired%20LANs</id><content type="html" xml:base="http://localhost:4000/posts/Wired-LANs">&lt;h1 id=&quot;ehternet&quot;&gt;Ehternet&lt;/h1&gt;
-
-&lt;p&gt;IEEE Project 802&lt;/p&gt;
-
-&lt;h2 id=&quot;ethernet-protocol&quot;&gt;Ethernet protocol&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;TCP/IP protocol&lt;/li&gt;
-  &lt;li&gt;Local area network(LAN)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;IEEE standard for LANs&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/Data_communication/IEEE802LAN.JPG&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;standard-ehternet&quot;&gt;Standard Ehternet&lt;/h2&gt;
-
-&lt;p&gt;: data rate of 10 Mbps&lt;/p&gt;
-
-&lt;h3 id=&quot;characteristics&quot;&gt;Characteristics&lt;/h3&gt;
-
-&lt;p&gt;connectionless and Unrealiable Service&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Each frame sent is independent of the previous or next frame&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Ethernet frame&lt;/p&gt;
-
-&lt;p&gt;| Preamble | SFD | Destination address | Source address | Type | Data and padding | CRC |
-|:——–:|—–|———————|—————-|——|——————|—–|&lt;/p&gt;
-
-&lt;h3 id=&quot;addressing&quot;&gt;Addressing&lt;/h3&gt;
-
-&lt;p&gt;The Ethernet address is 6 bytes (48bits)&lt;/p&gt;
-
-&lt;p&gt;첫번째 Byte에는 Unicast, Multicast, BroadCast Addresses 정보가 들어있음.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Unicast : 짝수&lt;/p&gt;
-
-    &lt;p&gt;All stations will receive the frame, the intended recipient keeps and handles the frame; the rest discard it.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Multicast : 홀수&lt;/p&gt;
-
-    &lt;p&gt;All stations will receive the frame, the stations that are members of the group keep and handle it; the rest discard it.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Broadcast : FF&lt;/p&gt;
-
-    &lt;p&gt;All stations (except the sender) will receive the frame and all stations (except the sender) keep and handle it.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;access-method&quot;&gt;Access Method&lt;/h3&gt;
-
-&lt;p&gt;The standard Ethernet chose CSMA/CD with 1-persistent method.&lt;/p&gt;
-
-&lt;p&gt;최소프레임길이 예제&lt;/p&gt;
-
-&lt;h3 id=&quot;implementation&quot;&gt;Implementation&lt;/h3&gt;
-
-&lt;p&gt;10BaseX&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Data rate 10 Mbps&lt;/li&gt;
-  &lt;li&gt;Base means baseband (digital) signal&lt;/li&gt;
-  &lt;li&gt;X
-approximately defines either the maximum size of the cable in 100 meters. Or, the type of cable, T for unshielded twisted pair cable (UTP) and F for fiber-optic.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;10Base5 : Thick Ethernet
-10Base2 : Thin Ethernet
-10Base-T : Twisted-Pair Ethernet
-10Base-F : Fiber Ethernet&lt;/p&gt;
-
-&lt;h2 id=&quot;fast-ethernet&quot;&gt;FAST Ethernet&lt;/h2&gt;
-
-&lt;h2 id=&quot;gigabit-ethernet&quot;&gt;GIGABIT Ethernet&lt;/h2&gt;
-
-&lt;h2 id=&quot;10-gigabit-ethernet&quot;&gt;10-GIGABIT Ethernet&lt;/h2&gt;
-
-&lt;h1 id=&quot;other-wired-networks&quot;&gt;Other wired Networks&lt;/h1&gt;
-
-&lt;h2 id=&quot;telephone-network&quot;&gt;telephone network&lt;/h2&gt;
-
-&lt;h2 id=&quot;the-cable-network&quot;&gt;The cable network&lt;/h2&gt;
-
-&lt;h2 id=&quot;synchronous-optical-network-sonet&quot;&gt;Synchronous Optical Network (SONET)&lt;/h2&gt;
-
-&lt;p&gt;a wide area network(WAN), SONET, that is used as a transport network to carry loads from other WANs.&lt;/p&gt;
-
-&lt;p&gt;SONET/SDH is a synchronous network using synchronous TDM multiplexing.&lt;/p&gt;
-
-&lt;p&gt;SONET&lt;/p&gt;
-
-&lt;h2 id=&quot;atm&quot;&gt;ATM&lt;/h2&gt;</content><author><name>Gmimg</name></author><category term="Data_communications" /><summary type="html">Ehternet</summary></entry><entry><title type="html">Media access control(mac)</title><link href="http://localhost:4000/posts/Media-Access-Control(MAC)" rel="alternate" type="text/html" title="Media access control(mac)" /><published>2018-11-12T00:00:00+09:00</published><updated>2018-11-12T00:00:00+09:00</updated><id>http://localhost:4000/posts/Media%20Access%20Control(MAC)</id><content type="html" xml:base="http://localhost:4000/posts/Media-Access-Control(MAC)">&lt;h1 id=&quot;mac&quot;&gt;MAC&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Random access&lt;/li&gt;
-  &lt;li&gt;Controlled access&lt;/li&gt;
-  &lt;li&gt;Channelization&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;random-access-protocols&quot;&gt;Random access Protocols&lt;/h2&gt;
-
-&lt;p&gt;Each station can transmit when it desires on the condition that it follows the predefined procedure. including testing the state of the medium. If more than one station tries to send, there is an access conflict. i.e., collision.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;ALOHA&lt;/li&gt;
-  &lt;li&gt;CSMA&lt;/li&gt;
-  &lt;li&gt;CSMA/CD&lt;/li&gt;
-  &lt;li&gt;CSMA/CA&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;aloha-protocol&quot;&gt;ALOHA protocol&lt;/h3&gt;
-
-&lt;p&gt;‘Pure ALOHA’&lt;/p&gt;
-
-&lt;p&gt;Each station sends a frame whenever it has a frame to send (multiple access), but possibility of collision. If collided need to resend the frames that have been destroyed during transmission. Pure ALOHA protocol relies on acknowledgments from the receiver. If the acknowledgment does not arrive after a time-out period. the station assumes that the frame (or the acknowledgment) has been destoryed and resends the frame.&lt;/p&gt;
-
-&lt;p&gt;‘Binary exponential backoff’&lt;/p&gt;
-
-&lt;p&gt;For each retransmission, a multiplier R = 0 to 2^k -1 is randomly chosen and multiplied by t(p)(maximum propagation time) or T(fr)(the average time required to send out a frame) to find T(B).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/Data_communication/BinaryExponentialBackoff.JPG&quot; alt=&quot;BinaryExponentialBackoff&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;‘Vulnerable time’&lt;/p&gt;
-
-&lt;p&gt;Length of time in which there is a possibility of collision.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/Data_communication/VulnerableTime.JPG&quot; alt=&quot;VulnerableTime&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;‘Throughput’&lt;/p&gt;
-
-&lt;p&gt;The throughput for pure ALOHA is S= G x e^(-2G)
-The maximum throughput S(max)= 1/(2e) = 0.184 when G=(1/2)&lt;/p&gt;
-
-&lt;p&gt;‘Slotted ALOHA’&lt;/p&gt;
-
-&lt;p&gt;Invented to improve the efficiency of pure ALOHA. Divide the time into slots of T(fr) seconds and force the station to send only at the beginning of the time slot. 시작지점을 정해줌. Vulnerable time = T(fr), Throughput S = G x E^(-G), S(max) = 0.368 when G=1&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/Data_communication/VulnerableTime.JPG&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;csma&quot;&gt;CSMA&lt;/h3&gt;
-
-&lt;p&gt;Carrier sense multiple access (CSMA)&lt;/p&gt;
-
-&lt;p&gt;To minimize the chance of collision and, therefore, increase the performance. 눈치를 보고 보냄.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;1-persistent&lt;/li&gt;
-  &lt;li&gt;Nonpersistent&lt;/li&gt;
-  &lt;li&gt;p-persistent&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;csmacd&quot;&gt;CSMA/CD&lt;/h3&gt;
-
-&lt;h3 id=&quot;csmaca&quot;&gt;CSMA/CA&lt;/h3&gt;
-
-&lt;p&gt;For wireless networks. Collisions are avoided through the use of CSMA/CA’s three strategies: Interframe space, Contention window, and Acknowledgments.&lt;/p&gt;
-
-&lt;h2 id=&quot;controlled-access&quot;&gt;Controlled access&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Reservation&lt;/li&gt;
-  &lt;li&gt;Polling&lt;/li&gt;
-  &lt;li&gt;Token passing&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;channelization&quot;&gt;Channelization&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;FDMA&lt;/li&gt;
-  &lt;li&gt;TDMA&lt;/li&gt;
-  &lt;li&gt;CDMA&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Gmimg</name></author><category term="Data_communications" /><summary type="html">MAC</summary></entry><entry><title type="html">Jekyll</title><link href="http://localhost:4000/posts/jekyll" rel="alternate" type="text/html" title="Jekyll" /><published>2018-11-07T00:00:00+09:00</published><updated>2018-11-07T00:00:00+09:00</updated><id>http://localhost:4000/posts/jekyll</id><content type="html" xml:base="http://localhost:4000/posts/jekyll">&lt;h1 id=&quot;뭥미&quot;&gt;뭥미&lt;/h1&gt;
-&lt;!--
-~~~
-https://www.mattcrampton.com/blog/checking_if_a_variable_is_set_in_jekyll/
-
-
-
-
-
-
-
-
-
-
-https://github.com/Shopify/liquid/issues/223#issuecomment-376816247
-
-
-To summarize, here's a table of the boolean value of various values (jekyll 3.7.3, liquid 4.0.0):
-
-Operator	nil	&quot;&quot;	&quot; &quot;
-var	false	true	true
-var == blank	false	false	false
-var == empty	false	true	false
-var == &quot;&quot;	false	true	false
-var == nil	true	false	false
-Generated with statements like false
-
-- Empty strings are &quot;truthy&quot;, unlike in most languages
-- No operator returns true for both undefined (nil) and empty strings. Use 'or' as suggested above (var == nil or var == empty)
-- blank doesn't seem to work for strings. By analogy to the rails blank? operator, I would have expected both &quot;&quot; and &quot; &quot; to be blank, but liquid seems to only define it for certain custom datatypes.
-~~~
---&gt;</content><author><name>Gmimg</name></author><category term="jekyll" /><summary type="html">뭥미 &amp;lt;!– ~~~ https://www.mattcrampton.com/blog/checking_if_a_variable_is_set_in_jekyll/</summary></entry><entry><title type="html">C++ c String and string</title><link href="http://localhost:4000/posts/C++-C-string-and-String" rel="alternate" type="text/html" title="C++ c String and string" /><published>2018-11-06T00:00:00+09:00</published><updated>2018-11-06T00:00:00+09:00</updated><id>http://localhost:4000/posts/C++%20C-string%20and%20String</id><content type="html" xml:base="http://localhost:4000/posts/C++-C-string-and-String">&lt;h1 id=&quot;c-string&quot;&gt;C-String&lt;/h1&gt;
-
-&lt;p&gt;c언어에서 쓰던 것과 같다. 1byte type인 char의 배열이라고 볼수있다. 그리고 크기는 글자수 + 1 byte 이상인데 이 1byte는 null character(‘\o’)로 구성되어있어야 C-String으로 인식하고 내장함수를 사용할 수 있다. Array with base type char, End of string marked with null, “\0”. If null overwritten, c-string no longer “acts” like c-string!&lt;/p&gt;
-
-&lt;p&gt;char ourString[5] = “Hi”;
-// char ourString[] = “Hi”; =&amp;gt; legal
-// char ourString = “Hi”; =&amp;gt; illegal&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;ourString[1] =&amp;gt; “H”&lt;/li&gt;
-  &lt;li&gt;ourString[2] =&amp;gt; “i”&lt;/li&gt;
-  &lt;li&gt;ourString[3] =&amp;gt; “\0”&lt;/li&gt;
-  &lt;li&gt;ourString[4] =&amp;gt; ?&lt;/li&gt;
-  &lt;li&gt;ourString[5] =&amp;gt; ?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Require library &amp;lt;cstring&amp;gt;&lt;/p&gt;
-
-&lt;p&gt;cannot use operator ‘==’&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;strcmp(a, b) : ==&lt;/li&gt;
-  &lt;li&gt;strcat(a, b, [limit]) : +&lt;/li&gt;
-  &lt;li&gt;strcpy(a, b, [limit]) : copy&lt;/li&gt;
-  &lt;li&gt;strlan(a) : length&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-C++&quot;&gt;cin.getline(a, 80);
-char nextSymbol;
-cin.get(nextSymbol);
-cout.put(&quot;a&quot;);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;cin.putback()&lt;/li&gt;
-  &lt;li&gt;peekChar = cin.peek();&lt;/li&gt;
-  &lt;li&gt;cin.ignore(1000, “\n”);&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;cctype&amp;gt;
-&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;toupper&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;'a'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tolower&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;'A'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// isupper();
-// islower();
-// isalpha(); (alphabat)
-// isdigit();
-// isalnum();
-// isspace();
-// ispunct(); (?)
-// isprint();
-// isgraph();
-// isctrl();
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;class-string&quot;&gt;Class string&lt;/h1&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-C++&quot;&gt;#include &amp;lt;iostream&amp;gt;
-#include &amp;lt;string&amp;gt;
-using namespace std ;
-void newLine();
-
-int main(){
-string s1, s2, s3, s4, s5, s6;
-s3 = s1 + s2; //Concatenation
-s3 = &quot;Hello Mom!&quot; //Assignment
-getline(cin, s4);
-cin &amp;gt;&amp;gt; s5;
-newLine();
-}
-void newLine() //clear buffer
-{
-	char nextChar ;
-	do
-	{
-	cin.get (nextChar );
-	} while (nextChar != ' \n');
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;.at(i)&lt;/li&gt;
-  &lt;li&gt;.substr(position, length)&lt;/li&gt;
-  &lt;li&gt;.length()&lt;/li&gt;
-  &lt;li&gt;.empty()&lt;/li&gt;
-  &lt;li&gt;.insert(pos, str2)&lt;/li&gt;
-  &lt;li&gt;.remove(pos, length)&lt;/li&gt;
-  &lt;li&gt;.find(str1, [start_pos])&lt;/li&gt;
-  &lt;li&gt;.find_first_of(str1, pos)&lt;/li&gt;
-  &lt;li&gt;=,+=&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-C++&quot;&gt;//class string =&amp;gt; c-String
-char aCString[]= &quot;my C-string&quot;;
-string stringVar;
-stringVar = aCstring;
-strcpy(aCString, stringVar.c_str());
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-C++&quot;&gt;int i;
-double d;
-string s;
-i = stoi(&quot;35&quot;);
-d = stod(&quot;2.5&quot;);
-s = to_string(d*2);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//Demonstrates getline and cin.get.
-&lt;/span&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;
-#include &amp;lt;string&amp;gt;
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;just&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;firstString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;secondString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
- 
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;firstString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;secondString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Enter two strings.&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;getline&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;firstString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;getline&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;secondString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;just&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;firstString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;secondString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;just&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;firstString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;secondString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{},&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{};&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;firstString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;firstString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;64&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;91&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;c1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;65&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;96&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;123&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;c1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;97&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-	&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;secondString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;secondString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;64&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;91&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;c2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;65&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;96&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;123&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;c2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;97&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-		&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-	&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;They are not anagrams.&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;They are anagrams!&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Gmimg</name></author><category term="C++" /><category term="String" /><summary type="html">C-String</summary></entry></feed>
+&lt;p&gt;&lt;img src=&quot;/assets/img/C++/InhariteProtected.JPG&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;</content><author><name>Gmimg</name></author><category term="C++" /><category term="Inheritance" /><summary type="html">Inheritance class DERIVED_CLASS: public BASE_CLASS</summary></entry></feed>

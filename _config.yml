@@ -24,7 +24,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-paginate
-lang: ko_KR
+lang: ko_kr
 permalink: /posts/:title
 paginate: 15
 paginate_path: "/posts/:num/"

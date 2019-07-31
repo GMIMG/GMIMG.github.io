@@ -11,20 +11,20 @@
 </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Error detection and correction | GMIMG</title>
+<title>C tip | GMIMG</title>
 <meta name="generator" content="Jekyll v3.7.4" />
-<meta property="og:title" content="Error detection and correction" />
+<meta property="og:title" content="C tip" />
 <meta name="author" content="Gmimg" />
 <meta property="og:locale" content="ko_kr" />
-<meta name="description" content="Block coding Cyclic coding Checksum Forward error correction Error =&gt; bit가 깨짐" />
-<meta property="og:description" content="Block coding Cyclic coding Checksum Forward error correction Error =&gt; bit가 깨짐" />
-<link rel="canonical" href="http://localhost:4000/posts/Error-Detection-and-Correction" />
-<meta property="og:url" content="http://localhost:4000/posts/Error-Detection-and-Correction" />
+<meta name="description" content="Mechagrammer" />
+<meta property="og:description" content="Mechagrammer" />
+<link rel="canonical" href="http://localhost:4000/posts/C-TIP" />
+<meta property="og:url" content="http://localhost:4000/posts/C-TIP" />
 <meta property="og:site_name" content="GMIMG" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-10-30T00:00:00+09:00" />
+<meta property="article:published_time" content="2019-07-27T00:00:00+09:00" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/posts/Error-Detection-and-Correction","headline":"Error detection and correction","dateModified":"2018-10-30T00:00:00+09:00","datePublished":"2018-10-30T00:00:00+09:00","author":{"@type":"Person","name":"Gmimg"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/Error-Detection-and-Correction"},"description":"Block coding Cyclic coding Checksum Forward error correction Error =&gt; bit가 깨짐","@type":"BlogPosting","@context":"http://schema.org"}</script>
+{"url":"http://localhost:4000/posts/C-TIP","headline":"C tip","dateModified":"2019-07-27T00:00:00+09:00","datePublished":"2019-07-27T00:00:00+09:00","author":{"@type":"Person","name":"Gmimg"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/C-TIP"},"description":"Mechagrammer","@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css">
   <!--font-->
@@ -65,95 +65,20 @@
       <div class="wrapper">
         <article class="post">
   <div class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Error detection and correction</h1>
+    <h1 class="post-title p-name" itemprop="name headline">C tip</h1>
     <p class="post-meta">
-      <time class="dt-published" datetime="2018-10-30T00:00:00+09:00" itemprop="datePublished">
-        30 Oct 2018
+      <time class="dt-published" datetime="2019-07-27T00:00:00+09:00" itemprop="datePublished">
+        27 Jul 2019
       </time>
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Gmimg</span></span>
     </p>
     <div class="post-header-categories">
-      <span>Category: </span><a href="/category/#Data_communications">Data_communications</a>
     </div>
     <div class="post-header-tags">
-      <span>Tags: </span>
-        <a href="/tag/#Error Detection">Error Detection</a><span>, </span>
-        <a href="/tag/#Error Correction">Error Correction</a>
     </div>
   </div>
   <div class="post-content" itemprop="articleBody">
-    <ul>
-  <li>Block coding</li>
-  <li>Cyclic coding</li>
-  <li>Checksum</li>
-  <li>Forward error correction</li>
-</ul>
-
-<p>Error =&gt; bit가 깨짐</p>
-
-<ul>
-  <li>Single-bit error</li>
-  <li>Burst error</li>
-</ul>
-
-<p><code class="highlighter-rouge">Redundancy</code> : Error 탐지를 위해 부가적으로 붙이는 bit</p>
-
-<h1 id="block-coding">Block coding</h1>
-
-<p>Codewords(n) = datawords(k) + redundant(r)</p>
-
-<p>2^n - 2^k = codeword가 남아서 invalid 코드를 판단한다.</p>
-
-<p>Hamming Distance : 두 bits를 exclusive or해서 1의 갯수를 샌것 (즉, 두 words의 거리)</p>
-
-<h2 id="linear-block-codes">Linear Block Codes</h2>
-
-<p>각 비트를 exclusive or 해서 redundancy를 붙여줌.</p>
-
-<p>ex) 00 -&gt; 000, 10 -&gt; 101, 01 -&gt; 011, 11 -&gt; 110</p>
-
-<p>Minimum Hanning distance is 2.</p>
-
-<h2 id="parity-check-code">Parity-check code</h2>
-
-<p>하나의 linear bock code</p>
-
-<p>detect an odd number of errors</p>
-
-<h1 id="cyclic-coding">Cyclic coding</h1>
-
-<h2 id="crc">CRC</h2>
-
-<p><img src="/assets/img/CRC.JPG" alt="alt text" /></p>
-
-<p><img src="/assets/img/CRC2.JPG" alt="alt text" /></p>
-
-<p>어떤값을 나눠서 남은 나머지를 붙여서 보냄</p>
-
-<p>수신측과 송신측은 어떤 값을 나눴는지 미리 정해야함.</p>
-
-<p>수신측에서 받은 codeword를 그수로 나누면 나누어 떨어져야한다.</p>
-
-<h3 id="polynomial">Polynomial</h3>
-
-<p>binary -&gt; 다항식으로 차수를 적용</p>
-
-<p>Generator 생성에 유리</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>**dataword를 주고 CRC값 찾기
-</code></pre></div></div>
-
-<h1 id="checksum">Checksum</h1>
-
-<p>블럭을 일정한 bit인 여러 유닛으로 나누어 다 더한값을 Redundancy로 사용</p>
-
-<p>유닛의 범위를 넘어가면 넘어간 범위를 그냥 더해줌</p>
-
-<p>**풀어볼것</p>
-
-<h1 id="chunk-interleaving">Chunk Interleaving</h1>
-
-<p>패킷별로 보내는게 아니라 다른 유닛으로 보내준다 -&gt; 미디어전송에 유리(손실돼도 큰 지장 없음)</p>
+    
  
   </div>
     
@@ -168,7 +93,7 @@ s.setAttribute('data-timestamp', +new Date());
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-  <a class="u-url" href="/posts/Error-Detection-and-Correction" hidden></a>
+  <a class="u-url" href="/posts/C-TIP" hidden></a>
 </article>
       </div>
     </main>

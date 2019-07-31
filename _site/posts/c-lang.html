@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko_KR">
+<html lang="ko_kr">
   <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125422008-2"></script>
@@ -15,16 +15,16 @@
 <meta name="generator" content="Jekyll v3.7.4" />
 <meta property="og:title" content="C lang" />
 <meta name="author" content="Gmimg" />
-<meta property="og:locale" content="ko_KR" />
+<meta property="og:locale" content="ko_kr" />
 <meta name="description" content="Embedded C Programming" />
 <meta property="og:description" content="Embedded C Programming" />
-<link rel="canonical" href="http://localhost:4000/posts/c-lang" />
-<meta property="og:url" content="http://localhost:4000/posts/c-lang" />
+<link rel="canonical" href="http://localhost:4000/posts/C-lang" />
+<meta property="og:url" content="http://localhost:4000/posts/C-lang" />
 <meta property="og:site_name" content="GMIMG" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-07-27T00:00:00+09:00" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/posts/c-lang","headline":"C lang","dateModified":"2019-07-27T00:00:00+09:00","datePublished":"2019-07-27T00:00:00+09:00","author":{"@type":"Person","name":"Gmimg"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/c-lang"},"description":"Embedded C Programming","@type":"BlogPosting","@context":"http://schema.org"}</script>
+{"url":"http://localhost:4000/posts/C-lang","headline":"C lang","dateModified":"2019-07-27T00:00:00+09:00","datePublished":"2019-07-27T00:00:00+09:00","author":{"@type":"Person","name":"Gmimg"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/C-lang"},"description":"Embedded C Programming","@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css">
   <!--font-->
@@ -35,16 +35,17 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.0/axios.min.js"></script>
 </head>
   <body>
-    <header class="site-header" role="banner">
+    <header class="site-header">
   <div class="wrapper"><a class="site-title" rel="author" href="/">GMIMG</a>
       <nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        
         <label for="nav-trigger">
-          <div class="menu-icon">
+          
             <svg class="svg-menu" viewBox="0 0 18 15" width="18px" height="15px">
               <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
             </svg>
-          </div>
+          
         </label>
         <div class="trigger">
             <a class="page-link" href="/about/">about</a>
@@ -76,6 +77,52 @@
     <div class="post-header-tags">
     </div>
   </div>
+    <aside>
+      <div class="toc_container">
+        <div class="toc_title">
+          <span><strong>Index</strong></span>
+        </div>
+        <ul>
+  <li><a href="#embedded-c-programming">Embedded C Programming</a>
+    <ul>
+      <li><a href="#들어가며">들어가며</a></li>
+      <li><a href="#임베디드-시스템">임베디드 시스템</a></li>
+      <li><a href="#c언어">C언어</a></li>
+      <li><a href="#상수">상수</a>
+        <ul>
+          <li><a href="#c언어의-데이터-타입">C언어의 데이터 타입</a></li>
+          <li><a href="#suffix">suffix</a></li>
+          <li><a href="#문자열">문자열</a>
+            <ul>
+              <li><a href="#printf">printf</a></li>
+              <li><a href="#scanf와-scanf_s">scanf와 scanf_s</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#변수">변수</a></li>
+      <li><a href="#디버깅">디버깅</a></li>
+      <li><a href="#연산자">연산자</a></li>
+      <li><a href="#함수">함수</a></li>
+      <li><a href="#분기문">분기문</a>
+        <ul>
+          <li><a href="#if문">if문</a></li>
+          <li><a href="#조건연산자">조건연산자</a></li>
+          <li><a href="#switch--case문">switch ~ case문</a></li>
+        </ul>
+      </li>
+      <li><a href="#반복문">반복문</a>
+        <ul>
+          <li><a href="#for문">for문</a></li>
+          <li><a href="#while문">while문</a></li>
+        </ul>
+      </li>
+      <li><a href="#유효범위와-기억클래스">유효범위와 기억클래스</a></li>
+    </ul>
+  </li>
+</ul>
+      </div>
+    </aside>
   <div class="post-content" itemprop="articleBody">
     <h1 id="embedded-c-programming">Embedded C Programming</h1>
 
@@ -501,11 +548,194 @@ void main(void)
 
 <h2 id="디버깅">디버깅</h2>
 
-<p>디버깅은 간단하게 F5(디버깅), F9(중단점), F10(프로시저단위실행), F11(한단계씩 코드실행) 와 조사식, 메모리 덤프로 진행한다.</p>
+<p>IDE 마다 다른 디버깅 모드를 지원한다. VS에서 디버깅은 간단하게 F5(디버깅), F9(중단점), F10(프로시저단위실행), F11(한단계씩 코드실행) 와 조사식, 메모리 덤프로 진행한다.</p>
 
 <p>직접해보는게 더 빨리 익힐 수 있다.</p>
 
 <h2 id="연산자">연산자</h2>
+
+<p><a href="https://dojang.io/mod/page/view.php?id=188">연산자 우선순위</a> 를 잘 알면 여러줄의 코드를 짧게 줄일 수 있고, 연산 효율을 높일 수 있다.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>우선순위</th>
+      <th>연산자</th>
+      <th>설명</th>
+      <th>결합 방향</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>(postfix) <code class="highlighter-rouge">++</code> <code class="highlighter-rouge">--</code></td>
+      <td>후위 증가와 감소</td>
+      <td>→</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><code class="highlighter-rouge">()</code></td>
+      <td>함수 호출</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><code class="highlighter-rouge">[]</code></td>
+      <td>배열 첨자</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><code class="highlighter-rouge">.</code></td>
+      <td>참조로 요소 선택</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><code class="highlighter-rouge">-&gt;</code></td>
+      <td>포인터를 통해 요소 선택</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>(prefix) <code class="highlighter-rouge">++</code> <code class="highlighter-rouge">--</code></td>
+      <td>전위 증가와 감소</td>
+      <td>←</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>(sign) <code class="highlighter-rouge">+</code> <code class="highlighter-rouge">-</code></td>
+      <td>단항 증가감소 연산자</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><code class="highlighter-rouge">!</code> <code class="highlighter-rouge">~</code></td>
+      <td>논리 NOT, 비트NOT</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><code class="highlighter-rouge">(type)</code></td>
+      <td>타입 캐스트</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><code class="highlighter-rouge">*</code></td>
+      <td>역참조</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><code class="highlighter-rouge">&amp;</code></td>
+      <td>주소값</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><code class="highlighter-rouge">sizeof</code></td>
+      <td>자료형의 크기</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><code class="highlighter-rouge">*</code> <code class="highlighter-rouge">/</code> <code class="highlighter-rouge">%</code></td>
+      <td>곱셈 나눗셈 나머지</td>
+      <td>→</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td><code class="highlighter-rouge">+</code> <code class="highlighter-rouge">-</code></td>
+      <td>덧셈 뺄셈</td>
+      <td>→</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td><code class="highlighter-rouge">&lt;&lt;</code> <code class="highlighter-rouge">&gt;&gt;</code></td>
+      <td>비트 왼쪽 쉬프트와 오른쪽 쉬프트</td>
+      <td>→</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td><code class="highlighter-rouge">&lt;</code> <code class="highlighter-rouge">&lt;=</code> <code class="highlighter-rouge">&gt;</code> <code class="highlighter-rouge">&gt;=</code></td>
+      <td>작음, 작거나 같음, 큼, 크거나 같음</td>
+      <td>→</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td><code class="highlighter-rouge">==</code> <code class="highlighter-rouge">!=</code></td>
+      <td>관계 = 와 ≠</td>
+      <td>→</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td><code class="highlighter-rouge">&amp;</code></td>
+      <td>비트 AND</td>
+      <td>→</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td><code class="highlighter-rouge">^</code></td>
+      <td>비트 XOR</td>
+      <td>→</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td><code class="highlighter-rouge">|</code></td>
+      <td>비트 OR</td>
+      <td>→</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td><code class="highlighter-rouge">&amp;&amp;</code></td>
+      <td>논리 AND</td>
+      <td>→</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td><code class="highlighter-rouge">||</code></td>
+      <td>논리 OR</td>
+      <td>→</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td><code class="highlighter-rouge">? :</code></td>
+      <td>삼항 연산자</td>
+      <td>←</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td><code class="highlighter-rouge">=</code></td>
+      <td>직접 할당</td>
+      <td>←</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><code class="highlighter-rouge">+=</code> <code class="highlighter-rouge">-=</code> <code class="highlighter-rouge">*=</code> <code class="highlighter-rouge">/=</code> <code class="highlighter-rouge">%=</code></td>
+      <td>덧셈, 뺄셈, 곱셈, 나눗셈, 나머지 연산 후 할당</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><code class="highlighter-rouge">&lt;&lt;=</code> <code class="highlighter-rouge">&gt;&gt;=</code></td>
+      <td>비트를 왼쪽, 오른쪽으로 시프트한 후 할당</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><code class="highlighter-rouge">&amp;=</code> <code class="highlighter-rouge">^=</code> <code class="highlighter-rouge">|=</code></td>
+      <td>비트 AND, XOR, OR 연산 후 할당</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td><code class="highlighter-rouge">,</code></td>
+      <td>콤마</td>
+      <td>→</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>% 의 피연산자는 양의 정수이어야함 (음수면 컴파일러 의존) 실수를 피연산자로 취할 수 없음.</p>
 
@@ -530,8 +760,6 @@ void main(void)
 <h3 id="if문">if문</h3>
 
 <p>if(조건식) 실행문;</p>
-
-<p>! : 논리부정 연산자</p>
 
 <p><strong>숏서킷 원리</strong></p>
 
@@ -583,245 +811,19 @@ void main(void)
 
 <h2 id="유효범위와-기억클래스">유효범위와 기억클래스</h2>
 
-<p>컴파일과정</p>
+<p><strong>컴파일과정</strong></p>
 
-<h2 id="연산자-1">연산자</h2>
+<p><img src="C:\Users\JMDESKTOP\OneDrive - seoultech.ac.kr\GitHub\GMIMG.github.io\_posts\compile.jpg" alt="compile" /></p>
 
-<p><a href="https://ko.cppreference.com/w/cpp/language/operator_precedence">연산자 우선순위</a></p>
+<p>변수의 선언</p>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center">우선순위</th>
-      <th style="text-align: left">연산자</th>
-      <th style="text-align: left">설명</th>
-      <th style="text-align: left">결합방향</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center">1</td>
-      <td style="text-align: left"><code class="highlighter-rouge">::</code></td>
-      <td style="text-align: left">Scope resolution (c++)</td>
-      <td style="text-align: left">좌 → 우</td>
-    </tr>
-    <tr>
-      <td style="text-align: center">2</td>
-      <td style="text-align: left"><code class="highlighter-rouge">++</code> <code class="highlighter-rouge">--</code></td>
-      <td style="text-align: left">후위 증가와 감소</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: center"> </td>
-      <td style="text-align: left">()</td>
-      <td style="text-align: left">함수호출</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: center"> </td>
-      <td style="text-align: left">[]</td>
-      <td style="text-align: left">배열 첨자</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: center"> </td>
-      <td style="text-align: left">.</td>
-      <td style="text-align: left">참조로 요소 선택</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: center"> </td>
-      <td style="text-align: left">-&gt;</td>
-      <td style="text-align: left">포인터를 통해 요소 선택</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: center">3</td>
-      <td style="text-align: left"><code class="highlighter-rouge">++</code> <code class="highlighter-rouge">--</code></td>
-      <td style="text-align: left">전위 증가와 감소</td>
-      <td style="text-align: left">우 → 좌</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"> </td>
-      <td style="text-align: left">+ -</td>
-      <td style="text-align: left">단항 부호 연산자</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: center"> </td>
-      <td style="text-align: left">!<code class="highlighter-rouge"> </code>~</td>
-      <td style="text-align: left">논리 NOT, 비트단위 NOT</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: center"> </td>
-      <td style="text-align: left">(<em>type</em>)</td>
-      <td style="text-align: left">타입 캐스트</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: center"> </td>
-      <td style="text-align: left">*</td>
-      <td style="text-align: left">역참조</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: center"> </td>
-      <td style="text-align: left">&amp;</td>
-      <td style="text-align: left">주소값</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: center"> </td>
-      <td style="text-align: left">sizeof</td>
-      <td style="text-align: left">Size-of 연산자</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: center"> </td>
-      <td style="text-align: left">new<code class="highlighter-rouge">, </code>new[]</td>
-      <td style="text-align: left">동적 메모리 할당 (c++)</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: center"> </td>
-      <td style="text-align: left">delete<code class="highlighter-rouge">, </code>delete[]</td>
-      <td style="text-align: left">동적 메모리 해제 (c++)</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: center">4</td>
-      <td style="text-align: left"><code class="highlighter-rouge">.*</code> <code class="highlighter-rouge">-&gt;*</code></td>
-      <td style="text-align: left">멤버 접근</td>
-      <td style="text-align: left">좌 → 우</td>
-    </tr>
-    <tr>
-      <td style="text-align: center">5</td>
-      <td style="text-align: left"><code class="highlighter-rouge">*</code> <code class="highlighter-rouge">/</code> <code class="highlighter-rouge">%</code></td>
-      <td style="text-align: left">곱셈, 나눗셈, 나머지</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: center">6</td>
-      <td style="text-align: left"><code class="highlighter-rouge">+</code> <code class="highlighter-rouge">−</code></td>
-      <td style="text-align: left">더하기, 빼기</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: center">7</td>
-      <td style="text-align: left"><code class="highlighter-rouge">&lt;&lt;</code> <code class="highlighter-rouge">&gt;&gt;</code></td>
-      <td style="text-align: left">비트 왼쪽 쉬프트와 오른쪽 쉬프트</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: center">8</td>
-      <td style="text-align: left"><code class="highlighter-rouge">&lt;</code> <code class="highlighter-rouge">&lt;=</code></td>
-      <td style="text-align: left">관계 연산자 &lt; 와 ≤</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: center"> </td>
-      <td style="text-align: left">&gt; &gt;=</td>
-      <td style="text-align: left">관계 연산자 &gt; 와 ≥</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: center">9</td>
-      <td style="text-align: left"><code class="highlighter-rouge">==</code> <code class="highlighter-rouge">!=</code></td>
-      <td style="text-align: left">관계 = 와 ≠</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: center">10</td>
-      <td style="text-align: left"><code class="highlighter-rouge">&amp;</code></td>
-      <td style="text-align: left">비트 AND</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: center">11</td>
-      <td style="text-align: left"><code class="highlighter-rouge">^</code></td>
-      <td style="text-align: left">비트 XOR (exclusive or)</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: center">12</td>
-      <td style="text-align: left"><code class="highlighter-rouge">|</code></td>
-      <td style="text-align: left">비트 OR (inclusive or)</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: center">13</td>
-      <td style="text-align: left"><code class="highlighter-rouge">&amp;&amp;</code></td>
-      <td style="text-align: left">논리 AND</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: center">14</td>
-      <td style="text-align: left"><code class="highlighter-rouge">||</code></td>
-      <td style="text-align: left">논리 OR</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: center">15</td>
-      <td style="text-align: left"><code class="highlighter-rouge">?:</code></td>
-      <td style="text-align: left">조건 연산자 (삼항 연산자)</td>
-      <td style="text-align: left">우 → 좌</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"> </td>
-      <td style="text-align: left"><code class="highlighter-rouge">=</code></td>
-      <td style="text-align: left">직접 할당 (C++ 클래스를 위해 기본 제공)</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: center"> </td>
-      <td style="text-align: left"><code class="highlighter-rouge">+=</code> <code class="highlighter-rouge">−=</code></td>
-      <td style="text-align: left">합과 차 할당</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: center"> </td>
-      <td style="text-align: left"><code class="highlighter-rouge">*=</code> <code class="highlighter-rouge">/=</code> <code class="highlighter-rouge">%=</code></td>
-      <td style="text-align: left">곱, 몫, 나머지 할당</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: center"> </td>
-      <td style="text-align: left"><code class="highlighter-rouge">&lt;&lt;=</code> <code class="highlighter-rouge">&gt;&gt;=</code></td>
-      <td style="text-align: left">비트 왼쪽 쉬프트와 오른쪽 쉬프트 후 할당</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: center"> </td>
-      <td style="text-align: left"><code class="highlighter-rouge">&amp;=</code> <code class="highlighter-rouge">^=</code> <code class="highlighter-rouge">|=</code></td>
-      <td style="text-align: left">비트연산 AND, XOR, OR 연산 후 할당</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: center">16</td>
-      <td style="text-align: left"><code class="highlighter-rouge">throw</code></td>
-      <td style="text-align: left">(예외를 위한)Throw 연산자</td>
-      <td style="text-align: left"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: center">17</td>
-      <td style="text-align: left"><code class="highlighter-rouge">,</code></td>
-      <td style="text-align: left">콤마</td>
-      <td style="text-align: left">좌 → 우</td>
-    </tr>
-  </tbody>
-</table>
+<p>specifier + modifier + identifier ;</p>
 
-<p>https://dojang.io/mod/page/view.php?id=188</p>
+<p><img src="C:\Users\JMDESKTOP\OneDrive - seoultech.ac.kr\GitHub\GMIMG.github.io\_posts\주석 2019-07-29 010819.png" alt="주석 2019-07-29 010819" /></p>
 
-<p>운영체제 공부</p>
+<p>C언어 공부에 좋은 사이트</p>
 
-<p>https://covenant.tistory.com/100</p>
-
-<p>컴퓨터 구조</p>
-
-<p>https://covenant.tistory.com/103?category=773722</p>
-
+<p>http://tcpschool.com/c/intro</p>
  
   </div>
     
@@ -836,7 +838,7 @@ s.setAttribute('data-timestamp', +new Date());
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-  <a class="u-url" href="/posts/c-lang" hidden></a>
+  <a class="u-url" href="/posts/C-lang" hidden></a>
 </article>
       </div>
     </main>
