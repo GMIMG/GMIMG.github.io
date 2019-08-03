@@ -30,13 +30,17 @@ paginate: 15
 paginate_path: "/posts/:num/"
 category_dir: category/
 tag_dir: tag/
+algolia:
+  application_id: XOU4HIXAXB
+  index_name:     blog # You can replace that with whatever name you want
+  search_only_api_key    : 2cefbb1667552724a06f3051447863bc # YOUR_SEARCH_ONLY_API_KEY
 
 #폴더에 있는 파일의 YAML디폴트값
 defaults:
   # _posts
   - scope:
       path: ""
-      type: posts
+      type: posts #_posts폴더안에있으면
     values:
       author: Gmimg
       layout: post
@@ -45,9 +49,9 @@ defaults:
       #toc: true #목차
       #category: None
       
-  # _page
+  # page
   - scope:
-      path: "page"
+      path: "page" #page폴더 안에있는 html
       type: 
     values:
       sidebar: "main"
@@ -63,11 +67,12 @@ defaults:
 # disqus.html : disqus(댓글서비스)에서 제공하는 형식
 
 # _layouts
-# defalt.html : 
-# page.html :
-# post.html :
+# 페이지들의 layout을 설정, Liquid 템플릿 언어 사용.
+# defalt.html : {YAML(page.lang,site.lang),script(masthjax,discus),include(head,header,footer)}
+# page.html : {layout(defalut),YAML(page.sidebar),include(sidebar)}
+# post.html : {layout(page),YAML(page.toc,site.disqus.shortname,)include(post-header,toc,disqus)}
 
-# _posts
+# _posts {layout(post)}
 # 포스트를 저장하는곳 (카테고리별로 폴더별로 묶어서 저장하면 관리하기 편함)
 
 # _sass
@@ -86,4 +91,3 @@ defaults:
 
 # page
 # 사이트 페이지의 구성
-

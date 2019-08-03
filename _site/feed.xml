@@ -1,4 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko"><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko" /><updated>2019-07-31T22:04:22+09:00</updated><id>http://localhost:4000/</id><title type="html">GMIMG</title><subtitle>Mechagrammer</subtitle><author><name>Jimin Hwang</name></author><entry><title type="html">Rtos</title><link href="http://localhost:4000/posts/RTOS" rel="alternate" type="text/html" title="Rtos" /><published>2019-07-29T00:00:00+09:00</published><updated>2019-07-29T00:00:00+09:00</updated><id>http://localhost:4000/posts/RTOS</id><content type="html" xml:base="http://localhost:4000/posts/RTOS">&lt;h1 id=&quot;rtos-porting--programming&quot;&gt;RTOS Porting &amp;amp; Programming&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko" /><updated>2019-08-03T16:51:03+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">GMIMG</title><subtitle>Mechagrammer</subtitle><author><name>Jimin Hwang</name></author><entry><title type="html">School</title><link href="http://localhost:4000/posts/school" rel="alternate" type="text/html" title="School" /><published>2019-08-01T00:00:00+09:00</published><updated>2019-08-01T00:00:00+09:00</updated><id>http://localhost:4000/posts/school</id><content type="html" xml:base="http://localhost:4000/posts/school">&lt;ul&gt;
+  &lt;li&gt;190722&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;운영체제 공부&lt;/p&gt;
+
+&lt;p&gt;https://covenant.tistory.com/100?category=773722&lt;/p&gt;
+
+&lt;p&gt;http://www.kocw.net/home/search/kemView.do?kemId=978503&lt;/p&gt;
+
+&lt;p&gt;http://www.kocw.net/home/m/search/kemView.do?kemId=998138&lt;/p&gt;
+
+&lt;p&gt;http://blog.naver.com/PostList.nhn?blogId=hjyang0&amp;amp;parentCategoryNo=6&lt;/p&gt;
+
+&lt;p&gt;http://snui.snu.ac.kr/ocw/index.php?mode=view&amp;amp;id=623#class_room-tab&lt;/p&gt;</content><author><name>Gmimg</name></author><summary type="html">190722</summary></entry><entry><title type="html">Rtos</title><link href="http://localhost:4000/posts/RTOS" rel="alternate" type="text/html" title="Rtos" /><published>2019-07-29T00:00:00+09:00</published><updated>2019-07-29T00:00:00+09:00</updated><id>http://localhost:4000/posts/RTOS</id><content type="html" xml:base="http://localhost:4000/posts/RTOS">&lt;h1 id=&quot;rtos-porting--programming&quot;&gt;RTOS Porting &amp;amp; Programming&lt;/h1&gt;
 
 &lt;h2 id=&quot;임베디드-시스템-및-rtos-개요&quot;&gt;임베디드 시스템 및 RTOS 개요&lt;/h2&gt;
 
@@ -163,10 +177,10 @@
 &lt;/ul&gt;
 
 &lt;p&gt;Interrupts&lt;/p&gt;</content><author><name>Gmimg</name></author><summary type="html">RTOS Porting &amp;amp; Programming</summary></entry><entry><title type="html">추천교재</title><link href="http://localhost:4000/posts/%EC%B6%94%EC%B2%9C%EA%B5%90%EC%9E%AC" rel="alternate" type="text/html" title="추천교재" /><published>2019-07-27T00:00:00+09:00</published><updated>2019-07-27T00:00:00+09:00</updated><id>http://localhost:4000/posts/%EC%B6%94%EC%B2%9C%EA%B5%90%EC%9E%AC</id><content type="html" xml:base="http://localhost:4000/posts/%EC%B6%94%EC%B2%9C%EA%B5%90%EC%9E%AC">&lt;ul class=&quot;task-list&quot;&gt;
-  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Clean Code&lt;/li&gt;
-  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;윤성우의 열혈 자료구조&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;Clean Code&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;윤성우의 열혈 자료구조&lt;/li&gt;
   &lt;li class=&quot;task-list-item&quot;&gt;
-    &lt;p&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;&lt;a href=&quot;http://order.kyobobook.co.kr/cart/cartListMain#&quot;&gt;C로 배우는 알고리즘 1&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;&lt;a href=&quot;http://order.kyobobook.co.kr/cart/cartListMain#&quot;&gt;C로 배우는 알고리즘 1&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;C++ STL&lt;/li&gt;
   &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Effective C++&lt;/li&gt;
@@ -282,21 +296,21 @@
 
 &lt;p&gt;http://blog.naver.com/PostList.nhn?blogId=hjyang0&amp;amp;parentCategoryNo=6&lt;/p&gt;
 
-&lt;p&gt;http://snui.snu.ac.kr/ocw/index.php?mode=view&amp;amp;id=623#class_room-tab&lt;/p&gt;</content><author><name>Gmimg</name></author><summary type="html">나는 지금까지 공부를 하는데에 철학이 없었다.</summary></entry><entry><title type="html">To do</title><link href="http://localhost:4000/posts/To-Do" rel="alternate" type="text/html" title="To do" /><published>2019-07-27T00:00:00+09:00</published><updated>2019-07-27T00:00:00+09:00</updated><id>http://localhost:4000/posts/To%20Do</id><content type="html" xml:base="http://localhost:4000/posts/To-Do">&lt;ul&gt;
-  &lt;li&gt;190722&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;http://snui.snu.ac.kr/ocw/index.php?mode=view&amp;amp;id=623#class_room-tab&lt;/p&gt;
 
-&lt;p&gt;운영체제 공부&lt;/p&gt;
+&lt;p&gt;2019 하반기&lt;/p&gt;
 
-&lt;p&gt;https://covenant.tistory.com/100?category=773722&lt;/p&gt;
+&lt;p&gt;C언어&lt;/p&gt;</content><author><name>Gmimg</name></author><summary type="html">나는 지금까지 공부를 하는데에 철학이 없었다.</summary></entry><entry><title type="html">To do</title><link href="http://localhost:4000/posts/To-Do" rel="alternate" type="text/html" title="To do" /><published>2019-07-27T00:00:00+09:00</published><updated>2019-07-27T00:00:00+09:00</updated><id>http://localhost:4000/posts/To%20Do</id><content type="html" xml:base="http://localhost:4000/posts/To-Do">&lt;p&gt;학교에서 했던 경험&lt;/p&gt;
 
-&lt;p&gt;http://www.kocw.net/home/search/kemView.do?kemId=978503&lt;/p&gt;
+&lt;p&gt;1학년&lt;/p&gt;
 
-&lt;p&gt;http://www.kocw.net/home/m/search/kemView.do?kemId=998138&lt;/p&gt;
+&lt;p&gt;CAD/CAM&lt;/p&gt;
 
-&lt;p&gt;http://blog.naver.com/PostList.nhn?blogId=hjyang0&amp;amp;parentCategoryNo=6&lt;/p&gt;
+&lt;p&gt;2학년&lt;/p&gt;
 
-&lt;p&gt;http://snui.snu.ac.kr/ocw/index.php?mode=view&amp;amp;id=623#class_room-tab&lt;/p&gt;</content><author><name>Gmimg</name></author><summary type="html">190722</summary></entry><entry><title type="html">C lang</title><link href="http://localhost:4000/posts/C-lang" rel="alternate" type="text/html" title="C lang" /><published>2019-07-27T00:00:00+09:00</published><updated>2019-07-27T00:00:00+09:00</updated><id>http://localhost:4000/posts/C%20lang</id><content type="html" xml:base="http://localhost:4000/posts/C-lang">&lt;h1 id=&quot;embedded-c-programming&quot;&gt;Embedded C Programming&lt;/h1&gt;
+&lt;p&gt;3학년&lt;/p&gt;
+
+&lt;p&gt;4학년&lt;/p&gt;</content><author><name>Gmimg</name></author><summary type="html">학교에서 했던 경험</summary></entry><entry><title type="html">C lang</title><link href="http://localhost:4000/posts/C-lang" rel="alternate" type="text/html" title="C lang" /><published>2019-07-27T00:00:00+09:00</published><updated>2019-07-27T00:00:00+09:00</updated><id>http://localhost:4000/posts/C%20lang</id><content type="html" xml:base="http://localhost:4000/posts/C-lang">&lt;h1 id=&quot;embedded-c-programming&quot;&gt;Embedded C Programming&lt;/h1&gt;
 
 &lt;h2 id=&quot;들어가며&quot;&gt;들어가며&lt;/h2&gt;
 
@@ -995,7 +1009,7 @@ void main(void)
 
 &lt;p&gt;C언어 공부에 좋은 사이트&lt;/p&gt;
 
-&lt;p&gt;http://tcpschool.com/c/intro&lt;/p&gt;</content><author><name>Gmimg</name></author><summary type="html">Embedded C Programming</summary></entry><entry><title type="html">C tip</title><link href="http://localhost:4000/posts/C-TIP" rel="alternate" type="text/html" title="C tip" /><published>2019-07-27T00:00:00+09:00</published><updated>2019-07-27T00:00:00+09:00</updated><id>http://localhost:4000/posts/C%20TIP</id><content type="html" xml:base="http://localhost:4000/posts/C-TIP"></content><author><name>Gmimg</name></author><summary type="html"></summary></entry><entry><title type="html">C++ 이산수학 2주차</title><link href="http://localhost:4000/posts/C++-%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-2%EC%A3%BC%EC%B0%A8" rel="alternate" type="text/html" title="C++ 이산수학 2주차" /><published>2019-03-29T00:00:00+09:00</published><updated>2019-03-29T00:00:00+09:00</updated><id>http://localhost:4000/posts/C++%20%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99%202%EC%A3%BC%EC%B0%A8</id><content type="html" xml:base="http://localhost:4000/posts/C++-%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-2%EC%A3%BC%EC%B0%A8">&lt;p&gt;이산수학을 들으면서 까먹었던 c++ 사용법을 다시 공부하게 됐다. 1차 과제는 생각한 숫자를 n장의 카드에서 있나 없나 확인으로 맞추는 과제였는데 배열의 동적할당 정도 사용한것 같다.&lt;/p&gt;
+&lt;p&gt;http://tcpschool.com/c/intro&lt;/p&gt;</content><author><name>Gmimg</name></author><summary type="html">Embedded C Programming</summary></entry><entry><title type="html">C tip</title><link href="http://localhost:4000/posts/C-TIP" rel="alternate" type="text/html" title="C tip" /><published>2019-07-27T00:00:00+09:00</published><updated>2019-07-27T00:00:00+09:00</updated><id>http://localhost:4000/posts/C%20TIP</id><content type="html" xml:base="http://localhost:4000/posts/C-TIP"></content><author><name>Gmimg</name></author><summary type="html"></summary></entry><entry><title type="html">C++ discrete mathematics week2</title><link href="http://localhost:4000/posts/C++-Discrete-mathematics-week2" rel="alternate" type="text/html" title="C++ discrete mathematics week2" /><published>2019-03-29T00:00:00+09:00</published><updated>2019-03-29T00:00:00+09:00</updated><id>http://localhost:4000/posts/C++%20Discrete%20mathematics%20week2</id><content type="html" xml:base="http://localhost:4000/posts/C++-Discrete-mathematics-week2">&lt;p&gt;이산수학을 들으면서 까먹었던 c++ 사용법을 다시 공부하게 됐다. 1차 과제는 생각한 숫자를 n장의 카드에서 있나 없나 확인으로 맞추는 과제였는데 배열의 동적할당 정도 사용한것 같다.&lt;/p&gt;
 
 &lt;p&gt;이번 2차 과제는&lt;/p&gt;
 
@@ -1015,7 +1029,7 @@ void main(void)
 &lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;matrix&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MAX&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MAX&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MAX&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Gmimg</name></author><category term="C++" /><summary type="html">이산수학을 들으면서 까먹었던 c++ 사용법을 다시 공부하게 됐다. 1차 과제는 생각한 숫자를 n장의 카드에서 있나 없나 확인으로 맞추는 과제였는데 배열의 동적할당 정도 사용한것 같다.</summary></entry><entry><title type="html">C++ discrete mathematics week2</title><link href="http://localhost:4000/posts/C++-Discrete-mathematics-week2" rel="alternate" type="text/html" title="C++ discrete mathematics week2" /><published>2019-03-29T00:00:00+09:00</published><updated>2019-03-29T00:00:00+09:00</updated><id>http://localhost:4000/posts/C++%20Discrete%20mathematics%20week2</id><content type="html" xml:base="http://localhost:4000/posts/C++-Discrete-mathematics-week2">&lt;p&gt;이산수학을 들으면서 까먹었던 c++ 사용법을 다시 공부하게 됐다. 1차 과제는 생각한 숫자를 n장의 카드에서 있나 없나 확인으로 맞추는 과제였는데 배열의 동적할당 정도 사용한것 같다.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Gmimg</name></author><category term="C++" /><summary type="html">이산수학을 들으면서 까먹었던 c++ 사용법을 다시 공부하게 됐다. 1차 과제는 생각한 숫자를 n장의 카드에서 있나 없나 확인으로 맞추는 과제였는데 배열의 동적할당 정도 사용한것 같다.</summary></entry><entry><title type="html">C++ 이산수학 2주차</title><link href="http://localhost:4000/posts/C++-%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-2%EC%A3%BC%EC%B0%A8" rel="alternate" type="text/html" title="C++ 이산수학 2주차" /><published>2019-03-29T00:00:00+09:00</published><updated>2019-03-29T00:00:00+09:00</updated><id>http://localhost:4000/posts/C++%20%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99%202%EC%A3%BC%EC%B0%A8</id><content type="html" xml:base="http://localhost:4000/posts/C++-%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99-2%EC%A3%BC%EC%B0%A8">&lt;p&gt;이산수학을 들으면서 까먹었던 c++ 사용법을 다시 공부하게 됐다. 1차 과제는 생각한 숫자를 n장의 카드에서 있나 없나 확인으로 맞추는 과제였는데 배열의 동적할당 정도 사용한것 같다.&lt;/p&gt;
 
 &lt;p&gt;이번 2차 과제는&lt;/p&gt;
 
@@ -1203,31 +1217,4 @@ void main(void)
 &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Discounted item is not cheaper.&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Gmimg</name></author><category term="C++" /><summary type="html">Virtual function</summary></entry><entry><title type="html">C++ inheritance</title><link href="http://localhost:4000/posts/C++-Inheritance" rel="alternate" type="text/html" title="C++ inheritance" /><published>2018-11-20T00:00:00+09:00</published><updated>2018-11-20T00:00:00+09:00</updated><id>http://localhost:4000/posts/C++%20Inheritance</id><content type="html" xml:base="http://localhost:4000/posts/C++-Inheritance">&lt;h1 id=&quot;inheritance&quot;&gt;Inheritance&lt;/h1&gt;
-&lt;p&gt;class DERIVED_CLASS: public BASE_CLASS&lt;/p&gt;
-
-&lt;p&gt;‘Derived class’ derived ‘member variables’, ‘member functions’ from ‘base class’&lt;/p&gt;
-
-&lt;p&gt;NOT inherited&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Constructor&lt;/li&gt;
-  &lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-C++&quot;&gt;//construct
-HourlyEmployee :: HourlyEmployee ()
-    : Employee() , wageRate (0), hours(0) 
-{
-    //Deliberately empty
-}
-HourlyEmployee :: HourlyEmployee(string theName, string theNumber, double theWageRate)
-    : Employee(theName, theNumber), wageRate (theWageRate), hours(theHours)
-{
-    //Deliberately empty 
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id=&quot;protected&quot;&gt;Protected&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/C++/InhariteProtected.JPG&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;</content><author><name>Gmimg</name></author><category term="C++" /><category term="Inheritance" /><summary type="html">Inheritance class DERIVED_CLASS: public BASE_CLASS</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Gmimg</name></author><category term="C++" /><summary type="html">Virtual function</summary></entry></feed>
