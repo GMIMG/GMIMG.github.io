@@ -44,9 +44,9 @@ pre, code { font-size: 11.25pt; font-family: "Source Code Pro", "Consolas", "Hac
 
 code { padding: 1px 5px; }
 
-pre { padding: 8px 12px; overflow-x: auto; }
-pre > code { max-height: 500px; border: 0; padding-right: 0; padding-left: 0; }
-@media screen and (max-width: 600px) { pre > code { max-height: 400px; } }
+pre { padding: 8px 12px; overflow-x: auto; max-height: 500px; }
+pre > code { border: 0; padding-right: 0; padding-left: 0; }
+@media screen and (max-width: 600px) { pre { max-height: 350px; font-size: 10.65pt; } }
 
 /** Wrapper */
 .wrapper { max-width: -webkit-calc(800px - (30px * 2)); max-width: calc(800px - (30px * 2)); margin-right: auto; margin-left: auto; padding-right: 30px; padding-left: 30px; }

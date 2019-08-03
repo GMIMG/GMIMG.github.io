@@ -137,21 +137,16 @@ code {
 pre {
   padding: 8px 12px;
   overflow-x: auto;
-
+  max-height: 500px;
   > code {
-    max-height: 500px;
     border: 0;
     padding-right: 0;
     padding-left: 0;
   }
-
-
   @media screen and (max-width: $on-palm) {
-    > code {
-      max-height: 400px;
-    }
+    max-height: 350px;
+    @include relative-font-size(0.8875);
   }
-
 }
 
 /**
