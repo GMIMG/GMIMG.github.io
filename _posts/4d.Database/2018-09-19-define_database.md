@@ -91,4 +91,4 @@ SQL> CREATE TABLE customer(
 
 desc table로 테이블 속성 확인
 
-![Alt text](/assets/img/Database/constraint.jpg)
+![Alt text](/assets/img/Database/Constraint.jpg)
