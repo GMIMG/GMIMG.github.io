@@ -1,5 +1,9 @@
 ---
 category : C++
+tags:
+  - C++
+  - Pointer
+  - Polymorphism
 ---
 
 # Virtual function

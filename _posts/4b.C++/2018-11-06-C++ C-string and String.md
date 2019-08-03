@@ -1,7 +1,8 @@
 ---
 category : C++
-tags :
-    - String
+tags:
+  - C++
+  - String
 ---
 
 # C-String

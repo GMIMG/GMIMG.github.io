@@ -11,14 +11,12 @@ main:
   - title: "Blog"
   - title: "Class"
     children:
-      - title: "Data_communications"
+      - title: "Network"
       - title: "C++"
       - title: "Database"
       - title: "Applied_Robot_Design"
   - title: "Embedded"
-    children:
-      - title: "C"
-      - title: "?"
-      - title: "?"
+  - title: "Story"
+  - title: "NEWS"
   - title: "etc"
   #- title: "None"

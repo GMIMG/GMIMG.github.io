@@ -1,7 +1,8 @@
 ---
 category : C++
-tags :
-    - Inheritance
+tags:
+  - C++
+  - Inheritance
 ---
 
 # Inheritance

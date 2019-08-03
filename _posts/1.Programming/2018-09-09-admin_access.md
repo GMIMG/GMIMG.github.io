@@ -1,9 +1,8 @@
 ---
-title: 명령프롬프트(cmd)
+title: 명령프롬프트(CMD)
 category: Programming
 tags:
-  - Cmd
-  - Bat
+  - CMD
 ---
 
 

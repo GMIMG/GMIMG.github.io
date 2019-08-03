@@ -2,8 +2,9 @@
 title: C++ Parameter and overloading
 category: C++
 tags:
+  - C++
   - Call-by-value
-  - Call-by reference
+  - Call-by-reference
   - Overloading
 ---
 

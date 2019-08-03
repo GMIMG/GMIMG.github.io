@@ -2,6 +2,7 @@
 title: Applied_Robot_Design(응용로봇설계)
 category: Applied_Robot_Design
 tags:
+    - Robot
 ---
 
 로봇 메커니즘 설계에서 바뀜  

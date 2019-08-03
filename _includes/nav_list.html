@@ -15,9 +15,9 @@
         {%- endif %}
 
         {%- if nav_url %}
-        <a href="{{ nav_url }}" onclick="location.reload()">
+        <a href="{{ nav_url }}" class="{{ active }}" onClick="top.location='javascript:location.reload()'">
         {%- else %}
-        <a href="{{ root_url }}/{{ site.category_dir }}#{{ nav.title }}" onclick="location.reload()">
+        <a href="{{ root_url }}/{{ site.category_dir }}#{{ nav.title }}" class="{{ active }}" onClick="top.location='javascript:location.reload()'">
         {%- endif %}
         <span class="nav__sub-title">{{- nav.title -}}</span>
         </a>
@@ -41,9 +41,9 @@
 
             <li>
               {%- if child_url %}
-              <a href="{{ child_url }}" class="{{ active }}" onclick="location.reload()">{{ child.title }}</a>
+              <a href="{{ child_url }}" class="{{ active }}" onClick="top.location='javascript:location.reload()'">{{ child.title }}</a>
               {%- else %}
-              <a href="{{ root_url }}/{{ site.category_dir }}#{{ child.title }}" class="{{ active }}" onclick="location.reload()">{{ child.title }}</a>
+              <a href="{{ root_url }}/{{ site.category_dir }}#{{ child.title }}" onClick="top.location='javascript:location.reload()'">{{ child.title }}</a>
               {%- endif %}
 
               {% if child.children != null %}
@@ -64,9 +64,9 @@
                     {%- endif %}
                     <li>
                     {%- if childchild_url %}
-                    <a href="{{ childchild_url }}" class="{{ active }}" onclick="location.reload()">{{ childchild.title }}</a>
+                    <a href="{{ childchild_url }}" class="{{ active }}"onClick="top.location='javascript:location.reload()'">{{ childchild.title }}</a>
                     {%- else %}
-                    <a href="{{ root_url }}/{{ site.category_dir }}#{{ childchild.title }}" class="{{ active }}" onclick="location.reload()">{{ childchild.title }}</a>
+                    <a href="{{ root_url }}/{{ site.category_dir }}#{{ childchild.title }}" class="{{ active }}" onClick="top.location='javascript:location.reload()'">{{ childchild.title }}</a>
                     {%- endif %}
                     </li>
                   {%- endfor %}

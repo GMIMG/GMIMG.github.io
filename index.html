@@ -5,13 +5,14 @@ layout: default
 <ul class="main-post-list">
   {%- for post in site.posts -%}
   <li class="post-list-list">
+
     <span class="post-date">{{ post.date | date_to_string }}</span>
+    <span class="site-post-category"> {{post.categories}}</span>
     <span>
       <a class="post-link" href="{{ post.url | relative_url }}">
       {{- post.title | escape -}}
       </a>
     </span>
-
     <span class="containerBox">
       <svg style="display:inline-block;height: 100%;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px"
         viewBox="0 0 58 58" xml:space="preserve">
@@ -20,8 +21,10 @@ layout: default
       </svg>
       <a href="{{ post.url | relative_url }}#disqus_thread">0</a>
     </span>
-    <span class="site-post-category"> {{post.categories}}</span>
     
   </li>
   {%- endfor -%}
 </ul>
+
+<!--discus comments count-->
+<script id="dsq-count-scr" src="//gmimg.disqus.com/count.js" async></script>

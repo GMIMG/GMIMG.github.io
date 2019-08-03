@@ -2,6 +2,7 @@
 title: C++ Structure and Classs
 category: C++
 tags:
+  - C++
   - Structure
   - Class
 ---

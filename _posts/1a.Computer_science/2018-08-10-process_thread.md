@@ -39,8 +39,6 @@ process 우선순위
 - 동시성 프로그래밍을 할 땐 multi thread로 해야함.
 
 
-
-
 ### example
 
 - race condition (경쟁조건) => mutual ~~~ 상호

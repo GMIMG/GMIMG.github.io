@@ -2,6 +2,7 @@
 title: Introduction to Applied Robot Design
 category: Applied_Robot_Design
 tags:
+    - Robot
 ---
 
 ## Components and Structure of Robots

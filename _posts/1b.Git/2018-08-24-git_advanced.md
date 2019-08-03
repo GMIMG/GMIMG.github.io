@@ -2,23 +2,12 @@
 title: Git_advanced
 category: Git
 tags:
+    - Git
 ---
 
 fetch
 merge
 pull
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -54,20 +43,3 @@ ttoh_attendance
 
 
 collaboration => 마치 나인것처럼 git 모두가능
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

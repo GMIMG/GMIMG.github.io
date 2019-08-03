@@ -1,7 +1,8 @@
 ---
-title: 프로젝트 분석 및 데이터베이스 설계, 데이터베이스 시동과 접속
+title: 프로젝트 분석 및 데이터베이스 설계 시동과 접속
 category: Database
 tags:
+  - Database
   - E-R
 ---
 
