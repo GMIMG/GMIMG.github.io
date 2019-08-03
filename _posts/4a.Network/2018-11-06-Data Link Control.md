@@ -24,7 +24,6 @@ PHY-> 1계층 -> bit synchronization
 frames 에는 sender와 recevier의 addresses가 정의된다. Fixed-size framing과 Variable-size framing으로 나뉜다.
 
 | Flag | Header | DATA from upper layer | Trailer | Flag |
-|:----:|--------|-----------------------|---------|------|
 
 ### Charater-Oriented(byte-oriented) Framing
 
@@ -80,9 +79,9 @@ Protocol을 표현하는 방법은 다음과 같다.
 
 Using both flow and error control. Sender sends one frame at a time and waits for an acknowledgment before sending the next one.
 
-![StopAndWaitFSM](/assets/img/Data_communication/StopAndWaitFSM.jpg)
+![StopAndWaitFSM](/assets/img/Network/StopAndWaitFSM.jpg)
 
-![StopAndWaitFSM](/assets/img/Data_communication/StopAndWaitMSC.jpg)
+![StopAndWaitFSM](/assets/img/Network/StopAndWaitMSC.jpg)
 
 Sequence and ACK에 Numbering을 하여 duplicate packets을 방지 한다.
 

@@ -30,7 +30,7 @@ connected by physical links
 장점 : 연결되어 있을때 Delay 가없음.  
 단점 : 효율적이지 않음. 빈데이터가 있어도 연결돼있음.
 
-![Alt text](/assets/img/Circuit_delay.JPG)
+![Alt text](/assets/img/Network/Circuit_delay.jpg)
 
 ## Packet-switched network
 
@@ -52,7 +52,7 @@ Every packet in a datagram network carries a header that contains the destinatio
 
 virtual-circuit network보단 delay가 적다.
 
-![Alt text](/assets/img/Datagram_delay.JPG)
+![Alt text](/assets/img/Network/Datagram_delay.jpg)
 
 ### Virtual-Circuit Networks
 
@@ -68,4 +68,4 @@ Each switch changes the VCI and routes the frame.
 Setup request frame 이 Routing table로 따라 보내면 Acknowledgment Frame이 돌아오면서 VCI를 설정해줘서 switching table이 만들어진다.
 
 
-![Alt text](/assets/img/Virtual_circuit_delay.JPG)
+![Alt text](/assets/img/Network/Virtual_circuit_delay.jpg)

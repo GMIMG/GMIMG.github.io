@@ -45,9 +45,9 @@ detect an odd number of errors
 
 ## CRC
 
-![CRC](\assets\img\CRC.jpg)
+![CRC](/assets/img/Network/CRC.jpg)
 
-![CRC2](\assets\img\CRC2.jpg)
+![CRC2](/assets/img/Network/CRC2.jpg)
 
 어떤값을 나눠서 남은 나머지를 붙여서 보냄
 
@@ -61,9 +61,7 @@ binary -> 다항식으로 차수를 적용
 
 Generator 생성에 유리
 
-~~~
 **dataword를 주고 CRC값 찾기
-~~~
 
 # Checksum
 

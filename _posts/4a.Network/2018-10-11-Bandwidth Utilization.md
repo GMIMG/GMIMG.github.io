@@ -14,15 +14,15 @@ tags:
 - frequency-division ultiplexing (FDM)
   여러 주파수 합쳐서(mux) 보낸뒤 filter로 demux한다.
 
-  ![Alt text](/assets/img/FDM_mux.JPG)  
-  ![Alt text](/assets/img/FDM_demux.JPG)
+  ![Alt text](/assets/img/Network/FDM_mux.jpg)  
+  ![Alt text](/assets/img/Network/FDM_demux.jpg)
 
   예제(No Guard band)  
-  ![Alt text](/assets/img/FDM_exp.JPG)
+  ![Alt text](/assets/img/Network/FDM_exp.jpg)
 
 - wavelength division multiplexing (WDM)  
   광케이블을 프리즘으로 합치고 나눠서 multiplexing 한다. (FDM과 유사)  
-  ![Alt text](/assets/img/FDM_exp.JPG)
+  ![Alt text](/assets/img/Network/FDM_exp.jpg)
 
 - time-division multiplexing (TDM)  
   시간단위로 나눠서 -> 단일코어 멀티프로세싱과 유사
@@ -30,7 +30,7 @@ tags:
   - Synchronous TDM  
     한 라인에서 빈공간이 생기면 그만큼 비효율적
     One or more synchronization bits are usually added to the beginning of each frame.  
-    ![Alt text](/assets/img/Synchronous_TDM.JPG)
+    ![Alt text](/assets/img/Network/Synchronous_TDM.jpg)
 
   - Statistical TDM  
     헤더를 붙여서 보냄

@@ -29,13 +29,13 @@ Each station sends a frame whenever it has a frame to send (multiple access), bu
 
 For each retransmission, a multiplier R = 0 to 2^k -1 is randomly chosen and multiplied by t(p)(maximum propagation time) or T(fr)(the average time required to send out a frame) to find T(B).
 
-![BinaryExponentialBackoff](/assets/img/Data_communication/BinaryExponentialBackoff.jpg)
+![BinaryExponentialBackoff](/assets/img/Network/BinaryExponentialBackoff.jpg)
 
 'Vulnerable time'
 
 Length of time in which there is a possibility of collision.
 
-![VulnerableTime](/assets/img/Data_communication/VulnerableTime.jpg)
+![VulnerableTime](/assets/img/Network/VulnerableTime.jpg)
 
 
 'Throughput'
@@ -47,7 +47,7 @@ The maximum throughput S(max)= 1/(2e) = 0.184 when G=(1/2)
 
 Invented to improve the efficiency of pure ALOHA. Divide the time into slots of T(fr) seconds and force the station to send only at the beginning of the time slot. 시작지점을 정해줌. Vulnerable time = T(fr), Throughput S = G x E^(-G), S(max) = 0.368 when G=1
 
-![img](/assets/img/Data_communication/VulnerableTime.jpg)
+![img](/assets/img/Network/VulnerableTime.jpg)
 
 ### CSMA
 

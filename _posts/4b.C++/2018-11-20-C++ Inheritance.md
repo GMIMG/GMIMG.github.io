@@ -32,4 +32,4 @@ HourlyEmployee :: HourlyEmployee(string theName, string theNumber, double theWag
 
 # Protected
 
-![img](/assets/img/C++/InhariteProtected.JPG)
+![img](/assets/img/C++/InhariteProtected.jpg)
