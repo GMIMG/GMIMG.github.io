@@ -67,3 +67,4 @@ Mac address(physical aaress)(link address)는 장치를 지날때마다 바뀌�
 ![Alt text](/assets/img/ARP_example3.JPG)
 
 ![Alt text](/assets/img/ARP_example4.JPG)
+

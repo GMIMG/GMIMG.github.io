@@ -16,7 +16,7 @@ IEEE Project 802
 
 IEEE standard for LANs
 
-![img](/assets/img/Data_communication/IEEE802LAN.JPG)
+![img](/assets/img/Data_communication/IEEE802LAN.jpg)
 
 
 ## Standard Ehternet
@@ -32,7 +32,6 @@ connectionless and Unrealiable Service
 Ethernet frame
 
 | Preamble | SFD | Destination address | Source address | Type | Data and padding | CRC |
-|:--------:|-----|---------------------|----------------|------|------------------|-----|
 
 
 ### Addressing

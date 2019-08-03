@@ -178,9 +178,9 @@ Trailer에는 CRC가 들어간다.</p>
 
 <p>Using both flow and error control. Sender sends one frame at a time and waits for an acknowledgment before sending the next one.</p>
 
-<p><img src="/assets/img/Data_communication/StopAndWaitFSM.JPG" alt="StopAndWaitFSM" /></p>
+<p><img src="/assets/img/Data_communication/StopAndWaitFSM.jpg" alt="StopAndWaitFSM" /></p>
 
-<p><img src="/assets/img/Data_communication/StopAndWaitMSC.JPG" alt="StopAndWaitFSM" /></p>
+<p><img src="/assets/img/Data_communication/StopAndWaitMSC.jpg" alt="StopAndWaitFSM" /></p>
 
 <p>Sequence and ACK에 Numbering을 하여 duplicate packets을 방지 한다.</p>
 
@@ -228,8 +228,18 @@ information carried by U-frames is intended for managing the link itself</p>
   </li>
 </ul>
 
-<p>| Flag | Address | Control | (Information) | FCS | Flag |
-|:—-:|———|———|—————|—–|——|</p>
+<table>
+  <tbody>
+    <tr>
+      <td>Flag</td>
+      <td>Address</td>
+      <td>Control</td>
+      <td>(Information)</td>
+      <td>FCS</td>
+      <td>Flag</td>
+    </tr>
+  </tbody>
+</table>
 
 <ul>
   <li>
@@ -266,8 +276,19 @@ information carried by U-frames is intended for managing the link itself</p>
 
 <h2 id="point-to-point-protocol-ppp">Point-to-Point Protocol (PPP)</h2>
 
-<p>| Flag | Address | Control | Protocol | Payload | FCS | Flag |
-|:—-:|———|———|———-|———|—–|——|</p>
+<table>
+  <tbody>
+    <tr>
+      <td>Flag</td>
+      <td>Address</td>
+      <td>Control</td>
+      <td>Protocol</td>
+      <td>Payload</td>
+      <td>FCS</td>
+      <td>Flag</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>PPP defines the format of the frame to be exchanged between devices.</p>
 

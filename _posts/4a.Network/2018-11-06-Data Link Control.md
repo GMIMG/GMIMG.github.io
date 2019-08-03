@@ -80,9 +80,9 @@ Protocol을 표현하는 방법은 다음과 같다.
 
 Using both flow and error control. Sender sends one frame at a time and waits for an acknowledgment before sending the next one.
 
-![StopAndWaitFSM](/assets/img/Data_communication/StopAndWaitFSM.JPG)
+![StopAndWaitFSM](/assets/img/Data_communication/StopAndWaitFSM.jpg)
 
-![StopAndWaitFSM](/assets/img/Data_communication/StopAndWaitMSC.JPG)
+![StopAndWaitFSM](/assets/img/Data_communication/StopAndWaitMSC.jpg)
 
 Sequence and ACK에 Numbering을 하여 duplicate packets을 방지 한다.
 
@@ -120,7 +120,6 @@ Configuration and Transfer Modes
   information carried by U-frames is intended for managing the link itself
 
 | Flag | Address | Control | (Information) | FCS | Flag |
-|:----:|---------|---------|---------------|-----|------|
 
 - Flag field
 
@@ -148,7 +147,6 @@ Configuration and Transfer Modes
 ## Point-to-Point Protocol (PPP)
 
 | Flag | Address | Control | Protocol | Payload | FCS | Flag |
-|:----:|---------|---------|----------|---------|-----|------|
 
 PPP defines the format of the frame to be exchanged between devices.
 

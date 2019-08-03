@@ -11,6 +11,7 @@ tags:
 - Checksum
 - Forward error correction
   
+
 Error => bit가 깨짐
 
 - Single-bit error
@@ -44,9 +45,9 @@ detect an odd number of errors
 
 ## CRC
 
-![alt text](/assets/img/CRC.JPG)
+![CRC](\assets\img\CRC.jpg)
 
-![alt text](/assets/img/CRC2.JPG)
+![CRC2](\assets\img\CRC2.jpg)
 
 어떤값을 나눠서 남은 나머지를 붙여서 보냄
 

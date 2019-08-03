@@ -57,11 +57,11 @@ IEEE 802.11, which covers the physical and data-link layers. Sometimes called wi
 
     두개 이상의 BSS를 AP로 구성
 
-![img](/assets/img/Data_communication/IEEE802.11.JPG)
+![img](/assets/img/Data_communication/IEEE802.11.jpg)
 
 'Network Allocation Vector' (네트워크 할당 벡터) (NAV)
 
-![img](/assets/img/Data_communication/IEEE802.11MAC.JPG)
+![img](/assets/img/Data_communication/IEEE802.11MAC.jpg)
 
 Source에서 DIFS시간동안 탐색하고 RTS를 Destination을 보낸다 여기에 채널 점유 시간을 포함합니다. 그러면 Destination에서 SIFS동안 기다렸다가 모든 기기에 CTS로 응답하면 Source가 아닌 기기들은 NAV로 아무 동작을 하지않는다. 그러고 Source와 Destination간의 Data 정보 교환을 한다.
 
@@ -80,13 +80,13 @@ AP가 스테이션에 대해 폴링을 수행, 차례대로 폴링되어 AP에 �
 
 Addressing mechanisms
 
-![img](/assets/img/Data_communication/IEEE802.11Addressing.JPG)
+![img](/assets/img/Data_communication/IEEE802.11Addressing.jpg)
 
-![img](/assets/img/Data_communication/IEEE802.11Addressing2.JPG)
+![img](/assets/img/Data_communication/IEEE802.11Addressing2.jpg)
 
 *Exposed Station Problem*
 
-![img](/assets/img/Data_communication/IEEE802.11Problem.JPG)
+![img](/assets/img/Data_communication/IEEE802.11Problem.jpg)
 
 
 ## Bluetooth
