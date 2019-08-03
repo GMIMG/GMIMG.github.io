@@ -119,7 +119,7 @@ blockquote {
 }
 
 /**
- * Code formatting???
+ * Code formatting
  */
 pre,
 code {
@@ -139,10 +139,19 @@ pre {
   overflow-x: auto;
 
   > code {
+    max-height: 500px;
     border: 0;
     padding-right: 0;
     padding-left: 0;
   }
+
+
+  @media screen and (max-width: $on-palm) {
+    > code {
+      max-height: 400px;
+    }
+  }
+
 }
 
 /**
