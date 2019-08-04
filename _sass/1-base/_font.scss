@@ -1,15 +1,17 @@
-@import url('//cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css');
 
-$base-font-size:   12pt !default;
+//@import url('//cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css'); //이롭게 바탕체
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap'); //나눔고딕
+@import url('https://cdn.jsdelivr.net/gh/wan2land/d2coding/d2coding-subset.css'); //d2coding
+
+$base-font-size:   16pt !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
 
-$base-font-family: 'Iropke Batang', 'Noto', serif;
-$code-font-family: "Source Code Pro", "Consolas", "Hack", monospace;
-//$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-//$code-font-family: 'Nanum Gothic Coding', monospace;
-//$font-serif: "PT Serif", Georgia, "Times New Roman", serif;
-//$font-sans: "PT Sans", Helvetica, Arial, sans-serif;
+
+$base-font-family: 'Nanum Gothic', sans-serif;
+$code-font-family: 'D2Coding', monospace;
+//$base-font-family: 'Iropke Batang', 'Noto', serif;
+//$code-font-family: "Source Code Pro", "Consolas", "Hack", monospace;
 $font-awesome: FontAwesome;
 
 @mixin relative-font-size($ratio) {
