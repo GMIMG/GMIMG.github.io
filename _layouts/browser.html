@@ -1,15 +1,13 @@
 ---
 layout: default
 ---
-<article class="page">
-  {%- if page.sidebar %}
-
-    {% include sidebar.html %}
-
-  {%- endif %}
-  <div class="post-content-col">
-    <div class="wrapper">
-      {{ content }}
-    </div>
+{%- if page.sidebar %}
+<aside>
+  {% include sidebar.html %}
+</aside>
+{%- endif %}
+<div class="browser-post-list">
+  <div class="wrapper">
+    {{ content }}
   </div>
-</article>
+</div>

@@ -1,0 +1,31 @@
+---
+layout: page
+permalink: /categories/
+---
+<div class="expo">
+  <div class="expo-list">
+    {%- assign sorted_categories = site.categories -%}
+    {%- for category in sorted_categories %}
+    <a href="#{{ category | first | slugize }}" class="post-tag"><i class="fas fa-tag"></i> {{ category | first }}</a>
+    {%- endfor %}
+  </div>
+  <hr/>
+  <div class="expo-section">
+    {%- for category in sorted_categories %}
+      {%- assign category_name = category | first -%}
+      <a name="{{ category_name | slugize }}"></a>
+      <h3 id="#{{ category_name | slugize }}">{{ category_name }}</h3>
+      <ul class="expo-posts">
+      {%- for post in site.categories[category_name] %}
+      <li>
+        <a href="{{ root_url }}{{ post.url }}">{{- post.title -}}</a>
+        <small class="expo-post-date">{{- post.date | date_to_string -}}</small>
+      </li>
+      {%- endfor %}
+      <div class="back-to-top">
+        <a href="#">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
+      </div>
+      </ul>
+    {%- endfor %}
+  </div>
+</div>

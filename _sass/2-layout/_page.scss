@@ -1,18 +1,13 @@
 .page-content {
   flex: 1 0 auto;
 }
-.page-heading {
-  @include relative-font-size(2);
-}
-.post-list-heading {
-  @include relative-font-size(1.75);
-}
+
 .post-meta {
   font-size: $small-font-size;
   color: $grey-color;
 }
 
-.main-post-list, .post-list {
+.post-list {
   margin-left: 0;
   list-style: none;
   margin-top: 30px;
@@ -23,17 +18,6 @@
   }
 }
 
-.post-content-col {
-  float: left;
-  width: 70%;
-}
-
-
-@media screen and (max-width: $content-width) {
-  .post-content-col {
-    width: 100%;
-  }
-  .containerBox, .site-post-category {
-    display: none;
-  }
+.post-list-category {
+  font-size: 80%;
 }

@@ -3,10 +3,10 @@ layout: page
 permalink: /tags/
 ---
 <div class="expo">
-  <div class="expo-tag-list">
+  <div class="expo-list">
     {%- assign sorted_tags = site.tags | sort -%}
     {%- for tag in sorted_tags %}
-    <a href="#{{ tag | first | slugize }}" class="post-tag">{{ tag | first }}</a>
+    <a href="#{{ tag | first | slugize }}" class="post-tag"><i class="fas fa-tag"></i> {{ tag | first }}</a>
     {%- endfor %}
   </div>
   <hr/>
@@ -22,7 +22,7 @@ permalink: /tags/
         <small class="expo-post-date">{{- post.date | date_to_string -}}</small>
       </li>
       {%- endfor %}
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
       </div>
       </ul>

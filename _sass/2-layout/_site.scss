@@ -1,20 +1,17 @@
-$site-header-height: 50px !default;
-$site-header-border-top: 5px;
-$site-header-border-bottom: 1px;
-$site-icon-size: 36px;
+$site-header-line-height: $base-line-height * $base-font-size * 2.25;
+$site-header-icon-size: 36px;
 
 .site-header {
-  height: $site-header-height;
+  height: $site-header-line-height;
   width: 100%;
-  //border-top: $site-header-border-top solid $grey-color-dark;
-  border-bottom: $site-header-border-bottom solid $grey-color-light;
+  border-bottom: 1px solid $grey-color-light;
   position: relative;
 }
+
 .site-title {
   @include relative-font-size(1.625);
   font-weight: 300;
-  line-height: $base-line-height * $base-font-size * 2.25;
-  letter-spacing: -1px;
+  line-height: $site-header-line-height;
   margin-bottom: 0;
   float: left;
   &,
@@ -22,21 +19,43 @@ $site-icon-size: 36px;
     color: $grey-color-dark;
   }
 }
-.site-post-category {
-  font-size: 70%;
+
+.comment-icon {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  font-size: 75%;
+}
+
+/**
+ * navigation bar
+ */
+
+.site-search {
+  position: absolute;
+  top: ($site-header-line-height - $site-header-icon-size) / 2;
+  right: $spacing-unit / 2;
+  border: 1px solid $grey-color-light;
+  border-radius: 5px;
+}
+
+.search-icon, .menu-icon {
+  position: relative;
+  width: $site-header-icon-size;
+  height: $site-header-icon-size;
+  line-height: $site-header-icon-size;
+  text-align: center;
+  cursor: pointer;
 }
 
 
-
-.site-nav {
+.site-menu {
   float: right;
-  line-height: $base-line-height * $base-font-size * 2.25;
+  line-height: $site-header-line-height;
   z-index: 1; /* Stay on top */
-  margin-right:  $spacing-unit / 2 + $site-icon-size;
-  .nav-trigger {
-      display: none;
-  }
-  .menu-icon {
+  margin-right:  $spacing-unit / 2 + $site-header-icon-size;
+
+  .menu-trigger, .menu-icon {
     display: none;
   }
   .page-link {
@@ -45,38 +64,27 @@ $site-icon-size: 36px;
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
       margin-right: 20px;
+    }
   }
-}
-
 
   @media screen and (max-width: $on-palm) {
     position: absolute;
-    top: 6px;
+    top: ($site-header-line-height - $site-header-icon-size) / 2;
     right: $spacing-unit / 2;
-    background-color: $background-color;
     border: 1px solid $grey-color-light;
     border-radius: 5px;
-    text-align: right;
 
-    label[for="nav-trigger"] {
+    label[for="menu-trigger"] {
       display: block;
       float: right;
-      width: 36px;
-      height: 36px;
+      width: $site-header-icon-size;
+      height: $site-header-icon-size;
       z-index: 2;
       cursor: pointer;
     }
     .menu-icon {
       display: block;
       float: right;
-      width: 36px;
-      height: 26px;
-      line-height: 0;
-      padding-top: 10px;
-      text-align: center;
-      > svg {
-        fill: $grey-color-dark;
-      }
     }
     input ~ .trigger {
       clear: both;
@@ -92,101 +100,7 @@ $site-icon-size: 36px;
       &:not(:last-child) {
         margin-right: 0;
       }
-      margin-left: 20px;
     }
   }
 }
 
-
-.main-area {
-  position: relative;
-}
-.copyright {
-  font-size: 70%;
-}
-
-
-.site-search {
-  position: absolute;
-  top: 6px;
-  right: $spacing-unit / 2;
-  border: 1px solid $grey-color-light;
-  border-radius: 5px;
-  .search-icon {
-    position: relative;
-    width: 36px;
-    height: 36px;
-    text-align: center;
-    line-height: 36px;
-    cursor: pointer;
-    > svg {
-      fill: $grey-color-dark;
-    }
-  }
-}
-.svg-search, .svg-menu {
-  display: inline-block;
-  vertical-align: middle;
-  }
-
-.containerBox {
-  position: relative;
-  display: inline-block;
-  text-align: center;
-  font-size: 75%;
-}
-
-
-/*
-.text-box {
-  display: inline-block;
-  color: #fff;
-  text-align: center;    
-}
-.text-box:before {
-  content: '';
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
- }
-
-.middle{
-  position: relative;
-  text-align: center;
-  vertical-align: middle;
-}
-.icon{
-  position: absolute;
-  display: inline-block;
-  color: #fff;
-  vertical-align: middle;
-}
-
-<h1>
-    64px ABC
-    <div class="icon baseline">
-      <svg width="48" height="48" viewBox="0 0 48 48">
-         <path id="icon-info" d="M22 34h4V22h-4v12zm2-30C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4zm0 36c-8.82 0-16-7.18-16-16S15.18 8 24 8s16 7.18 16 16-7.18 16-16 16zm-2-22h4v-4h-4v4z">
-        </path>
-      </svg>
-    </div>
-    xyz
-    <div class="icon baseline">
-      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
-        <path id="icon-open" d="M38 38H10V10h14V6H10c-2.21 0-4 1.79-4 4v28c0 2.21 1.79 4 4 4h28c2.21 0 4-1.79 4-4V24h-4v14zM28 6v4h7.17L15.51 29.66l2.83 2.83L38 12.83V20h4V6H28z"/>
-      </svg>
-    </div>
-  </h1>
-
-
-
-
-  <span>gming
-<div class="icon baseline">
-    <svg width="48" height="48" viewBox="0 0 48 48">
-       <path id="icon-info" d="M22 34h4V22h-4v12zm2-30C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4zm0 36c-8.82 0-16-7.18-16-16S15.18 8 24 8s16 7.18 16 16-7.18 16-16 16zm-2-22h4v-4h-4v4z">
-      </path>
-    </svg>
-  </div>
-</span>
-*/

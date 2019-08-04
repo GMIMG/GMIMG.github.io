@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-125422008-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-125422008-2');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>GMIMG | Mechagrammer</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="GMIMG" />
+<meta name="author" content="Jimin Hwang" />
+<meta property="og:locale" content="ko" />
+<meta name="description" content="Mechagrammer" />
+<meta property="og:description" content="Mechagrammer" />
+<link rel="canonical" href="http://localhost:4000/categorybrowser/" />
+<meta property="og:url" content="http://localhost:4000/categorybrowser/" />
+<meta property="og:site_name" content="GMIMG" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/categorybrowser/","headline":"GMIMG","author":{"@type":"Person","name":"Jimin Hwang"},"description":"Mechagrammer","@type":"WebPage","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css">
+  <!--icon-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="GMIMG" />
+  <!--vue.js & axios for categories generator-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.6/vue.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.0/axios.min.js"></script>
+</head>
+  <body>
+    <header class="site-header">
+  <div class="wrapper"><a class="site-title" rel="author" href="/">GMIMG</a>
+      <nav class="site-menu">
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+          <div class="menu-icon">
+            <i class="fas fa-bars"></i>
+          </div>
+        </label>
+        <div class="trigger">
+            <a class="page-link" href="/about/">about</a>
+            <a class="page-link" href="/posts/">Posts browser</a>
+        </div>
+      </nav>
+      <nav class="site-search">
+        <div class="search-icon" onclick="location.href='/search';">
+          <i class="fas fa-search"></i>
+        </div>
+      </nav>
+  </div>
+</header>
+    <main class="page-content">
+      <div class="wrapper">
+        <div class="page">
+  <div class="post-content">
+    <div class="wrapper">
+      <header class="post-header">
+	<h1 class="post-title"></h1>
+</header><div class="expo">
+	<button id="showbutton"onclick="showhidePostAll()">Show all</button>
+	<div class="expo-section">
+		<nav class="expo-section-category">
+			<h2><span onclick="showPost('Programming')">Programming</span></h2>
+			<ul id="Programming" class="expo-category-posts">
+				<li>
+					<a href="/posts/admin_access">명령프롬프트(CMD)</a>
+					<small class="post-date">09 Sep 2018</small>
+				</li>
+				<li>
+					<a href="/posts/Terms">용어</a>
+					<small class="post-date">09 Sep 2018</small>
+				</li>
+				<li>
+					<a href="/posts/language">Compiler & Interpreter language</a>
+					<small class="post-date">10 Aug 2018</small>
+				</li>
+				<li>
+					<a href="/posts/class">Class</a>
+					<small class="post-date">08 Aug 2018</small>
+				</li>
+				<li>
+					<a href="/posts/OOP">객체지향 프로그래밍(OOP)</a>
+					<small class="post-date">08 Aug 2018</small>
+				</li>
+				<ul>
+						<h3><span onclick="showPost('Computer_science')">Computer_science</span></h3>
+						<ul id="Computer_science" class="expo-category-posts">
+							<li>
+								<a href="/posts/study">공부할 것</a>
+								<small class="post-date">29 Sep 2018</small>
+							</li>
+							<li>
+								<a href="/posts/network">Network</a>
+								<small class="post-date">20 Aug 2018</small>
+							</li>
+							<li>
+								<a href="/posts/data_structure">data_structure</a>
+								<small class="post-date">14 Aug 2018</small>
+							</li>
+							<li>
+								<a href="/posts/argorism">argorism</a>
+								<small class="post-date">13 Aug 2018</small>
+							</li>
+							<li>
+								<a href="/posts/process_thread">Process & Thread</a>
+								<small class="post-date">10 Aug 2018</small>
+							</li>
+						</ul>
+							<ul>
+							</ul>
+						<h3><span onclick="showPost('Git')">Git</span></h3>
+						<ul id="Git" class="expo-category-posts">
+							<li>
+								<a href="/posts/software_engineering">Git</a>
+								<small class="post-date">24 Aug 2018</small>
+							</li>
+							<li>
+								<a href="/posts/git_advanced">Git_advanced</a>
+								<small class="post-date">24 Aug 2018</small>
+							</li>
+							<li>
+								<a href="/posts/git">Git</a>
+								<small class="post-date">24 Jul 2018</small>
+							</li>
+						</ul>
+							<ul>
+							</ul>
+						<h3><span onclick="showPost('Python')">Python</span></h3>
+						<ul id="Python" class="expo-category-posts">
+							<li>
+								<a href="/posts/crawling">Crawling</a>
+								<small class="post-date">21 Aug 2018</small>
+							</li>
+							<li>
+								<a href="/posts/recursion">Recursion(재귀)</a>
+								<small class="post-date">12 Aug 2018</small>
+							</li>
+							<li>
+								<a href="/posts/charater">Character(문자)</a>
+								<small class="post-date">08 Aug 2018</small>
+							</li>
+							<li>
+								<a href="/posts/Number">Number(실수)</a>
+								<small class="post-date">08 Aug 2018</small>
+							</li>
+							<li>
+								<a href="/posts/Function">Function</a>
+								<small class="post-date">07 Aug 2018</small>
+							</li>
+							<li>
+								<a href="/posts/python">Python Basic</a>
+								<small class="post-date">23 Jul 2018</small>
+							</li>
+						</ul>
+							<ul>
+							</ul>
+				</ul>
+			</ul>
+			<h2><span onclick="showPost('Hardware')">Hardware</span></h2>
+			<ul id="Hardware" class="expo-category-posts">
+				<li>
+					<a href="/posts/memory">Memory</a>
+					<small class="post-date">09 Aug 2018</small>
+				</li>
+				<li>
+					<a href="/posts/CPU">CPU</a>
+					<small class="post-date">09 Aug 2018</small>
+				</li>
+				<ul>
+				</ul>
+			</ul>
+			<h2><span onclick="showPost('Blog')">Blog</span></h2>
+			<ul id="Blog" class="expo-category-posts">
+				<li>
+					<a href="/posts/Sass">Sass</a>
+					<small class="post-date">29 Sep 2018</small>
+				</li>
+				<li>
+					<a href="/posts/elements">블로그에서 사용하는 문법 정리</a>
+					<small class="post-date">10 Sep 2018</small>
+				</li>
+				<li>
+					<a href="/posts/writing-jekyll-posts">Writing jekyll posts</a>
+					<small class="post-date">05 Aug 2018</small>
+				</li>
+				<ul>
+				</ul>
+			</ul>
+			<h2><span onclick="showPost('Class')">Class</span></h2>
+			<ul id="Class" class="expo-category-posts">
+				<ul>
+						<h3><span onclick="showPost('Network')">Network</span></h3>
+						<ul id="Network" class="expo-category-posts">
+							<li>
+								<a href="/posts/wireless-LANs">Wireless lans</a>
+								<small class="post-date">20 Nov 2018</small>
+							</li>
+							<li>
+								<a href="/posts/Wired-LANs">Wired LANs Ethernet & Other Wired Networks</a>
+								<small class="post-date">13 Nov 2018</small>
+							</li>
+							<li>
+								<a href="/posts/Media-Access-Control(MAC)">Media access control(mac)</a>
+								<small class="post-date">12 Nov 2018</small>
+							</li>
+							<li>
+								<a href="/posts/Data-Link-Control">Data link control</a>
+								<small class="post-date">06 Nov 2018</small>
+							</li>
+							<li>
+								<a href="/posts/Error-Detection-and-Correction">Error detection and correction</a>
+								<small class="post-date">30 Oct 2018</small>
+							</li>
+							<li>
+								<a href="/posts/Intruduction-to-Data-LInk-layer">Intruduction to data Link layer</a>
+								<small class="post-date">28 Oct 2018</small>
+							</li>
+							<li>
+								<a href="/posts/Switching">Switching</a>
+								<small class="post-date">16 Oct 2018</small>
+							</li>
+							<li>
+								<a href="/posts/Transmission-Media">Transmission media</a>
+								<small class="post-date">11 Oct 2018</small>
+							</li>
+							<li>
+								<a href="/posts/Bandwidth-Utilization">Bandwidth Utilization</a>
+								<small class="post-date">11 Oct 2018</small>
+							</li>
+							<li>
+								<a href="/posts/Analog-Transmission">Analog Transmission</a>
+								<small class="post-date">02 Oct 2018</small>
+							</li>
+							<li>
+								<a href="/posts/Digital-Transmission">Digital Transmission</a>
+								<small class="post-date">01 Oct 2018</small>
+							</li>
+							<li>
+								<a href="/posts/Introduction-to-Physical-Layer">Introduction to Physical Layer</a>
+								<small class="post-date">18 Sep 2018</small>
+							</li>
+							<li>
+								<a href="/posts/Orientation-data-communication">Orientation data communication</a>
+								<small class="post-date">11 Sep 2018</small>
+							</li>
+							<li>
+								<a href="/posts/data_communication">Data communication</a>
+								<small class="post-date">04 Sep 2018</small>
+							</li>
+						</ul>
+							<ul>
+							</ul>
+						<h3><span onclick="showPost('C++')">C++</span></h3>
+						<ul id="C++" class="expo-category-posts">
+							<li>
+								<a href="/posts/C++-Discrete-mathematics">Discrete mathematics(이산수학)</a>
+								<small class="post-date">29 Mar 2019</small>
+							</li>
+							<li>
+								<a href="/posts/C++-Polymorphism-and-Virtual-Functions">C++ polymorphism and virtual functions</a>
+								<small class="post-date">04 Dec 2018</small>
+							</li>
+							<li>
+								<a href="/posts/C++-pointer2">C++ pointer2</a>
+								<small class="post-date">20 Nov 2018</small>
+							</li>
+							<li>
+								<a href="/posts/C++-Inheritance">C++ inheritance</a>
+								<small class="post-date">20 Nov 2018</small>
+							</li>
+							<li>
+								<a href="/posts/C++-pointer">C++ pointer</a>
+								<small class="post-date">13 Nov 2018</small>
+							</li>
+							<li>
+								<a href="/posts/C++-C-string-and-String">C++ c String and string</a>
+								<small class="post-date">06 Nov 2018</small>
+							</li>
+							<li>
+								<a href="/posts/C++-Operator-Overloading">C++ operator overloading</a>
+								<small class="post-date">30 Oct 2018</small>
+							</li>
+							<li>
+								<a href="/posts/C++-Structure-and-Classs">C++ Structure and Classs</a>
+								<small class="post-date">16 Oct 2018</small>
+							</li>
+							<li>
+								<a href="/posts/C++-Constructor-and-Other-tools">C++ Constructor and Other tools</a>
+								<small class="post-date">16 Oct 2018</small>
+							</li>
+							<li>
+								<a href="/posts/C++-Parameter-and-overloading">C++ Parameter and overloading</a>
+								<small class="post-date">02 Oct 2018</small>
+							</li>
+							<li>
+								<a href="/posts/C++-Function">C++ Function</a>
+								<small class="post-date">18 Sep 2018</small>
+							</li>
+							<li>
+								<a href="/posts/C++-basics">C++ basics</a>
+								<small class="post-date">11 Sep 2018</small>
+							</li>
+							<li>
+								<a href="/posts/C++-Orientation">C++ Orientation</a>
+								<small class="post-date">04 Sep 2018</small>
+							</li>
+						</ul>
+							<ul>
+							</ul>
+						<h3><span onclick="showPost('Database')">Database</span></h3>
+						<ul id="Database" class="expo-category-posts">
+							<li>
+								<a href="/posts/control_database">데이터베이스 조작</a>
+								<small class="post-date">03 Oct 2018</small>
+							</li>
+							<li>
+								<a href="/posts/define_database">데이터베이스 정의</a>
+								<small class="post-date">19 Sep 2018</small>
+							</li>
+							<li>
+								<a href="/posts/design_database">프로젝트 분석 및 데이터베이스 설계 시동과 접속</a>
+								<small class="post-date">12 Sep 2018</small>
+							</li>
+							<li>
+								<a href="/posts/database_structure">Database programming</a>
+								<small class="post-date">05 Sep 2018</small>
+							</li>
+						</ul>
+							<ul>
+							</ul>
+						<h3><span onclick="showPost('Applied_Robot_Design')">Applied_Robot_Design</span></h3>
+						<ul id="Applied_Robot_Design" class="expo-category-posts">
+							<li>
+								<a href="/posts/Introduction-to-Applied-Robot-Design">Introduction to Applied Robot Design</a>
+								<small class="post-date">11 Sep 2018</small>
+							</li>
+							<li>
+								<a href="/posts/orientation">Applied_Robot_Design(응용로봇설계)</a>
+								<small class="post-date">04 Sep 2018</small>
+							</li>
+						</ul>
+							<ul>
+							</ul>
+				</ul>
+			</ul>
+			<h2><span onclick="showPost('Embedded')">Embedded</span></h2>
+			<ul id="Embedded" class="expo-category-posts">
+				<li>
+					<a href="/posts/RTOS">Rtos</a>
+					<small class="post-date">29 Jul 2019</small>
+				</li>
+				<li>
+					<a href="/posts/C-lang">Embedded C</a>
+					<small class="post-date">27 Jul 2019</small>
+				</li>
+				<ul>
+				</ul>
+			</ul>
+			<h2><span onclick="showPost('Story')">Story</span></h2>
+			<ul id="Story" class="expo-category-posts">
+				<ul>
+				</ul>
+			</ul>
+			<h2><span onclick="showPost('NEWS')">NEWS</span></h2>
+			<ul id="NEWS" class="expo-category-posts">
+				<ul>
+				</ul>
+			</ul>
+			<h2><span onclick="showPost('etc')">etc</span></h2>
+			<ul id="etc" class="expo-category-posts">
+				<ul>
+				</ul>
+			</ul>
+		<!--posts for none_category-->
+		<h2><span onclick="showPost('None')">None</span></h2>
+		<ul id="None" class="expo-category-posts">
+				<li>
+					<a href="/posts/Diary">Diary</a>
+					<small class="post-date">01 Aug 2019</small>
+				</li>
+				<li>
+					<a href="/posts/school">School</a>
+					<small class="post-date">01 Aug 2019</small>
+				</li>
+				<li>
+					<a href="/posts/book">추천교재</a>
+					<small class="post-date">27 Jul 2019</small>
+				</li>
+				<li>
+					<a href="/posts/To-Do">To do</a>
+					<small class="post-date">27 Jul 2019</small>
+				</li>
+				<li>
+					<a href="/posts/Term">Term</a>
+					<small class="post-date">27 Jul 2019</small>
+				</li>
+				<li>
+					<a href="/posts/Plan">Plan</a>
+					<small class="post-date">27 Jul 2019</small>
+				</li>
+		</ul>
+	</nav>
+</div>
+
+<script>
+	function showPost(selector) {
+		var x = document.getElementById(selector);
+		if (x.style.display === "block") {
+			x.style.display = "none";
+		} else {
+			x.style.display = "block";
+		}
+	}
+	function showhidePostAll() {
+		if (document.getElementById("showbutton").innerHTML === 'Show all'){
+			var y = document.getElementsByClassName('expo-category-posts');
+			for (var i=0; i<y.length; i++) {
+				y[i].style.display = "block";
+			}
+			document.getElementById("showbutton").innerHTML = 'Hide all';
+		}
+		else {
+			var y = document.getElementsByClassName('expo-category-posts');
+			for (var i=0; i<y.length; i++) {
+				y[i].style.display = "None";
+			}
+			document.getElementById("showbutton").innerHTML = 'Show all';
+		}
+	}
+</script>
+    </div>
+  </div>
+</div>
+      </div>
+    </main>
+    <footer class="site-footer h-card">
+  <!--data class="u-url" href="/"></data-->
+  <div class="wrapper">
+    <h2 class="footer-heading">GMIMG</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Jimin Hwang</li>
+          <li><a class="u-email" href="mailto:gming7281@gmail.com">gming7281@gmail.com</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list"><li><a href="https://github.com/GMIMG"><svg class="svg-icon"><use xlink:href="/assets/gming-social-icons.svg#github"></use></svg> <span class="username">GMIMG</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/gming-social-icons.svg#rss"></use></svg> <span>Subscribe</span></a></li></ul>
+      </div>
+      <div class="footer-col footer-col-3">
+        <p>Hello. I&#39;m Seoultech univesity student in South Korea. My english is so terrible but trying ;) I&#39;m majoring in mechanical engineering system. and my minor is computer engineering. I am dreaming to be a good developer. This blog is writing that today I learned.</p>
+      </div>
+    </div>
+    <p class="copyright">
+      All content copyright 
+      <a href="mailto://gming7281@gmail.com">Jimin Hwang</a>.
+      © 2018 • All rights reserved.<br>
+      Made with 
+      <a href="https://jekyllrb.com/">Jekyll</a>.
+    </p>
+  </div>
+</footer>
+</body>
+</html>

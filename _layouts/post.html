@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 ---
 <article class="post">
   {% include post-header.html %}
@@ -10,6 +10,9 @@ layout: default
           <span><strong>Index</strong></span>
         </div>
         {% include toc.html html=content %}
+        <div class="back-to-top">
+          <a href="#">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
+        </div>
       </div>
     </aside>
     {%- endif %}

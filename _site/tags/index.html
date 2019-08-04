@@ -25,9 +25,8 @@
 {"url":"http://localhost:4000/tags/","headline":"GMIMG","author":{"@type":"Person","name":"Jimin Hwang"},"description":"Mechagrammer","@type":"WebPage","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css">
-  <!--font-->
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="GMIMG" />
+  <!--icon-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="GMIMG" />
   <!--vue.js & axios for categories generator-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.6/vue.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.0/axios.min.js"></script>
@@ -35,13 +34,11 @@
   <body>
     <header class="site-header">
   <div class="wrapper"><a class="site-title" rel="author" href="/">GMIMG</a>
-      <nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-        <label for="nav-trigger">
+      <nav class="site-menu">
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
           <div class="menu-icon">
-            <svg class="svg-menu" viewBox="0 0 18 15" width="18px" height="15px">
-              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
-            </svg>
+            <i class="fas fa-bars"></i>
           </div>
         </label>
         <div class="trigger">
@@ -51,9 +48,7 @@
       </nav>
       <nav class="site-search">
         <div class="search-icon" onclick="location.href='/search';">
-          <svg class="svg-search" viewBox="0 0 56.966 56.966" xml:space="preserve" width="18px" height="18px">
-            <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23 s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92 c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17 s-17-7.626-17-17S14.61,6,23.984,6z"/>
-          </svg>
+          <i class="fas fa-search"></i>
         </div>
       </nav>
   </div>
@@ -64,71 +59,71 @@
   <div class="post-content">
     <div class="wrapper">
       <div class="expo">
-  <div class="expo-tag-list">
-    <a href="#Argorism" class="post-tag">Argorism</a>
-    <a href="#C" class="post-tag">C</a>
-    <a href="#C++" class="post-tag">C++</a>
-    <a href="#CMD" class="post-tag">CMD</a>
-    <a href="#CPU" class="post-tag">CPU</a>
-    <a href="#CSS" class="post-tag">CSS</a>
-    <a href="#Call-by-reference" class="post-tag">Call-by-reference</a>
-    <a href="#Call-by-value" class="post-tag">Call-by-value</a>
-    <a href="#Character" class="post-tag">Character</a>
-    <a href="#Class" class="post-tag">Class</a>
-    <a href="#Closure" class="post-tag">Closure</a>
-    <a href="#Compiler" class="post-tag">Compiler</a>
-    <a href="#Constructor" class="post-tag">Constructor</a>
-    <a href="#Crawling" class="post-tag">Crawling</a>
-    <a href="#DDL" class="post-tag">DDL</a>
-    <a href="#DML" class="post-tag">DML</a>
-    <a href="#Data-link layer" class="post-tag">Data-link layer</a>
-    <a href="#Data_structure" class="post-tag">Data_structure</a>
-    <a href="#Database" class="post-tag">Database</a>
-    <a href="#Decorator" class="post-tag">Decorator</a>
-    <a href="#E-R" class="post-tag">E-R</a>
-    <a href="#Embedded" class="post-tag">Embedded</a>
-    <a href="#Error Correction" class="post-tag">Error Correction</a>
-    <a href="#Error Detection" class="post-tag">Error Detection</a>
-    <a href="#First_class_function" class="post-tag">First_class_function</a>
-    <a href="#Function" class="post-tag">Function</a>
-    <a href="#Git" class="post-tag">Git</a>
-    <a href="#Immutable" class="post-tag">Immutable</a>
-    <a href="#Inheritance" class="post-tag">Inheritance</a>
-    <a href="#Interpreter" class="post-tag">Interpreter</a>
-    <a href="#Jekyll" class="post-tag">Jekyll</a>
-    <a href="#List" class="post-tag">List</a>
-    <a href="#MarkDown" class="post-tag">MarkDown</a>
-    <a href="#Memory" class="post-tag">Memory</a>
-    <a href="#Multiplexing" class="post-tag">Multiplexing</a>
-    <a href="#Mutable" class="post-tag">Mutable</a>
-    <a href="#Network" class="post-tag">Network</a>
-    <a href="#Number" class="post-tag">Number</a>
-    <a href="#OOP" class="post-tag">OOP</a>
-    <a href="#Operator" class="post-tag">Operator</a>
-    <a href="#Overloading" class="post-tag">Overloading</a>
-    <a href="#Physical Layer" class="post-tag">Physical Layer</a>
-    <a href="#Pointer" class="post-tag">Pointer</a>
-    <a href="#Polymorphism" class="post-tag">Polymorphism</a>
-    <a href="#Process" class="post-tag">Process</a>
-    <a href="#Python" class="post-tag">Python</a>
-    <a href="#RTOS" class="post-tag">RTOS</a>
-    <a href="#Robot" class="post-tag">Robot</a>
-    <a href="#SQL" class="post-tag">SQL</a>
-    <a href="#Sass" class="post-tag">Sass</a>
-    <a href="#Spectrum_spreading" class="post-tag">Spectrum_spreading</a>
-    <a href="#Str" class="post-tag">Str</a>
-    <a href="#String" class="post-tag">String</a>
-    <a href="#Structure" class="post-tag">Structure</a>
-    <a href="#Study" class="post-tag">Study</a>
-    <a href="#Switching" class="post-tag">Switching</a>
-    <a href="#Table_space" class="post-tag">Table_space</a>
-    <a href="#Term" class="post-tag">Term</a>
-    <a href="#Thread" class="post-tag">Thread</a>
-    <a href="#Transmission" class="post-tag">Transmission</a>
-    <a href="#Variable" class="post-tag">Variable</a>
-    <a href="#Web" class="post-tag">Web</a>
-    <a href="#뷰" class="post-tag">뷰</a>
-    <a href="#이산수학" class="post-tag">이산수학</a>
+  <div class="expo-list">
+    <a href="#Argorism" class="post-tag"><i class="fas fa-tag"></i> Argorism</a>
+    <a href="#C" class="post-tag"><i class="fas fa-tag"></i> C</a>
+    <a href="#C++" class="post-tag"><i class="fas fa-tag"></i> C++</a>
+    <a href="#CMD" class="post-tag"><i class="fas fa-tag"></i> CMD</a>
+    <a href="#CPU" class="post-tag"><i class="fas fa-tag"></i> CPU</a>
+    <a href="#CSS" class="post-tag"><i class="fas fa-tag"></i> CSS</a>
+    <a href="#Call-by-reference" class="post-tag"><i class="fas fa-tag"></i> Call-by-reference</a>
+    <a href="#Call-by-value" class="post-tag"><i class="fas fa-tag"></i> Call-by-value</a>
+    <a href="#Character" class="post-tag"><i class="fas fa-tag"></i> Character</a>
+    <a href="#Class" class="post-tag"><i class="fas fa-tag"></i> Class</a>
+    <a href="#Closure" class="post-tag"><i class="fas fa-tag"></i> Closure</a>
+    <a href="#Compiler" class="post-tag"><i class="fas fa-tag"></i> Compiler</a>
+    <a href="#Constructor" class="post-tag"><i class="fas fa-tag"></i> Constructor</a>
+    <a href="#Crawling" class="post-tag"><i class="fas fa-tag"></i> Crawling</a>
+    <a href="#DDL" class="post-tag"><i class="fas fa-tag"></i> DDL</a>
+    <a href="#DML" class="post-tag"><i class="fas fa-tag"></i> DML</a>
+    <a href="#Data-link layer" class="post-tag"><i class="fas fa-tag"></i> Data-link layer</a>
+    <a href="#Data_structure" class="post-tag"><i class="fas fa-tag"></i> Data_structure</a>
+    <a href="#Database" class="post-tag"><i class="fas fa-tag"></i> Database</a>
+    <a href="#Decorator" class="post-tag"><i class="fas fa-tag"></i> Decorator</a>
+    <a href="#E-R" class="post-tag"><i class="fas fa-tag"></i> E-R</a>
+    <a href="#Embedded" class="post-tag"><i class="fas fa-tag"></i> Embedded</a>
+    <a href="#Error Correction" class="post-tag"><i class="fas fa-tag"></i> Error Correction</a>
+    <a href="#Error Detection" class="post-tag"><i class="fas fa-tag"></i> Error Detection</a>
+    <a href="#First_class_function" class="post-tag"><i class="fas fa-tag"></i> First_class_function</a>
+    <a href="#Function" class="post-tag"><i class="fas fa-tag"></i> Function</a>
+    <a href="#Git" class="post-tag"><i class="fas fa-tag"></i> Git</a>
+    <a href="#Immutable" class="post-tag"><i class="fas fa-tag"></i> Immutable</a>
+    <a href="#Inheritance" class="post-tag"><i class="fas fa-tag"></i> Inheritance</a>
+    <a href="#Interpreter" class="post-tag"><i class="fas fa-tag"></i> Interpreter</a>
+    <a href="#Jekyll" class="post-tag"><i class="fas fa-tag"></i> Jekyll</a>
+    <a href="#List" class="post-tag"><i class="fas fa-tag"></i> List</a>
+    <a href="#MarkDown" class="post-tag"><i class="fas fa-tag"></i> MarkDown</a>
+    <a href="#Memory" class="post-tag"><i class="fas fa-tag"></i> Memory</a>
+    <a href="#Multiplexing" class="post-tag"><i class="fas fa-tag"></i> Multiplexing</a>
+    <a href="#Mutable" class="post-tag"><i class="fas fa-tag"></i> Mutable</a>
+    <a href="#Network" class="post-tag"><i class="fas fa-tag"></i> Network</a>
+    <a href="#Number" class="post-tag"><i class="fas fa-tag"></i> Number</a>
+    <a href="#OOP" class="post-tag"><i class="fas fa-tag"></i> OOP</a>
+    <a href="#Operator" class="post-tag"><i class="fas fa-tag"></i> Operator</a>
+    <a href="#Overloading" class="post-tag"><i class="fas fa-tag"></i> Overloading</a>
+    <a href="#Physical Layer" class="post-tag"><i class="fas fa-tag"></i> Physical Layer</a>
+    <a href="#Pointer" class="post-tag"><i class="fas fa-tag"></i> Pointer</a>
+    <a href="#Polymorphism" class="post-tag"><i class="fas fa-tag"></i> Polymorphism</a>
+    <a href="#Process" class="post-tag"><i class="fas fa-tag"></i> Process</a>
+    <a href="#Python" class="post-tag"><i class="fas fa-tag"></i> Python</a>
+    <a href="#RTOS" class="post-tag"><i class="fas fa-tag"></i> RTOS</a>
+    <a href="#Robot" class="post-tag"><i class="fas fa-tag"></i> Robot</a>
+    <a href="#SQL" class="post-tag"><i class="fas fa-tag"></i> SQL</a>
+    <a href="#Sass" class="post-tag"><i class="fas fa-tag"></i> Sass</a>
+    <a href="#Spectrum_spreading" class="post-tag"><i class="fas fa-tag"></i> Spectrum_spreading</a>
+    <a href="#Str" class="post-tag"><i class="fas fa-tag"></i> Str</a>
+    <a href="#String" class="post-tag"><i class="fas fa-tag"></i> String</a>
+    <a href="#Structure" class="post-tag"><i class="fas fa-tag"></i> Structure</a>
+    <a href="#Study" class="post-tag"><i class="fas fa-tag"></i> Study</a>
+    <a href="#Switching" class="post-tag"><i class="fas fa-tag"></i> Switching</a>
+    <a href="#Table_space" class="post-tag"><i class="fas fa-tag"></i> Table_space</a>
+    <a href="#Term" class="post-tag"><i class="fas fa-tag"></i> Term</a>
+    <a href="#Thread" class="post-tag"><i class="fas fa-tag"></i> Thread</a>
+    <a href="#Transmission" class="post-tag"><i class="fas fa-tag"></i> Transmission</a>
+    <a href="#Variable" class="post-tag"><i class="fas fa-tag"></i> Variable</a>
+    <a href="#Web" class="post-tag"><i class="fas fa-tag"></i> Web</a>
+    <a href="#뷰" class="post-tag"><i class="fas fa-tag"></i> 뷰</a>
+    <a href="#이산수학" class="post-tag"><i class="fas fa-tag"></i> 이산수학</a>
   </div>
   <hr/>
   <div class="expo-section"><a name="Argorism"></a>
@@ -138,7 +133,7 @@
         <a href="/posts/argorism">argorism</a>
         <small class="expo-post-date">13 Aug 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="C"></a>
@@ -148,7 +143,7 @@
         <a href="/posts/C-lang">Embedded C</a>
         <small class="expo-post-date">27 Jul 2019</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="C++"></a>
@@ -206,7 +201,7 @@
         <a href="/posts/C++-Orientation">C++ Orientation</a>
         <small class="expo-post-date">04 Sep 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="CMD"></a>
@@ -216,7 +211,7 @@
         <a href="/posts/admin_access">명령프롬프트(CMD)</a>
         <small class="expo-post-date">09 Sep 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="CPU"></a>
@@ -226,7 +221,7 @@
         <a href="/posts/CPU">CPU</a>
         <small class="expo-post-date">09 Aug 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="CSS"></a>
@@ -236,7 +231,7 @@
         <a href="/posts/Sass">Sass</a>
         <small class="expo-post-date">29 Sep 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Call-by-reference"></a>
@@ -246,7 +241,7 @@
         <a href="/posts/C++-Parameter-and-overloading">C++ Parameter and overloading</a>
         <small class="expo-post-date">02 Oct 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Call-by-value"></a>
@@ -256,7 +251,7 @@
         <a href="/posts/C++-Parameter-and-overloading">C++ Parameter and overloading</a>
         <small class="expo-post-date">02 Oct 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Character"></a>
@@ -266,7 +261,7 @@
         <a href="/posts/charater">Character(문자)</a>
         <small class="expo-post-date">08 Aug 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Class"></a>
@@ -280,7 +275,7 @@
         <a href="/posts/class">Class</a>
         <small class="expo-post-date">08 Aug 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Closure"></a>
@@ -290,7 +285,7 @@
         <a href="/posts/Function">Function</a>
         <small class="expo-post-date">07 Aug 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Compiler"></a>
@@ -300,7 +295,7 @@
         <a href="/posts/language">Compiler & Interpreter language</a>
         <small class="expo-post-date">10 Aug 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Constructor"></a>
@@ -310,7 +305,7 @@
         <a href="/posts/C++-Constructor-and-Other-tools">C++ Constructor and Other tools</a>
         <small class="expo-post-date">16 Oct 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Crawling"></a>
@@ -320,7 +315,7 @@
         <a href="/posts/crawling">Crawling</a>
         <small class="expo-post-date">21 Aug 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="DDL"></a>
@@ -330,7 +325,7 @@
         <a href="/posts/define_database">데이터베이스 정의</a>
         <small class="expo-post-date">19 Sep 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="DML"></a>
@@ -340,7 +335,7 @@
         <a href="/posts/control_database">데이터베이스 조작</a>
         <small class="expo-post-date">03 Oct 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Data-link layer"></a>
@@ -350,7 +345,7 @@
         <a href="/posts/Intruduction-to-Data-LInk-layer">Intruduction to data Link layer</a>
         <small class="expo-post-date">28 Oct 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Data_structure"></a>
@@ -360,7 +355,7 @@
         <a href="/posts/data_structure">data_structure</a>
         <small class="expo-post-date">14 Aug 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Database"></a>
@@ -382,7 +377,7 @@
         <a href="/posts/database_structure">Database programming</a>
         <small class="expo-post-date">05 Sep 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Decorator"></a>
@@ -392,7 +387,7 @@
         <a href="/posts/Function">Function</a>
         <small class="expo-post-date">07 Aug 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="E-R"></a>
@@ -402,7 +397,7 @@
         <a href="/posts/design_database">프로젝트 분석 및 데이터베이스 설계 시동과 접속</a>
         <small class="expo-post-date">12 Sep 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Embedded"></a>
@@ -416,7 +411,7 @@
         <a href="/posts/C-lang">Embedded C</a>
         <small class="expo-post-date">27 Jul 2019</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Error Correction"></a>
@@ -426,7 +421,7 @@
         <a href="/posts/Error-Detection-and-Correction">Error detection and correction</a>
         <small class="expo-post-date">30 Oct 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Error Detection"></a>
@@ -436,7 +431,7 @@
         <a href="/posts/Error-Detection-and-Correction">Error detection and correction</a>
         <small class="expo-post-date">30 Oct 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="First_class_function"></a>
@@ -446,7 +441,7 @@
         <a href="/posts/Function">Function</a>
         <small class="expo-post-date">07 Aug 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Function"></a>
@@ -460,7 +455,7 @@
         <a href="/posts/python">Python Basic</a>
         <small class="expo-post-date">23 Jul 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Git"></a>
@@ -478,7 +473,7 @@
         <a href="/posts/git">Git</a>
         <small class="expo-post-date">24 Jul 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Immutable"></a>
@@ -488,7 +483,7 @@
         <a href="/posts/python">Python Basic</a>
         <small class="expo-post-date">23 Jul 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Inheritance"></a>
@@ -498,7 +493,7 @@
         <a href="/posts/C++-Inheritance">C++ inheritance</a>
         <small class="expo-post-date">20 Nov 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Interpreter"></a>
@@ -508,7 +503,7 @@
         <a href="/posts/language">Compiler & Interpreter language</a>
         <small class="expo-post-date">10 Aug 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Jekyll"></a>
@@ -518,7 +513,7 @@
         <a href="/posts/writing-jekyll-posts">Writing jekyll posts</a>
         <small class="expo-post-date">05 Aug 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="List"></a>
@@ -528,7 +523,7 @@
         <a href="/posts/python">Python Basic</a>
         <small class="expo-post-date">23 Jul 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="MarkDown"></a>
@@ -538,7 +533,7 @@
         <a href="/posts/elements">블로그에서 사용하는 문법 정리</a>
         <small class="expo-post-date">10 Sep 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Memory"></a>
@@ -548,7 +543,7 @@
         <a href="/posts/memory">Memory</a>
         <small class="expo-post-date">09 Aug 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Multiplexing"></a>
@@ -558,7 +553,7 @@
         <a href="/posts/Bandwidth-Utilization">Bandwidth Utilization</a>
         <small class="expo-post-date">11 Oct 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Mutable"></a>
@@ -568,7 +563,7 @@
         <a href="/posts/python">Python Basic</a>
         <small class="expo-post-date">23 Jul 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Network"></a>
@@ -634,7 +629,7 @@
         <a href="/posts/network">Network</a>
         <small class="expo-post-date">20 Aug 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Number"></a>
@@ -644,7 +639,7 @@
         <a href="/posts/Number">Number(실수)</a>
         <small class="expo-post-date">08 Aug 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="OOP"></a>
@@ -654,7 +649,7 @@
         <a href="/posts/OOP">객체지향 프로그래밍(OOP)</a>
         <small class="expo-post-date">08 Aug 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Operator"></a>
@@ -664,7 +659,7 @@
         <a href="/posts/python">Python Basic</a>
         <small class="expo-post-date">23 Jul 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Overloading"></a>
@@ -678,7 +673,7 @@
         <a href="/posts/C++-Parameter-and-overloading">C++ Parameter and overloading</a>
         <small class="expo-post-date">02 Oct 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Physical Layer"></a>
@@ -688,7 +683,7 @@
         <a href="/posts/Introduction-to-Physical-Layer">Introduction to Physical Layer</a>
         <small class="expo-post-date">18 Sep 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Pointer"></a>
@@ -706,7 +701,7 @@
         <a href="/posts/C++-pointer">C++ pointer</a>
         <small class="expo-post-date">13 Nov 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Polymorphism"></a>
@@ -716,7 +711,7 @@
         <a href="/posts/C++-Polymorphism-and-Virtual-Functions">C++ polymorphism and virtual functions</a>
         <small class="expo-post-date">04 Dec 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Process"></a>
@@ -726,7 +721,7 @@
         <a href="/posts/process_thread">Process & Thread</a>
         <small class="expo-post-date">10 Aug 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Python"></a>
@@ -756,7 +751,7 @@
         <a href="/posts/python">Python Basic</a>
         <small class="expo-post-date">23 Jul 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="RTOS"></a>
@@ -766,7 +761,7 @@
         <a href="/posts/RTOS">Rtos</a>
         <small class="expo-post-date">29 Jul 2019</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Robot"></a>
@@ -780,7 +775,7 @@
         <a href="/posts/orientation">Applied_Robot_Design(응용로봇설계)</a>
         <small class="expo-post-date">04 Sep 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="SQL"></a>
@@ -790,7 +785,7 @@
         <a href="/posts/control_database">데이터베이스 조작</a>
         <small class="expo-post-date">03 Oct 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Sass"></a>
@@ -800,7 +795,7 @@
         <a href="/posts/Sass">Sass</a>
         <small class="expo-post-date">29 Sep 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Spectrum_spreading"></a>
@@ -810,7 +805,7 @@
         <a href="/posts/Bandwidth-Utilization">Bandwidth Utilization</a>
         <small class="expo-post-date">11 Oct 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Str"></a>
@@ -820,7 +815,7 @@
         <a href="/posts/python">Python Basic</a>
         <small class="expo-post-date">23 Jul 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="String"></a>
@@ -830,7 +825,7 @@
         <a href="/posts/C++-C-string-and-String">C++ c String and string</a>
         <small class="expo-post-date">06 Nov 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Structure"></a>
@@ -840,7 +835,7 @@
         <a href="/posts/C++-Structure-and-Classs">C++ Structure and Classs</a>
         <small class="expo-post-date">16 Oct 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Study"></a>
@@ -850,7 +845,7 @@
         <a href="/posts/study">공부할 것</a>
         <small class="expo-post-date">29 Sep 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Switching"></a>
@@ -860,7 +855,7 @@
         <a href="/posts/Switching">Switching</a>
         <small class="expo-post-date">16 Oct 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Table_space"></a>
@@ -870,7 +865,7 @@
         <a href="/posts/define_database">데이터베이스 정의</a>
         <small class="expo-post-date">19 Sep 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Term"></a>
@@ -880,7 +875,7 @@
         <a href="/posts/Terms">용어</a>
         <small class="expo-post-date">09 Sep 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Thread"></a>
@@ -890,7 +885,7 @@
         <a href="/posts/process_thread">Process & Thread</a>
         <small class="expo-post-date">10 Aug 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Transmission"></a>
@@ -908,7 +903,7 @@
         <a href="/posts/Digital-Transmission">Digital Transmission</a>
         <small class="expo-post-date">01 Oct 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Variable"></a>
@@ -918,7 +913,7 @@
         <a href="/posts/Function">Function</a>
         <small class="expo-post-date">07 Aug 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="Web"></a>
@@ -928,7 +923,7 @@
         <a href="/posts/Sass">Sass</a>
         <small class="expo-post-date">29 Sep 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="뷰"></a>
@@ -938,7 +933,7 @@
         <a href="/posts/control_database">데이터베이스 조작</a>
         <small class="expo-post-date">03 Oct 2018</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul><a name="이산수학"></a>
@@ -948,7 +943,7 @@
         <a href="/posts/C++-Discrete-mathematics">Discrete mathematics(이산수학)</a>
         <small class="expo-post-date">29 Mar 2019</small>
       </li>
-      <div class="expo-back-to-top">
+      <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
       </ul>

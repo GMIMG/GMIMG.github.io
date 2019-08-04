@@ -1,6 +1,7 @@
 .toc_container {
     background: #f9f9f9 none repeat scroll 0 0;
     width: 100%;
+    font-size: 80%;
     padding-top: $spacing-unit/2;
     padding-bottom: $spacing-unit/2;
     margin-bottom: $spacing-unit/2;
@@ -15,11 +16,10 @@
 @media screen and (min-width: $toc-relative) {
     .toc_container {
         position: fixed;
-        top: 60px;
-        font-size: 80%;
+        top: 10%;
         right: 20px;
         border-radius: 20px;
         padding: 10px 10px 10px 0px;
-        max-width: 200px;
+        max-width: 220px;
     }
 }
