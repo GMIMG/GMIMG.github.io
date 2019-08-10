@@ -62,7 +62,7 @@
     <div class="wrapper">
       <article class="post">
   <div class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Embedded C</h1>
+    <span class="post-title" itemprop="name headline">Embedded C</span>
     <p class="post-meta">
       <time class="dt-published" datetime="2019-07-27T00:00:00+09:00" itemprop="datePublished">
         27 Jul 2019
@@ -767,15 +767,7 @@ void main(void)
 
 <p><strong>숏서킷 원리</strong></p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>(A &amp;&amp; B) 에서 A가 false면 B는 생략한다, (A</td>
-      <td> </td>
-      <td>B) 에서 A가 True면 B는 생략한다.</td>
-    </tr>
-  </tbody>
-</table>
+<p>(A <code class="highlighter-rouge">&amp;&amp;</code> B) 에서 A가 false면 B는 생략한다, (A <code class="highlighter-rouge">||</code> B) 에서 A가 True면 B는 생략한다.</p>
 
 <p>즉, 조건문에서는 연산을 하지 않는게 좋고, 조건의 확률을 따져서 조건식을 배치하면 효율이좋다.</p>
 

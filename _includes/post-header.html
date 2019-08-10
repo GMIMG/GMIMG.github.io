@@ -1,5 +1,5 @@
 <div class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    <span class="post-title" itemprop="name headline">{{ page.title | escape }}</span>
     <p class="post-meta">
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         {{ page.date | date_to_string }}

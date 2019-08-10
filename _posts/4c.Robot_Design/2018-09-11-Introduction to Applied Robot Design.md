@@ -1,6 +1,6 @@
 ---
 title: Introduction to Applied Robot Design
-category: Applied_Robot_Design
+category: Robot_Design
 tags:
     - Robot
 ---

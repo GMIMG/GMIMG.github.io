@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko" /><updated>2019-08-05T01:12:42+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">GMIMG</title><subtitle>Mechagrammer</subtitle><author><name>Jimin Hwang</name></author><entry><title type="html">School</title><link href="http://localhost:4000/posts/school" rel="alternate" type="text/html" title="School" /><published>2019-08-01T00:00:00+09:00</published><updated>2019-08-01T00:00:00+09:00</updated><id>http://localhost:4000/posts/school</id><content type="html" xml:base="http://localhost:4000/posts/school">&lt;ul&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko" /><updated>2019-08-11T00:50:58+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">GMIMG</title><subtitle>Mechagrammer</subtitle><author><name>Jimin Hwang</name></author><entry><title type="html">School</title><link href="http://localhost:4000/posts/school" rel="alternate" type="text/html" title="School" /><published>2019-08-01T00:00:00+09:00</published><updated>2019-08-01T00:00:00+09:00</updated><id>http://localhost:4000/posts/school</id><content type="html" xml:base="http://localhost:4000/posts/school">&lt;ul&gt;
   &lt;li&gt;190722&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -875,15 +875,7 @@ void main(void)
 
 &lt;p&gt;&lt;strong&gt;숏서킷 원리&lt;/strong&gt;&lt;/p&gt;
 
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;(A &amp;amp;&amp;amp; B) 에서 A가 false면 B는 생략한다, (A&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt;B) 에서 A가 True면 B는 생략한다.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+&lt;p&gt;(A &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&amp;amp;&lt;/code&gt; B) 에서 A가 false면 B는 생략한다, (A &lt;code class=&quot;highlighter-rouge&quot;&gt;||&lt;/code&gt; B) 에서 A가 True면 B는 생략한다.&lt;/p&gt;
 
 &lt;p&gt;즉, 조건문에서는 연산을 하지 않는게 좋고, 조건의 확률을 따져서 조건식을 배치하면 효율이좋다.&lt;/p&gt;
 

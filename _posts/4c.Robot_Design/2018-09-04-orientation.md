@@ -1,6 +1,6 @@
 ---
 title: Applied_Robot_Design(응용로봇설계)
-category: Applied_Robot_Design
+category: Robot_Design
 tags:
     - Robot
 ---

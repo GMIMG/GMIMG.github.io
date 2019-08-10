@@ -17,10 +17,15 @@
         {%- if nav_url %}
         <a href="{{ nav_url }}" class="{{ active }}" onClick="top.location='javascript:location.reload()'">
         {%- else %}
-        <a href="{{ root_url }}/{{ site.category_dir }}#{{ nav.title }}" class="{{ active }}" onClick="top.location='javascript:location.reload()'">
+        <a href="{{ root_url }}/{{ site.category_dir }}#{{ nav.title }}" onClick="top.location='javascript:location.reload()'">
         {%- endif %}
-        <span class="nav__sub-title">{{- nav.title -}}</span>
+        {{- nav.title -}} 
+        {%- assign count = site.categories[nav.title] | size -%}
+        {%- if count != 0 %}
+        {{ count }}
+        {%- endif %}
         </a>
+        
 
         {%- if nav.children != null %}
         <ul>
@@ -41,11 +46,16 @@
 
             <li>
               {%- if child_url %}
-              <a href="{{ child_url }}" class="{{ active }}" onClick="top.location='javascript:location.reload()'">{{ child.title }}</a>
+              <a href="{{ child_url }}" class="{{ active }}" onClick="top.location='javascript:location.reload()'">
               {%- else %}
-              <a href="{{ root_url }}/{{ site.category_dir }}#{{ child.title }}" onClick="top.location='javascript:location.reload()'">{{ child.title }}</a>
+              <a href="{{ root_url }}/{{ site.category_dir }}#{{ child.title }}" onClick="top.location='javascript:location.reload()'">
               {%- endif %}
-
+              {{ child.title }}
+              {%- assign count = site.categories[child.title] | size -%}
+              {%- if count != 0 %}
+              {{ count }}
+              {%- endif %}
+              </a>
               {% if child.children != null %}
                 <ul>
                   {% for childchild in child.children %}
@@ -64,10 +74,16 @@
                     {%- endif %}
                     <li>
                     {%- if childchild_url %}
-                    <a href="{{ childchild_url }}" class="{{ active }}"onClick="top.location='javascript:location.reload()'">{{ childchild.title }}</a>
+                    <a href="{{ childchild_url }}" class="{{ active }}"onClick="top.location='javascript:location.reload()'">
                     {%- else %}
-                    <a href="{{ root_url }}/{{ site.category_dir }}#{{ childchild.title }}" class="{{ active }}" onClick="top.location='javascript:location.reload()'">{{ childchild.title }}</a>
+                    <a href="{{ root_url }}/{{ site.category_dir }}#{{ childchild.title }}" class="{{ active }}" onClick="top.location='javascript:location.reload()'">
                     {%- endif %}
+                    {{ childchild.title }}
+                    {%- assign count = site.categories[childchild.title] | size -%}
+                    {%- if count != 0 %}
+                    {{ count }}
+                    {%- endif %}
+                    </a>
                     </li>
                   {%- endfor %}
                 </ul>

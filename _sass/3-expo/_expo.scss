@@ -1,3 +1,5 @@
+$tag-color: $blue;
+
 .expo {
   :target:before {
     content:"";
@@ -12,15 +14,15 @@
   
   .post-tag {
     display: inline-block;
-    background: rgba($theme-color, 0.15);
+    background: rgba($tag-color, 0.15);
     padding: 0 .5rem;
     margin: .2em .3em;
     border-radius: 4px;
-    color: $theme-color;
-    font-size: 90%;
+    color: $tag-color;
+    //font-size: 90%;
     &:hover {
       text-decoration: none;
-      background: $theme-color;
+      background: $tag-color;
       color: $white;
     }
   }
@@ -68,13 +70,13 @@
     }
     .expo-post-date {
       display: inline-block;
-      font-size: 80%;
+      //font-size: 80%;
       color: $post-date-color;
     }
   }
 
   @media screen and (max-width: $on-palm) {
-    font-size: 80%;
+    //font-size: 80%;
     .back-to-top {
       display: None;
     }
