@@ -49,3 +49,8 @@ jekyll : GitHub Pages가 기본으로 지원하는 ruby로 작성된 정적 사�
 [kakao 기술 블로그]:http://tech.kakao.com/2016/07/07/tech-blog-story/
 [ruby설치 사이트]:https://rubyinstaller.org/downloads/
 [jekyll theme]:https://github.com/topics/jekyll-theme
+
+[변수](https://jekyllrb-ko.github.io/docs/variables/)
+
+[Liquid](https://shopify.github.io/liquid/tags/control-flow/)
+

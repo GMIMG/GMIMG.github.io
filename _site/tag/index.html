@@ -55,7 +55,8 @@
 </header>
     <main class="page-content">
       <div class="wrapper">
-        
+  <div class="page">
+    
 <aside>
   <div class="sidebar">
   <!--category list-->
@@ -89,7 +90,7 @@
             <li>
               <a href="/category/#Git" onClick="top.location='javascript:location.reload()'">
               Git
-              3
+              1
               </a>
               
             </li>
@@ -250,8 +251,8 @@
           <a href="/tag#First_class_function" onclick="location.reload()" style="color: #999;">First_class_function</a>
         </span><span style="font-size: 81%;">
           <a href="/tag#Function" onclick="location.reload()" style="color: #888;">Function</a>
-        </span><span style="font-size: 85%;">
-          <a href="/tag#Git" onclick="location.reload()" style="color: #888;">Git</a>
+        </span><span style="font-size: 78%;">
+          <a href="/tag#Git" onclick="location.reload()" style="color: #999;">Git</a>
         </span><span style="font-size: 78%;">
           <a href="/tag#Immutable" onclick="location.reload()" style="color: #999;">Immutable</a>
         </span><span style="font-size: 78%;">
@@ -338,9 +339,9 @@
     
 
 
-<ul id="post-list" class="post-list">
-  <h2 id="" class="post-title">{{ hash }}</h2>
-  <li v-for="postjson in posts" v-if="postjson.tags.indexOf(hash) != -1" class="post-list-li">
+<ul id="post-list">
+  <h2 id="" class="tag-title">{{ hash }}</h2>
+  <li v-for="postjson in posts" v-if="postjson.tags.indexOf(hash) != -1" class="post-item">
     <time class="post-date">{{ postjson.date }}</time>
     <a class="post-link" v-bind:href="postjson.url">{{ postjson.title }}</a>
   </li>
@@ -365,7 +366,8 @@
 
   </div>
 </div>
-      </div>
+  </div>
+</div>
     </main>
     <footer class="site-footer h-card">
   <!--data class="u-url" href="/"></data-->
@@ -394,5 +396,5 @@
     </p>
   </div>
 </footer>
-</body>
+  </body>
 </html>

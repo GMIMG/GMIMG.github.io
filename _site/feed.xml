@@ -1,18 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko" /><updated>2019-08-11T01:03:26+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">GMIMG</title><subtitle>Mechagrammer</subtitle><author><name>Jimin Hwang</name></author><entry><title type="html">School</title><link href="http://localhost:4000/posts/school" rel="alternate" type="text/html" title="School" /><published>2019-08-01T00:00:00+09:00</published><updated>2019-08-01T00:00:00+09:00</updated><id>http://localhost:4000/posts/school</id><content type="html" xml:base="http://localhost:4000/posts/school">&lt;ul&gt;
-  &lt;li&gt;190722&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;운영체제 공부&lt;/p&gt;
-
-&lt;p&gt;https://covenant.tistory.com/100?category=773722&lt;/p&gt;
-
-&lt;p&gt;http://www.kocw.net/home/search/kemView.do?kemId=978503&lt;/p&gt;
-
-&lt;p&gt;http://www.kocw.net/home/m/search/kemView.do?kemId=998138&lt;/p&gt;
-
-&lt;p&gt;http://blog.naver.com/PostList.nhn?blogId=hjyang0&amp;amp;parentCategoryNo=6&lt;/p&gt;
-
-&lt;p&gt;http://snui.snu.ac.kr/ocw/index.php?mode=view&amp;amp;id=623#class_room-tab&lt;/p&gt;</content><author><name>Gmimg</name></author><summary type="html">190722</summary></entry><entry><title type="html">Diary</title><link href="http://localhost:4000/posts/Diary" rel="alternate" type="text/html" title="Diary" /><published>2019-08-01T00:00:00+09:00</published><updated>2019-08-01T00:00:00+09:00</updated><id>http://localhost:4000/posts/Diary</id><content type="html" xml:base="http://localhost:4000/posts/Diary"></content><author><name>Gmimg</name></author><summary type="html"></summary></entry><entry><title type="html">Rtos</title><link href="http://localhost:4000/posts/RTOS" rel="alternate" type="text/html" title="Rtos" /><published>2019-07-29T00:00:00+09:00</published><updated>2019-07-29T00:00:00+09:00</updated><id>http://localhost:4000/posts/RTOS</id><content type="html" xml:base="http://localhost:4000/posts/RTOS">&lt;h1 id=&quot;rtos-porting--programming&quot;&gt;RTOS Porting &amp;amp; Programming&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko" /><updated>2019-08-15T02:36:02+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">GMIMG</title><subtitle>Mechagrammer</subtitle><author><name>Jimin Hwang</name></author><entry><title type="html">일기</title><link href="http://localhost:4000/posts/Diary" rel="alternate" type="text/html" title="일기" /><published>2019-08-01T00:00:00+09:00</published><updated>2019-08-01T00:00:00+09:00</updated><id>http://localhost:4000/posts/Diary</id><content type="html" xml:base="http://localhost:4000/posts/Diary">&lt;h1 id=&quot;안녕하세요-저는-황지민입니다&quot;&gt;안녕하세요 저는 황지민입니다.&lt;/h1&gt;</content><author><name>Gmimg</name></author><summary type="html">안녕하세요 저는 황지민입니다.</summary></entry><entry><title type="html">Rtos</title><link href="http://localhost:4000/posts/RTOS" rel="alternate" type="text/html" title="Rtos" /><published>2019-07-29T00:00:00+09:00</published><updated>2019-07-29T00:00:00+09:00</updated><id>http://localhost:4000/posts/RTOS</id><content type="html" xml:base="http://localhost:4000/posts/RTOS">&lt;h1 id=&quot;rtos-porting--programming&quot;&gt;RTOS Porting &amp;amp; Programming&lt;/h1&gt;
 
 &lt;h2 id=&quot;임베디드-시스템-및-rtos-개요&quot;&gt;임베디드 시스템 및 RTOS 개요&lt;/h2&gt;
 
@@ -176,7 +162,71 @@
   &lt;li&gt;타임아웃을 지정&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Interrupts&lt;/p&gt;</content><author><name>Gmimg</name></author><category term="Embedded" /><category term="Embedded" /><category term="RTOS" /><summary type="html">RTOS Porting &amp;amp; Programming</summary></entry><entry><title type="html">추천교재</title><link href="http://localhost:4000/posts/book" rel="alternate" type="text/html" title="추천교재" /><published>2019-07-27T00:00:00+09:00</published><updated>2019-07-27T00:00:00+09:00</updated><id>http://localhost:4000/posts/book</id><content type="html" xml:base="http://localhost:4000/posts/book">&lt;ul class=&quot;task-list&quot;&gt;
+&lt;p&gt;Interrupts&lt;/p&gt;</content><author><name>Gmimg</name></author><category term="Embedded" /><category term="Embedded" /><category term="RTOS" /><summary type="html">RTOS Porting &amp;amp; Programming</summary></entry><entry><title type="html">Plan</title><link href="http://localhost:4000/posts/Plan" rel="alternate" type="text/html" title="Plan" /><published>2019-07-27T00:00:00+09:00</published><updated>2019-07-27T00:00:00+09:00</updated><id>http://localhost:4000/posts/Plan</id><content type="html" xml:base="http://localhost:4000/posts/Plan">&lt;p&gt;나는 지금까지 공부를 하는데에 철학이 없었다.&lt;/p&gt;
+
+&lt;p&gt;학습의 형식에만 중점을 두고 어떻게하면 내가 노력을 했는지에 대해 보여주기에 집중했다. (지금 글을 쓰고있는 이유도 그중 하나). 좋은 책을 검색하고 (읽지는 않고) 모으기만 하고있다.&lt;/p&gt;
+
+&lt;p&gt;생각하고 생각하고 또 생각하자&lt;/p&gt;
+
+&lt;p&gt;임베디드 개발자가 되기로한 이유는 뭐가 있을까?&lt;/p&gt;
+
+&lt;p&gt;내 전공과의 연계성&lt;/p&gt;
+
+&lt;p&gt;전문성에대한 매력&lt;/p&gt;
+
+&lt;p&gt;연차가 쌓일수록 노하우&lt;/p&gt;
+
+&lt;p&gt;소주가 아닌 위스키&lt;/p&gt;
+
+&lt;p&gt;글을 잘 쓰는 방법&lt;/p&gt;
+
+&lt;p&gt;먼저 기업의 채용공고를 보고 지원자격과 우대사항에대해 정리한다.&lt;/p&gt;
+
+&lt;p&gt;알고리즘 공부&lt;/p&gt;
+
+&lt;p&gt;코딩을 하기전에 프로그램 설계를 완벽하게 하기.&lt;/p&gt;
+
+&lt;p&gt;여러 알고리즘을 짜기보단 하나를 짜더라도 내가 짠 코드를 철저하게 분석한다.&lt;/p&gt;
+
+&lt;p&gt;착각하는것.&lt;/p&gt;
+
+&lt;p&gt;언어는 수단&lt;/p&gt;
+
+&lt;p&gt;C 언어 와 C++ 현직자 수준으로 내가 머리속으로 생각한 것을 자유자재로 구현할 정도로&lt;/p&gt;
+
+&lt;p&gt;나만의 노하우 쌓기&lt;/p&gt;
+
+&lt;p&gt;코드 품질 높이기&lt;/p&gt;
+
+&lt;p&gt;이후 생산성을 높이기 위해 파이썬으로 다양한 활동&lt;/p&gt;
+
+&lt;p&gt;컴퓨터 (시스템) 구조&lt;/p&gt;
+
+&lt;p&gt;Operating System 공부&lt;/p&gt;
+
+&lt;p&gt;깃허브에 꾸준히 업로드하기.&lt;/p&gt;
+
+&lt;p&gt;나에대한 메타인지&lt;/p&gt;
+
+&lt;p&gt;컴퓨터 구조&lt;/p&gt;
+
+&lt;p&gt;https://covenant.tistory.com/103?category=773722&lt;/p&gt;
+
+&lt;p&gt;운영체제 공부&lt;/p&gt;
+
+&lt;p&gt;https://covenant.tistory.com/100?category=773722&lt;/p&gt;
+
+&lt;p&gt;http://www.kocw.net/home/search/kemView.do?kemId=978503&lt;/p&gt;
+
+&lt;p&gt;http://www.kocw.net/home/m/search/kemView.do?kemId=998138&lt;/p&gt;
+
+&lt;p&gt;http://blog.naver.com/PostList.nhn?blogId=hjyang0&amp;amp;parentCategoryNo=6&lt;/p&gt;
+
+&lt;p&gt;http://snui.snu.ac.kr/ocw/index.php?mode=view&amp;amp;id=623#class_room-tab&lt;/p&gt;
+
+&lt;p&gt;2019 하반기&lt;/p&gt;
+
+&lt;p&gt;C언어&lt;/p&gt;</content><author><name>Gmimg</name></author><summary type="html">나는 지금까지 공부를 하는데에 철학이 없었다.</summary></entry><entry><title type="html">추천교재</title><link href="http://localhost:4000/posts/book" rel="alternate" type="text/html" title="추천교재" /><published>2019-07-27T00:00:00+09:00</published><updated>2019-07-27T00:00:00+09:00</updated><id>http://localhost:4000/posts/book</id><content type="html" xml:base="http://localhost:4000/posts/book">&lt;ul class=&quot;task-list&quot;&gt;
   &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;Clean Code&lt;/li&gt;
   &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;윤성우의 열혈 자료구조&lt;/li&gt;
   &lt;li class=&quot;task-list-item&quot;&gt;
@@ -927,7 +977,7 @@ void main(void)
 
 &lt;p&gt;C언어 공부에 좋은 사이트&lt;/p&gt;
 
-&lt;p&gt;http://tcpschool.com/c/intro&lt;/p&gt;</content><author><name>Gmimg</name></author><category term="Embedded" /><category term="Embedded" /><category term="C" /><summary type="html">Embedded C Programming</summary></entry><entry><title type="html">To do</title><link href="http://localhost:4000/posts/To-Do" rel="alternate" type="text/html" title="To do" /><published>2019-07-27T00:00:00+09:00</published><updated>2019-07-27T00:00:00+09:00</updated><id>http://localhost:4000/posts/To%20Do</id><content type="html" xml:base="http://localhost:4000/posts/To-Do">&lt;p&gt;학교에서 했던 경험&lt;/p&gt;
+&lt;p&gt;http://tcpschool.com/c/intro&lt;/p&gt;</content><author><name>Gmimg</name></author><category term="Embedded" /><category term="Embedded" /><category term="C" /><summary type="html">Embedded C Programming</summary></entry><entry><title type="html">To Do</title><link href="http://localhost:4000/posts/To-Do" rel="alternate" type="text/html" title="To Do" /><published>2019-07-27T00:00:00+09:00</published><updated>2019-07-27T00:00:00+09:00</updated><id>http://localhost:4000/posts/To%20Do</id><content type="html" xml:base="http://localhost:4000/posts/To-Do">&lt;p&gt;학교에서 했던 경험&lt;/p&gt;
 
 &lt;p&gt;1학년&lt;/p&gt;
 
@@ -937,59 +987,7 @@ void main(void)
 
 &lt;p&gt;3학년&lt;/p&gt;
 
-&lt;p&gt;4학년&lt;/p&gt;</content><author><name>Gmimg</name></author><summary type="html">학교에서 했던 경험</summary></entry><entry><title type="html">Term</title><link href="http://localhost:4000/posts/Term" rel="alternate" type="text/html" title="Term" /><published>2019-07-27T00:00:00+09:00</published><updated>2019-07-27T00:00:00+09:00</updated><id>http://localhost:4000/posts/Term</id><content type="html" xml:base="http://localhost:4000/posts/Term">&lt;p&gt;Modem : Modulator + Demodulator&lt;/p&gt;
-
-&lt;p&gt;Codec : Coder + Decoder&lt;/p&gt;
-
-&lt;p&gt;비메모리&lt;/p&gt;</content><author><name>Gmimg</name></author><summary type="html">Modem : Modulator + Demodulator</summary></entry><entry><title type="html">Plan</title><link href="http://localhost:4000/posts/Plan" rel="alternate" type="text/html" title="Plan" /><published>2019-07-27T00:00:00+09:00</published><updated>2019-07-27T00:00:00+09:00</updated><id>http://localhost:4000/posts/Plan</id><content type="html" xml:base="http://localhost:4000/posts/Plan">&lt;p&gt;나는 지금까지 공부를 하는데에 철학이 없었다.&lt;/p&gt;
-
-&lt;p&gt;학습의 형식에만 중점을 두고 어떻게하면 내가 노력을 했는지에 대해 보여주기에 집중했다. (지금 글을 쓰고있는 이유도 그중 하나). 좋은 책을 검색하고 (읽지는 않고) 모으기만 하고있다.&lt;/p&gt;
-
-&lt;p&gt;생각하고 생각하고 또 생각하자&lt;/p&gt;
-
-&lt;p&gt;임베디드 개발자가 되기로한 이유는 뭐가 있을까?&lt;/p&gt;
-
-&lt;p&gt;내 전공과의 연계성&lt;/p&gt;
-
-&lt;p&gt;전문성에대한 매력&lt;/p&gt;
-
-&lt;p&gt;연차가 쌓일수록 노하우&lt;/p&gt;
-
-&lt;p&gt;소주가 아닌 위스키&lt;/p&gt;
-
-&lt;p&gt;글을 잘 쓰는 방법&lt;/p&gt;
-
-&lt;p&gt;먼저 기업의 채용공고를 보고 지원자격과 우대사항에대해 정리한다.&lt;/p&gt;
-
-&lt;p&gt;알고리즘 공부&lt;/p&gt;
-
-&lt;p&gt;코딩을 하기전에 프로그램 설계를 완벽하게 하기.&lt;/p&gt;
-
-&lt;p&gt;여러 알고리즘을 짜기보단 하나를 짜더라도 내가 짠 코드를 철저하게 분석한다.&lt;/p&gt;
-
-&lt;p&gt;착각하는것.&lt;/p&gt;
-
-&lt;p&gt;언어는 수단&lt;/p&gt;
-
-&lt;p&gt;C 언어 와 C++ 현직자 수준으로 내가 머리속으로 생각한 것을 자유자재로 구현할 정도로&lt;/p&gt;
-
-&lt;p&gt;나만의 노하우 쌓기&lt;/p&gt;
-
-&lt;p&gt;코드 품질 높이기&lt;/p&gt;
-
-&lt;p&gt;이후 생산성을 높이기 위해 파이썬으로 다양한 활동&lt;/p&gt;
-
-&lt;p&gt;컴퓨터 (시스템) 구조&lt;/p&gt;
-
-&lt;p&gt;Operating System 공부&lt;/p&gt;
-
-&lt;p&gt;깃허브에 꾸준히 업로드하기.&lt;/p&gt;
-
-&lt;p&gt;나에대한 메타인지&lt;/p&gt;
-
-&lt;p&gt;컴퓨터 구조&lt;/p&gt;
-
-&lt;p&gt;https://covenant.tistory.com/103?category=773722&lt;/p&gt;
+&lt;p&gt;4학년&lt;/p&gt;
 
 &lt;p&gt;운영체제 공부&lt;/p&gt;
 
@@ -1001,11 +999,11 @@ void main(void)
 
 &lt;p&gt;http://blog.naver.com/PostList.nhn?blogId=hjyang0&amp;amp;parentCategoryNo=6&lt;/p&gt;
 
-&lt;p&gt;http://snui.snu.ac.kr/ocw/index.php?mode=view&amp;amp;id=623#class_room-tab&lt;/p&gt;
+&lt;p&gt;http://snui.snu.ac.kr/ocw/index.php?mode=view&amp;amp;id=623#class_room-tab&lt;/p&gt;</content><author><name>Gmimg</name></author><summary type="html">학교에서 했던 경험</summary></entry><entry><title type="html">Term</title><link href="http://localhost:4000/posts/Term" rel="alternate" type="text/html" title="Term" /><published>2019-07-27T00:00:00+09:00</published><updated>2019-07-27T00:00:00+09:00</updated><id>http://localhost:4000/posts/Term</id><content type="html" xml:base="http://localhost:4000/posts/Term">&lt;p&gt;Modem : Modulator + Demodulator&lt;/p&gt;
 
-&lt;p&gt;2019 하반기&lt;/p&gt;
+&lt;p&gt;Codec : Coder + Decoder&lt;/p&gt;
 
-&lt;p&gt;C언어&lt;/p&gt;</content><author><name>Gmimg</name></author><summary type="html">나는 지금까지 공부를 하는데에 철학이 없었다.</summary></entry><entry><title type="html">Discrete mathematics(이산수학)</title><link href="http://localhost:4000/posts/C++-Discrete-mathematics" rel="alternate" type="text/html" title="Discrete mathematics(이산수학)" /><published>2019-03-29T00:00:00+09:00</published><updated>2019-03-29T00:00:00+09:00</updated><id>http://localhost:4000/posts/C++%20Discrete%20mathematics</id><content type="html" xml:base="http://localhost:4000/posts/C++-Discrete-mathematics">&lt;p&gt;이산수학을 들으면서 까먹었던 c++ 사용법을 다시 공부하게 됐다. 1차 과제는 생각한 숫자를 n장의 카드에서 있나 없나 확인으로 맞추는 과제였는데 배열의 동적할당 정도 사용한것 같다.&lt;/p&gt;
+&lt;p&gt;비메모리&lt;/p&gt;</content><author><name>Gmimg</name></author><summary type="html">Modem : Modulator + Demodulator</summary></entry><entry><title type="html">Discrete mathematics(이산수학)</title><link href="http://localhost:4000/posts/C++-Discrete-mathematics" rel="alternate" type="text/html" title="Discrete mathematics(이산수학)" /><published>2019-03-29T00:00:00+09:00</published><updated>2019-03-29T00:00:00+09:00</updated><id>http://localhost:4000/posts/C++%20Discrete%20mathematics</id><content type="html" xml:base="http://localhost:4000/posts/C++-Discrete-mathematics">&lt;p&gt;이산수학을 들으면서 까먹었던 c++ 사용법을 다시 공부하게 됐다. 1차 과제는 생각한 숫자를 n장의 카드에서 있나 없나 확인으로 맞추는 과제였는데 배열의 동적할당 정도 사용한것 같다.&lt;/p&gt;
 
 &lt;p&gt;이번 2차 과제는&lt;/p&gt;
 
@@ -1193,4 +1191,113 @@ void main(void)
 &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Discounted item is not cheaper.&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Gmimg</name></author><category term="C++" /><category term="C++" /><category term="Pointer" /><category term="Polymorphism" /><summary type="html">Virtual function</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Gmimg</name></author><category term="C++" /><category term="C++" /><category term="Pointer" /><category term="Polymorphism" /><summary type="html">Virtual function</summary></entry><entry><title type="html">Wireless lans</title><link href="http://localhost:4000/posts/wireless-LANs" rel="alternate" type="text/html" title="Wireless lans" /><published>2018-11-20T00:00:00+09:00</published><updated>2018-11-20T00:00:00+09:00</updated><id>http://localhost:4000/posts/wireless%20LANs</id><content type="html" xml:base="http://localhost:4000/posts/wireless-LANs">&lt;h1 id=&quot;wireless-lans&quot;&gt;Wireless LANs&lt;/h1&gt;
+
+&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;h3 id=&quot;characteristics&quot;&gt;Characteristics&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;감쇠&lt;/p&gt;
+
+    &lt;p&gt;모든 방향으로 분산되기 때문에 강도가 빠르게 감소&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;간섭&lt;/p&gt;
+
+    &lt;p&gt;동일한 주파수 대역을 사용하는 경우 신호 수신이 힘듦&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;다중 경로 전파&lt;/p&gt;
+
+    &lt;p&gt;반사되는 신호때문에 동일한 발신자로부터 하나 이상의 신호를 수신 할 수 있음.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;오류&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;access-control&quot;&gt;Access Control&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;CSMA/CD&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;
+        &lt;p&gt;충돌이 감지되면&lt;/p&gt;
+
+        &lt;p&gt;프레임이 수신되지 않았으므로 다시 보내야 함을 의미합니다.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;충돌이 감지되지 않으면&lt;/p&gt;
+
+        &lt;p&gt;프레임이 수신되었음을 ack로 알립니다.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+
+    &lt;p&gt;다음과 같은 세가지 이유로 CSMA/CD는 Wireless LANs에 적합하지 않다.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;동시에 sending과 또는 receiving&lt;/li&gt;
+      &lt;li&gt;Hidden station problem&lt;/li&gt;
+      &lt;li&gt;경로 손실, 신호 페이딩(fading)으로 인한 매우 약한 감쇄&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;CSMA/CA&lt;/p&gt;
+
+    &lt;p&gt;반송파 감지 다중 접속&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;ieee-80211&quot;&gt;IEEE 802.11&lt;/h2&gt;
+
+&lt;p&gt;IEEE 802.11, which covers the physical and data-link layers. Sometimes called wireless Ethernet&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Basic sericee set (BSS)&lt;/p&gt;
+
+    &lt;p&gt;와이파이처럼 하나의 AP에 연결 또는 직접연결&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Extended service set (ESS)&lt;/p&gt;
+
+    &lt;p&gt;두개 이상의 BSS를 AP로 구성&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/Network/IEEE802.11.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;‘Network Allocation Vector’ (네트워크 할당 벡터) (NAV)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/Network/IEEE802.11MAC.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Source에서 DIFS시간동안 탐색하고 RTS를 Destination을 보낸다 여기에 채널 점유 시간을 포함합니다. 그러면 Destination에서 SIFS동안 기다렸다가 모든 기기에 CTS로 응답하면 Source가 아닌 기기들은 NAV로 아무 동작을 하지않는다. 그러고 Source와 Destination간의 Data 정보 교환을 한다.&lt;/p&gt;
+
+&lt;p&gt;DIFS : 아무도 안쓰는지 확인하는 시간
+Handshaking : RTS or CTS를 합친 시간&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Hidden-Station Problem&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The solution to the hidden station problem is the use of the handshake frames (RTS and CTS)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/Network/IEEE802.11Problem2.JPG&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;‘Point Coordination Function’ (PCF)&lt;/p&gt;
+
+&lt;p&gt;AP가 스테이션에 대해 폴링을 수행, 차례대로 폴링되어 AP에 데이터를 전송.&lt;/p&gt;
+
+&lt;p&gt;Addressing mechanisms&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/Network/IEEE802.11Addressing.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/Network/IEEE802.11Addressing2.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Exposed Station Problem&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/Network/IEEE802.11Problem.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;bluetooth&quot;&gt;Bluetooth&lt;/h2&gt;</content><author><name>Gmimg</name></author><category term="Network" /><category term="Network" /><summary type="html">Wireless LANs</summary></entry></feed>

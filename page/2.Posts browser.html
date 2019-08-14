@@ -5,9 +5,9 @@ title: Posts browser
 sidebar: "main"
 ---
 {%- assign prepost_date = post.date %}
-<ul class="post-list">
+<ul id="post-list">
   {%- for post in site.posts -%}
-  <li class="post-list-li">
+  <li class="post-item">
     <span class="post-date">{{ post.date | date_to_string }}</span>
     <a class="post-link" href="{{ post.url | relative_url }}">{{- post.title | escape -}}</a>
     {%- if post.description %}

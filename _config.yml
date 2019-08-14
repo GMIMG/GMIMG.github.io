@@ -26,7 +26,7 @@ plugins:
   - jekyll-paginate
 lang: ko
 permalink: /posts/:title
-paginate: 15
+paginate: 5
 paginate_path: "/posts/:num/"
 category_dir: category/
 tag_dir: tag/
@@ -48,6 +48,7 @@ defaults:
       comments: true #false
       #toc: true #목차
       #category: None
+      notice: false
       
   # page
   - scope:
