@@ -12,3 +12,13 @@
     font-size: 14px;
     color: #505050;
 }
+
+#results-container > li {
+    list-style: none;
+    margin-bottom: 10px;
+    border-top: 1px solid $grey-color-light;
+}
+
+#results-container > li .post-title{
+    font-size: 2rem;
+}

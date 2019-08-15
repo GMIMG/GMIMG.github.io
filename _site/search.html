@@ -22,14 +22,14 @@
 <meta property="og:url" content="http://localhost:4000/search" />
 <meta property="og:site_name" content="GMIMG" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/search","author":{"@type":"Person","name":"Jimin Hwang"},"headline":"GMIMG","description":"Mechagrammer","@type":"WebPage","@context":"http://schema.org"}</script>
+{"url":"http://localhost:4000/search","headline":"GMIMG","description":"Mechagrammer","author":{"@type":"Person","name":"Jimin Hwang"},"@type":"WebPage","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css">
   <!--icon-->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="GMIMG" />
   <!--vue.js & axios for categories generator-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.6/vue.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.0/axios.min.js"></script>
+  <script src="/assets/js/vue.min.js"></script>
+  <script src="/assets/js/axios.min.js"></script>
   <!--jquery for back-to-top-->
   <script src="/assets/js/jquery-3.3.1.min.js"></script>
   <script src="/assets/js/index.js"></script>
@@ -72,15 +72,19 @@
         searchInput: document.getElementById('search-input'),
         resultsContainer: document.getElementById('results-container'),
         json: '/search.json',
-        searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>\
-                <br>\
-                <span class="post-date">{date}</span>\
-                <a class="post-category"> {category}</a>\
-                <p class="post-excerpt">{content}</p>\
-                <p class="post-tags">\
-                <!--a class="tag" href="/tag/#">{tags}</a-->\
-                </p>\
-                ',
+        searchResultTemplate: '<li><div class="result-item">\
+            <a href="{url}" class="post-title" title="{desc}">{title}</a>\
+            <br>\
+            <span class="post-date">{date}</span>\
+            <a class="post-category" href="/category/#{category}">{category}</a>\
+            <p class="post-excerpt">{content}</p>\
+            </div></li>\
+            ',
+        templateMiddleware: function(prop, value, template) {
+        if (prop === 'category') {
+            return value.replace('', '')
+        }
+        },
         noResultsText: '<li>No results found</li>',
         limit: 15,
         fuzzy: false,

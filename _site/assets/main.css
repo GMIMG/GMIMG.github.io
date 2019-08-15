@@ -156,6 +156,10 @@ table td { border: 1px solid #e8e8e8; }
 
 #search > input { margin: 30px; width: 240px; height: 30px; border-radius: 15px; border: 1px solid #f1f1f1; padding: 0 15px 0 15px; font-size: 14px; color: #505050; }
 
+#results-container > li { list-style: none; margin-bottom: 10px; border-top: 1px solid #e8e8e8; }
+
+#results-container > li .post-title { font-size: 2rem; }
+
 .sidebar { float: left; width: 30%; border-radius: 15px; background-color: #f1f1f1; /* white-gray */ overflow-x: hidden; /* Disable horizontal scroll */ margin: 20px 0px; }
 .sidebar .sidebar-item { padding: 15px 15px; }
 .sidebar .sidebar-item a { text-decoration: none; color: #828282; }
