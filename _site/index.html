@@ -23,7 +23,7 @@
 <meta property="og:site_name" content="GMIMG" />
 <link rel="next" href="http://localhost:4000/posts/2/" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/","headline":"GMIMG","author":{"@type":"Person","name":"Jimin Hwang"},"description":"Mechagrammer","name":"GMIMG","@type":"WebSite","@context":"http://schema.org"}</script>
+{"url":"http://localhost:4000/","author":{"@type":"Person","name":"Jimin Hwang"},"headline":"GMIMG","description":"Mechagrammer","name":"GMIMG","@type":"WebSite","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css">
   <!--icon-->
@@ -31,6 +31,9 @@
   <!--vue.js & axios for categories generator-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.6/vue.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.0/axios.min.js"></script>
+  <!--jquery for back-to-top-->
+  <script src="/assets/js/jquery-3.3.1.min.js"></script>
+  <script src="/assets/js/index.js"></script>
 </head>
   <body>
     <header class="site-header">
@@ -220,8 +223,9 @@
         
     </ul>
 </div>
+      <a href="#" id="back-to-top"><i class="fas fa-arrow-circle-up"></i></a>
     </main>
-    <footer class="site-footer h-card">
+    <footer id="footer" class="site-footer h-card">
   <!--data class="u-url" href="/"></data-->
   <div class="wrapper">
     <h2 class="footer-heading">GMIMG</h2>
@@ -248,5 +252,9 @@
     </p>
   </div>
 </footer>
+  <!--simple-jekyll-search-->
+  <script src="/assets/js/simple-jekyll-search.min.js"></script>
+  <!--mathjax-->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
   </body>
 </html>

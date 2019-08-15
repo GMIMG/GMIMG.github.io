@@ -35,6 +35,11 @@ algolia:
   index_name:     blog # You can replace that with whatever name you want
   search_only_api_key    : 2cefbb1667552724a06f3051447863bc # YOUR_SEARCH_ONLY_API_KEY
 
+
+exclude: [README.md, Gemfile, Gemfile.lock]
+
+
+
 #폴더에 있는 파일의 YAML디폴트값
 defaults:
   # _posts

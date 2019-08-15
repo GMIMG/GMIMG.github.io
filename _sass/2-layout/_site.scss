@@ -44,9 +44,9 @@ $site-header-icon-size: 36px;
 .site-menu {
   float: right;
   line-height: $site-header-line-height;
-  z-index: 1; /* Stay on top */
+  //z-index: 1; /* Stay on top */
   margin-right:  $spacing-unit / 2 + $site-header-icon-size;
-
+  background-color: white;
   .menu-trigger, .menu-icon {
     display: none;
   }
@@ -65,6 +65,8 @@ $site-header-icon-size: 36px;
     right: $spacing-unit / 2;
     border: 1px solid $grey-color-light;
     border-radius: 5px;
+    z-index: 1; /* Stay on top */
+
 
     label[for="menu-trigger"] {
       display: block;
@@ -88,6 +90,7 @@ $site-header-icon-size: 36px;
     }
     .page-link {
       display: block;
+      border-top: 1px solid $grey-color-light;
       padding: 5px 10px;
       &:not(:last-child) {
         margin-right: 0;
@@ -96,3 +99,25 @@ $site-header-icon-size: 36px;
   }
 }
 
+#back-to-top {
+  display: none; /* @@iolo: show/hide by js */
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  right: 30px;
+  bottom: 20px;
+  z-index: 999;
+  //background: url(../images/pc/icon_uarrow.png) no-repeat;
+  background-size: 30px 30px;
+  i {
+    font-size: 29px;
+  }
+}
+
+#back-to-top.static {
+  position: static;
+  float: right;
+  margin-top: $spacing-unit / 2;
+  margin-right: $spacing-unit;
+  margin-bottom: $spacing-unit / 2;
+}

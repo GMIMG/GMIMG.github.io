@@ -24,7 +24,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-08-10T00:00:00+09:00" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/posts/process_thread","headline":"Process &amp; Thread","dateModified":"2018-08-10T00:00:00+09:00","datePublished":"2018-08-10T00:00:00+09:00","author":{"@type":"Person","name":"Gmimg"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/process_thread"},"description":"process &amp; thread","@type":"BlogPosting","@context":"http://schema.org"}</script>
+{"url":"http://localhost:4000/posts/process_thread","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/process_thread"},"author":{"@type":"Person","name":"Gmimg"},"headline":"Process &amp; Thread","description":"process &amp; thread","datePublished":"2018-08-10T00:00:00+09:00","dateModified":"2018-08-10T00:00:00+09:00","@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css">
   <!--icon-->
@@ -32,6 +32,9 @@
   <!--vue.js & axios for categories generator-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.6/vue.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.0/axios.min.js"></script>
+  <!--jquery for back-to-top-->
+  <script src="/assets/js/jquery-3.3.1.min.js"></script>
+  <script src="/assets/js/index.js"></script>
 </head>
   <body>
     <header class="site-header">
@@ -58,9 +61,10 @@
     <main class="page-content">
       <div class="wrapper">
   <div class="page">
-    <div class="post-content">
-  <article class="post">
-    <div class="post-header">
+    <div class="wrapper">
+  <div class="post-content">
+    <article class="post">
+      <div class="post-header">
     <span class="post-title" itemprop="name headline">Process &amp; Thread</span>
     <p class="post-meta">
       <time class="dt-published" datetime="2018-08-10T00:00:00+09:00" itemprop="datePublished">
@@ -77,8 +81,8 @@
         <a href="/tag/#Thread">Thread</a>
     </div>
   </div>
-    <div class="post-content" itemprop="articleBody">
-      <h1 id="process--thread">process &amp; thread</h1>
+      <div class="post-content" itemprop="articleBody">
+        <h1 id="process--thread">process &amp; thread</h1>
 
 <h2 id="process">process</h2>
 
@@ -131,9 +135,9 @@
   <li>race condition (경쟁조건) =&gt; mutual ~~~ 상호</li>
   <li>교착상태</li>
 </ul>
- 
-    </div>
-      
+
+      </div>
+        
 <div id="disqus_thread"><p></p></div>
 <script>
 (function() { // DON'T EDIT BELOW THIS LINE
@@ -145,15 +149,15 @@ s.setAttribute('data-timestamp', +new Date());
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-    <a class="u-url" href="/posts/process_thread" hidden></a>
-  </article>
-</div>
-<!--mathjax-->
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+      <a class="u-url" href="/posts/process_thread" hidden></a>
+    </article>
   </div>
 </div>
+  </div>
+</div>
+      <a href="#" id="back-to-top"><i class="fas fa-arrow-circle-up"></i></a>
     </main>
-    <footer class="site-footer h-card">
+    <footer id="footer" class="site-footer h-card">
   <!--data class="u-url" href="/"></data-->
   <div class="wrapper">
     <h2 class="footer-heading">GMIMG</h2>
@@ -180,5 +184,9 @@ s.setAttribute('data-timestamp', +new Date());
     </p>
   </div>
 </footer>
+  <!--simple-jekyll-search-->
+  <script src="/assets/js/simple-jekyll-search.min.js"></script>
+  <!--mathjax-->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
   </body>
 </html>

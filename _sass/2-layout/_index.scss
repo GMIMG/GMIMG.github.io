@@ -1,7 +1,7 @@
 
 .page-content {
-    padding-bottom: 100px;
-    background-color: #f4f4f4;
+    //padding-bottom: 100px;
+    background-color: #f1f1f1;
     //overflow-x: scroll;
     .wrapper {
         background-color: #fff;
@@ -22,6 +22,9 @@
     padding: 0;
     background-position: center;
     background-size: cover;
+    @media screen and (max-width: $on-palm) {
+        height: 300px;
+      }
 }
 .img-cover{
     display: table-cell;
@@ -30,7 +33,7 @@
     text-align: center;
     background-color: rgba(12, 12, 48, 0.3);
     overflow: hidden;                                                         
-    z-index:2;
+    //z-index:2;
 
     h1, p{
         width: 80%;
@@ -48,7 +51,7 @@
 #notice-list {
     margin-left: 0;
     list-style: none;
-    margin-top: 100px;
+    //margin-top: 30px;
     margin-bottom: 30px;
     .description {
       display: block;
@@ -75,14 +78,14 @@
 #post-list .post-title,
 #post-list .post-excerpt,
 #post-list .post-tags {
-    margin: 0 160px 0 0; /* 160px = 60(spacing from .post-author) + 140(.post-author width) - 40(padding-left) */
+    margin: 0 0 0 0; /* 160px = 60(spacing from .post-author) + 140(.post-author width) - 40(padding-left) */
     max-width: 620px;
 }
 
 #post-list .post-title {
     font-size: 26px;
     text-overflow: ellipsis;
-    white-space: nowrap;
+    //white-space: nowrap;
     overflow: hidden;
 }
 
@@ -149,3 +152,6 @@
     display:block;
 }
 
+#page-prev, #page-next {
+    font-size: 20px;
+}
