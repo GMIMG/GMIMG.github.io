@@ -9,8 +9,28 @@ introduction: >-
   I'm majoring in mechanical engineering system. and my minor is computer engineering.
   I am dreaming to be a good developer.
   This blog is writing that today I learned.
+lang: ko
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-paginate
+
+#링크경로
 baseurl: ""
 url: ""
+permalink: /posts/:title
+category_dir: category/
+tag_dir: tag/
+
+#markdown 설정
+markdown: kramdown
+mathjax : true
+
+#paginate 플러그인 설정
+paginate: 5
+paginate_path: "/posts/:num/"
+
+#footer에 SNS 넣기
 #twitter_username: 
 #facebook_username: 
 #instagram_username:
@@ -18,27 +38,8 @@ github_username: GMIMG
 disqus:
   shortname: GMIMG
 rss: Subscribe
-markdown: kramdown
-mathjax : true
-plugins:
-  - jekyll-sitemap
-  - jekyll-feed
-  - jekyll-paginate
-lang: ko
-permalink: /posts/:title
-paginate: 5
-paginate_path: "/posts/:num/"
-category_dir: category/
-tag_dir: tag/
-algolia:
-  application_id: XOU4HIXAXB
-  index_name:     blog # You can replace that with whatever name you want
-  search_only_api_key    : 2cefbb1667552724a06f3051447863bc # YOUR_SEARCH_ONLY_API_KEY
-
 
 exclude: [README.md, Gemfile, Gemfile.lock]
-
-
 
 #폴더에 있는 파일의 YAML디폴트값
 defaults:
@@ -62,9 +63,7 @@ defaults:
     values:
       sidebar: "main"
 
-
-
-
+# 사이트 설명
 # _data
 # 사이트 전반에 대한 데이터
 # navigation.yml : 포스트의 카테고리를 관리하는 YAML (최대 두단계의 자손 카테고리까지 가능)
