@@ -19,7 +19,7 @@ permalink: /tags/
       {%- for post in site.tags[tag_name] %}
       <li>
         <a href="{{ root_url }}{{ post.url }}">{{- post.title -}}</a>
-        <small class="expo-post-date">{{- post.date | date_to_string -}}</small>
+        <small class="post-date">{{- post.date | date_to_string -}}</small>
       </li>
       {%- endfor %}
       <div class="back-to-top">

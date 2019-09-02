@@ -1,16 +1,11 @@
 ---
-##title: title
+title: Advanced-C
 category: Embedded
 tags:
  - C
  - Embedded
 toc : true
 ---
-
-
-
-
-
 # Advenced C
 
 ## 데이터타입과 형변환

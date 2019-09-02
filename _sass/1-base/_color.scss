@@ -7,6 +7,7 @@ $blue:     #6a9fb5;
 $magenta:  #aa759f;
 $brown:    #8f5536;
 $default:  #505050;
+
 $white:      #fff;
 $lightgrey:  #eee;
 $black:      #000;
@@ -14,19 +15,15 @@ $grey-color:       #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
 $grey-color-dark:  darken($grey-color, 25%) !default;
 
-/* Font stack */
-$post-date-color: #9a9a9a;
-$title-color: #313131;
-$masthead-title-small-color: #c0c0c0;
-
-$text-color:       #111 !default;
+/* Area color */
 $background-color: #fdfdfd !default;
-
-$link-color: royalblue;
-$brand-color:      #2a7ae2 !default;
-
-
 $pre-color: #212121;
+
+/* Text color */
+$text-color:       #111 !default;
+$link-color: royalblue;
+
+/* dark mode */
 
 $light-primary-color: #6200EE;
 $light-primary-variant-color: #3700B3;
@@ -41,7 +38,6 @@ $light-on-background-color: #000000;
 $light-on-surface-color: #000000;
 $light-on-error-color: #FFFFFF;
 
-
 $dark-primary-color: #BB86FC;
 $dark-primary-variant-color: #3700B3;
 $dark-secondary-color: #03DAC6;
@@ -55,9 +51,4 @@ $dark-on-surface-color: #FFFFFF;
 $dark-on-error-color: #000000;
 
 $light-toc-container-color: #f1f1f1;
-$dark-toc-container-color: #212121;
-
-@mixin background-color-opacity($background-color,$ratio) {
-    background-color: $background-color;
-    opacity: $ratio;
-  }
+$dark-toc-container-color: #424242;

@@ -18,8 +18,10 @@
             <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
             {%- endif %}
           {%- endfor %}
-          <a id="theme-toggle" class="page-link" onclick="modeSwitcher()"></a>
         </div>
+      </nav>
+      <nav class="dark-icon">
+        <a id="theme-toggle" class="page-link" onclick="modeSwitcher()"></a>
       </nav>
       <nav class="site-search">
         <div class="search-icon" onclick="location.href='/search';">

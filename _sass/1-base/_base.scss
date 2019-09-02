@@ -97,7 +97,7 @@ h1, h2, h3, h4, h5, h6 {
 a {
   color: $link-color;
   text-decoration: none;
-
+/*
   &:visited {
     color: darken($link-color, 30%);
   }
@@ -106,6 +106,7 @@ a {
     color: $text-color;
     text-decoration: underline;
   }
+*/
 }
 
 /**
@@ -133,7 +134,6 @@ pre,
 code {
   @include relative-font-size(0.9375);
   font-family: $code-font-family;
-  //border: 1px solid $grey-color-light;
   border-radius: 3px;
   color: $dark-on-background-color;
 }
@@ -199,7 +199,6 @@ code {
     padding-right: 5px;
     vertical-align: text-top;
 }
-
 .social-media-list {
   li + li {
     padding-top: 5px;
@@ -214,19 +213,12 @@ table {
   margin-bottom: $spacing-unit;
   width: 100%;
   text-align: $table-text-align;
-  //color: lighten($text-color, 18%);
   border-collapse: collapse;
   border: 1px solid $grey-color-light;
-  tr {
-    &:nth-child(even) {
-      //background-color: lighten($grey-color-light, 6%);
-    }
-  }
   th, td {
     padding: ($spacing-unit / 3) ($spacing-unit / 2);
   }
   th {
-    //background-color: lighten($grey-color-light, 3%);
     border: 1px solid darken($grey-color-light, 4%);
     border-bottom-color: darken($grey-color-light, 12%);
   }
