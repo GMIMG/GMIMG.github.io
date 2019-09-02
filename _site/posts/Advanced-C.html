@@ -35,6 +35,12 @@
   <!--jquery for back-to-top-->
   <script src="/assets/js/jquery-3.3.1.min.js"></script>
   <script src="/assets/js/index.js"></script>
+  <script>
+  const theme = localStorage.getItem('theme');
+	if (theme === "dark") {
+		document.documentElement.setAttribute('data-theme', 'dark');
+	}
+  </script>
 </head>
   <body>
     <header class="site-header">
@@ -49,6 +55,7 @@
         <div class="trigger">
             <a class="page-link" href="/about/">about</a>
             <a class="page-link" href="/posts/">Posts browser</a>
+          <a id="theme-toggle" class="page-link" onclick="modeSwitcher()"></a>
         </div>
       </nav>
       <nav class="site-search">
@@ -90,8 +97,11 @@
   <li><a href="#advenced-c">Advenced C</a>
     <ul>
       <li><a href="#데이터타입과-형변환">데이터타입과 형변환</a>
-      - {:.} <a href="#데이터-타입">데이터 타입</a>
-      - {:.} <a href="#형변환">형변환</a></li>
+        <ul>
+          <li><a href="#데이터-타입">데이터 타입</a></li>
+          <li><a href="#형변환">형변환</a></li>
+        </ul>
+      </li>
       <li><a href="#고급포인터">고급포인터</a></li>
     </ul>
   </li>
@@ -103,7 +113,7 @@
 
 <h2 id="데이터타입과-형변환">데이터타입과 형변환</h2>
 
-<h4 id="데이터-타입">데이터 타입</h4>
+<h3 id="데이터-타입">데이터 타입</h3>
 
 <ul>
   <li>int 상수의 크기는 컴파일러 마다 다르다(CPU 의존적) -&gt; 한번에 처리할 수 있는 단위</li>
@@ -147,7 +157,7 @@
 <span class="c1">//데이터 align 때문에 int와 char형 두개의 변수를 포함한 구조체의 크기가 8이다.
 </span></code></pre></div></div>
 
-<h4 id="형변환">형변환</h4>
+<h3 id="형변환">형변환</h3>
 
 <p>C에서는 다음 4가지 경우에 형변환이 발생한다</p>
 
@@ -169,15 +179,15 @@
     <p>(signed, unsigned)char, short -&gt; signed int로 변환 (단, int가 4B일 때만)</p>
   </li>
   <li>
+    <p>unsigned int 우선 : signed 와 unsigned int는 unsigned int를 크게본다.</p>
+  </li>
+  <li>
     <p>실수 우선 : 실수 타입이 정수 타입보다 크고 같은 타입끼리는 크기로 판단</p>
 
     <p>int &lt; long int &lt; long long int &lt; float &lt; double &lt; long double</p>
   </li>
   <li>
     <p>큰타입이 작은 타입으로 변환될때 truncation이 발생함(경고 발생).</p>
-  </li>
-  <li>
-    <p>unsigned int 우선 : signed 와 unsigned int는 unsigned int를 크게본다.</p>
   </li>
   <li>
     <p>signed 형의 음수 표현은 <a href="https://ko.wikipedia.org/wiki/2%EC%9D%98_%EB%B3%B4%EC%88%98">2의 보수</a>를 이용함.</p>
@@ -223,7 +233,9 @@ int main(void)
 <span class="p">{</span>
 	<span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="mh">0xff</span><span class="p">;</span>
 
-	<span class="k">if</span><span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="mh">0xff</span><span class="p">)</span> <span class="c1">//(signed int) 0xffffffff != (signed int) 0x000000ff =&gt; 컴파일러에 따라 char의 default값이 다름. VS : signed, RVDS : unsigned
+	<span class="k">if</span><span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="mh">0xff</span><span class="p">)</span> 
+    <span class="c1">//(signed int) 0xffffffff != (signed int) 0x000000ff 
+</span>	<span class="c1">// =&gt; 컴파일러에 따라 char의 default값이 다름. VS : signed, RVDS : unsigned
 </span>		<span class="n">printf</span><span class="p">(</span><span class="s">"%x</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="n">c</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
 	<span class="k">else</span>
 		<span class="n">printf</span><span class="p">(</span><span class="s">"%x</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="n">c</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
@@ -272,6 +284,78 @@ int main(void)
 
 <p>sizeof 연산자 반환값 type은 size_t인데 unsigned int 과 같으므로 왼쪽항은 signed int에서 unsigned int 로 형변환 돼서 비교한다.</p>
 
+<p><strong>실수형 상수</strong></p>
+
+<p>실수(float, double, long double)는 모두 signed 이다.</p>
+
+<p>long double 크기는 컴파일러 의존적이다.</p>
+
+<p>float는 부동소수점(float point)에서 파생됨.(고정 소수점은 메모리 비효율적)</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>메모리 크기</th>
+      <th>유효자릿수</th>
+      <th>최소값</th>
+      <th>최대값</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>float</td>
+      <td>4 Byte</td>
+      <td>6~7 자리(컴파일러 의존적)</td>
+      <td>1.175494351 e-38</td>
+      <td>3.402823 466 e+38</td>
+    </tr>
+    <tr>
+      <td>double</td>
+      <td>8 Byte</td>
+      <td>15~16 자리(float의 약 2배)</td>
+      <td>2.250738 585072 014E -308</td>
+      <td>1.7976931348623158E + 308</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>참고 <a href="/posts/embedded-c#C언어의-데이터-타입">C언어의 데이터 타입</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>부호부 (sign bit)</th>
+      <th>지수부 (exponent bits)</th>
+      <th>가수부 (mantissa bits)</th>
+      <th>유효자릿수 (precision)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>float</td>
+      <td>1</td>
+      <td>8</td>
+      <td>23(부호포함 24)</td>
+      <td>6-7</td>
+    </tr>
+    <tr>
+      <td>double</td>
+      <td>1</td>
+      <td>11</td>
+      <td>52(부호포함 53)</td>
+      <td>15-16</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>예시) 3.5 를 이진수로 바꾸면 11.1(2) (소수점은 2로 계속 곱해서 정수부분을 취함, 0.625 =&gt; 0.101(2))</p>
+
+<p>float 일때 유효숫자 1.11 * 2^(127+n)</p>
+
+<p>0 100/0000/0 110/0000/… == 0x4060/0000</p>
+
 <h2 id="고급포인터">고급포인터</h2>
 
 <p>피연산자 - 연산자 - statement - function - file - program</p>
@@ -309,7 +393,7 @@ s.setAttribute('data-timestamp', +new Date());
         </ul>
       </div>
       <div class="footer-col footer-col-2">
-        <ul class="social-media-list"><li><a href="https://github.com/GMIMG"><svg class="svg-icon"><use xlink:href="/assets/gming-social-icons.svg#github"></use></svg> <span class="username">GMIMG</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/gming-social-icons.svg#rss"></use></svg> <span>Subscribe</span></a></li></ul>
+        <ul class="social-media-list"><li><a href="https://github.com/GMIMG"><i class="fab fa-github"></i> <span class="username">GMIMG</span></a></li><li><a href="/feed.xml"><i class="fas fa-rss"></i> <span>Subscribe</span></a></li></ul>
       </div>
       <div class="footer-col footer-col-3">
         <p>Hello. I&#39;m Seoultech univesity student in South Korea. My english is so terrible but trying ;) I&#39;m majoring in mechanical engineering system. and my minor is computer engineering. I am dreaming to be a good developer. This blog is writing that today I learned.</p>
@@ -328,5 +412,7 @@ s.setAttribute('data-timestamp', +new Date());
   <script src="/assets/js/simple-jekyll-search.min.js"></script>
   <!--mathjax-->
   <!--script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script-->
+  <!--dark-mode-save-->
+  <script src="/assets/js/dark.js"></script>
   </body>
 </html>

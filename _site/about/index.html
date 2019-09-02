@@ -33,6 +33,12 @@
   <!--jquery for back-to-top-->
   <script src="/assets/js/jquery-3.3.1.min.js"></script>
   <script src="/assets/js/index.js"></script>
+  <script>
+  const theme = localStorage.getItem('theme');
+	if (theme === "dark") {
+		document.documentElement.setAttribute('data-theme', 'dark');
+	}
+  </script>
 </head>
   <body>
     <header class="site-header">
@@ -47,6 +53,7 @@
         <div class="trigger">
             <a class="page-link" href="/about/">about</a>
             <a class="page-link" href="/posts/">Posts browser</a>
+          <a id="theme-toggle" class="page-link" onclick="modeSwitcher()"></a>
         </div>
       </nav>
       <nav class="site-search">
@@ -59,7 +66,9 @@
     <main class="page-content">
       <div class="wrapper">
   <div class="page">
-    <h1 id="gmimg">GMIMG</h1>
+    <p>[TOC]</p>
+
+<h1 id="gmimg">GMIMG</h1>
 
 <p>메타정보</p>
 <ul>
@@ -67,6 +76,25 @@
   <li>표준을 좋아함</li>
   <li>게으름</li>
 </ul>
+
+<h2 id="timeline">Timeline</h2>
+
+<blockquote>
+
+</blockquote>
+
+<ol>
+  <li>
+    <p>직무선택(메인,서브)</p>
+  </li>
+  <li>
+    <p>경험 분해-&gt;나를 표현할수있는경험</p>
+  </li>
+  <li>마스터자소서 작성, 1000자 이상</li>
+  <li>면접 준비(경험에대한 질문,답변) 완결형 자소서는 면접스크립트다.</li>
+  <li>인적성검사 공부</li>
+</ol>
+
 
   </div>
 </div>
@@ -84,7 +112,7 @@
         </ul>
       </div>
       <div class="footer-col footer-col-2">
-        <ul class="social-media-list"><li><a href="https://github.com/GMIMG"><svg class="svg-icon"><use xlink:href="/assets/gming-social-icons.svg#github"></use></svg> <span class="username">GMIMG</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/gming-social-icons.svg#rss"></use></svg> <span>Subscribe</span></a></li></ul>
+        <ul class="social-media-list"><li><a href="https://github.com/GMIMG"><i class="fab fa-github"></i> <span class="username">GMIMG</span></a></li><li><a href="/feed.xml"><i class="fas fa-rss"></i> <span>Subscribe</span></a></li></ul>
       </div>
       <div class="footer-col footer-col-3">
         <p>Hello. I&#39;m Seoultech univesity student in South Korea. My english is so terrible but trying ;) I&#39;m majoring in mechanical engineering system. and my minor is computer engineering. I am dreaming to be a good developer. This blog is writing that today I learned.</p>
@@ -103,5 +131,7 @@
   <script src="/assets/js/simple-jekyll-search.min.js"></script>
   <!--mathjax-->
   <!--script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script-->
+  <!--dark-mode-save-->
+  <script src="/assets/js/dark.js"></script>
   </body>
 </html>

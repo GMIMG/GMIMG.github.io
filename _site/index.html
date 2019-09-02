@@ -34,6 +34,12 @@
   <!--jquery for back-to-top-->
   <script src="/assets/js/jquery-3.3.1.min.js"></script>
   <script src="/assets/js/index.js"></script>
+  <script>
+  const theme = localStorage.getItem('theme');
+	if (theme === "dark") {
+		document.documentElement.setAttribute('data-theme', 'dark');
+	}
+  </script>
 </head>
   <body>
     <header class="site-header">
@@ -48,6 +54,7 @@
         <div class="trigger">
             <a class="page-link" href="/about/">about</a>
             <a class="page-link" href="/posts/">Posts browser</a>
+          <a id="theme-toggle" class="page-link" onclick="modeSwitcher()"></a>
         </div>
       </nav>
       <nav class="site-search">
@@ -101,14 +108,26 @@
         
         <div class="post-item-container">
             <li class="post-item">
+                <a class="post-title" href="/posts/Project">Project</a>
+                <br>
+                <span class="post-date">26 Aug 2019</span>
+                <a href="/posts/Project#disqus_thread"><i class="fas fa-comment"></i></a>
+                <p class="post-excerpt">
+</p>
+                <p class="post-tags">
+                </p>
+            </li>
+        </div>
+        
+        <div class="post-item-container">
+            <li class="post-item">
                 <a class="post-title" href="/posts/Algorithm">Algorithm</a>
                 <br>
                 <span class="post-date">18 Aug 2019</span>
-                <i class="fas fa-comment"></i><a href="/posts/Algorithm#disqus_thread"></a>
+                <a href="/posts/Algorithm#disqus_thread"><i class="fas fa-comment"></i></a>
                 <p class="post-excerpt">알고리즘 공부
 
 </p>
-                <!--span class="description"></span-->
                 <p class="post-tags">
                 </p>
             </li>
@@ -120,11 +139,10 @@
                 <br>
                 <span class="post-date">18 Aug 2019</span>
                 <a class="post-category" href="/category/#Embedded"> Embedded</a>
-                <i class="fas fa-comment"></i><a href="/posts/Advanced-C#disqus_thread"></a>
+                <a href="/posts/Advanced-C#disqus_thread"><i class="fas fa-comment"></i></a>
                 <p class="post-excerpt">Advenced C
 
 </p>
-                <!--span class="description"></span-->
                 <p class="post-tags">
                 <a class="tag" href="/tag/#C">C</a>
                 <a class="tag" href="/tag/#Embedded">Embedded</a>
@@ -137,10 +155,9 @@
                 <a class="post-title" href="/posts/JOB">Job</a>
                 <br>
                 <span class="post-date">17 Aug 2019</span>
-                <i class="fas fa-comment"></i><a href="/posts/JOB#disqus_thread"></a>
+                <a href="/posts/JOB#disqus_thread"><i class="fas fa-comment"></i></a>
                 <p class="post-excerpt">먼저 기업의 채용공고를 보고 지원자격과 우대사항에대해 정리한다.
 </p>
-                <!--span class="description"></span-->
                 <p class="post-tags">
                 </p>
             </li>
@@ -152,26 +169,10 @@
                 <br>
                 <span class="post-date">17 Aug 2019</span>
                 <a class="post-category" href="/category/#Embedded"> Embedded</a>
-                <i class="fas fa-comment"></i><a href="/posts/Cause_Embedded#disqus_thread"></a>
+                <a href="/posts/Cause_Embedded#disqus_thread"><i class="fas fa-comment"></i></a>
                 <p class="post-excerpt">내 전공과의 연계성
 
 </p>
-                <!--span class="description"></span-->
-                <p class="post-tags">
-                </p>
-            </li>
-        </div>
-        
-        <div class="post-item-container">
-            <li class="post-item">
-                <a class="post-title" href="/posts/OS">Os</a>
-                <br>
-                <span class="post-date">02 Aug 2019</span>
-                <i class="fas fa-comment"></i><a href="/posts/OS#disqus_thread"></a>
-                <p class="post-excerpt">RTOS
-
-</p>
-                <!--span class="description"></span-->
                 <p class="post-tags">
                 </p>
             </li>
@@ -232,7 +233,7 @@
         </ul>
       </div>
       <div class="footer-col footer-col-2">
-        <ul class="social-media-list"><li><a href="https://github.com/GMIMG"><svg class="svg-icon"><use xlink:href="/assets/gming-social-icons.svg#github"></use></svg> <span class="username">GMIMG</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/gming-social-icons.svg#rss"></use></svg> <span>Subscribe</span></a></li></ul>
+        <ul class="social-media-list"><li><a href="https://github.com/GMIMG"><i class="fab fa-github"></i> <span class="username">GMIMG</span></a></li><li><a href="/feed.xml"><i class="fas fa-rss"></i> <span>Subscribe</span></a></li></ul>
       </div>
       <div class="footer-col footer-col-3">
         <p>Hello. I&#39;m Seoultech univesity student in South Korea. My english is so terrible but trying ;) I&#39;m majoring in mechanical engineering system. and my minor is computer engineering. I am dreaming to be a good developer. This blog is writing that today I learned.</p>
@@ -251,5 +252,7 @@
   <script src="/assets/js/simple-jekyll-search.min.js"></script>
   <!--mathjax-->
   <!--script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script-->
+  <!--dark-mode-save-->
+  <script src="/assets/js/dark.js"></script>
   </body>
 </html>

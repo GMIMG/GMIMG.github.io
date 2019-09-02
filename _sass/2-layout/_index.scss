@@ -1,22 +1,10 @@
-
-.page-content {
-    //padding-bottom: 100px;
-    background-color: #f1f1f1;
-    //overflow-x: scroll;
-    .wrapper {
-        background-color: #fff;
-    }
-}
-
-
-
 /**
  * Intro Image
  */
 
 .img{
     display: table;
-    background-image: url(/assets/img/img1.jpg);
+    background-image: url(/assets/img/home.jpg);
     height: 460px;
     width: 100%;
     padding: 0;
@@ -32,9 +20,7 @@
     vertical-align: middle;
     text-align: center;
     background-color: rgba(12, 12, 48, 0.3);
-    overflow: hidden;                                                         
-    //z-index:2;
-
+    overflow: hidden;
     h1, p{
         width: 80%;
         max-width: 780px;
@@ -51,7 +37,6 @@
 #notice-list {
     margin-left: 0;
     list-style: none;
-    //margin-top: 30px;
     margin-bottom: 30px;
     .description {
       display: block;
@@ -78,14 +63,13 @@
 #post-list .post-title,
 #post-list .post-excerpt,
 #post-list .post-tags {
-    margin: 0 0 0 0; /* 160px = 60(spacing from .post-author) + 140(.post-author width) - 40(padding-left) */
+    margin: 0 0 0 0;
     max-width: 620px;
 }
 
 #post-list .post-title {
     font-size: 26px;
     text-overflow: ellipsis;
-    //white-space: nowrap;
     overflow: hidden;
 }
 
@@ -103,8 +87,6 @@
     border: 1px solid #e6e6e6;
     border-radius: 4px;
     vertical-align: middle;
-    background-color: #fafafa;
-    color: #1e1e1e;
     font-size: 12px;
     line-height: 24px;
 }
@@ -128,7 +110,6 @@
     display: inline-block;
     height: 20px;
     width: 20px;
-    color: #1e1e1e;
     font-size: 14px;
     line-height: 18px; /* 18px = 20(height) - 2(border) */
     vertical-align: middle;
@@ -146,7 +127,6 @@
 }
 
 #pagination > li > a {
-    color: #1e1e1e;
     width: 100%;
     height: 100%;
     display:block;

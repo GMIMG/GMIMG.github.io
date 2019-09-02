@@ -35,6 +35,12 @@
   <!--jquery for back-to-top-->
   <script src="/assets/js/jquery-3.3.1.min.js"></script>
   <script src="/assets/js/index.js"></script>
+  <script>
+  const theme = localStorage.getItem('theme');
+	if (theme === "dark") {
+		document.documentElement.setAttribute('data-theme', 'dark');
+	}
+  </script>
 </head>
   <body>
     <header class="site-header">
@@ -49,6 +55,7 @@
         <div class="trigger">
             <a class="page-link" href="/about/">about</a>
             <a class="page-link" href="/posts/">Posts browser</a>
+          <a id="theme-toggle" class="page-link" onclick="modeSwitcher()"></a>
         </div>
       </nav>
       <nav class="site-search">
@@ -102,14 +109,102 @@
         
         <div class="post-item-container">
             <li class="post-item">
+                <a class="post-title" href="/posts/To-Do">To Do</a>
+                <br>
+                <span class="post-date">27 Jul 2019</span>
+                <a href="/posts/To-Do#disqus_thread"><i class="fas fa-comment"></i></a>
+                <p class="post-excerpt">
+  
+    
+      우선순위
+      당장 할 일
+      소프트웨어
+      복습
+      꾸준하게
+    
+  
+  
+    
+      1
+      코테준비
+      C 정리
+      반도체 정리
+      알고리즘
+    
+    
+      2
+      임베디드기사
+      OS 정리
+      데이터 베이스
+      경험정리
+    
+    
+      3
+      토스
+      파이썬 정리
+      네트워크
+       
+    
+    
+      4
+       
+      C++ 정리
+      로봇
+       
+    
+    
+      5
+       
+      컴퓨터 구조
+      회로설계
+       
+    
+    
+      6
+       
+      OS
+      확률과통계??
+       
+    
+    
+      7
+       
+      소프트웨어 공학
+      열전달??
+       
+    
+    
+      8
+       
+      시스템 아키텍쳐
+       
+       
+    
+    
+      9
+       
+       
+       
+       
+    
+  
+
+
+</p>
+                <p class="post-tags">
+                </p>
+            </li>
+        </div>
+        
+        <div class="post-item-container">
+            <li class="post-item">
                 <a class="post-title" href="/posts/Term">Term</a>
                 <br>
                 <span class="post-date">27 Jul 2019</span>
-                <i class="fas fa-comment"></i><a href="/posts/Term#disqus_thread"></a>
+                <a href="/posts/Term#disqus_thread"><i class="fas fa-comment"></i></a>
                 <p class="post-excerpt">Modem : Modulator + Demodulator
 
 </p>
-                <!--span class="description"></span-->
                 <p class="post-tags">
                 </p>
             </li>
@@ -121,11 +216,10 @@
                 <br>
                 <span class="post-date">29 Mar 2019</span>
                 <a class="post-category" href="/category/#C++"> C++</a>
-                <i class="fas fa-comment"></i><a href="/posts/C++-Discrete-mathematics#disqus_thread"></a>
+                <a href="/posts/C++-Discrete-mathematics#disqus_thread"><i class="fas fa-comment"></i></a>
                 <p class="post-excerpt">이산수학을 들으면서 까먹었던 c++ 사용법을 다시 공부하게 됐다. 1차 과제는 생각한 숫자를 n장의 카드에서 있나 없나 확인으로 맞추는 과제였는데 배열의 동적할당 정도 사용한것 같다.
 
 </p>
-                <!--span class="description"></span-->
                 <p class="post-tags">
                 <a class="tag" href="/tag/#C++">C++</a>
                 <a class="tag" href="/tag/#이산수학">이산수학</a>
@@ -139,11 +233,10 @@
                 <br>
                 <span class="post-date">04 Dec 2018</span>
                 <a class="post-category" href="/category/#C++"> C++</a>
-                <i class="fas fa-comment"></i><a href="/posts/C++-Polymorphism-and-Virtual-Functions#disqus_thread"></a>
+                <a href="/posts/C++-Polymorphism-and-Virtual-Functions#disqus_thread"><i class="fas fa-comment"></i></a>
                 <p class="post-excerpt">Virtual function
 
 </p>
-                <!--span class="description"></span-->
                 <p class="post-tags">
                 <a class="tag" href="/tag/#C++">C++</a>
                 <a class="tag" href="/tag/#Pointer">Pointer</a>
@@ -158,33 +251,13 @@
                 <br>
                 <span class="post-date">20 Nov 2018</span>
                 <a class="post-category" href="/category/#C++"> C++</a>
-                <i class="fas fa-comment"></i><a href="/posts/C++-pointer2#disqus_thread"></a>
+                <a href="/posts/C++-pointer2#disqus_thread"><i class="fas fa-comment"></i></a>
                 <p class="post-excerpt">Pointers and dynamic array
 
 </p>
-                <!--span class="description"></span-->
                 <p class="post-tags">
                 <a class="tag" href="/tag/#C++">C++</a>
                 <a class="tag" href="/tag/#Pointer">Pointer</a>
-                </p>
-            </li>
-        </div>
-        
-        <div class="post-item-container">
-            <li class="post-item">
-                <a class="post-title" href="/posts/C++-Inheritance">C++ inheritance</a>
-                <br>
-                <span class="post-date">20 Nov 2018</span>
-                <a class="post-category" href="/category/#C++"> C++</a>
-                <i class="fas fa-comment"></i><a href="/posts/C++-Inheritance#disqus_thread"></a>
-                <p class="post-excerpt">Inheritance
-class DERIVED_CLASS: public BASE_CLASS
-
-</p>
-                <!--span class="description"></span-->
-                <p class="post-tags">
-                <a class="tag" href="/tag/#C++">C++</a>
-                <a class="tag" href="/tag/#Inheritance">Inheritance</a>
                 </p>
             </li>
         </div>
@@ -197,7 +270,6 @@ class DERIVED_CLASS: public BASE_CLASS
             
             
                 <li id="page-prev"><a href="/posts/2/"><i class="fas fa-chevron-left"></i><span class="sr-only">Previous Page</span></a>
-                    
                 </li>
             
             
@@ -245,7 +317,7 @@ class DERIVED_CLASS: public BASE_CLASS
         </ul>
       </div>
       <div class="footer-col footer-col-2">
-        <ul class="social-media-list"><li><a href="https://github.com/GMIMG"><svg class="svg-icon"><use xlink:href="/assets/gming-social-icons.svg#github"></use></svg> <span class="username">GMIMG</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/gming-social-icons.svg#rss"></use></svg> <span>Subscribe</span></a></li></ul>
+        <ul class="social-media-list"><li><a href="https://github.com/GMIMG"><i class="fab fa-github"></i> <span class="username">GMIMG</span></a></li><li><a href="/feed.xml"><i class="fas fa-rss"></i> <span>Subscribe</span></a></li></ul>
       </div>
       <div class="footer-col footer-col-3">
         <p>Hello. I&#39;m Seoultech univesity student in South Korea. My english is so terrible but trying ;) I&#39;m majoring in mechanical engineering system. and my minor is computer engineering. I am dreaming to be a good developer. This blog is writing that today I learned.</p>
@@ -264,5 +336,7 @@ class DERIVED_CLASS: public BASE_CLASS
   <script src="/assets/js/simple-jekyll-search.min.js"></script>
   <!--mathjax-->
   <!--script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script-->
+  <!--dark-mode-save-->
+  <script src="/assets/js/dark.js"></script>
   </body>
 </html>

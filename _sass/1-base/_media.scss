@@ -6,3 +6,8 @@
     @content;
   }
 }
+@media (prefers-color-scheme: dark) {
+  html {
+    content: "dark";
+  }
+}

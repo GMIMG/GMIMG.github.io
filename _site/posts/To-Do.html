@@ -16,15 +16,15 @@
 <meta property="og:title" content="To Do" />
 <meta name="author" content="Gmimg" />
 <meta property="og:locale" content="ko" />
-<meta name="description" content="학교에서 했던 경험" />
-<meta property="og:description" content="학교에서 했던 경험" />
+<meta name="description" content="우선순위 당장 할 일 소프트웨어 복습 꾸준하게 1 코테준비 C 정리 반도체 정리 알고리즘 2 임베디드기사 OS 정리 데이터 베이스 경험정리 3 토스 파이썬 정리 네트워크   4   C++ 정리 로봇   5   컴퓨터 구조 회로설계   6   OS 확률과통계??   7   소프트웨어 공학 열전달??   8   시스템 아키텍쳐     9        " />
+<meta property="og:description" content="우선순위 당장 할 일 소프트웨어 복습 꾸준하게 1 코테준비 C 정리 반도체 정리 알고리즘 2 임베디드기사 OS 정리 데이터 베이스 경험정리 3 토스 파이썬 정리 네트워크   4   C++ 정리 로봇   5   컴퓨터 구조 회로설계   6   OS 확률과통계??   7   소프트웨어 공학 열전달??   8   시스템 아키텍쳐     9        " />
 <link rel="canonical" href="http://localhost:4000/posts/To-Do" />
 <meta property="og:url" content="http://localhost:4000/posts/To-Do" />
 <meta property="og:site_name" content="GMIMG" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-07-27T00:00:00+09:00" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/posts/To-Do","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/To-Do"},"headline":"To Do","dateModified":"2019-07-27T00:00:00+09:00","datePublished":"2019-07-27T00:00:00+09:00","description":"학교에서 했던 경험","author":{"@type":"Person","name":"Gmimg"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
+{"url":"http://localhost:4000/posts/To-Do","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/To-Do"},"headline":"To Do","dateModified":"2019-07-27T00:00:00+09:00","datePublished":"2019-07-27T00:00:00+09:00","description":"우선순위 당장 할 일 소프트웨어 복습 꾸준하게 1 코테준비 C 정리 반도체 정리 알고리즘 2 임베디드기사 OS 정리 데이터 베이스 경험정리 3 토스 파이썬 정리 네트워크   4   C++ 정리 로봇   5   컴퓨터 구조 회로설계   6   OS 확률과통계??   7   소프트웨어 공학 열전달??   8   시스템 아키텍쳐     9        ","author":{"@type":"Person","name":"Gmimg"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css">
   <!--icon-->
@@ -35,6 +35,12 @@
   <!--jquery for back-to-top-->
   <script src="/assets/js/jquery-3.3.1.min.js"></script>
   <script src="/assets/js/index.js"></script>
+  <script>
+  const theme = localStorage.getItem('theme');
+	if (theme === "dark") {
+		document.documentElement.setAttribute('data-theme', 'dark');
+	}
+  </script>
 </head>
   <body>
     <header class="site-header">
@@ -49,6 +55,7 @@
         <div class="trigger">
             <a class="page-link" href="/about/">about</a>
             <a class="page-link" href="/posts/">Posts browser</a>
+          <a id="theme-toggle" class="page-link" onclick="modeSwitcher()"></a>
         </div>
       </nav>
       <nav class="site-search">
@@ -78,7 +85,84 @@
     </div>
   </div>
       <div class="post-content" itemprop="articleBody">
-        <p>학교에서 했던 경험</p>
+        <table>
+  <thead>
+    <tr>
+      <th style="text-align: center">우선순위</th>
+      <th>당장 할 일</th>
+      <th>소프트웨어</th>
+      <th>복습</th>
+      <th>꾸준하게</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td>코테준비</td>
+      <td>C 정리</td>
+      <td>반도체 정리</td>
+      <td>알고리즘</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2</td>
+      <td>임베디드기사</td>
+      <td>OS 정리</td>
+      <td>데이터 베이스</td>
+      <td>경험정리</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">3</td>
+      <td>토스</td>
+      <td>파이썬 정리</td>
+      <td>네트워크</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center">4</td>
+      <td> </td>
+      <td>C++ 정리</td>
+      <td>로봇</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center">5</td>
+      <td> </td>
+      <td>컴퓨터 구조</td>
+      <td>회로설계</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center">6</td>
+      <td> </td>
+      <td>OS</td>
+      <td>확률과통계??</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center">7</td>
+      <td> </td>
+      <td>소프트웨어 공학</td>
+      <td>열전달??</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center">8</td>
+      <td> </td>
+      <td>시스템 아키텍쳐</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center">9</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>학교에서 했던 경험</p>
 
 <p>1학년</p>
 
@@ -123,7 +207,7 @@ s.setAttribute('data-timestamp', +new Date());
         </ul>
       </div>
       <div class="footer-col footer-col-2">
-        <ul class="social-media-list"><li><a href="https://github.com/GMIMG"><svg class="svg-icon"><use xlink:href="/assets/gming-social-icons.svg#github"></use></svg> <span class="username">GMIMG</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/gming-social-icons.svg#rss"></use></svg> <span>Subscribe</span></a></li></ul>
+        <ul class="social-media-list"><li><a href="https://github.com/GMIMG"><i class="fab fa-github"></i> <span class="username">GMIMG</span></a></li><li><a href="/feed.xml"><i class="fas fa-rss"></i> <span>Subscribe</span></a></li></ul>
       </div>
       <div class="footer-col footer-col-3">
         <p>Hello. I&#39;m Seoultech univesity student in South Korea. My english is so terrible but trying ;) I&#39;m majoring in mechanical engineering system. and my minor is computer engineering. I am dreaming to be a good developer. This blog is writing that today I learned.</p>
@@ -142,5 +226,7 @@ s.setAttribute('data-timestamp', +new Date());
   <script src="/assets/js/simple-jekyll-search.min.js"></script>
   <!--mathjax-->
   <!--script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script-->
+  <!--dark-mode-save-->
+  <script src="/assets/js/dark.js"></script>
   </body>
 </html>

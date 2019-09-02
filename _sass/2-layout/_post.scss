@@ -1,12 +1,11 @@
 .post-header {
-  //margin-top: $spacing-unit;
   margin-bottom: $spacing-unit;
 }
 .post-date {
   color: $grey-color;
 }
 .post-header-categories, .post-header-tags {
-  font-size: 0.935rem;
+  @include relative-font-size(0.935);
   text-align: right;
 }
 .post-last-modified {
@@ -35,4 +34,27 @@
   }
 }
 
-
+.toc_container {
+  width: 100%;
+  font-size: 80%;
+  padding-top: $spacing-unit/2;
+  padding-bottom: $spacing-unit/2;
+  margin-bottom: $spacing-unit/2;
+  border-radius: 15px;
+  ul ul{
+      margin-left: 15px;
+  }
+  .toc_title {
+      padding-bottom: $spacing-unit/2;
+      text-align: center;
+  }
+}
+@media screen and (min-width: $toc-relative) {
+  .toc_container {
+      position: fixed;
+      top: 10%;
+      right: 20px;
+      padding: 10px 10px 10px 0px;
+      max-width: 220px;
+  }
+}

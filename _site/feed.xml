@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko" /><updated>2019-08-19T01:49:42+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">GMIMG</title><subtitle>Mechagrammer</subtitle><author><name>Jimin Hwang</name></author><entry><title type="html">Advanced C</title><link href="http://localhost:4000/posts/Advanced-C" rel="alternate" type="text/html" title="Advanced C" /><published>2019-08-18T00:00:00+09:00</published><updated>2019-08-18T00:00:00+09:00</updated><id>http://localhost:4000/posts/Advanced-C</id><content type="html" xml:base="http://localhost:4000/posts/Advanced-C">&lt;h1 id=&quot;advenced-c&quot;&gt;Advenced C&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko" /><updated>2019-09-02T18:56:04+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">GMIMG</title><subtitle>Mechagrammer</subtitle><author><name>Jimin Hwang</name></author><entry><title type="html">Project</title><link href="http://localhost:4000/posts/Project" rel="alternate" type="text/html" title="Project" /><published>2019-08-26T00:00:00+09:00</published><updated>2019-08-26T00:00:00+09:00</updated><id>http://localhost:4000/posts/Project</id><content type="html" xml:base="http://localhost:4000/posts/Project"></content><author><name>Gmimg</name></author><summary type="html"></summary></entry><entry><title type="html">Advanced C</title><link href="http://localhost:4000/posts/Advanced-C" rel="alternate" type="text/html" title="Advanced C" /><published>2019-08-18T00:00:00+09:00</published><updated>2019-08-18T00:00:00+09:00</updated><id>http://localhost:4000/posts/Advanced-C</id><content type="html" xml:base="http://localhost:4000/posts/Advanced-C">&lt;h1 id=&quot;advenced-c&quot;&gt;Advenced C&lt;/h1&gt;
 
 &lt;h2 id=&quot;데이터타입과-형변환&quot;&gt;데이터타입과 형변환&lt;/h2&gt;
 
-&lt;h4 id=&quot;데이터-타입&quot;&gt;데이터 타입&lt;/h4&gt;
+&lt;h3 id=&quot;데이터-타입&quot;&gt;데이터 타입&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;int 상수의 크기는 컴파일러 마다 다르다(CPU 의존적) -&amp;gt; 한번에 처리할 수 있는 단위&lt;/li&gt;
@@ -46,7 +46,7 @@
 &lt;span class=&quot;c1&quot;&gt;//데이터 align 때문에 int와 char형 두개의 변수를 포함한 구조체의 크기가 8이다.
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;형변환&quot;&gt;형변환&lt;/h4&gt;
+&lt;h3 id=&quot;형변환&quot;&gt;형변환&lt;/h3&gt;
 
 &lt;p&gt;C에서는 다음 4가지 경우에 형변환이 발생한다&lt;/p&gt;
 
@@ -68,15 +68,15 @@
     &lt;p&gt;(signed, unsigned)char, short -&amp;gt; signed int로 변환 (단, int가 4B일 때만)&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
+    &lt;p&gt;unsigned int 우선 : signed 와 unsigned int는 unsigned int를 크게본다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
     &lt;p&gt;실수 우선 : 실수 타입이 정수 타입보다 크고 같은 타입끼리는 크기로 판단&lt;/p&gt;
 
     &lt;p&gt;int &amp;lt; long int &amp;lt; long long int &amp;lt; float &amp;lt; double &amp;lt; long double&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;큰타입이 작은 타입으로 변환될때 truncation이 발생함(경고 발생).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;unsigned int 우선 : signed 와 unsigned int는 unsigned int를 크게본다.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;signed 형의 음수 표현은 &lt;a href=&quot;https://ko.wikipedia.org/wiki/2%EC%9D%98_%EB%B3%B4%EC%88%98&quot;&gt;2의 보수&lt;/a&gt;를 이용함.&lt;/p&gt;
@@ -122,7 +122,9 @@ int main(void)
 &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
 	&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0xff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
-	&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0xff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//(signed int) 0xffffffff != (signed int) 0x000000ff =&amp;gt; 컴파일러에 따라 char의 default값이 다름. VS : signed, RVDS : unsigned
+	&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0xff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+    &lt;span class=&quot;c1&quot;&gt;//(signed int) 0xffffffff != (signed int) 0x000000ff 
+&lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;// =&amp;gt; 컴파일러에 따라 char의 default값이 다름. VS : signed, RVDS : unsigned
 &lt;/span&gt;		&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%x&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 	&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
 		&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%x&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
@@ -170,6 +172,78 @@ int main(void)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;sizeof 연산자 반환값 type은 size_t인데 unsigned int 과 같으므로 왼쪽항은 signed int에서 unsigned int 로 형변환 돼서 비교한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;실수형 상수&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;실수(float, double, long double)는 모두 signed 이다.&lt;/p&gt;
+
+&lt;p&gt;long double 크기는 컴파일러 의존적이다.&lt;/p&gt;
+
+&lt;p&gt;float는 부동소수점(float point)에서 파생됨.(고정 소수점은 메모리 비효율적)&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Type&lt;/th&gt;
+      &lt;th&gt;메모리 크기&lt;/th&gt;
+      &lt;th&gt;유효자릿수&lt;/th&gt;
+      &lt;th&gt;최소값&lt;/th&gt;
+      &lt;th&gt;최대값&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;float&lt;/td&gt;
+      &lt;td&gt;4 Byte&lt;/td&gt;
+      &lt;td&gt;6~7 자리(컴파일러 의존적)&lt;/td&gt;
+      &lt;td&gt;1.175494351 e-38&lt;/td&gt;
+      &lt;td&gt;3.402823 466 e+38&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;double&lt;/td&gt;
+      &lt;td&gt;8 Byte&lt;/td&gt;
+      &lt;td&gt;15~16 자리(float의 약 2배)&lt;/td&gt;
+      &lt;td&gt;2.250738 585072 014E -308&lt;/td&gt;
+      &lt;td&gt;1.7976931348623158E + 308&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;참고 &lt;a href=&quot;/posts/embedded-c#C언어의-데이터-타입&quot;&gt;C언어의 데이터 타입&lt;/a&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Type&lt;/th&gt;
+      &lt;th&gt;부호부 (sign bit)&lt;/th&gt;
+      &lt;th&gt;지수부 (exponent bits)&lt;/th&gt;
+      &lt;th&gt;가수부 (mantissa bits)&lt;/th&gt;
+      &lt;th&gt;유효자릿수 (precision)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;float&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;23(부호포함 24)&lt;/td&gt;
+      &lt;td&gt;6-7&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;double&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;11&lt;/td&gt;
+      &lt;td&gt;52(부호포함 53)&lt;/td&gt;
+      &lt;td&gt;15-16&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;예시) 3.5 를 이진수로 바꾸면 11.1(2) (소수점은 2로 계속 곱해서 정수부분을 취함, 0.625 =&amp;gt; 0.101(2))&lt;/p&gt;
+
+&lt;p&gt;float 일때 유효숫자 1.11 * 2^(127+n)&lt;/p&gt;
+
+&lt;p&gt;0 100/0000/0 110/0000/… == 0x4060/0000&lt;/p&gt;
 
 &lt;h2 id=&quot;고급포인터&quot;&gt;고급포인터&lt;/h2&gt;
 
@@ -496,7 +570,13 @@ int main(void)
   &lt;li&gt;타임아웃을 지정&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Interrupts&lt;/p&gt;</content><author><name>Gmimg</name></author><category term="Embedded" /><category term="Embedded" /><category term="RTOS" /><summary type="html">RTOS Porting &amp;amp; Programming</summary></entry><entry><title type="html">추천교재</title><link href="http://localhost:4000/posts/book" rel="alternate" type="text/html" title="추천교재" /><published>2019-07-27T00:00:00+09:00</published><updated>2019-07-27T00:00:00+09:00</updated><id>http://localhost:4000/posts/book</id><content type="html" xml:base="http://localhost:4000/posts/book">&lt;ul class=&quot;task-list&quot;&gt;
+&lt;p&gt;Interrupts&lt;/p&gt;</content><author><name>Gmimg</name></author><category term="Embedded" /><category term="Embedded" /><category term="RTOS" /><summary type="html">RTOS Porting &amp;amp; Programming</summary></entry><entry><title type="html">Term</title><link href="http://localhost:4000/posts/Term" rel="alternate" type="text/html" title="Term" /><published>2019-07-27T00:00:00+09:00</published><updated>2019-07-27T00:00:00+09:00</updated><id>http://localhost:4000/posts/Term</id><content type="html" xml:base="http://localhost:4000/posts/Term">&lt;p&gt;Modem : Modulator + Demodulator&lt;/p&gt;
+
+&lt;p&gt;Codec : Coder + Decoder&lt;/p&gt;
+
+&lt;p&gt;비메모리&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://ko.wikipedia.org/wiki/후킹&quot;&gt;후킹&lt;/a&gt;&lt;/p&gt;</content><author><name>Gmimg</name></author><summary type="html">Modem : Modulator + Demodulator</summary></entry><entry><title type="html">추천교재</title><link href="http://localhost:4000/posts/book" rel="alternate" type="text/html" title="추천교재" /><published>2019-07-27T00:00:00+09:00</published><updated>2019-07-27T00:00:00+09:00</updated><id>http://localhost:4000/posts/book</id><content type="html" xml:base="http://localhost:4000/posts/book">&lt;ul class=&quot;task-list&quot;&gt;
   &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;Clean Code&lt;/li&gt;
   &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;윤성우의 열혈 자료구조&lt;/li&gt;
   &lt;li class=&quot;task-list-item&quot;&gt;
@@ -598,36 +678,44 @@ int main(void)
 &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
+      &lt;th&gt;우선순위&lt;/th&gt;
       &lt;th&gt;언어&lt;/th&gt;
       &lt;th&gt;컴퓨터과학&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
       &lt;td&gt;C 복습&lt;/td&gt;
       &lt;td&gt;컴퓨터 구조&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
       &lt;td&gt;자료구조&lt;/td&gt;
       &lt;td&gt;시스템(프로세스) 아키텍처&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
       &lt;td&gt;C++ 복습&lt;/td&gt;
       &lt;td&gt;운영체제&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
       &lt;td&gt;C++ API 디자인패턴&lt;/td&gt;
       &lt;td&gt;데이터베이스&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
+      &lt;td&gt;5&lt;/td&gt;
       &lt;td&gt;Effective C++&lt;/td&gt;
       &lt;td&gt;네트워크&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
+      &lt;td&gt;6&lt;/td&gt;
       &lt;td&gt;파이썬 복습&lt;/td&gt;
       &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
+      &lt;td&gt;7&lt;/td&gt;
       &lt;td&gt; &lt;/td&gt;
       &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
@@ -650,1041 +738,4 @@ int main(void)
 
 &lt;p&gt;http://blog.naver.com/PostList.nhn?blogId=hjyang0&amp;amp;parentCategoryNo=6&lt;/p&gt;
 
-&lt;p&gt;http://snui.snu.ac.kr/ocw/index.php?mode=view&amp;amp;id=623#class_room-tab&lt;/p&gt;</content><author><name>Gmimg</name></author><category term="story" /><summary type="html">‘소프트웨어를 쉽게 배우는 방법은 없을까?’</summary></entry><entry><title type="html">Embedded-C</title><link href="http://localhost:4000/posts/Embedded-C" rel="alternate" type="text/html" title="Embedded-C" /><published>2019-07-27T00:00:00+09:00</published><updated>2019-07-27T00:00:00+09:00</updated><id>http://localhost:4000/posts/Embedded-C</id><content type="html" xml:base="http://localhost:4000/posts/Embedded-C">&lt;p&gt;이 포스팅은 2019년 여름 멀티캠퍼스에서 ‘청년취업아카데미 스마트 디바이스 프로그래밍’ 과정을 수강하며 배운것을 정리하는 것을 목적으로 합니다. 임베디드 회사 윌텍(Willtek)에서 강사님을 모셔서 배웠습니다. IDE는 visual stdio 2005 입니다.&lt;/p&gt;
-
-&lt;p&gt;1주차에서 3주차는 C언어와 자료구조, 알고리즘을 공부했습니다. 틀린 내용이 있을 수 있으므로 지적이나 피드백은 감사하게 받겠습니다.&lt;/p&gt;
-
-&lt;h1 id=&quot;embedded-c-programming&quot;&gt;Embedded C Programming&lt;/h1&gt;
-
-&lt;h2 id=&quot;임베디드-시스템&quot;&gt;임베디드 시스템&lt;/h2&gt;
-
-&lt;p&gt;임베디드 시스템은 다양한 분야에서 사용되는 만큼 각자 다른 목적을 가지고있다. 대부분은 몇가지 기능만을 수행하도록 설계된다. 또한 수백개의 규모로 양산되기 때문에 가격도 중요하다. 즉 메모리를 최대한 활용하고 적당한 속도의 싼 마이크로 프로세서를 사용하는게 좋다. 또한 신뢰성(안정성)을 중요시한다.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://ko.wikipedia.org/wiki/%EC%9E%84%EB%B2%A0%EB%94%94%EB%93%9C_%EC%8B%9C%EC%8A%A4%ED%85%9C&quot;&gt;임베디드 시스템&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;c언어&quot;&gt;C언어&lt;/h2&gt;
-
-&lt;p&gt;하드웨어에 가장 가까운 코드는 &lt;strong&gt;기계어&lt;/strong&gt;로 0과 1로 이루어져있고, 이것을 인간의 관점에서 이해하기 쉽게 기계어와 1:1 매칭 구성한것이 &lt;strong&gt;어셈블리어&lt;/strong&gt;이다.  여기까지는 인간의 설계 보단 기계의 인식과정에 중점을 두어 &lt;u&gt;Low-Level 언어&lt;/u&gt;로 불린다. 기계어와 어셈블리어는 CPU 아키텍처마다 다르다. 예를들어 인텔과 AMD의 CPU에서 사용하는 어셈블리어는 다르다.&lt;/p&gt;
-
-&lt;p&gt;같은 프로그램이어도 다른 기계어와 어셈블리어를 만들어야하는 불필요한 과정을 생략하기위해 C언어가 만들어졌다. C언어는 같은 코드에도 컴파일러가 플랫폼에 맞는 다른 어셈블리어로 전환해준다. 이로서 인간은 플랫폼과 상관없이 자신이 설계하고자하는 프로그램을 설계할 수있게 되었고, &lt;u&gt;High-Level 언어&lt;/u&gt;로 불린다. 참고로 High-Level 언어로는 JAVA와 C언어 기반으로 짜여진 Python이있다.&lt;/p&gt;
-
-&lt;p&gt;High-Level 언어는 Low-Level의 언어에 비해 생산성은 매우 높으나, 자원활용(메모리,시간) 효율성이 떨어진다. 일반 개발자가 Low-Level 언어를 사용할 일은 거의 없으나, 임베디드 업계에서는 자원활용이 매우 중요하고, 또 컴파일러가 개발되지 않은 환경에서 어셈블리어를 다루는 개발자가 많다고 한다.&lt;/p&gt;
-
-&lt;p&gt;참고로 같은 C언어도 버전(컴파일러)에 따라 오류와 경고가 달라질 수 있다. 안정성, 신뢰성이 매우 중요한 항공,군사 업계에서는 이러한 충돌 가능성을 줄이기 위해 &lt;a href=&quot;https://ko.wikipedia.org/wiki/MISRA_C&quot;&gt;MISRA&lt;/a&gt; 같은 개발 표준을 사용한다.&lt;/p&gt;
-
-&lt;p&gt;(컴파일러에 대한 이야기)&lt;/p&gt;
-
-&lt;p&gt;참고&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://ko.wikipedia.org/wiki/C_(%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D_%EC%96%B8%EC%96%B4)&quot;&gt;C 언어&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://ko.wikipedia.org/wiki/%EC%BB%B4%ED%93%A8%ED%84%B0_%EA%B5%AC%EC%A1%B0&quot;&gt;컴퓨터 구조&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://ko.wikipedia.org/wiki/%EC%8B%9C%EC%8A%A4%ED%85%9C_%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98&quot;&gt;시스템 아키텍처&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://ko.wikipedia.org/wiki/X86&quot;&gt;x86&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://ko.wikipedia.org/wiki/%ED%8C%8C%EC%9D%B4%EC%8D%AC&quot;&gt;파이썬&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://ko.wikipedia.org/wiki/%EC%BB%B4%ED%8C%8C%EC%9D%BC%EB%9F%AC&quot;&gt;컴파일러&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://ko.wikipedia.org/wiki/GNU_%EC%BB%B4%ED%8C%8C%EC%9D%BC%EB%9F%AC_%EB%AA%A8%EC%9D%8C&quot;&gt;GCC&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;상수&quot;&gt;상수&lt;/h2&gt;
-
-&lt;p&gt;CPU는 0과 1이라는 2진수를 사용하기 때문에 우리가 일상생활에서 사용하는 10진수와 다르다. 수에 대해 이해 할 수록 프로그래밍 할 때 도움이된다. 또한 2진수는 보기가 불편하여 4자리씩 묶어서 16진수로 표현한다.  ( 0001(2) == 0x1)&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://ko.wikipedia.org/wiki/%EB%B9%84%ED%8A%B8&quot;&gt;bit&lt;/a&gt;는 CPU가 인식할수 있는 최소단위이다. 즉 0과 1 이므로 2진수 한자리를 bit로 정의한다.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://ko.wikipedia.org/wiki/%EB%B0%94%EC%9D%B4%ED%8A%B8&quot;&gt;byte&lt;/a&gt;(B)는 일정한 갯수의 비트로 이루어진 비트열로 주소로 표현할 수 있는 가장 작은 단위라고 생각하면 된다. 대부분은 8bit이다. 그러므로 8bit는 16진수 두자리로 표현할 수 있다. (1byte == 0x00)&lt;/p&gt;
-
-&lt;p&gt;변환법 참고 : &lt;a href=&quot;https://ko.wikipedia.org/wiki/%EC%9D%B4%EC%A7%84%EB%B2%95&quot;&gt;2진수&lt;/a&gt; - 10진수 - &lt;a href=&quot;https://ko.wikipedia.org/wiki/%EC%8B%AD%EC%9C%A1%EC%A7%84%EB%B2%95&quot;&gt;16진수&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;c언어의-데이터-타입&quot;&gt;C언어의 데이터 타입&lt;/h3&gt;
-
-&lt;p&gt;정수의 데이터 타입&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;데이터 타입&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;크키(B)&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;최소값&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;최대값&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;char&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;127&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;signed char&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;-128&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;127&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;unsigned char&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;255&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;signed short&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;-32,768&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;32,768&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;unsigned short&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;65,535&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;signed int&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;-2,147, 483,648&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;2,147, 483,648&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;unsigned int&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;4,294, 967,295&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;signed long&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;-2,147, 483,648&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;2,147, 483,648&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;unsigned long&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;4,294, 967,295&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;signed long long&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;8&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;-9, 223,372, 036,854, 775,808&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;9, 223,372, 036,854, 775,808&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;unsigned long long&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;8&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;0&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;‭18, 446,744, 073,709, 551,615&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;integer(정수)는 시스템의 기본연산 단위를 사용하여 컴파일러에 따라 다르다. (16bit =&amp;gt;2byte, 32=&amp;gt;4byte, 64=&amp;gt;4byte) 대부분의 경우는 4byte이다.&lt;/p&gt;
-
-&lt;p&gt;실수의 데이터 타입&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Type&lt;/th&gt;
-      &lt;th&gt;크기&lt;/th&gt;
-      &lt;th&gt;최소값&lt;/th&gt;
-      &lt;th&gt;최대값&lt;/th&gt;
-      &lt;th&gt;유효 자릿수&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;float&lt;/td&gt;
-      &lt;td&gt;4B&lt;/td&gt;
-      &lt;td&gt;1.175494351E - 38&lt;/td&gt;
-      &lt;td&gt;3.402823466E + 38&lt;/td&gt;
-      &lt;td&gt;10진수 6자리&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;double&lt;/td&gt;
-      &lt;td&gt;8B&lt;/td&gt;
-      &lt;td&gt;2.250738585072014E -308&lt;/td&gt;
-      &lt;td&gt;1.7976931348623158E + 308&lt;/td&gt;
-      &lt;td&gt;10진수 15자리&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;실수를 메모리에 저장하는 방법은 IEEE754 표준.&lt;/p&gt;
-
-&lt;p&gt;실수는 unsigned type이 없다.&lt;/p&gt;
-
-&lt;h3 id=&quot;suffix&quot;&gt;suffix&lt;/h3&gt;
-
-&lt;p&gt;c언어에서 사용하는 숫자(100,10.1)은 시스템의 기본 정수,실수를 따른다.&lt;/p&gt;
-
-&lt;p&gt;시스템의 기본 정수 : 100 =&amp;gt; signed integer
-시스템의 기본 실수 : 10.1 =&amp;gt; double&lt;/p&gt;
-
-&lt;p&gt;숫자의 타입 바꾸기 위해서 suffix 사용&lt;/p&gt;
-
-&lt;p&gt;100 -&amp;gt; signed int&lt;/p&gt;
-
-&lt;p&gt;100U -&amp;gt; unsigned int&lt;/p&gt;
-
-&lt;p&gt;100L -&amp;gt; long&lt;/p&gt;
-
-&lt;p&gt;100UL -&amp;gt; unsigned long&lt;/p&gt;
-
-&lt;p&gt;100LL -&amp;gt; long long&lt;/p&gt;
-
-&lt;p&gt;100ULL -&amp;gt; unsinged long long&lt;/p&gt;
-
-&lt;p&gt;float 유효자릿수 10진수 6자리
-double 유효자릿수 10진수 15자리&lt;/p&gt;
-
-&lt;p&gt;float(4B) -&amp;gt; 3.14f, -712.34E2f&lt;/p&gt;
-
-&lt;p&gt;long double(8B) -&amp;gt; 3.14L, -712.34e2l&lt;/p&gt;
-
-&lt;h3 id=&quot;문자열&quot;&gt;문자열&lt;/h3&gt;
-
-&lt;p&gt;c언어에서 &lt;stdio.h&gt;라는 표준 입출력 라이브러리 문자를 입출력한다. 문자열을 저장하는 방법은 char형 배열에 아스키([ASCII](https://ko.wikipedia.org/wiki/ASCII))코드 대응하는 숫자를 저장한다. 즉 개발자는 문자를 넣지만 컴퓨터는 자동으로 숫자로 변환하여 저장한다는 뜻이다.&lt;/stdio.h&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#include &amp;lt;stdio.h&amp;gt;
-int main(void)
-{
-	printf(&quot;Hello&quot;);
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h4 id=&quot;printf&quot;&gt;printf&lt;/h4&gt;
-
-&lt;dl&gt;
-  &lt;dt&gt;printf 함수는 아스키코드로 이루어진 문자열상수를 콘솔에 문자로 변환해서 보여준다.&lt;/dt&gt;
-  &lt;dt&gt;“Hello” =&amp;gt; 문자열 상수&lt;/dt&gt;
-  &lt;dd&gt;char str[]= “Hello” -&amp;gt; str은 char 형 배열로 6개가 들어감 5개문자(‘H’, ‘e’, ‘l’, ‘l’, ‘o’) + ‘\0’(0x00)&lt;/dd&gt;
-&lt;/dl&gt;
-
-&lt;p&gt;char형 배열이 문자열로 인식되기 위해서는 ‘\0’ 문자를 포함해야한다.&lt;/p&gt;
-
-&lt;p&gt;‘0’ 문자는 아스키코드로 0x20 값이다.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;‘\0’은 아스키코드로 0x00(NUL)을 의미한다.&lt;/p&gt;
-
-  &lt;p&gt;NULL은 헤더파일에 정의된 매크로로 null pointer constant, 즉 (void *)0 인 포인터 타입이다.&lt;/p&gt;
-
-  &lt;p&gt;NULL - 0x00000000 or 0x00000000’00000000 (32 vs 64 bit)&lt;/p&gt;
-
-  &lt;p&gt;char *ptr = NULL 과 char *ptr = 0 은 &lt;strong&gt;같은 의미&lt;/strong&gt;&lt;/p&gt;
-
-  &lt;p&gt;int a = NULL 과 int a = 0 의 의미는 &lt;strong&gt;다릅&lt;/strong&gt;니다.&lt;/p&gt;
-
-  &lt;p&gt;출처: https://noirstar.tistory.com/16&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;문자열에는 다음과같은 특수문자들이 있다.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Escape Sequence&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;ASCII&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;기능&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;\a&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0x07&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;경고음, Alarm&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;\b&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0x08&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;New line, 줄 바꿈&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;\t&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0x09&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;탭(TAB)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;\n&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0x0a&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;줄 바꾸기, New Line&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;\r&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0x0d&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;줄 처음으로 가기, Carriage Return&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;\\&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0x5c&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;백슬레쉬&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;\’&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0x27&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;홑따옴표&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;\’’&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0x22&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;겹따옴표&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;\o&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;0x00&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;NULL, 문자열의 끝&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;strong&gt;형식지정자&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;printf 함수에서 변수에 저장된 상수를 출력할 수 있는데 이때 타입에 따라 다음과같은 형식지정자를 써주면 된다.&lt;/p&gt;
-
-&lt;p&gt;integer : %d&lt;/p&gt;
-
-&lt;p&gt;unsigned int : %u&lt;/p&gt;
-
-&lt;p&gt;long : %ld&lt;/p&gt;
-
-&lt;p&gt;unsigned long : %lu&lt;/p&gt;
-
-&lt;p&gt;char : %c&lt;/p&gt;
-
-&lt;p&gt;문자열 배열 : %s&lt;/p&gt;
-
-&lt;p&gt;float, double : %f(부동소숫점), %e(지수표기법)&lt;/p&gt;
-
-&lt;p&gt;long double : %lf, %le&lt;/p&gt;
-
-&lt;h4 id=&quot;scanf와-scanf_s&quot;&gt;scanf와 scanf_s&lt;/h4&gt;
-
-&lt;p&gt;scanf는 (“%s”, 주소값)을 인자로 받는다.&lt;/p&gt;
-
-&lt;p&gt;최신버전의 컴파일러에서는 scanf 함수 대신 scanf_s를 사용 하도록 권유(거의 강요) 하고있다. 기존에 쓰던 scanf가 지정된 버퍼의 크기보다 많은양의 문자를 넣을 수 있기때문(&lt;strong&gt;버퍼 오버플로우&lt;/strong&gt;)에 보안상문제로 업데이트 한것이다. scanf_s 는 (“%s”, &lt;strong&gt;배열의 주소, 배열의 크기&lt;/strong&gt;) 를 인자로 받는다. 일정 버전(VS2010) 이상의 컴파일러에서 에러없이 scanf 를 사용하기위해 ‘#pragma warning (disable:4996)’ 또는 ‘#define _CRT_NO_SECURE_WARNINGS’을 코드 최상단에 선언해주면 된다.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;서식문자&lt;/th&gt;
-      &lt;th&gt;입력데이터&lt;/th&gt;
-      &lt;th&gt;대응되는 인수형&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;d, D&lt;/td&gt;
-      &lt;td&gt;10진 정수&lt;/td&gt;
-      &lt;td&gt;int *, long *&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;o, O&lt;/td&gt;
-      &lt;td&gt;8진 정수&lt;/td&gt;
-      &lt;td&gt;int *, long *&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;i, I&lt;/td&gt;
-      &lt;td&gt;정수&lt;/td&gt;
-      &lt;td&gt;int *, long *&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;u, U&lt;/td&gt;
-      &lt;td&gt;부호 없는 10진 정수&lt;/td&gt;
-      &lt;td&gt;unsigned int *, unsigned long *&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;x, X&lt;/td&gt;
-      &lt;td&gt;16진 정수&lt;/td&gt;
-      &lt;td&gt;int *&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;e, E&lt;/td&gt;
-      &lt;td&gt;부동 소수점&lt;/td&gt;
-      &lt;td&gt;double *&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;f&lt;/td&gt;
-      &lt;td&gt;부동 소수점&lt;/td&gt;
-      &lt;td&gt;double *&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;g, G&lt;/td&gt;
-      &lt;td&gt;부동 소수점&lt;/td&gt;
-      &lt;td&gt;double *&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;s&lt;/td&gt;
-      &lt;td&gt;문자열&lt;/td&gt;
-      &lt;td&gt;char *&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;c&lt;/td&gt;
-      &lt;td&gt;문자&lt;/td&gt;
-      &lt;td&gt;char *&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;n&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt;int *&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;p&lt;/td&gt;
-      &lt;td&gt;포인터&lt;/td&gt;
-      &lt;td&gt;far * or near *&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;strong&gt;fflush(stdin)&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;scanf에서 지정된 입력 개수보다 더 많이 입력 받으면 입력버퍼에 남는데 이 버퍼를 지워주기위해 사용되는 함수이다.&lt;/p&gt;
-
-&lt;h2 id=&quot;변수&quot;&gt;변수&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;변수의 선언&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;specifier + modifier + identifier ;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;spcifier : 변수의 모양, 유효범위와 기억클래스 지정해줌
-    &lt;ul&gt;
-      &lt;li&gt;Type specifier : 변수의 모양을 지시(char, short, int, long, float, double, long double)&lt;/li&gt;
-      &lt;li&gt;Type qualifier : 변수의 기능 제한 (const, volatile)&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;#유효범위와-기억클래스&quot;&gt;Storage class specifier&lt;/a&gt;&lt;/strong&gt; : 변수가 저장되는 공간(등급)을 지정 (extern, static, auto, resgister, 미지정(default))&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;modifier : 변수의 타입을 변경
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt; : 포인터라고 읽으며 기본형 변수를 주소 타입으로 변경&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;[]&lt;/code&gt; : &lt;a href=&quot;#배열&quot;&gt;배열(array)&lt;/a&gt;이라 읽으며 기본형변수를 집합형으로 변경&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;()&lt;/code&gt; : 함수(function)라고 읽으며 기본형변수를 함수로 변경&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Type 변수이름;&lt;/p&gt;
-
-&lt;p&gt;선언과 함께 초기화하는 방법은 다음과 같다.&lt;/p&gt;
-
-&lt;p&gt;Type 변수이름 = xxx; //변수가 선언되어있지 않을때만 가능&lt;/p&gt;
-
-&lt;p&gt;변수의 종류는 전역변수와 지역변수로 크게 두가지이다.&lt;/p&gt;
-
-&lt;p&gt;컴파일러 버전에 따라 다르지만 &lt;a href=&quot;https://ko.wikipedia.org/wiki/C99&quot;&gt;c99&lt;/a&gt; 이전 표준(gcc 2.x 버전까지)에서 지역변수의 변수 선언은 항상 선두에 있어야한다.&lt;/p&gt;
-
-&lt;p&gt;지역변수의 수명은 블록({ }, brace) 에서 사용가능하다.&lt;/p&gt;
-
-&lt;p&gt;어떤 변수의 메모리를 호출하기 위해 &amp;amp;(ampersand)(address of)연산자를 사용한다.&lt;/p&gt;
-
-&lt;p&gt;주소는 1B메모리 마다 붙이며 주소값은 메모리 크기에 따라 다르다. (32bit-&amp;gt; 4byte)&lt;/p&gt;
-
-&lt;p&gt;sizeof 연산자는 변수의 type의 크기(byte)를 반환해준다.&lt;/p&gt;
-
-&lt;p&gt;정수가 메모리에 저장되는 순서는 프로세서 제조사별로 다르다.&lt;/p&gt;
-
-&lt;p&gt;예를들어 인텔은 Littel Endian, 모토롤라는 Big Endian 방식이다.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://ko.wikipedia.org/wiki/%EC%97%94%EB%94%94%EC%96%B8&quot;&gt;Littel Endian&lt;/a&gt;은 변수가 높은 메모리주소에서 낮은메모리주소로 쌓이는 방식이다.&lt;/p&gt;
-
-&lt;h2 id=&quot;디버깅&quot;&gt;디버깅&lt;/h2&gt;
-
-&lt;p&gt;IDE 마다 다른 디버깅 모드를 지원한다. VS에서 디버깅은 간단하게 F5(디버깅), F9(중단점), F10(프로시저단위실행), F11(한단계씩 코드실행) 와 조사식, 메모리 덤프로 진행한다.&lt;/p&gt;
-
-&lt;p&gt;직접해보는게 더 빨리 익힐 수 있다.&lt;/p&gt;
-
-&lt;h2 id=&quot;연산자&quot;&gt;연산자&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://dojang.io/mod/page/view.php?id=188&quot;&gt;연산자 우선순위&lt;/a&gt; 를 잘 알면 여러줄의 코드를 짧게 줄일 수 있고, 연산 효율을 높일 수 있다.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;우선순위&lt;/th&gt;
-      &lt;th&gt;연산자&lt;/th&gt;
-      &lt;th&gt;설명&lt;/th&gt;
-      &lt;th&gt;결합 방향&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;1&lt;/td&gt;
-      &lt;td&gt;(postfix) &lt;code class=&quot;highlighter-rouge&quot;&gt;++&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;--&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;후위 증가와 감소&lt;/td&gt;
-      &lt;td&gt;→&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;()&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;함수 호출&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;[]&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;배열 첨자&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;.&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;참조로 요소 선택&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-&amp;gt;&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;포인터를 통해 요소 선택&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;2&lt;/td&gt;
-      &lt;td&gt;(prefix) &lt;code class=&quot;highlighter-rouge&quot;&gt;++&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;--&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;전위 증가와 감소&lt;/td&gt;
-      &lt;td&gt;←&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt;(sign) &lt;code class=&quot;highlighter-rouge&quot;&gt;+&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;-&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;단항 증가감소 연산자&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;!&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;~&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;논리 NOT, 비트NOT&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;(type)&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;타입 캐스트&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;역참조&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;주소값&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sizeof&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;자료형의 크기&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;3&lt;/td&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;/&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;%&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;곱셈 나눗셈 나머지&lt;/td&gt;
-      &lt;td&gt;→&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;4&lt;/td&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;+&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;-&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;덧셈 뺄셈&lt;/td&gt;
-      &lt;td&gt;→&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;5&lt;/td&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;&amp;lt;&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&amp;gt;&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;비트 왼쪽 쉬프트와 오른쪽 쉬프트&lt;/td&gt;
-      &lt;td&gt;→&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;6&lt;/td&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;=&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;=&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;작음, 작거나 같음, 큼, 크거나 같음&lt;/td&gt;
-      &lt;td&gt;→&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;7&lt;/td&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;==&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;!=&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;관계 = 와 ≠&lt;/td&gt;
-      &lt;td&gt;→&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;8&lt;/td&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;비트 AND&lt;/td&gt;
-      &lt;td&gt;→&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;9&lt;/td&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;^&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;비트 XOR&lt;/td&gt;
-      &lt;td&gt;→&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;10&lt;/td&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;비트 OR&lt;/td&gt;
-      &lt;td&gt;→&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;11&lt;/td&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&amp;amp;&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;논리 AND&lt;/td&gt;
-      &lt;td&gt;→&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;12&lt;/td&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;||&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;논리 OR&lt;/td&gt;
-      &lt;td&gt;→&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;13&lt;/td&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;? :&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;삼항 연산자&lt;/td&gt;
-      &lt;td&gt;←&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;14&lt;/td&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;=&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;직접 할당&lt;/td&gt;
-      &lt;td&gt;←&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;+=&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;-=&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;*=&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;/=&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;%=&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;덧셈, 뺄셈, 곱셈, 나눗셈, 나머지 연산 후 할당&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;&amp;lt;=&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&amp;gt;=&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;비트를 왼쪽, 오른쪽으로 시프트한 후 할당&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;=&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;^=&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;|=&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;비트 AND, XOR, OR 연산 후 할당&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;15&lt;/td&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;,&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;콤마&lt;/td&gt;
-      &lt;td&gt;→&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;% 의 피연산자는 양의 정수이어야함 (음수면 컴파일러 의존) 실수를 피연산자로 취할 수 없음.&lt;/p&gt;
-
-&lt;h2 id=&quot;함수&quot;&gt;함수&lt;/h2&gt;
-
-&lt;p&gt;#include 뒤에 파일은 &amp;lt;&amp;gt; 또는 ““을 사용하여 지정하게 된다.&lt;/p&gt;
-
-&lt;p&gt;&amp;lt;&amp;gt; 는 컴파일러를 설치할 때 만들어진 표준 폴더에서 해당 파일을 찾아서 복사하고, “” 는 현재 작업중인 폴더에서 찾고 없으면 표준 폴더에서 찾는다.&lt;/p&gt;
-
-&lt;p&gt;표준 라이브러리 폴더는 ‘C:\Program Files (x86)\Windows Kits\10\Include’ 에 있다&lt;/p&gt;
-
-&lt;p&gt;함수의 입력을 parameter(인자), 출력을 return(반환), 작업을 operation(기능)이라고 함. 함수에 넣어주는 값을 argument(인수)라하고 이 값이 parameter로 전달 됨.&lt;/p&gt;
-
-&lt;p&gt;함수 만드는 형식&lt;/p&gt;
-
-&lt;p&gt;return type + 함수명 + (parameter list) + { code }&lt;/p&gt;
-
-&lt;p&gt;함수를 쓰겠다고 형식을 알려주는 것이 선언, 함수 본체를 만드는 것은 정의.&lt;/p&gt;
-
-&lt;h2 id=&quot;분기문&quot;&gt;분기문&lt;/h2&gt;
-
-&lt;h3 id=&quot;if문&quot;&gt;if문&lt;/h3&gt;
-
-&lt;p&gt;if(조건식) 실행문;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;숏서킷 원리&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;(A &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&amp;amp;&lt;/code&gt; B) 에서 A가 false면 B는 생략한다, (A &lt;code class=&quot;highlighter-rouge&quot;&gt;||&lt;/code&gt; B) 에서 A가 True면 B는 생략한다.&lt;/p&gt;
-
-&lt;p&gt;즉, 조건문에서는 연산을 하지 않는게 좋고, 조건의 확률을 따져서 조건식을 배치하면 효율이좋다.&lt;/p&gt;
-
-&lt;h3 id=&quot;조건연산자&quot;&gt;조건연산자&lt;/h3&gt;
-
-&lt;p&gt;A ? B : C&lt;/p&gt;
-
-&lt;p&gt;if는 문장을 만들고, ? : 는 식을 만든다.&lt;/p&gt;
-
-&lt;h3 id=&quot;switch--case문&quot;&gt;switch ~ case문&lt;/h3&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;switch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1번&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//break가 없으면 다음 case문으로 들어간다.
-&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;2번&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;3번&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;switch의 조건식은 정수식(실수식 불가). case의 비교 값은 상수식만 가능(변수식 불가능). 보통 enum 과 함께 사용한다.&lt;/p&gt;
-
-&lt;h2 id=&quot;반복문&quot;&gt;반복문&lt;/h2&gt;
-
-&lt;h3 id=&quot;for문&quot;&gt;for문&lt;/h3&gt;
-
-&lt;p&gt;for(초기화식;조건식;후처리식) 실행문;&lt;/p&gt;
-
-&lt;p&gt;for(;;) : 무한루프.&lt;/p&gt;
-
-&lt;p&gt;break : 루프를 빠져나옴.&lt;/p&gt;
-
-&lt;p&gt;continue : 코드를 중단하고 후처리식으로 돌아감.&lt;/p&gt;
-
-&lt;h3 id=&quot;while문&quot;&gt;while문&lt;/h3&gt;
-
-&lt;p&gt;while(조건식) 실행문;&lt;/p&gt;
-
-&lt;h2 id=&quot;유효범위와-기억클래스&quot;&gt;유효범위와 기억클래스&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;컴파일과정&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/Embedded/compile.jpg&quot; alt=&quot;compile&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;그림에서 알 수 있다시피  헤더(.h)파일과 c(.c)파일은 전처리기와 컴파일러에 의해 어셈블리어로 변환되고 어셈블리어는 어셈블러에의해 이진파일(.obj)로 바뀐다. 이 이진파일은 링커로 합쳐져서 하나의 파일이 된다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/Embedded/Scope_Lifetime.png&quot; alt=&quot;Scope_Lifetime&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;extern : 변수를 다른 공간을 공유, 여러 .c 파일간 같은 함수나, 변수를 호출할 때 사용.&lt;/p&gt;
-
-&lt;p&gt;static : 지역변수에서 사용했을 때 전역변수와 이름이 같더라도 다른 변수를 생성. 또한 static 변수가 선언된 함수가 두번이상 사용되었을 때 두번째 부터는 초기화를 하지않고, 전에 사용했던 값을 불러옴(초기화 안했을때 0). 전역변수로 사용했을 때 해당 소스파일 내에서만 사용 가능.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;#변수&quot;&gt;변수&lt;/a&gt; 참조&lt;/p&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
-&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;a=%d, b=%d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;a=%d, b=%d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;cm&quot;&gt;/*
-a=2, b=21
-a=3, b=22
-a=3, b=11
-*/&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;배열&quot;&gt;배열&lt;/h2&gt;
-
-&lt;p&gt;배열은 같은 타입의 데이터 여러개를 집합으로 관리해 준다.&lt;/p&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;'A'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,}&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//초기화자가 부족할경우 0으로 채워진다(일부 컴파일러에서는 쓰레기 값)
-&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;ABCD&quot;&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//초기화자가 많으면 에러발생. 단, 문자열로 초기화할때는 나머지를 버림
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;sizeof&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;sizeof&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;\assets\img\Embedded\array_a.jpg&quot; alt=&quot;array_a&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;a 는 배열의 이름이면서, 배열의 첫번째 데이터의 주소를 가르키는 포인터이기도 하다. 즉, a == &amp;amp;a[0]&lt;/p&gt;
-
-&lt;h2 id=&quot;포인터&quot;&gt;포인터&lt;/h2&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
-&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-	&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-	&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%#.8x %#.8x&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%d %d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;포인터는 메모리주소를 저장하는 &lt;strong&gt;변수&lt;/strong&gt;이다.&lt;/p&gt;
-
-&lt;p&gt;포인터 변수는 *(포인터) modifier를 사용해서 선언하고 포인터로 메모리를 접근하기위해 *(간접(indirect)) 연산자를 이용한다. (같은 기호를 쓰지만 선언할때와 사용할때는 다른의미로 사용된다)&lt;/p&gt;
-
-&lt;p&gt;별개로 &amp;amp;(ampersand) 연산자는 변수의 주소값을 가져온다.&lt;/p&gt;
-
-&lt;h3 id=&quot;포인터의-역할&quot;&gt;포인터의 역할&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Call by address에 의한 원본 메모리(변수)를 수정할 수 있도록 한다. (예를들면 scanf)&lt;/li&gt;
-  &lt;li&gt;함수에 전달되는 배열 및 문자열을 parameter로 받을 수 있다.&lt;/li&gt;
-  &lt;li&gt;공유메모리인 Heap영역에서 메모리를 할당 받는다. (malloc, calloc, free, realloc 함수사용(&lt;a href=&quot;https://ko.wikipedia.org/wiki/Stdlib.h&quot;&gt;stdlib.h&lt;/a&gt;))&lt;/li&gt;
-  &lt;li&gt;특정 주소의 메모리를 접근한다. (하드웨어에서 필수적)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;포인터를 이용해 배열의 요소에 접근할수 있다.&lt;/p&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
-&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-	&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-	&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%#.8x, %#.8x&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%d, %d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%d, %d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-
-	&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%#.8x, %#.8x&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%d, %d, %d, %d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%#.8x, %#.8x&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%d, %d, %d, %d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
-
-	&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%#.8x, %#.8x&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%d, %d, %d, %d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%#.8x, %#.8x&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%d, %d, %d, %d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;공유메모리-heap영역-할당하기&quot;&gt;공유메모리 Heap영역 할당하기&lt;/h4&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
-#include &amp;lt;stdlib.h&amp;gt;
-&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-	&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;malloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;sizeof&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-	&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// == *(p + i) = i;
-&lt;/span&gt;	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-	&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;free&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;구조체와-공용체&quot;&gt;구조체와 공용체&lt;/h2&gt;
-
-&lt;h3 id=&quot;구조체&quot;&gt;구조체&lt;/h3&gt;
-
-&lt;p&gt;여러타입의 데이터들로 새로운 타입을 만듦&lt;/p&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
-&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;st&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//템플릿(template)이라는 집합을 이룰 모양을 정하는것, st는 tag라고 부름
-&lt;/span&gt;	&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//구조체 멤버
-&lt;/span&gt;		&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//구조체 y,z 선언
-&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;st&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;'A'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//구조체 x 초기화
-&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;a=%d b=%c&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-	&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;'B'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-	&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;a=%d b=%c&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    
-    &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 구조체 y에 x 복사
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;a=%d b=%c&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;\assets\img\Embedded\struct_template.jpg&quot; alt=&quot;struct_template&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;구조체의 멤버에 접근하는 방법은 .(dot)연산자를 이용한다.&lt;/p&gt;
-
-&lt;p&gt;구조체의 포인터는 Advanced-C 에서 다루기로한다.&lt;/p&gt;
-
-&lt;h3 id=&quot;공용체&quot;&gt;공용체&lt;/h3&gt;
-
-&lt;p&gt;공용체는 같은 메모리를 여러 타입의 멤버가 공동으로 사용한다.&lt;/p&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
-&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;union&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;uni&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-		&lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x12345678&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-
-	&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;a=%#x	b=%#x&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&amp;amp;x.a=%#.8x	&amp;amp;x.b=%#.8x&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;sizeof x.a=%d	sizeof x.b=%d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;sizeof&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;sizeof&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&amp;amp;x=%#.8x	sizeof x=%d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;sizeof&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-
-	&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0xEF&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;a=%#x	b=%#x&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;\assets\img\Embedded\union_ex.jpg&quot; alt=&quot;union_ex&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;\assets\img\Embedded\union_x.jpg&quot; alt=&quot;union_x&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;공용체(union)의 선언은 구조체와 거의 동일하다.&lt;/p&gt;
-
-&lt;p&gt;공용체 활용&lt;/p&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
-&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;st&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;alpha&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-		&lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;blue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-		&lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;green&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-		&lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;red&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;union&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;uni&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;st&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rgb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;union&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;uni&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-	&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;color&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0xA1B1C155&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%X&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%X %X %X %X&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rgb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;red&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rgb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;green&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rgb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;blue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rgb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;alpha&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rgb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;red&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0xA9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%X %X&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rgb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;red&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;\assets\img\Embedded\union_ex2.jpg&quot; alt=&quot;union_ex2&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;기타&quot;&gt;기타&lt;/h2&gt;
-
-&lt;h3 id=&quot;열거형&quot;&gt;열거형&lt;/h3&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
-&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;color1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;WHITE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BLACK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;YELLOW&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RED&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//enum color2 { BLACK, BROWN }; //같은 멤버이름 에러
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;   &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;C&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;D&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 초기화 없으면 뒤에 있는 멤버+1
-&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%d %d %d %d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;WHITE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BLACK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;YELLOW&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RED&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%d %d %d %d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;C&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;D&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;cm&quot;&gt;/*
-0 1 2 3
--1 1 2 1
-*/&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;매크로&quot;&gt;매크로&lt;/h3&gt;
-
-&lt;p&gt;간단한 구문의 반복을 함수대신 매크로의 적절한 활용으로 속도를 개선시킨다.&lt;/p&gt;
-
-&lt;p&gt;주의할점&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;;을 붙이지 않는다. (전처리기에서 실행하기때문)&lt;/li&gt;
-  &lt;li&gt;매개변수는 ()로 묶는다.&lt;/li&gt;
-  &lt;li&gt;전체를 괄호로 묶는다.&lt;/li&gt;
-  &lt;li&gt;과도한 사용은 코드 가독성을 떨어뜨리며, typecasting 문제때문에 웬만하면 매크로사용을 자제하는것이 권장됨.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#define ARR_SIZE(x) (sizeof(x) / sizeof(x[0]))
-#define PRT(x) printf(&quot;%d\n&quot;,x)
-#define SQR(x) ((x)*(x))
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;typedef&quot;&gt;typedef&lt;/h3&gt;
-
-&lt;p&gt;새로운 타입의 별명을 설정하는 명령어다. 구조체에서 많이 사용한다.&lt;/p&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt; 
-&lt;/span&gt;
-&lt;span class=&quot;cp&quot;&gt;#define ARR_SIZE(x)	(sizeof(x)/sizeof((x)[0]))
-&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;UI&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//UI라는 unsigned int 타입을 만듦.
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;UI&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;UIP&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 
-&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;UI&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;UIP&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-	&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ARR_SIZE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;표준라이브러리&quot;&gt;표준라이브러리&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://ko.wikipedia.org/wiki/C_%ED%91%9C%EC%A4%80_%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC&quot;&gt;표준라이브러리&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;자주쓰는 라이브러리 정리&lt;/p&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdlib.h&amp;gt;
-&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;malloc&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;size_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;//size 바이트의 메모리를 힙에서 할당하여 반환한다.
-&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;calloc&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;size_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;size_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;//(num * size) 바이트의 메모리를 힙에서 할당하여 반환한다.
-&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;realloc&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ptr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;size_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;//ptr이 가리키는 메모리를 size 바이트만큼 힙에서 재할당하여 반환한다.
-&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;free&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ptr&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;//ptr이 가리키는 메모리를 해제한다.(할당했으면 반드시 해제해야 한다.)
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;string.h&amp;gt;
-&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strcpy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//문자열 복사
-&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strncpy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;size_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//문자열을 글자수만큼 복사
-&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;strcat&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;destination&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;//source를 destination뒤에 붙인다.
-&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;strncat&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;destination&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;size_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;//source에서 destination뒤에 처음 num개의 문자들을 붙인다.
-&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;size_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;strlen&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;//str의 길이를 반환한다.
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;C언어 공부에 좋은 사이트&lt;/p&gt;
-
-&lt;p&gt;http://tcpschool.com/c/intro&lt;/p&gt;</content><author><name>Gmimg</name></author><category term="Embedded" /><category term="Embedded" /><category term="C" /><summary type="html">이 포스팅은 2019년 여름 멀티캠퍼스에서 ‘청년취업아카데미 스마트 디바이스 프로그래밍’ 과정을 수강하며 배운것을 정리하는 것을 목적으로 합니다. 임베디드 회사 윌텍(Willtek)에서 강사님을 모셔서 배웠습니다. IDE는 visual stdio 2005 입니다.</summary></entry><entry><title type="html">To Do</title><link href="http://localhost:4000/posts/To-Do" rel="alternate" type="text/html" title="To Do" /><published>2019-07-27T00:00:00+09:00</published><updated>2019-07-27T00:00:00+09:00</updated><id>http://localhost:4000/posts/To%20Do</id><content type="html" xml:base="http://localhost:4000/posts/To-Do">&lt;p&gt;학교에서 했던 경험&lt;/p&gt;
-
-&lt;p&gt;1학년&lt;/p&gt;
-
-&lt;p&gt;CAD/CAM&lt;/p&gt;
-
-&lt;p&gt;2학년&lt;/p&gt;
-
-&lt;p&gt;3학년&lt;/p&gt;
-
-&lt;p&gt;4학년&lt;/p&gt;</content><author><name>Gmimg</name></author><summary type="html">학교에서 했던 경험</summary></entry></feed>
+&lt;p&gt;http://snui.snu.ac.kr/ocw/index.php?mode=view&amp;amp;id=623#class_room-tab&lt;/p&gt;</content><author><name>Gmimg</name></author><category term="story" /><summary type="html">‘소프트웨어를 쉽게 배우는 방법은 없을까?’</summary></entry></feed>

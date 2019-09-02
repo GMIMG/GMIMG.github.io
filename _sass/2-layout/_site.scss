@@ -6,6 +6,7 @@ $site-header-icon-size: 36px;
   width: 100%;
   border-bottom: 1px solid $grey-color-light;
   position: relative;
+  //background-color: #121212;
 }
 
 .site-title {
@@ -14,10 +15,10 @@ $site-header-icon-size: 36px;
   line-height: $site-header-line-height;
   margin-bottom: 0;
   float: left;
-  &,
-  &:visited {
-    color: $grey-color-dark;
-  }
+  //&,
+  //&:visited {
+  //  color: $grey-color-dark;
+  //}
 }
 
 /**
@@ -46,12 +47,12 @@ $site-header-icon-size: 36px;
   line-height: $site-header-line-height;
   //z-index: 1; /* Stay on top */
   margin-right:  $spacing-unit / 2 + $site-header-icon-size;
-  background-color: white;
+  //background-color: white;
   .menu-trigger, .menu-icon {
     display: none;
   }
   .page-link {
-    color: $text-color;
+    //color: $text-color;
     line-height: $base-line-height;
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
@@ -66,7 +67,6 @@ $site-header-icon-size: 36px;
     border: 1px solid $grey-color-light;
     border-radius: 5px;
     z-index: 1; /* Stay on top */
-
 
     label[for="menu-trigger"] {
       display: block;
@@ -99,6 +99,10 @@ $site-header-icon-size: 36px;
   }
 }
 
+#theme-toggle {
+  text-align: center;
+}
+
 #back-to-top {
   display: none; /* @@iolo: show/hide by js */
   position: fixed;
@@ -106,8 +110,7 @@ $site-header-icon-size: 36px;
   height: 30px;
   right: 30px;
   bottom: 20px;
-  z-index: 999;
-  //background: url(../images/pc/icon_uarrow.png) no-repeat;
+  //z-index: 999;
   background-size: 30px 30px;
   i {
     font-size: 29px;

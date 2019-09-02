@@ -35,6 +35,12 @@
   <!--jquery for back-to-top-->
   <script src="/assets/js/jquery-3.3.1.min.js"></script>
   <script src="/assets/js/index.js"></script>
+  <script>
+  const theme = localStorage.getItem('theme');
+	if (theme === "dark") {
+		document.documentElement.setAttribute('data-theme', 'dark');
+	}
+  </script>
 </head>
   <body>
     <header class="site-header">
@@ -49,6 +55,7 @@
         <div class="trigger">
             <a class="page-link" href="/about/">about</a>
             <a class="page-link" href="/posts/">Posts browser</a>
+          <a id="theme-toggle" class="page-link" onclick="modeSwitcher()"></a>
         </div>
       </nav>
       <nav class="site-search">
@@ -102,15 +109,30 @@
         
         <div class="post-item-container">
             <li class="post-item">
+                <a class="post-title" href="/posts/Terms">용어</a>
+                <br>
+                <span class="post-date">09 Sep 2018</span>
+                <a class="post-category" href="/category/#Programming"> Programming</a>
+                <a href="/posts/Terms#disqus_thread"><i class="fas fa-comment"></i></a>
+                <p class="post-excerpt">terms(용어들)
+
+</p>
+                <p class="post-tags">
+                <a class="tag" href="/tag/#Term">Term</a>
+                </p>
+            </li>
+        </div>
+        
+        <div class="post-item-container">
+            <li class="post-item">
                 <a class="post-title" href="/posts/database_structure">Database programming</a>
                 <br>
                 <span class="post-date">05 Sep 2018</span>
                 <a class="post-category" href="/category/#Database"> Database</a>
-                <i class="fas fa-comment"></i><a href="/posts/database_structure#disqus_thread"></a>
+                <a href="/posts/database_structure#disqus_thread"><i class="fas fa-comment"></i></a>
                 <p class="post-excerpt">데이터베이스 프로그래밍
 
 </p>
-                <!--span class="description"></span-->
                 <p class="post-tags">
                 <a class="tag" href="/tag/#Database">Database</a>
                 </p>
@@ -123,7 +145,7 @@
                 <br>
                 <span class="post-date">04 Sep 2018</span>
                 <a class="post-category" href="/category/#Robot_Design"> Robot_Design</a>
-                <i class="fas fa-comment"></i><a href="/posts/orientation#disqus_thread"></a>
+                <a href="/posts/orientation#disqus_thread"><i class="fas fa-comment"></i></a>
                 <p class="post-excerpt">로봇 메커니즘 설계에서 바뀜
 텀프가 있음
 jyk76@seoultech.ac.kr
@@ -132,7 +154,6 @@ www.hrrlab.com -&gt; Lecture -&gt; Applied Robot Design
 책 : Robot modeling and control (M.W Spong)
 중간발표 없을듯
 </p>
-                <!--span class="description"></span-->
                 <p class="post-tags">
                 <a class="tag" href="/tag/#Robot">Robot</a>
                 </p>
@@ -145,11 +166,10 @@ www.hrrlab.com -&gt; Lecture -&gt; Applied Robot Design
                 <br>
                 <span class="post-date">04 Sep 2018</span>
                 <a class="post-category" href="/category/#C++"> C++</a>
-                <i class="fas fa-comment"></i><a href="/posts/C++-Orientation#disqus_thread"></a>
+                <a href="/posts/C++-Orientation#disqus_thread"><i class="fas fa-comment"></i></a>
                 <p class="post-excerpt">C++
 
 </p>
-                <!--span class="description"></span-->
                 <p class="post-tags">
                 <a class="tag" href="/tag/#C++">C++</a>
                 </p>
@@ -162,31 +182,12 @@ www.hrrlab.com -&gt; Lecture -&gt; Applied Robot Design
                 <br>
                 <span class="post-date">04 Sep 2018</span>
                 <a class="post-category" href="/category/#Network"> Network</a>
-                <i class="fas fa-comment"></i><a href="/posts/data_communication#disqus_thread"></a>
+                <a href="/posts/data_communication#disqus_thread"><i class="fas fa-comment"></i></a>
                 <p class="post-excerpt">Orientation
 
 </p>
-                <!--span class="description"></span-->
                 <p class="post-tags">
                 <a class="tag" href="/tag/#Network">Network</a>
-                </p>
-            </li>
-        </div>
-        
-        <div class="post-item-container">
-            <li class="post-item">
-                <a class="post-title" href="/posts/crawling">Crawling</a>
-                <br>
-                <span class="post-date">21 Aug 2018</span>
-                <a class="post-category" href="/category/#Python"> Python</a>
-                <i class="fas fa-comment"></i><a href="/posts/crawling#disqus_thread"></a>
-                <p class="post-excerpt">Crawling
-
-</p>
-                <!--span class="description"></span-->
-                <p class="post-tags">
-                <a class="tag" href="/tag/#Crawling">Crawling</a>
-                <a class="tag" href="/tag/#Python">Python</a>
                 </p>
             </li>
         </div>
@@ -199,7 +200,6 @@ www.hrrlab.com -&gt; Lecture -&gt; Applied Robot Design
             
             
                 <li id="page-prev"><a href="/posts/9/"><i class="fas fa-chevron-left"></i><span class="sr-only">Previous Page</span></a>
-                    
                 </li>
             
             
@@ -248,7 +248,7 @@ www.hrrlab.com -&gt; Lecture -&gt; Applied Robot Design
         </ul>
       </div>
       <div class="footer-col footer-col-2">
-        <ul class="social-media-list"><li><a href="https://github.com/GMIMG"><svg class="svg-icon"><use xlink:href="/assets/gming-social-icons.svg#github"></use></svg> <span class="username">GMIMG</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/gming-social-icons.svg#rss"></use></svg> <span>Subscribe</span></a></li></ul>
+        <ul class="social-media-list"><li><a href="https://github.com/GMIMG"><i class="fab fa-github"></i> <span class="username">GMIMG</span></a></li><li><a href="/feed.xml"><i class="fas fa-rss"></i> <span>Subscribe</span></a></li></ul>
       </div>
       <div class="footer-col footer-col-3">
         <p>Hello. I&#39;m Seoultech univesity student in South Korea. My english is so terrible but trying ;) I&#39;m majoring in mechanical engineering system. and my minor is computer engineering. I am dreaming to be a good developer. This blog is writing that today I learned.</p>
@@ -267,5 +267,7 @@ www.hrrlab.com -&gt; Lecture -&gt; Applied Robot Design
   <script src="/assets/js/simple-jekyll-search.min.js"></script>
   <!--mathjax-->
   <!--script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script-->
+  <!--dark-mode-save-->
+  <script src="/assets/js/dark.js"></script>
   </body>
 </html>

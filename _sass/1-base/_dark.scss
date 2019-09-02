@@ -1,0 +1,43 @@
+html, html[data-theme="light"]{
+  body {
+    background-color: $light-background-color;
+    color: $light-on-background-color;
+  }
+  a {
+    color: $light-primary-variant-color;
+  }
+  .toc_container {
+    background: $light-toc-container-color;
+  }
+  .site-title {
+    color: $light-on-background-color;
+  }
+  .site-menu {
+    background-color: $light-background-color;
+    .page-link {
+      color: $light-on-background-color;
+    }
+  }
+}
+
+html[data-theme="dark"]{
+  body {
+    background-color: $dark-background-color;
+    color: $dark-on-background-color;
+  }
+  a {
+    color: $dark-secondary-color;
+  }
+  .toc_container {
+    background: $dark-toc-container-color;
+  }
+  .site-title {
+    color: $dark-on-background-color;
+  }
+  .site-menu {
+    background-color: $dark-background-color;
+    .page-link {
+      color: $dark-on-background-color;
+    }
+  }
+}

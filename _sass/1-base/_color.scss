@@ -14,7 +14,6 @@ $grey-color:       #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
 $grey-color-dark:  darken($grey-color, 25%) !default;
 
-
 /* Font stack */
 $post-date-color: #9a9a9a;
 $title-color: #313131;
@@ -27,9 +26,38 @@ $link-color: royalblue;
 $brand-color:      #2a7ae2 !default;
 
 
+$pre-color: #212121;
+
+$light-primary-color: #6200EE;
+$light-primary-variant-color: #3700B3;
+$light-secondary-color: #03DAC6;
+$light-secondary-variant-color: #018786;
+$light-background-color: #FFFFFF;
+$light-surface-color: #FFFFFF;
+$light-error-color: #B00020;
+$light-on-primary-color: #FFFFFF;
+$light-on-secondary-color: #000000;
+$light-on-background-color: #000000;
+$light-on-surface-color: #000000;
+$light-on-error-color: #FFFFFF;
 
 
+$dark-primary-color: #BB86FC;
+$dark-primary-variant-color: #3700B3;
+$dark-secondary-color: #03DAC6;
+$dark-background-color: #282c35;
+$dark-surface-color: #121212;
+$dark-error-color: #CF6679;
+$dark-on-primary-color: #FFFFFF;
+$dark-on-secondary-color: #000000;
+$dark-on-background-color: #FFFFFF;
+$dark-on-surface-color: #FFFFFF;
+$dark-on-error-color: #000000;
 
+$light-toc-container-color: #f1f1f1;
+$dark-toc-container-color: #212121;
 
-
-
+@mixin background-color-opacity($background-color,$ratio) {
+    background-color: $background-color;
+    opacity: $ratio;
+  }

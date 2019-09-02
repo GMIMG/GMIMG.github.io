@@ -15,7 +15,7 @@ toc : true
 
 ## 데이터타입과 형변환
 
-#### 데이터 타입
+### 데이터 타입
 
 - int 상수의 크기는 컴파일러 마다 다르다(CPU 의존적) -> 한번에 처리할 수 있는 단위
 - 상수도 타입을 가지고 있음 -> 명확히하기위해 suffix 이용
@@ -58,7 +58,7 @@ int main(void)
 //데이터 align 때문에 int와 char형 두개의 변수를 포함한 구조체의 크기가 8이다.
 ```
 
-#### 형변환
+### 형변환
 
 C에서는 다음 4가지 경우에 형변환이 발생한다
 
@@ -75,13 +75,13 @@ C에서 데이터 타입들의 크기를 판단하는 기준 : 더 큰수를 표
 
   (signed, unsigned)char, short -> signed int로 변환 (단, int가 4B일 때만)
 
+- unsigned int 우선 : signed 와 unsigned int는 unsigned int를 크게본다.
+
 - 실수 우선 : 실수 타입이 정수 타입보다 크고 같은 타입끼리는 크기로 판단
 
   int < long int < long long int < float < double < long double
 
 - 큰타입이 작은 타입으로 변환될때 truncation이 발생함(경고 발생).
-
-- unsigned int 우선 : signed 와 unsigned int는 unsigned int를 크게본다.
 
 - signed 형의 음수 표현은 [2의 보수](https://ko.wikipedia.org/wiki/2%EC%9D%98_%EB%B3%B4%EC%88%98)를 이용함.
 
@@ -126,7 +126,9 @@ int main(void)
 {
 	char c = 0xff;
 
-	if(c == 0xff) //(signed int) 0xffffffff != (signed int) 0x000000ff => 컴파일러에 따라 char의 default값이 다름. VS : signed, RVDS : unsigned
+	if(c == 0xff) 
+    //(signed int) 0xffffffff != (signed int) 0x000000ff 
+	// => 컴파일러에 따라 char의 default값이 다름. VS : signed, RVDS : unsigned
 		printf("%x\n",c+1);
 	else
 		printf("%x\n",c-1);
@@ -180,6 +182,34 @@ int main(void)
 sizeof 연산자 반환값 type은 size_t인데 unsigned int 과 같으므로 왼쪽항은 signed int에서 unsigned int 로 형변환 돼서 비교한다. 
 
 
+
+**실수형 상수**
+
+실수(float, double, long double)는 모두 signed 이다.
+
+long double 크기는 컴파일러 의존적이다.
+
+float는 부동소수점(float point)에서 파생됨.(고정 소수점은 메모리 비효율적)
+
+| Type   | 메모리 크기 | 유효자릿수                 | 최소값                    | 최대값                    |
+| ------ | ----------- | -------------------------- | ------------------------- | ------------------------- |
+| float  | 4 Byte      | 6~7 자리(컴파일러 의존적)  | 1.175494351 e-38          | 3.402823 466 e+38         |
+| double | 8 Byte      | 15~16 자리(float의 약 2배) | 2.250738 585072 014E -308 | 1.7976931348623158E + 308 |
+
+참고 [C언어의 데이터 타입](/posts/embedded-c#C언어의-데이터-타입)
+
+| Type   | 부호부 (sign bit) | 지수부 (exponent bits) | 가수부 (mantissa bits) | 유효자릿수 (precision) |
+| ------ | ----------------- | ---------------------- | ---------------------- | ---------------------- |
+| float  | 1                 | 8                      | 23(부호포함 24)        | 6-7                    |
+| double | 1                 | 11                     | 52(부호포함 53)        | 15-16                  |
+
+
+
+예시) 3.5 를 이진수로 바꾸면 11.1(2) (소수점은 2로 계속 곱해서 정수부분을 취함, 0.625 => 0.101(2))
+
+float 일때 유효숫자 1.11 * 2^(127+n)
+
+0 100/0000/0 110/0000/... == 0x4060/0000
 
 ## 고급포인터
 

@@ -1,18 +1,19 @@
 .sidebar {
     float: left;
-    width: 30%;
+    width: 29%;
+    border: 1px solid;
     border-radius: 15px;
-    background-color: #f1f1f1; /* white-gray */
+    //background-color: #f1f1f1; /* white-gray */
     overflow-x: hidden; /* Disable horizontal scroll */
     margin: 20px 0px;
     .sidebar-item {
         padding: $spacing-unit/2 $spacing-unit/2;
-        a{
-            text-decoration: none;
+        nav a{
+            //text-decoration: none;
             color: $grey-color;
         }
         .sidebar-item-tltle {
-            color: $black;
+            //color: $black;
         }
         .sidebar-tag-cloud {
             list-style: none;

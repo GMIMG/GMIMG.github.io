@@ -11,20 +11,20 @@
 </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Switching | GMIMG</title>
+<title>Project | GMIMG</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="Switching" />
+<meta property="og:title" content="Project" />
 <meta name="author" content="Gmimg" />
 <meta property="og:locale" content="ko" />
-<meta name="description" content="Switching" />
-<meta property="og:description" content="Switching" />
-<link rel="canonical" href="http://localhost:4000/posts/Switching" />
-<meta property="og:url" content="http://localhost:4000/posts/Switching" />
+<meta name="description" content="Mechagrammer" />
+<meta property="og:description" content="Mechagrammer" />
+<link rel="canonical" href="http://localhost:4000/posts/Project" />
+<meta property="og:url" content="http://localhost:4000/posts/Project" />
 <meta property="og:site_name" content="GMIMG" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-10-16T00:00:00+09:00" />
+<meta property="article:published_time" content="2019-08-26T00:00:00+09:00" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/posts/Switching","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/Switching"},"headline":"Switching","dateModified":"2018-10-16T00:00:00+09:00","datePublished":"2018-10-16T00:00:00+09:00","description":"Switching","author":{"@type":"Person","name":"Gmimg"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
+{"url":"http://localhost:4000/posts/Project","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/Project"},"headline":"Project","dateModified":"2019-08-26T00:00:00+09:00","datePublished":"2019-08-26T00:00:00+09:00","description":"Mechagrammer","author":{"@type":"Person","name":"Gmimg"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css">
   <!--icon-->
@@ -72,98 +72,20 @@
   <div class="post-content">
     <article class="post">
       <div class="post-header">
-    <span class="post-title" itemprop="name headline">Switching</span>
+    <span class="post-title" itemprop="name headline">Project</span>
     <p class="post-meta">
-      <time class="dt-published" datetime="2018-10-16T00:00:00+09:00" itemprop="datePublished">
-        16 Oct 2018
+      <time class="dt-published" datetime="2019-08-26T00:00:00+09:00" itemprop="datePublished">
+        26 Aug 2019
       </time>
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Gmimg</span></span>
     </p>
     <div class="post-header-categories">
-      <span>Category: </span><a href="/category/#Network">Network</a>
     </div>
     <div class="post-header-tags">
-      <span>Tags: </span>
-        <a href="/tag/#Network">Network</a><span>, </span>
-        <a href="/tag/#Switching">Switching</a>
     </div>
   </div>
       <div class="post-content" itemprop="articleBody">
-        <h1 id="switching">Switching</h1>
-
-<ul>
-  <li>Circuit switching</li>
-  <li>Packet switching
-    <ul>
-      <li>Virtual-circuit approach</li>
-      <li>Datagram approach</li>
-    </ul>
-  </li>
-  <li>Message switching</li>
-</ul>
-
-<h2 id="circuit-switched-network">Circuit-switched network</h2>
-
-<p>connected by physical links</p>
-
-<ul>
-  <li>Setup phase
-    <ul>
-      <li>dedicated circuit</li>
-      <li>Resources: such as channel (bandwidth in FDM and time slots in TDM), switch buffers, switch processing time, and switch input/output ports 할당</li>
-    </ul>
-  </li>
-  <li>Data-transfer phase
-    <ul>
-      <li>No addressing</li>
-    </ul>
-  </li>
-  <li>Teardown phase(disconnect)</li>
-</ul>
-
-<p>장점 : 연결되어 있을때 Delay 가없음.<br />
-단점 : 효율적이지 않음. 빈데이터가 있어도 연결돼있음.</p>
-
-<p><img src="/assets/img/Network/Circuit_delay.jpg" alt="Alt text" /></p>
-
-<h2 id="packet-switched-network">Packet-switched network</h2>
-
-<ul>
-  <li>No resource allocation</li>
-  <li>No reserved bandwidth</li>
-  <li>No scheduled processing time</li>
-</ul>
-
-<p>Lack of reservation may create delay</p>
-
-<h3 id="datagram-network">Datagram network</h3>
-
-<p>서로 다른 길로 들어와서 TCP가 재정렬함.</p>
-
-<p>No setup or teardown phases.</p>
-
-<p>Routing Table 생성</p>
-
-<p>Every packet in a datagram network carries a header that contains the destination address of the packet.</p>
-
-<p>virtual-circuit network보단 delay가 적다.</p>
-
-<p><img src="/assets/img/Network/Datagram_delay.jpg" alt="Alt text" /></p>
-
-<h3 id="virtual-circuit-networks">Virtual-Circuit Networks</h3>
-
-<p>Setup and teardown phases + Data transfer phase</p>
-
-<p>Same path</p>
-
-<p>Virtual-Circuit Identifier (VCI)</p>
-
-<p>All switches need to have a table entry for this virtual circuit.<br />
-Each switch changes the VCI and routes the frame.</p>
-
-<p>Setup request frame 이 Routing table로 따라 보내면 Acknowledgment Frame이 돌아오면서 VCI를 설정해줘서 switching table이 만들어진다.</p>
-
-<p><img src="/assets/img/Network/Virtual_circuit_delay.jpg" alt="Alt text" /></p>
+        
 
       </div>
         
@@ -178,7 +100,7 @@ s.setAttribute('data-timestamp', +new Date());
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-      <a class="u-url" href="/posts/Switching" hidden></a>
+      <a class="u-url" href="/posts/Project" hidden></a>
     </article>
   </div>
 </div>
