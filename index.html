@@ -82,8 +82,7 @@ layout: default
                     {% elsif p == 1 %}
                     <li class="page-number"><a href="{{ site.baseurl }}/">{{ p }}</a></li>
                 {% else %}
-                    <li class="page-number"><a
-                                href="{{ site.baseurl }}{{ site.paginate_path | replace: ':num', p }}">{{ p }}</a></li>
+                    <li class="page-number"><a href="{{ site.baseurl }}{{ site.paginate_path | replace: ':num', p }}">{{ p }}</a></li>
                 {% endif %}
             {% endfor %}
             {% if paginator.next_page %}
