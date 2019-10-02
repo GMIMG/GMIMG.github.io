@@ -1,14 +1,14 @@
 ---
 layout: browser
-permalink: /category/
+permalink: /tag/
 sidebar: "main"
 ---
 {% assign esc_title="{{ postjson.title }}" %}
 {% assign esc_date="{{ postjson.date }}" %}
 {% assign esc_ctgname="{{ hash }}" %}
 <ul id="post-list">
-  <h2 id="{{ category | first }}" class="category-title">{{ esc_ctgname }}</h2>
-  <li v-for="postjson in posts" v-if="postjson.category.indexOf(hash) != -1" class="post-item">
+  <h2 id="{{ tag | first }}" class="tag-title">{{ esc_ctgname }}</h2>
+  <li v-for="postjson in posts" v-if="postjson.tags.indexOf(hash) != -1" class="post-item">
     <time class="post-date">{{ esc_date }}</time>
     <a class="post-link" v-bind:href="postjson.url">{{ esc_title }}</a>
   </li>
@@ -21,11 +21,12 @@ sidebar: "main"
       posts: []
     }
   });
-  axios.get('/posts.json')
+  axios.get('/search.json')
   .then(function (response) {
-    postList.posts = response.data.posts;
+    postList.posts = response.data;
   })
   .catch(function (error) {
     console.log(error);
   });
 </script>
+

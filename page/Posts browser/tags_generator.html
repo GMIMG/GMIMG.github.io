@@ -21,9 +21,9 @@ sidebar: "main"
       posts: []
     }
   });
-  axios.get('/search.json')
+  axios.get('/posts.json')
   .then(function (response) {
-    postList.posts = response.data;
+    postList.posts = response.data.posts;
   })
   .catch(function (error) {
     console.log(error);
