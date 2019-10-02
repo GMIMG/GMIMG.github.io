@@ -26,7 +26,7 @@ cmd에서 set PATH=%PATH%;C:\Ruby200-x64\bin
 [jekyll]공식사이트에 있는 Quick-start Instructions에 따라
 
 - $ gem install bundler jekyll # jekyll 자동으로 jekyll의 버전을 맞춰주는 bundle 설치
-- $ jekyll 'new site'
+- $ jekyll new 'new site'
 - $ cd 'new site'
 - $ bundle install # 로컬에서 Gemfile에 있는 플러그인을 사용하기 위해 터미널에서 bundle install 명령어를 이용해 플러그인을 설치
 - $ chcp 65001 # cp 949에러가 날때 사용(ruby 설치시 utp-8 자동설정 체크)

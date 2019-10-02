@@ -24,11 +24,14 @@
 <link rel="prev" href="http://localhost:4000/posts/2/" />
 <link rel="next" href="http://localhost:4000/posts/4/" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/posts/3/","headline":"GMIMG","description":"Mechagrammer","author":{"@type":"Person","name":"Jimin Hwang"},"@type":"WebPage","@context":"http://schema.org"}</script>
+{"@type":"WebPage","url":"http://localhost:4000/posts/3/","headline":"GMIMG","author":{"@type":"Person","name":"Jimin Hwang"},"description":"Mechagrammer","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css">
+<!--github pages nomalize css-->
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!--custom css-->
+  <link rel="stylesheet" href="/assets/css/main.css">
   <!--icon-->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="GMIMG" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="GMIMG" />
   <!--vue.js & axios for categories generator-->
   <script src="/assets/js/vue.min.js"></script>
   <script src="/assets/js/axios.min.js"></script>
@@ -45,27 +48,35 @@
 </head>
   <body>
     <header class="site-header">
-  <div class="wrapper"><a class="site-title" rel="author" href="/">GMIMG</a>
-      <nav class="site-menu">
-        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
-        <label for="menu-trigger">
-          <div class="menu-icon">
-            <i class="fas fa-bars"></i>
-          </div>
-        </label>
-        <div class="trigger">
-            <a class="page-link" href="/about/">about</a>
-            <a class="page-link" href="/posts/">Posts browser</a>
+  <div class="wrapper">
+    <!---->
+    
+    <a class="site-title" rel="author" href="/">GMIMG</a>
+
+    <div class="dark-icon">
+      <a id="theme-toggle" class="page-link" onclick="modeSwitcher()"></a>
+    </div>
+
+
+    <nav class="site-menu">
+      <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+      <label for="menu-trigger">
+        <div class="menu-icon">
+          <i class="fas fa-bars"></i>
         </div>
-      </nav>
-      <nav class="dark-icon">
-        <a id="theme-toggle" class="page-link" onclick="modeSwitcher()"></a>
-      </nav>
-      <nav class="site-search">
-        <div class="search-icon" onclick="location.href='/search';">
-          <i class="fas fa-search"></i>
-        </div>
-      </nav>
+      </label>
+      <div class="trigger">
+          <a class="page-link" href="/about/">about</a>
+          <a class="page-link" href="/posts/">Posts browser</a>
+      </div>
+    </nav>
+    
+    <nav class="site-search">
+      <div class="search-icon" onclick="location.href='/search';">
+        <i class="fas fa-search"></i>
+      </div>
+    </nav>
+
   </div>
 </header>
     <main class="page-content">
@@ -109,6 +120,36 @@
     <ul id="post-list">
     <span class="list-title"><strong>Featured Posts</strong></span>
         <!-- This loops through the paginated posts -->
+        
+        <div class="post-item-container">
+            <li class="post-item">
+                <a class="post-title" href="/posts/Plan">Software Study Plan</a>
+                <br>
+                <span class="post-date">27 Jul 2019</span>
+                <a class="post-category" href="/category/#story"> story</a>
+                <a href="/posts/Plan#disqus_thread"><i class="fas fa-comment"></i></a>
+                <p class="post-excerpt">‘소프트웨어를 쉽게 배우는 방법은 없을까?’
+
+</p>
+            </li>
+        </div>
+        
+        <div class="post-item-container">
+            <li class="post-item">
+                <a class="post-title" href="/posts/Embedded-C">Embedded-C</a>
+                <br>
+                <span class="post-date">27 Jul 2019</span>
+                <a class="post-category" href="/category/#Embedded"> Embedded</a>
+                <a href="/posts/Embedded-C#disqus_thread"><i class="fas fa-comment"></i></a>
+                <p class="post-excerpt">이 포스팅은 2019년 여름 멀티캠퍼스에서 ‘청년취업아카데미 스마트 디바이스 프로그래밍’ 과정을 수강하며 배운것을 정리하는 것을 목적으로 합니다. 임베디드 회사 윌텍(Willtek)에서 강사님을 모셔서 배웠습니다. IDE는 visual stdio 2005 입니다.
+
+</p>
+                <p class="post-tags">
+                <a class="tag" href="/tag/#Embedded">Embedded</a>
+                <a class="tag" href="/tag/#C">C</a>
+                </p>
+            </li>
+        </div>
         
         <div class="post-item-container">
             <li class="post-item">
@@ -222,41 +263,6 @@
                 <p class="post-tags">
                 <a class="tag" href="/tag/#C++">C++</a>
                 <a class="tag" href="/tag/#이산수학">이산수학</a>
-                </p>
-            </li>
-        </div>
-        
-        <div class="post-item-container">
-            <li class="post-item">
-                <a class="post-title" href="/posts/C++-Polymorphism-and-Virtual-Functions">C++ polymorphism and virtual functions</a>
-                <br>
-                <span class="post-date">04 Dec 2018</span>
-                <a class="post-category" href="/category/#C++"> C++</a>
-                <a href="/posts/C++-Polymorphism-and-Virtual-Functions#disqus_thread"><i class="fas fa-comment"></i></a>
-                <p class="post-excerpt">Virtual function
-
-</p>
-                <p class="post-tags">
-                <a class="tag" href="/tag/#C++">C++</a>
-                <a class="tag" href="/tag/#Pointer">Pointer</a>
-                <a class="tag" href="/tag/#Polymorphism">Polymorphism</a>
-                </p>
-            </li>
-        </div>
-        
-        <div class="post-item-container">
-            <li class="post-item">
-                <a class="post-title" href="/posts/C++-pointer2">C++ pointer2</a>
-                <br>
-                <span class="post-date">20 Nov 2018</span>
-                <a class="post-category" href="/category/#C++"> C++</a>
-                <a href="/posts/C++-pointer2#disqus_thread"><i class="fas fa-comment"></i></a>
-                <p class="post-excerpt">Pointers and dynamic array
-
-</p>
-                <p class="post-tags">
-                <a class="tag" href="/tag/#C++">C++</a>
-                <a class="tag" href="/tag/#Pointer">Pointer</a>
                 </p>
             </li>
         </div>

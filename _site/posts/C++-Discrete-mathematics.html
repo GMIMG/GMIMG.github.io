@@ -24,11 +24,14 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-03-29T00:00:00+09:00" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/posts/C++-Discrete-mathematics","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/C++-Discrete-mathematics"},"headline":"Discrete mathematics(이산수학)","dateModified":"2019-03-29T00:00:00+09:00","datePublished":"2019-03-29T00:00:00+09:00","description":"이산수학을 들으면서 까먹었던 c++ 사용법을 다시 공부하게 됐다. 1차 과제는 생각한 숫자를 n장의 카드에서 있나 없나 확인으로 맞추는 과제였는데 배열의 동적할당 정도 사용한것 같다.","author":{"@type":"Person","name":"Gmimg"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
+{"@type":"BlogPosting","url":"http://localhost:4000/posts/C++-Discrete-mathematics","headline":"Discrete mathematics(이산수학)","dateModified":"2019-03-29T00:00:00+09:00","datePublished":"2019-03-29T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/C++-Discrete-mathematics"},"author":{"@type":"Person","name":"Gmimg"},"description":"이산수학을 들으면서 까먹었던 c++ 사용법을 다시 공부하게 됐다. 1차 과제는 생각한 숫자를 n장의 카드에서 있나 없나 확인으로 맞추는 과제였는데 배열의 동적할당 정도 사용한것 같다.","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css">
+<!--github pages nomalize css-->
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!--custom css-->
+  <link rel="stylesheet" href="/assets/css/main.css">
   <!--icon-->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="GMIMG" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="GMIMG" />
   <!--vue.js & axios for categories generator-->
   <script src="/assets/js/vue.min.js"></script>
   <script src="/assets/js/axios.min.js"></script>
@@ -45,27 +48,35 @@
 </head>
   <body>
     <header class="site-header">
-  <div class="wrapper"><a class="site-title" rel="author" href="/">GMIMG</a>
-      <nav class="site-menu">
-        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
-        <label for="menu-trigger">
-          <div class="menu-icon">
-            <i class="fas fa-bars"></i>
-          </div>
-        </label>
-        <div class="trigger">
-            <a class="page-link" href="/about/">about</a>
-            <a class="page-link" href="/posts/">Posts browser</a>
+  <div class="wrapper">
+    <!---->
+    
+    <a class="site-title" rel="author" href="/">GMIMG</a>
+
+    <div class="dark-icon">
+      <a id="theme-toggle" class="page-link" onclick="modeSwitcher()"></a>
+    </div>
+
+
+    <nav class="site-menu">
+      <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+      <label for="menu-trigger">
+        <div class="menu-icon">
+          <i class="fas fa-bars"></i>
         </div>
-      </nav>
-      <nav class="dark-icon">
-        <a id="theme-toggle" class="page-link" onclick="modeSwitcher()"></a>
-      </nav>
-      <nav class="site-search">
-        <div class="search-icon" onclick="location.href='/search';">
-          <i class="fas fa-search"></i>
-        </div>
-      </nav>
+      </label>
+      <div class="trigger">
+          <a class="page-link" href="/about/">about</a>
+          <a class="page-link" href="/posts/">Posts browser</a>
+      </div>
+    </nav>
+    
+    <nav class="site-search">
+      <div class="search-icon" onclick="location.href='/search';">
+        <i class="fas fa-search"></i>
+      </div>
+    </nav>
+
   </div>
 </header>
     <main class="page-content">

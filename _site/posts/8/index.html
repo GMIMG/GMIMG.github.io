@@ -24,11 +24,14 @@
 <link rel="prev" href="http://localhost:4000/posts/7/" />
 <link rel="next" href="http://localhost:4000/posts/9/" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/posts/8/","headline":"GMIMG","description":"Mechagrammer","author":{"@type":"Person","name":"Jimin Hwang"},"@type":"WebPage","@context":"http://schema.org"}</script>
+{"@type":"WebPage","url":"http://localhost:4000/posts/8/","headline":"GMIMG","author":{"@type":"Person","name":"Jimin Hwang"},"description":"Mechagrammer","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css">
+<!--github pages nomalize css-->
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!--custom css-->
+  <link rel="stylesheet" href="/assets/css/main.css">
   <!--icon-->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="GMIMG" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="GMIMG" />
   <!--vue.js & axios for categories generator-->
   <script src="/assets/js/vue.min.js"></script>
   <script src="/assets/js/axios.min.js"></script>
@@ -45,27 +48,35 @@
 </head>
   <body>
     <header class="site-header">
-  <div class="wrapper"><a class="site-title" rel="author" href="/">GMIMG</a>
-      <nav class="site-menu">
-        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
-        <label for="menu-trigger">
-          <div class="menu-icon">
-            <i class="fas fa-bars"></i>
-          </div>
-        </label>
-        <div class="trigger">
-            <a class="page-link" href="/about/">about</a>
-            <a class="page-link" href="/posts/">Posts browser</a>
+  <div class="wrapper">
+    <!---->
+    
+    <a class="site-title" rel="author" href="/">GMIMG</a>
+
+    <div class="dark-icon">
+      <a id="theme-toggle" class="page-link" onclick="modeSwitcher()"></a>
+    </div>
+
+
+    <nav class="site-menu">
+      <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+      <label for="menu-trigger">
+        <div class="menu-icon">
+          <i class="fas fa-bars"></i>
         </div>
-      </nav>
-      <nav class="dark-icon">
-        <a id="theme-toggle" class="page-link" onclick="modeSwitcher()"></a>
-      </nav>
-      <nav class="site-search">
-        <div class="search-icon" onclick="location.href='/search';">
-          <i class="fas fa-search"></i>
-        </div>
-      </nav>
+      </label>
+      <div class="trigger">
+          <a class="page-link" href="/about/">about</a>
+          <a class="page-link" href="/posts/">Posts browser</a>
+      </div>
+    </nav>
+    
+    <nav class="site-search">
+      <div class="search-icon" onclick="location.href='/search';">
+        <i class="fas fa-search"></i>
+      </div>
+    </nav>
+
   </div>
 </header>
     <main class="page-content">
@@ -109,6 +120,23 @@
     <ul id="post-list">
     <span class="list-title"><strong>Featured Posts</strong></span>
         <!-- This loops through the paginated posts -->
+        
+        <div class="post-item-container">
+            <li class="post-item">
+                <a class="post-title" href="/posts/Digital-Transmission">Digital Transmission</a>
+                <br>
+                <span class="post-date">01 Oct 2018</span>
+                <a class="post-category" href="/category/#Network"> Network</a>
+                <a href="/posts/Digital-Transmission#disqus_thread"><i class="fas fa-comment"></i></a>
+                <p class="post-excerpt">Digital Transmission
+
+</p>
+                <p class="post-tags">
+                <a class="tag" href="/tag/#Network">Network</a>
+                <a class="tag" href="/tag/#Transmission">Transmission</a>
+                </p>
+            </li>
+        </div>
         
         <div class="post-item-container">
             <li class="post-item">
@@ -181,23 +209,6 @@ Write simple text-based games
                 <p class="post-tags">
                 <a class="tag" href="/tag/#Network">Network</a>
                 <a class="tag" href="/tag/#Physical Layer">Physical Layer</a>
-                </p>
-            </li>
-        </div>
-        
-        <div class="post-item-container">
-            <li class="post-item">
-                <a class="post-title" href="/posts/design_database">프로젝트 분석 및 데이터베이스 설계 시동과 접속</a>
-                <br>
-                <span class="post-date">12 Sep 2018</span>
-                <a class="post-category" href="/category/#Database"> Database</a>
-                <a href="/posts/design_database#disqus_thread"><i class="fas fa-comment"></i></a>
-                <p class="post-excerpt">프로젝트 분석 및 데이터베이스 설계
-
-</p>
-                <p class="post-tags">
-                <a class="tag" href="/tag/#Database">Database</a>
-                <a class="tag" href="/tag/#E-R">E-R</a>
                 </p>
             </li>
         </div>

@@ -129,20 +129,21 @@ blockquote {
 /**
  * Code formatting
  */
- 
 pre,
 code {
   @include relative-font-size(0.9375);
   font-family: $code-font-family;
-  border-radius: 3px;
-  color: $dark-on-background-color;
 }
-
+.highlight {
+  border-radius: 5px;
+}
+.highlight,.highlight pre,.highlight .hll,pre.highlight {
+  background-color: $highlight-background-color;
+}
 pre {
   padding: 8px 12px;
   overflow-x: auto;
   max-height: 550px;
-  background-color: $pre-color;
   > code {
     border: 0;
     padding-right: 0;

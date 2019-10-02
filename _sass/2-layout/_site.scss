@@ -37,10 +37,18 @@ $site-header-icon-size: 36px;
   cursor: pointer;
 }
 
+.dark-icon{
+  float: left;
+}
+
 .site-menu {
   float: right;
-  line-height: $site-header-line-height;
+
+  //line-height: $site-header-line-height;
+  margin-top: ($site-header-line-height / 2) - ($base-font-size * $base-line-height /2);
   margin-right:  $spacing-unit / 2 + $site-header-icon-size;
+  //max-height: $site-header-line-height;
+
   .menu-trigger, .menu-icon {
     display: none;
   }
@@ -55,6 +63,7 @@ $site-header-icon-size: 36px;
   @media screen and (max-width: $on-palm) {
     position: absolute;
     top: ($site-header-line-height - $site-header-icon-size) / 2;
+    margin-top: 0;
     right: $spacing-unit / 2;
     border: 1px solid $grey-color-light;
     border-radius: 5px;

@@ -22,11 +22,14 @@
 <meta property="og:url" content="http://localhost:4000/about/" />
 <meta property="og:site_name" content="GMIMG" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/about/","headline":"about","description":"Mechagrammer","name":"GMIMG","author":{"@type":"Person","name":"Jimin Hwang"},"@type":"WebSite","@context":"http://schema.org"}</script>
+{"@type":"WebSite","url":"http://localhost:4000/about/","headline":"about","name":"GMIMG","author":{"@type":"Person","name":"Jimin Hwang"},"description":"Mechagrammer","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css">
+<!--github pages nomalize css-->
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!--custom css-->
+  <link rel="stylesheet" href="/assets/css/main.css">
   <!--icon-->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="GMIMG" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="GMIMG" />
   <!--vue.js & axios for categories generator-->
   <script src="/assets/js/vue.min.js"></script>
   <script src="/assets/js/axios.min.js"></script>
@@ -43,58 +46,109 @@
 </head>
   <body>
     <header class="site-header">
-  <div class="wrapper"><a class="site-title" rel="author" href="/">GMIMG</a>
-      <nav class="site-menu">
-        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
-        <label for="menu-trigger">
-          <div class="menu-icon">
-            <i class="fas fa-bars"></i>
-          </div>
-        </label>
-        <div class="trigger">
-            <a class="page-link" href="/about/">about</a>
-            <a class="page-link" href="/posts/">Posts browser</a>
+  <div class="wrapper">
+    <!---->
+    
+    <a class="site-title" rel="author" href="/">GMIMG</a>
+
+    <div class="dark-icon">
+      <a id="theme-toggle" class="page-link" onclick="modeSwitcher()"></a>
+    </div>
+
+
+    <nav class="site-menu">
+      <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+      <label for="menu-trigger">
+        <div class="menu-icon">
+          <i class="fas fa-bars"></i>
         </div>
-      </nav>
-      <nav class="dark-icon">
-        <a id="theme-toggle" class="page-link" onclick="modeSwitcher()"></a>
-      </nav>
-      <nav class="site-search">
-        <div class="search-icon" onclick="location.href='/search';">
-          <i class="fas fa-search"></i>
-        </div>
-      </nav>
+      </label>
+      <div class="trigger">
+          <a class="page-link" href="/about/">about</a>
+          <a class="page-link" href="/posts/">Posts browser</a>
+      </div>
+    </nav>
+    
+    <nav class="site-search">
+      <div class="search-icon" onclick="location.href='/search';">
+        <i class="fas fa-search"></i>
+      </div>
+    </nav>
+
   </div>
 </header>
     <main class="page-content">
       <div class="wrapper">
   <div class="page">
-    <h1 id="gmimg">GMIMG</h1>
+    <h1 id="황지민">황지민</h1>
 
-<p>메타정보</p>
+<p>Jimin Hwang, 黃志玟</p>
+
+<p><i class="fas fa-map-marker-alt"></i> 서울시 노원구<br />
+<i class="fas fa-phone-alt"></i> 010-****-****<br />
+<i class="fas fa-envelope"></i> time9300@naver.com</p>
+
+<p>호머 히컴의 ‘시월의 하늘’이라는 책을 읽고 엔지니어라는 꿈을</p>
+
+<p>기계설계자동화를 전공하면서 프로젝트에서 주로 기계제어파트를 맡았습니다. 이후 프로그래밍에 관심이생겨</p>
+
+<h2 id="skills">SKILLS</h2>
+
 <ul>
-  <li>임베디드, 항공을 좋아함</li>
-  <li>표준을 좋아함</li>
-  <li>게으름</li>
+  <li>CREO(Pro-E) 상</li>
+  <li>Catia 하</li>
+  <li>AutoCAD 중</li>
+  <li>Inventor 중</li>
+  <li>
+    <p>Orcad 하</p>
+  </li>
+  <li>HTML/CSS 중</li>
+  <li>MySQL 중</li>
+  <li>C/C++ 중</li>
+  <li>Python 중</li>
 </ul>
+
+<h2 id="experience">Experience</h2>
+
+<p>2019.07 ~ 2019.08 멀티캠퍼스 청년취업아카데미 ‘스마트 디바이스 프로그래밍’ 과정 ‘스마트 벼룩’</p>
+
+<p>2019.03 ~ 2019.06 컴퓨터게임프로그래밍 수업 ‘팀장을지켜라’ <a href="https://play.google.com/store/apps/details?id=com.gibisoft.SaveTheTeamLeader&amp;hl=ko">결과</a></p>
+
+<p>2017.12 ~ 2018.11 캡스톤디자인 ‘반려동물을 위한 헬스케어놀이기구’</p>
+
+<p>2017.07 ~ 2017.07 성균관대학교 융합기초프로젝트 ‘Mollaby’</p>
+
+<p>2017.03 ~ 2017.06 마이크로컨트롤러(1) 수업 ‘Catch me if you can’</p>
+
+<p>2016.04 ~ 2016.10 제6회 전국학생설계경진대회 ‘스탠드락’ X</p>
+
+<p>2013.07 ~ 2013.12 울산도시경관디자인공모전 입상</p>
+
+<p>2013.03 ~ 2013.06 공학입문설계 수업 ‘자동화’</p>
 
 <h2 id="timeline">Timeline</h2>
 
-<blockquote>
+<p><i class="fas fa-book-open"></i> Education</p>
 
-</blockquote>
+<p>2019.10 ~        현재 멀티캠퍼스 4차산업혁명 선도인력 양성과정 ‘딥러닝 기반 AI 엔지니어링’ 수강</p>
 
-<ol>
-  <li>
-    <p>직무선택(메인,서브)</p>
-  </li>
-  <li>
-    <p>경험 분해-&gt;나를 표현할수있는경험</p>
-  </li>
-  <li>마스터자소서 작성, 1000자 이상</li>
-  <li>면접 준비(경험에대한 질문,답변) 완결형 자소서는 면접스크립트다.</li>
-  <li>인적성검사 공부</li>
-</ol>
+<p>2019.07 ~ 2019.08 멀티캠퍼스 청년취업아카데미 ‘스마트 디바이스 프로그래밍’ 수강</p>
+
+<p>2017.07 ~ 2017.08 Fastcampus 컴퓨터공학 입문 스쿨 수강</p>
+
+<p><i class="fas fa-fighter-jet"></i> Military</p>
+
+<p>2014.04 ~ 2016.01 대한민국 육군 5사단 만기전역 (대형운전병)</p>
+
+<p><i class="fas fa-graduation-cap"></i> School</p>
+
+<p>2013.03 ~        현재 서울과학기술대학교 기계시스템디자인공학과 기계설계자동화 전공, 컴퓨터공학 부전공</p>
+
+<p>2009.03 ~ 2012.02 군산동고등학교 졸업</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">foo</span>
+  <span class="nb">puts</span> <span class="s1">'foo'</span>
+<span class="k">end</span></code></pre></figure>
 
 
   </div>

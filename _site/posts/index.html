@@ -22,11 +22,14 @@
 <meta property="og:url" content="http://localhost:4000/posts/" />
 <meta property="og:site_name" content="GMIMG" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/posts/","headline":"Posts browser","description":"Mechagrammer","author":{"@type":"Person","name":"Jimin Hwang"},"@type":"WebPage","@context":"http://schema.org"}</script>
+{"@type":"WebPage","url":"http://localhost:4000/posts/","headline":"Posts browser","author":{"@type":"Person","name":"Jimin Hwang"},"description":"Mechagrammer","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css">
+<!--github pages nomalize css-->
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!--custom css-->
+  <link rel="stylesheet" href="/assets/css/main.css">
   <!--icon-->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="GMIMG" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="GMIMG" />
   <!--vue.js & axios for categories generator-->
   <script src="/assets/js/vue.min.js"></script>
   <script src="/assets/js/axios.min.js"></script>
@@ -43,27 +46,35 @@
 </head>
   <body>
     <header class="site-header">
-  <div class="wrapper"><a class="site-title" rel="author" href="/">GMIMG</a>
-      <nav class="site-menu">
-        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
-        <label for="menu-trigger">
-          <div class="menu-icon">
-            <i class="fas fa-bars"></i>
-          </div>
-        </label>
-        <div class="trigger">
-            <a class="page-link" href="/about/">about</a>
-            <a class="page-link" href="/posts/">Posts browser</a>
+  <div class="wrapper">
+    <!---->
+    
+    <a class="site-title" rel="author" href="/">GMIMG</a>
+
+    <div class="dark-icon">
+      <a id="theme-toggle" class="page-link" onclick="modeSwitcher()"></a>
+    </div>
+
+
+    <nav class="site-menu">
+      <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+      <label for="menu-trigger">
+        <div class="menu-icon">
+          <i class="fas fa-bars"></i>
         </div>
-      </nav>
-      <nav class="dark-icon">
-        <a id="theme-toggle" class="page-link" onclick="modeSwitcher()"></a>
-      </nav>
-      <nav class="site-search">
-        <div class="search-icon" onclick="location.href='/search';">
-          <i class="fas fa-search"></i>
-        </div>
-      </nav>
+      </label>
+      <div class="trigger">
+          <a class="page-link" href="/about/">about</a>
+          <a class="page-link" href="/posts/">Posts browser</a>
+      </div>
+    </nav>
+    
+    <nav class="site-search">
+      <div class="search-icon" onclick="location.href='/search';">
+        <i class="fas fa-search"></i>
+      </div>
+    </nav>
+
   </div>
 </header>
     <main class="page-content">
@@ -129,7 +140,7 @@
       <li>
         
         <a href="/category/#Blog" onClick="top.location='javascript:location.reload()'">Blog
-        3
+        1
         </a>
       </li>
       <li>
@@ -223,8 +234,6 @@
         </span><span style="font-size: 78%;">
           <a href="/tag#CPU" onclick="location.reload()" style="color: #999;">CPU</a>
         </span><span style="font-size: 78%;">
-          <a href="/tag#CSS" onclick="location.reload()" style="color: #999;">CSS</a>
-        </span><span style="font-size: 78%;">
           <a href="/tag#Call-by-reference" onclick="location.reload()" style="color: #999;">Call-by-reference</a>
         </span><span style="font-size: 78%;">
           <a href="/tag#Call-by-value" onclick="location.reload()" style="color: #999;">Call-by-value</a>
@@ -277,8 +286,6 @@
         </span><span style="font-size: 78%;">
           <a href="/tag#List" onclick="location.reload()" style="color: #999;">List</a>
         </span><span style="font-size: 78%;">
-          <a href="/tag#MarkDown" onclick="location.reload()" style="color: #999;">MarkDown</a>
-        </span><span style="font-size: 78%;">
           <a href="/tag#Memory" onclick="location.reload()" style="color: #999;">Memory</a>
         </span><span style="font-size: 78%;">
           <a href="/tag#Multiplexing" onclick="location.reload()" style="color: #999;">Multiplexing</a>
@@ -311,8 +318,6 @@
         </span><span style="font-size: 78%;">
           <a href="/tag#SQL" onclick="location.reload()" style="color: #999;">SQL</a>
         </span><span style="font-size: 78%;">
-          <a href="/tag#Sass" onclick="location.reload()" style="color: #999;">Sass</a>
-        </span><span style="font-size: 78%;">
           <a href="/tag#Spectrum_spreading" onclick="location.reload()" style="color: #999;">Spectrum_spreading</a>
         </span><span style="font-size: 78%;">
           <a href="/tag#Str" onclick="location.reload()" style="color: #999;">Str</a>
@@ -335,8 +340,6 @@
         </span><span style="font-size: 78%;">
           <a href="/tag#Variable" onclick="location.reload()" style="color: #999;">Variable</a>
         </span><span style="font-size: 78%;">
-          <a href="/tag#Web" onclick="location.reload()" style="color: #999;">Web</a>
-        </span><span style="font-size: 78%;">
           <a href="/tag#뷰" onclick="location.reload()" style="color: #999;">뷰</a>
         </span><span style="font-size: 78%;">
           <a href="/tag#이산수학" onclick="location.reload()" style="color: #999;">이산수학</a>
@@ -351,6 +354,12 @@
   <div class="wrapper">
     
 <ul id="post-list"><li class="post-item">
+    <span class="post-date">27 Sep 2019</span>
+    <a class="post-link" href="/posts/Blog-tech">Blog tech</a>
+  </li><li class="post-item">
+    <span class="post-date">04 Sep 2019</span>
+    <a class="post-link" href="/posts/MEMS">Mems</a>
+  </li><li class="post-item">
     <span class="post-date">26 Aug 2019</span>
     <a class="post-link" href="/posts/Project">Project</a>
   </li><li class="post-item">
@@ -454,9 +463,6 @@
     <a class="post-link" href="/posts/Digital-Transmission">Digital Transmission</a>
   </li><li class="post-item">
     <span class="post-date">29 Sep 2018</span>
-    <a class="post-link" href="/posts/Sass">Sass</a>
-  </li><li class="post-item">
-    <span class="post-date">29 Sep 2018</span>
     <a class="post-link" href="/posts/study">공부할 것</a>
   </li><li class="post-item">
     <span class="post-date">19 Sep 2018</span>
@@ -479,10 +485,6 @@
   </li><li class="post-item">
     <span class="post-date">11 Sep 2018</span>
     <a class="post-link" href="/posts/Orientation-data-communication">Orientation data communication</a>
-  </li><li class="post-item">
-    <span class="post-date">10 Sep 2018</span>
-    <a class="post-link" href="/posts/elements">블로그에서 사용하는 문법 정리</a>
-    <!--span class="description">다양한 마크다운 문법과 테마에서 지원하는 기능 미리보기</span-->
   </li><li class="post-item">
     <span class="post-date">09 Sep 2018</span>
     <a class="post-link" href="/posts/admin_access">명령프롬프트(CMD)</a>

@@ -7,7 +7,7 @@ $small-font-size:  $base-font-size * 0.875 !default;
 $base-line-height: 1.5 !default;
 
 $base-font-family: 'Nanum Gothic', sans-serif;
-$code-font-family: 'D2Coding', monospace;
+$code-font-family: 'D2Coding', "Consolas", monospace;
 @mixin relative-font-size($ratio) {
   font-size: $base-font-size * $ratio;
 }

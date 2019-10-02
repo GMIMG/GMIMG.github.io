@@ -22,11 +22,14 @@
 <meta property="og:url" content="http://localhost:4000/tags/" />
 <meta property="og:site_name" content="GMIMG" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/tags/","headline":"GMIMG","description":"Mechagrammer","author":{"@type":"Person","name":"Jimin Hwang"},"@type":"WebPage","@context":"http://schema.org"}</script>
+{"@type":"WebPage","url":"http://localhost:4000/tags/","headline":"GMIMG","author":{"@type":"Person","name":"Jimin Hwang"},"description":"Mechagrammer","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css">
+<!--github pages nomalize css-->
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!--custom css-->
+  <link rel="stylesheet" href="/assets/css/main.css">
   <!--icon-->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="GMIMG" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="GMIMG" />
   <!--vue.js & axios for categories generator-->
   <script src="/assets/js/vue.min.js"></script>
   <script src="/assets/js/axios.min.js"></script>
@@ -43,27 +46,35 @@
 </head>
   <body>
     <header class="site-header">
-  <div class="wrapper"><a class="site-title" rel="author" href="/">GMIMG</a>
-      <nav class="site-menu">
-        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
-        <label for="menu-trigger">
-          <div class="menu-icon">
-            <i class="fas fa-bars"></i>
-          </div>
-        </label>
-        <div class="trigger">
-            <a class="page-link" href="/about/">about</a>
-            <a class="page-link" href="/posts/">Posts browser</a>
+  <div class="wrapper">
+    <!---->
+    
+    <a class="site-title" rel="author" href="/">GMIMG</a>
+
+    <div class="dark-icon">
+      <a id="theme-toggle" class="page-link" onclick="modeSwitcher()"></a>
+    </div>
+
+
+    <nav class="site-menu">
+      <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+      <label for="menu-trigger">
+        <div class="menu-icon">
+          <i class="fas fa-bars"></i>
         </div>
-      </nav>
-      <nav class="dark-icon">
-        <a id="theme-toggle" class="page-link" onclick="modeSwitcher()"></a>
-      </nav>
-      <nav class="site-search">
-        <div class="search-icon" onclick="location.href='/search';">
-          <i class="fas fa-search"></i>
-        </div>
-      </nav>
+      </label>
+      <div class="trigger">
+          <a class="page-link" href="/about/">about</a>
+          <a class="page-link" href="/posts/">Posts browser</a>
+      </div>
+    </nav>
+    
+    <nav class="site-search">
+      <div class="search-icon" onclick="location.href='/search';">
+        <i class="fas fa-search"></i>
+      </div>
+    </nav>
+
   </div>
 </header>
     <main class="page-content">
@@ -76,7 +87,6 @@
     <a href="#C++" class="post-tag"><i class="fas fa-tag"></i> C++</a>
     <a href="#CMD" class="post-tag"><i class="fas fa-tag"></i> CMD</a>
     <a href="#CPU" class="post-tag"><i class="fas fa-tag"></i> CPU</a>
-    <a href="#CSS" class="post-tag"><i class="fas fa-tag"></i> CSS</a>
     <a href="#Call-by-reference" class="post-tag"><i class="fas fa-tag"></i> Call-by-reference</a>
     <a href="#Call-by-value" class="post-tag"><i class="fas fa-tag"></i> Call-by-value</a>
     <a href="#Character" class="post-tag"><i class="fas fa-tag"></i> Character</a>
@@ -103,7 +113,6 @@
     <a href="#Interpreter" class="post-tag"><i class="fas fa-tag"></i> Interpreter</a>
     <a href="#Jekyll" class="post-tag"><i class="fas fa-tag"></i> Jekyll</a>
     <a href="#List" class="post-tag"><i class="fas fa-tag"></i> List</a>
-    <a href="#MarkDown" class="post-tag"><i class="fas fa-tag"></i> MarkDown</a>
     <a href="#Memory" class="post-tag"><i class="fas fa-tag"></i> Memory</a>
     <a href="#Multiplexing" class="post-tag"><i class="fas fa-tag"></i> Multiplexing</a>
     <a href="#Mutable" class="post-tag"><i class="fas fa-tag"></i> Mutable</a>
@@ -120,7 +129,6 @@
     <a href="#RTOS" class="post-tag"><i class="fas fa-tag"></i> RTOS</a>
     <a href="#Robot" class="post-tag"><i class="fas fa-tag"></i> Robot</a>
     <a href="#SQL" class="post-tag"><i class="fas fa-tag"></i> SQL</a>
-    <a href="#Sass" class="post-tag"><i class="fas fa-tag"></i> Sass</a>
     <a href="#Spectrum_spreading" class="post-tag"><i class="fas fa-tag"></i> Spectrum_spreading</a>
     <a href="#Str" class="post-tag"><i class="fas fa-tag"></i> Str</a>
     <a href="#String" class="post-tag"><i class="fas fa-tag"></i> String</a>
@@ -132,7 +140,6 @@
     <a href="#Thread" class="post-tag"><i class="fas fa-tag"></i> Thread</a>
     <a href="#Transmission" class="post-tag"><i class="fas fa-tag"></i> Transmission</a>
     <a href="#Variable" class="post-tag"><i class="fas fa-tag"></i> Variable</a>
-    <a href="#Web" class="post-tag"><i class="fas fa-tag"></i> Web</a>
     <a href="#뷰" class="post-tag"><i class="fas fa-tag"></i> 뷰</a>
     <a href="#이산수학" class="post-tag"><i class="fas fa-tag"></i> 이산수학</a>
   </div>
@@ -235,16 +242,6 @@
       <li>
         <a href="/posts/CPU">CPU</a>
         <small class="post-date">09 Aug 2018</small>
-      </li>
-      <div class="back-to-top">
-        <a href="#">Back to Top &uarr;</a>
-      </div>
-      </ul><a name="CSS"></a>
-      <h3 id="#CSS">CSS</h3>
-      <ul class="expo-posts">
-      <li>
-        <a href="/posts/Sass">Sass</a>
-        <small class="post-date">29 Sep 2018</small>
       </li>
       <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
@@ -537,16 +534,6 @@
       <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
-      </ul><a name="MarkDown"></a>
-      <h3 id="#MarkDown">MarkDown</h3>
-      <ul class="expo-posts">
-      <li>
-        <a href="/posts/elements">블로그에서 사용하는 문법 정리</a>
-        <small class="post-date">10 Sep 2018</small>
-      </li>
-      <div class="back-to-top">
-        <a href="#">Back to Top &uarr;</a>
-      </div>
       </ul><a name="Memory"></a>
       <h3 id="#Memory">Memory</h3>
       <ul class="expo-posts">
@@ -799,16 +786,6 @@
       <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>
       </div>
-      </ul><a name="Sass"></a>
-      <h3 id="#Sass">Sass</h3>
-      <ul class="expo-posts">
-      <li>
-        <a href="/posts/Sass">Sass</a>
-        <small class="post-date">29 Sep 2018</small>
-      </li>
-      <div class="back-to-top">
-        <a href="#">Back to Top &uarr;</a>
-      </div>
       </ul><a name="Spectrum_spreading"></a>
       <h3 id="#Spectrum_spreading">Spectrum_spreading</h3>
       <ul class="expo-posts">
@@ -923,16 +900,6 @@
       <li>
         <a href="/posts/Function">Function</a>
         <small class="post-date">07 Aug 2018</small>
-      </li>
-      <div class="back-to-top">
-        <a href="#">Back to Top &uarr;</a>
-      </div>
-      </ul><a name="Web"></a>
-      <h3 id="#Web">Web</h3>
-      <ul class="expo-posts">
-      <li>
-        <a href="/posts/Sass">Sass</a>
-        <small class="post-date">29 Sep 2018</small>
       </li>
       <div class="back-to-top">
         <a href="#">Back to Top &uarr;</a>

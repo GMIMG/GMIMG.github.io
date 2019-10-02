@@ -1,4 +1,150 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko" /><updated>2019-09-03T21:42:36+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">GMIMG</title><subtitle>Mechagrammer</subtitle><author><name>Jimin Hwang</name></author><entry><title type="html">Project</title><link href="http://localhost:4000/posts/Project" rel="alternate" type="text/html" title="Project" /><published>2019-08-26T00:00:00+09:00</published><updated>2019-08-26T00:00:00+09:00</updated><id>http://localhost:4000/posts/Project</id><content type="html" xml:base="http://localhost:4000/posts/Project"></content><author><name>Gmimg</name></author><summary type="html"></summary></entry><entry><title type="html">Advanced-C</title><link href="http://localhost:4000/posts/Advanced-C" rel="alternate" type="text/html" title="Advanced-C" /><published>2019-08-18T00:00:00+09:00</published><updated>2019-08-18T00:00:00+09:00</updated><id>http://localhost:4000/posts/Advanced-C</id><content type="html" xml:base="http://localhost:4000/posts/Advanced-C">&lt;h1 id=&quot;advenced-c&quot;&gt;Advenced C&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko" /><updated>2019-09-30T15:50:09+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">GMIMG</title><subtitle>Mechagrammer</subtitle><author><name>Jimin Hwang</name></author><entry><title type="html">Blog tech</title><link href="http://localhost:4000/posts/Blog-tech" rel="alternate" type="text/html" title="Blog tech" /><published>2019-09-27T00:00:00+09:00</published><updated>2019-09-27T00:00:00+09:00</updated><id>http://localhost:4000/posts/Blog%20tech</id><content type="html" xml:base="http://localhost:4000/posts/Blog-tech"></content><author><name>Gmimg</name></author><summary type="html"></summary></entry><entry><title type="html">Mems</title><link href="http://localhost:4000/posts/MEMS" rel="alternate" type="text/html" title="Mems" /><published>2019-09-04T00:00:00+09:00</published><updated>2019-09-04T00:00:00+09:00</updated><id>http://localhost:4000/posts/MEMS</id><content type="html" xml:base="http://localhost:4000/posts/MEMS">&lt;h1 id=&quot;반도체&quot;&gt;반도체&lt;/h1&gt;
+
+&lt;p&gt;먼저 반도체업계에서 흔히 사용하는 용어를 먼저 정리한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;term&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Silicon : 규소&lt;/li&gt;
+  &lt;li&gt;Wafer : 가공하는 실리콘의 형태&lt;/li&gt;
+  &lt;li&gt;Fab : fabrication의 줄임말. 보통 반도체 가공하는 공장을 말한다.&lt;/li&gt;
+  &lt;li&gt;CMOS(Complementary Metal-Oxide Semiconductor) : PMOS+NMOS, 전자회로의 기본부품으로서 트렌지스터의 한 종류. 보통 트렌지스터를 만드는 공정을 말하기도한다.&lt;/li&gt;
+  &lt;li&gt;IC : 집적회로, 전자회로를 통칭하는 용어&lt;/li&gt;
+  &lt;li&gt;MEMS(Micro Electro Mechanical Systems) : 초소형 정밀기계 기술, 반도체 가공공정으로 제작하는 센서 등을 말함.&lt;/li&gt;
+  &lt;li&gt;Microprocessor : 반도체로 만든 연산처리장치&lt;/li&gt;
+  &lt;li&gt;Packaging : 전자칩공정에서 웨이퍼 공정 이후를 말함.&lt;/li&gt;
+  &lt;li&gt;Memory : 반도체로 만드는 저장장치
+    &lt;ul&gt;
+      &lt;li&gt;Flash (NAND, NOR) : 비휘발성 저장장치.&lt;/li&gt;
+      &lt;li&gt;RAM (SRAM, DRAM) : 휘발성 저장창치&lt;/li&gt;
+      &lt;li&gt;Cache (L1, L2) : CPU안에 위치한 메모리, 속도가빠름.&lt;/li&gt;
+      &lt;li&gt;ROM : 지울수 없는 비휘발성 저장장치, 일기전용 저장장치, 주로 마더보드에 위치.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;더 작게, 더작게..&lt;/p&gt;
+
+&lt;p&gt;뉴스 기사에서 반도체 산업에 대해 말할 때 ‘00전자 0나노 공정 개발 성공’이라는 타이틀을 자주 접해왔다. 대기업에서 말하는 7nm공정 에서 수치는 반도체의 회로폭을 말한다. 즉, 전자가 통제하에 이동하는 채널의 길이이다. 이 수치를 작게 할수록 집적도가 높아져 대량생산의 비용은 적게들고, 발열은 적어진다. 즉 전기효율이 높으면서 속도는 빨리지게된다. 이 때문에 반도체회사들은 1nm라도 작은 공정을 만드려고 한다.&lt;/p&gt;
+
+&lt;p&gt;전문가들은 3nm 정도가 최소라고 보고있는데 3nm이하로 내려가면 전자들이 통제와 상관없이 게이트를 넘나든다고 한다(누설전류). 그래서 평면 반도체는 한계에 가까워지고 있고 최근에는 3D 나노 기술을 개발중이고 적층기술과 열배출이 큰 이슈라고 한다. 반도체 대안으로 양자컴퓨팅이 있는데 상용화에는 아직 시간이 필요할 것 같다. (반도체의 자료가 0과 1의 상태(비트)를 나타낸다면 양자컴퓨팅의 자료는 더많은 상태(큐비트)를 나타내게 된다.)&lt;/p&gt;
+
+&lt;p&gt;여기까지는 반도체 이야기였다.&lt;/p&gt;
+
+&lt;p&gt;MEMS는 반도체와 혼용되어 사용하기도 하지만 엄밀히 따지면 다르다. 반도체는 흔히 트랜지스터를 이용한 집적 회로를 통칭해서 말하는 반면, MEMS는 움직이는(mechanical) 전자(electro)기구를 마이크로 단위로 작게 줄인 것을 말한다. 제조공정이 일부 겹치기 때문에 혼동할 수 있지만, 최근 반도체는 이미 나노단위로 작아진 반면 MEMS는 보통 마이크로 단위의 공정에서 제조한다.&lt;/p&gt;
+
+&lt;h2 id=&quot;mems-공정-교육&quot;&gt;MEMS 공정 교육&lt;/h2&gt;
+
+&lt;p&gt;19년 8월 26일 ~ 30일 동안 서울과학기술대학교 캠퍼스 안에있는 서울테크노파크에서 ‘S+ 2기 MEMS 공정 교육’과정으로 [S+ 2기 MEMS 공정 실습] 에 참여했다.&lt;/p&gt;
+
+&lt;p&gt;이틀은 이전에 ‘마이크로시스템공정’ 수업에서 배웠던 공정에 대한 이론수업을 들었고, 3일간 교내에있는 서울테크노파크 FAB에서 2인 1팀으로 인덕터를 직접 제작했다.&lt;/p&gt;
+
+&lt;h3 id=&quot;이론&quot;&gt;이론&lt;/h3&gt;
+
+&lt;h4 id=&quot;lithography&quot;&gt;Lithography&lt;/h4&gt;
+
+&lt;p&gt;어떤 막을 원하는 패턴으로 만드는 공정&lt;/p&gt;
+
+&lt;h5 id=&quot;photolithography&quot;&gt;Photolithography&lt;/h5&gt;
+
+&lt;p&gt;Photo-Resist(PR) 코팅 - Mask를 통해 노광시켜 patterning - Develop PR - Etching&lt;/p&gt;
+
+&lt;h5 id=&quot;soft-lithography&quot;&gt;Soft lithography&lt;/h5&gt;
+
+&lt;p&gt;stamp를 만들어 SAM 을입혀서 찍어 패턴을 만듦, 재활용이가능&lt;/p&gt;
+
+&lt;h4 id=&quot;deposition증착&quot;&gt;Deposition(증착)&lt;/h4&gt;
+
+&lt;p&gt;증착은 원하는 물질을 wafer에 평탄한 막을 올리는 공정이다. 이때 막은 보통 2um이하이며 metal, oxide 층이다.&lt;/p&gt;
+
+&lt;h5 id=&quot;pvd-physical-vapor-deposition&quot;&gt;PVD (Physical Vapor Deposition)&lt;/h5&gt;
+
+&lt;p&gt;화학적 변화가 없는 증착방법&lt;/p&gt;
+
+&lt;h6 id=&quot;evaporation&quot;&gt;Evaporation&lt;/h6&gt;
+
+&lt;p&gt;High vacuum 상태에서 텅스텐 보드에 Seed 물질을 넣고 전기 또는 E-beam으로 가열하면 고온이되며 증기상태가 되고 위에있는 substrate에 달라붙어 증착된다.&lt;/p&gt;
+
+&lt;p&gt;이때 고르게 증착시키기위해 substrate를 회전하면서 증착시킨다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;\assets\img\MEMS\evaporator.png&quot; alt=&quot;evaporator&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://hivatec.ca/consulting-design/thin-film-deposition/&quot;&gt;그림 출처&lt;/a&gt;&lt;/p&gt;
+
+&lt;h6 id=&quot;sputtering&quot;&gt;Sputtering&lt;/h6&gt;
+
+&lt;p&gt;evaporation과 다르게 열 대신 플라즈마를 이용해 고에너지를 얻는다. Ar기체 환경에서 전극한쪽에 substrate를 놓고 한쪽에는 target(seed 물질)을 놓는다. 그리고 전압을 가하면 Ar이 플라즈마 형태가 되면서 이온화한다. 이때 이온이 -전극 쪽으로 날아가 target에 달라붙으며 충돌하면 물질이 튕겨져나와 substrate에 달라붙게된다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;\assets\img\MEMS\Sputtering.gif&quot; alt=&quot;Sputtering&quot; /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;cvd-chemical-vapro-deposition&quot;&gt;CVD (Chemical Vapro Deposition)&lt;/h5&gt;
+
+&lt;p&gt;가스 상태의 원료에 에너지를 부여해서 화학반을을 일으켜 박막에 원하는 물질을 쌓음.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt;장점&lt;/th&gt;
+      &lt;th&gt;단점&lt;/th&gt;
+      &lt;th&gt;응용&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;APCVD (atmospheric)&lt;/td&gt;
+      &lt;td&gt;빠른 증착&lt;br /&gt;낮은 온도&lt;br /&gt;간단한 반응&lt;/td&gt;
+      &lt;td&gt;낮은 처리량&lt;br /&gt;불충분한 Step coverage&lt;br /&gt;오염물질&lt;/td&gt;
+      &lt;td&gt;저온 산화물&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;LPCVD (low-pressure)&lt;/td&gt;
+      &lt;td&gt;높은 처리량&lt;br /&gt;균일한 Step coverage&lt;/td&gt;
+      &lt;td&gt;느린 증착&lt;br /&gt;높은 온도&lt;br /&gt;유지보수&lt;br /&gt;진공필요&lt;/td&gt;
+      &lt;td&gt;고온 산화물&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;PECVD (plasma-enhanced)&lt;/td&gt;
+      &lt;td&gt;빠른 증착&lt;br /&gt;낮은 온도&lt;br /&gt;좋은 Step coverage&lt;br /&gt;좋은 Gap fill&lt;br /&gt;낮응 응력&lt;br /&gt;우수한 접착력&lt;/td&gt;
+      &lt;td&gt;RF 시스템 필요&lt;br /&gt;고비용&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;etching&quot;&gt;Etching&lt;/h4&gt;
+
+&lt;p&gt;식각률 : 시간당 식각두께&lt;/p&gt;
+
+&lt;p&gt;균일도 : 표면 전체에 얼마나 균일하게 식각되는지&lt;/p&gt;
+
+&lt;p&gt;선택비 : 식각하고자 하는 물질과 기타 물질간의 식각비&lt;/p&gt;
+
+&lt;p&gt;언더컷 : 식각시 옆으로 들어가는 현상&lt;/p&gt;
+
+&lt;p&gt;등방성 식각(Isotropic) : 모든방향으로 같은속도로 식각&lt;/p&gt;
+
+&lt;p&gt;이방형 식각(Anisotropic) : 한방향으로 빠른 식각&lt;/p&gt;
+
+&lt;h5 id=&quot;wet-etching-습식식각&quot;&gt;Wet etching (습식식각)&lt;/h5&gt;
+
+&lt;p&gt;KOH, TMAH, EDP 등 화학약품으로 식각&lt;/p&gt;
+
+&lt;p&gt;값이싸고 대량 사용가능&lt;/p&gt;
+
+&lt;h5 id=&quot;dry-etching-건식식각&quot;&gt;Dry etching (건식식각)&lt;/h5&gt;
+
+&lt;p&gt;플라즈마 상태를 만들고 이온을 충돌시켜 물리적 반응으로 식각&lt;/p&gt;
+
+&lt;h3 id=&quot;실습&quot;&gt;실습&lt;/h3&gt;
+
+&lt;p&gt;흔히 코일이라고 하는 골뱅이(@) 모양의 Micro 인덕터를 만드는 작업을 했다. 인덕터는 RF소자에서 필터역할을 한다. 교류에서 인덕터의 인덕턴스 R이 정해져있는데 이 R을 가변으로 만들기위해 하나의 인덕터의 여러지점에 스위칭을 하여 회절수를 결정할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;\assets\img\MEMS\Run sheet.jpg&quot; alt=&quot;Run sheet&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;실습 과정은 사진과 영상으로 대체한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://seoultechackr-my.sharepoint.com/personal/time9300_seoultech_ac_kr/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Ftime9300_seoultech_ac_kr%2FDocuments%2F사진%2F반도체.zip&amp;amp;parent=%2Fpersonal%2Ftime9300_seoultech_ac_kr%2FDocuments%2F사진&amp;amp;originalPath=aHR0cHM6Ly9zZW91bHRlY2hhY2tyLW15LnNoYXJlcG9pbnQuY29tLzp1Oi9nL3BlcnNvbmFsL3RpbWU5MzAwX3Nlb3VsdGVjaF9hY19rci9FWjQwY081N0VQbFBwTXQ5VXdjVkVhOEJHaHlGaVk5ejlaaEUxOUU4VnkyTmxRP3J0aW1lPTRkNVgwN0JFMTBn&quot;&gt;실습과정 클라우드&lt;/a&gt;&lt;/p&gt;</content><author><name>Gmimg</name></author><summary type="html">반도체</summary></entry><entry><title type="html">Project</title><link href="http://localhost:4000/posts/Project" rel="alternate" type="text/html" title="Project" /><published>2019-08-26T00:00:00+09:00</published><updated>2019-08-26T00:00:00+09:00</updated><id>http://localhost:4000/posts/Project</id><content type="html" xml:base="http://localhost:4000/posts/Project"></content><author><name>Gmimg</name></author><summary type="html"></summary></entry><entry><title type="html">Advanced-C</title><link href="http://localhost:4000/posts/Advanced-C" rel="alternate" type="text/html" title="Advanced-C" /><published>2019-08-18T00:00:00+09:00</published><updated>2019-08-18T00:00:00+09:00</updated><id>http://localhost:4000/posts/Advanced-C</id><content type="html" xml:base="http://localhost:4000/posts/Advanced-C">&lt;h1 id=&quot;advenced-c&quot;&gt;Advenced C&lt;/h1&gt;
 
 &lt;h2 id=&quot;데이터타입과-형변환&quot;&gt;데이터타입과 형변환&lt;/h2&gt;
 
@@ -204,7 +350,7 @@ int main(void)
       &lt;td&gt;8 Byte&lt;/td&gt;
       &lt;td&gt;15~16 자리(float의 약 2배)&lt;/td&gt;
       &lt;td&gt;2.250738 585072 014E -308&lt;/td&gt;
-      &lt;td&gt;1.7976931348623158E + 308&lt;/td&gt;
+      &lt;td&gt;1.797693 134862 3158E + 308&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -576,166 +722,4 @@ int main(void)
 
 &lt;p&gt;비메모리&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://ko.wikipedia.org/wiki/후킹&quot;&gt;후킹&lt;/a&gt;&lt;/p&gt;</content><author><name>Gmimg</name></author><summary type="html">Modem : Modulator + Demodulator</summary></entry><entry><title type="html">추천교재</title><link href="http://localhost:4000/posts/book" rel="alternate" type="text/html" title="추천교재" /><published>2019-07-27T00:00:00+09:00</published><updated>2019-07-27T00:00:00+09:00</updated><id>http://localhost:4000/posts/book</id><content type="html" xml:base="http://localhost:4000/posts/book">&lt;ul class=&quot;task-list&quot;&gt;
-  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;Clean Code&lt;/li&gt;
-  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;윤성우의 열혈 자료구조&lt;/li&gt;
-  &lt;li class=&quot;task-list-item&quot;&gt;
-    &lt;p&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;&lt;a href=&quot;http://order.kyobobook.co.kr/cart/cartListMain#&quot;&gt;C로 배우는 알고리즘 1&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;C++ STL&lt;/li&gt;
-  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Effective C++&lt;/li&gt;
-  &lt;li class=&quot;task-list-item&quot;&gt;
-    &lt;p&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;알고리즘 문제 해결 전략 세트&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li class=&quot;task-list-item&quot;&gt;
-    &lt;p&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Clean Software&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li class=&quot;task-list-item&quot;&gt;
-    &lt;p&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;GoF의 디자인 패턴&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li class=&quot;task-list-item&quot;&gt;
-    &lt;p&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Code Complete&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li class=&quot;task-list-item&quot;&gt;
-    &lt;p&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;생각하는 프로그래밍&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li class=&quot;task-list-item&quot;&gt;
-    &lt;p&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;리팩토링 : 코드 품질을 개선하는 객체지향 사고법&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li class=&quot;task-list-item&quot;&gt;
-    &lt;p&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Inntroduction to Algorithms&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li class=&quot;task-list-item&quot;&gt;
-    &lt;p&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;컴퓨터 프로그램의 구조와 해석&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li class=&quot;task-list-item&quot;&gt;
-    &lt;p&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;컴퓨터시스템구조&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li class=&quot;task-list-item&quot;&gt;
-    &lt;p&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;운영체제&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li class=&quot;task-list-item&quot;&gt;
-    &lt;p&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;컴퓨터 구조 및 설계&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li class=&quot;task-list-item&quot;&gt;
-    &lt;p&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;임베디드 레시피&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li class=&quot;task-list-item&quot;&gt;
-    &lt;p&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;ARM 리눅스 커널&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li class=&quot;task-list-item&quot;&gt;
-    &lt;p&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;해커의 기쁨&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li class=&quot;task-list-item&quot;&gt;
-    &lt;p&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;&lt;a href=&quot;http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=899792&quot;&gt;인사이드 머신&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li class=&quot;task-list-item&quot;&gt;
-    &lt;p&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;&lt;a href=&quot;http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=18480581&quot;&gt;리눅스 커널 심층 분석&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li class=&quot;task-list-item&quot;&gt;
-    &lt;p&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;&lt;a href=&quot;http://order.kyobobook.co.kr/cart/cartListMain#&quot;&gt;임베디드 리눅스 프로그래밍 완전정복&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;&lt;a href=&quot;http://order.kyobobook.co.kr/cart/cartListMain#&quot;&gt;코드로 알아보는 ARM 리눅스 커널&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Gmimg</name></author><summary type="html">Clean Code 윤성우의 열혈 자료구조 C로 배우는 알고리즘 1</summary></entry><entry><title type="html">Software Study Plan</title><link href="http://localhost:4000/posts/Plan" rel="alternate" type="text/html" title="Software Study Plan" /><published>2019-07-27T00:00:00+09:00</published><updated>2019-07-27T00:00:00+09:00</updated><id>http://localhost:4000/posts/Plan</id><content type="html" xml:base="http://localhost:4000/posts/Plan">&lt;p&gt;‘소프트웨어를 쉽게 배우는 방법은 없을까?’&lt;/p&gt;
-
-&lt;p&gt;소프트웨어를 배우기 시작하면서 항상 고민했던 질문이다. 지금 생각해보면 배움에 있어서 쉬운길은 없는건 당연한 것 같다. 쉽게 얻을수록 쉽게 잃는게 이치다. 하지만 배움에 흥미를 잃지않는 방법은 분명히 있다. 한 블로그에서 본 글이 와닿아서 &lt;a href=&quot;https://hl1itj.tistory.com/133?category=327240&quot;&gt;링크&lt;/a&gt;를 걸어본다. 어떻게 프로그래밍을 배우면 지치지 않고 배울 수 있을지 깨닫게 된다.&lt;/p&gt;
-
-&lt;p&gt;이 블로그 주인분께서 쓰신 &lt;a href=&quot;https://hl1itj.tistory.com/136?category=327240&quot;&gt;다른 포스팅&lt;/a&gt;이 또 매우 인상적이었다. 소프트웨어 개발자가 되기위해서 겪어야할 어려움을 단계별로 정리해놓으셨다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;1단계 : 언어&lt;/li&gt;
-  &lt;li&gt;2단계 : 데이터&lt;/li&gt;
-  &lt;li&gt;3단계 : 프레임워크&lt;/li&gt;
-  &lt;li&gt;4단계 : 알고리즘&lt;/li&gt;
-  &lt;li&gt;5단계 : 데이터&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;지금 내가 있는 단계는 어딜까 생각해 봤는데 고작.. 2단계 초반이 아닐까 싶다… 아쉽지만 대부분의 컴퓨터공학 전공 학부생은 2단계 ~ 3단계에 분포하지 않을까싶다..(이렇게라도 자기위로를). 언어에 대한 기본적인 지식은 있지만, 포인터와 자료구조 등 개념을 알지만 언제 어디서 써야하는지 알지못하는 부족함이 있다.. 이부분을 남에게 가르쳐줄 수준으로 공부를 해야 다음단계인 표준 라이브러리나 기존에 누군가가 짜놓은 코드를 완벽히 이해할 수 있을 것이다.&lt;/p&gt;
-
-&lt;p&gt;사설이 길었지만 어쨌든 앞으로의 학습계획을 짜보자.&lt;/p&gt;
-
-&lt;p&gt;소프트웨어 공부는 크게 두가지로 분류할 수 있다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;언어 공부(C, C++, 파이썬)&lt;/li&gt;
-  &lt;li&gt;컴퓨터과학(컴퓨터구조, 운영체제, 네트워크, 데이터베이스 등…)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;첫째는 소트트웨어를 만드는 도구인 언어를 공부하는 것이고, 둘째는 소프트웨어가 어떻게 구동되는지 기존에 만들어놓은 커다란 이론적인 아키텍처를 공부하는것이다.&lt;/p&gt;
-
-&lt;p&gt;소프트웨어를 만들기 위해서는 하나이상의 언어를 자유자재로 다룰줄 알아야 어떤 기획을 했을때 막힘없이 구현할 수 있다. 머리로 아무리 좋은 프로그램을 만들어도 언어능력이 부족하면 무용지물이다.&lt;/p&gt;
-
-&lt;p&gt;내가 &lt;strong&gt;임베디드 개발자&lt;/strong&gt;가 되기로한 이상 C는 무조건 마스터해야하지만, C만으로는 응용프로그램을 만들기엔 굉장히 비생산적이다. 그러므로 C++과, 파이썬을 더 공부하려한다.&lt;/p&gt;
-
-&lt;p&gt;또한, 임베디드 분야는 하드웨어와 밀접한 Low한 레벨의 데이터를 다루기 때문에 하드웨어아키텍처의 이론적인 구조과 그 데이터를 관리하고 다루는 방법을 알아야 한다. 그러기 위해 컴퓨터구조, 운영체제, 네트워크, 데이터베이스를 배우려는 것이다.&lt;/p&gt;
-
-&lt;p&gt;사실 C/C++, 파이썬, 네트워크, 데이터베이스 등 컴퓨터공학을 부전공하면서 1년간 어느정도 수업을 들었지만 완전히 내것으로 만들지는 못했다.&lt;/p&gt;
-
-&lt;p&gt;그러한 지식들을 다시한번 복기하면서 다음과같은 순서로 포스팅 하려고한다.&lt;/p&gt;
-
-&lt;p&gt;앞으로의 공부 순서도&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;우선순위&lt;/th&gt;
-      &lt;th&gt;언어&lt;/th&gt;
-      &lt;th&gt;컴퓨터과학&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;1&lt;/td&gt;
-      &lt;td&gt;C 복습&lt;/td&gt;
-      &lt;td&gt;컴퓨터 구조&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;2&lt;/td&gt;
-      &lt;td&gt;자료구조&lt;/td&gt;
-      &lt;td&gt;시스템(프로세스) 아키텍처&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;3&lt;/td&gt;
-      &lt;td&gt;C++ 복습&lt;/td&gt;
-      &lt;td&gt;운영체제&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;4&lt;/td&gt;
-      &lt;td&gt;C++ API 디자인패턴&lt;/td&gt;
-      &lt;td&gt;데이터베이스&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;5&lt;/td&gt;
-      &lt;td&gt;Effective C++&lt;/td&gt;
-      &lt;td&gt;네트워크&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;6&lt;/td&gt;
-      &lt;td&gt;파이썬 복습&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;7&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;여기에 요즘 취업을 위해 필수적인 &lt;strong&gt;알고리즘&lt;/strong&gt; 공부를 꾸준하게 하려고한다.&lt;/p&gt;
-
-&lt;p&gt;컴퓨터 구조&lt;/p&gt;
-
-&lt;p&gt;https://covenant.tistory.com/103?category=773722&lt;/p&gt;
-
-&lt;p&gt;운영체제 공부&lt;/p&gt;
-
-&lt;p&gt;https://covenant.tistory.com/100?category=773722&lt;/p&gt;
-
-&lt;p&gt;http://www.kocw.net/home/search/kemView.do?kemId=978503&lt;/p&gt;
-
-&lt;p&gt;http://www.kocw.net/home/m/search/kemView.do?kemId=998138&lt;/p&gt;
-
-&lt;p&gt;http://blog.naver.com/PostList.nhn?blogId=hjyang0&amp;amp;parentCategoryNo=6&lt;/p&gt;
-
-&lt;p&gt;http://snui.snu.ac.kr/ocw/index.php?mode=view&amp;amp;id=623#class_room-tab&lt;/p&gt;</content><author><name>Gmimg</name></author><category term="story" /><summary type="html">‘소프트웨어를 쉽게 배우는 방법은 없을까?’</summary></entry></feed>
+&lt;p&gt;&lt;a href=&quot;https://ko.wikipedia.org/wiki/후킹&quot;&gt;후킹&lt;/a&gt;&lt;/p&gt;</content><author><name>Gmimg</name></author><summary type="html">Modem : Modulator + Demodulator</summary></entry></feed>

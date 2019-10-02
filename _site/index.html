@@ -23,11 +23,14 @@
 <meta property="og:site_name" content="GMIMG" />
 <link rel="next" href="http://localhost:4000/posts/2/" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/","headline":"GMIMG","description":"Mechagrammer","name":"GMIMG","author":{"@type":"Person","name":"Jimin Hwang"},"@type":"WebSite","@context":"http://schema.org"}</script>
+{"@type":"WebSite","url":"http://localhost:4000/","headline":"GMIMG","name":"GMIMG","author":{"@type":"Person","name":"Jimin Hwang"},"description":"Mechagrammer","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css">
+<!--github pages nomalize css-->
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!--custom css-->
+  <link rel="stylesheet" href="/assets/css/main.css">
   <!--icon-->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="GMIMG" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="GMIMG" />
   <!--vue.js & axios for categories generator-->
   <script src="/assets/js/vue.min.js"></script>
   <script src="/assets/js/axios.min.js"></script>
@@ -44,27 +47,35 @@
 </head>
   <body>
     <header class="site-header">
-  <div class="wrapper"><a class="site-title" rel="author" href="/">GMIMG</a>
-      <nav class="site-menu">
-        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
-        <label for="menu-trigger">
-          <div class="menu-icon">
-            <i class="fas fa-bars"></i>
-          </div>
-        </label>
-        <div class="trigger">
-            <a class="page-link" href="/about/">about</a>
-            <a class="page-link" href="/posts/">Posts browser</a>
+  <div class="wrapper">
+    <!---->
+    
+    <a class="site-title" rel="author" href="/">GMIMG</a>
+
+    <div class="dark-icon">
+      <a id="theme-toggle" class="page-link" onclick="modeSwitcher()"></a>
+    </div>
+
+
+    <nav class="site-menu">
+      <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+      <label for="menu-trigger">
+        <div class="menu-icon">
+          <i class="fas fa-bars"></i>
         </div>
-      </nav>
-      <nav class="dark-icon">
-        <a id="theme-toggle" class="page-link" onclick="modeSwitcher()"></a>
-      </nav>
-      <nav class="site-search">
-        <div class="search-icon" onclick="location.href='/search';">
-          <i class="fas fa-search"></i>
-        </div>
-      </nav>
+      </label>
+      <div class="trigger">
+          <a class="page-link" href="/about/">about</a>
+          <a class="page-link" href="/posts/">Posts browser</a>
+      </div>
+    </nav>
+    
+    <nav class="site-search">
+      <div class="search-icon" onclick="location.href='/search';">
+        <i class="fas fa-search"></i>
+      </div>
+    </nav>
+
   </div>
 </header>
     <main class="page-content">
@@ -111,6 +122,29 @@
         
         <div class="post-item-container">
             <li class="post-item">
+                <a class="post-title" href="/posts/Blog-tech">Blog tech</a>
+                <br>
+                <span class="post-date">27 Sep 2019</span>
+                <a href="/posts/Blog-tech#disqus_thread"><i class="fas fa-comment"></i></a>
+                <p class="post-excerpt">
+</p>
+            </li>
+        </div>
+        
+        <div class="post-item-container">
+            <li class="post-item">
+                <a class="post-title" href="/posts/MEMS">Mems</a>
+                <br>
+                <span class="post-date">04 Sep 2019</span>
+                <a href="/posts/MEMS#disqus_thread"><i class="fas fa-comment"></i></a>
+                <p class="post-excerpt">반도체
+
+</p>
+            </li>
+        </div>
+        
+        <div class="post-item-container">
+            <li class="post-item">
                 <a class="post-title" href="/posts/Project">Project</a>
                 <br>
                 <span class="post-date">26 Aug 2019</span>
@@ -146,30 +180,6 @@
                 <a class="tag" href="/tag/#C">C</a>
                 <a class="tag" href="/tag/#Embedded">Embedded</a>
                 </p>
-            </li>
-        </div>
-        
-        <div class="post-item-container">
-            <li class="post-item">
-                <a class="post-title" href="/posts/JOB">Job</a>
-                <br>
-                <span class="post-date">17 Aug 2019</span>
-                <a href="/posts/JOB#disqus_thread"><i class="fas fa-comment"></i></a>
-                <p class="post-excerpt">먼저 기업의 채용공고를 보고 지원자격과 우대사항에대해 정리한다.
-</p>
-            </li>
-        </div>
-        
-        <div class="post-item-container">
-            <li class="post-item">
-                <a class="post-title" href="/posts/Cause_Embedded">임베디드 개발자가 되려고 하는 이유</a>
-                <br>
-                <span class="post-date">17 Aug 2019</span>
-                <a class="post-category" href="/category/#Embedded"> Embedded</a>
-                <a href="/posts/Cause_Embedded#disqus_thread"><i class="fas fa-comment"></i></a>
-                <p class="post-excerpt">내 전공과의 연계성
-
-</p>
             </li>
         </div>
         

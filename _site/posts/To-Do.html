@@ -24,11 +24,14 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-07-27T00:00:00+09:00" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/posts/To-Do","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/To-Do"},"headline":"To Do","dateModified":"2019-07-27T00:00:00+09:00","datePublished":"2019-07-27T00:00:00+09:00","description":"우선순위 당장 할 일 소프트웨어 복습 꾸준하게 1 코테준비 C 정리 반도체 정리 알고리즘 2 임베디드기사 OS 정리 데이터 베이스 경험정리 3 토스 파이썬 정리 네트워크   4   C++ 정리 로봇   5   컴퓨터 구조 회로설계   6   OS 확률과통계??   7   소프트웨어 공학 열전달??   8   시스템 아키텍쳐     9        ","author":{"@type":"Person","name":"Gmimg"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
+{"@type":"BlogPosting","url":"http://localhost:4000/posts/To-Do","headline":"To Do","dateModified":"2019-07-27T00:00:00+09:00","datePublished":"2019-07-27T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/To-Do"},"author":{"@type":"Person","name":"Gmimg"},"description":"우선순위 당장 할 일 소프트웨어 복습 꾸준하게 1 코테준비 C 정리 반도체 정리 알고리즘 2 임베디드기사 OS 정리 데이터 베이스 경험정리 3 토스 파이썬 정리 네트워크   4   C++ 정리 로봇   5   컴퓨터 구조 회로설계   6   OS 확률과통계??   7   소프트웨어 공학 열전달??   8   시스템 아키텍쳐     9        ","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css">
+<!--github pages nomalize css-->
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!--custom css-->
+  <link rel="stylesheet" href="/assets/css/main.css">
   <!--icon-->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="GMIMG" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="GMIMG" />
   <!--vue.js & axios for categories generator-->
   <script src="/assets/js/vue.min.js"></script>
   <script src="/assets/js/axios.min.js"></script>
@@ -45,27 +48,35 @@
 </head>
   <body>
     <header class="site-header">
-  <div class="wrapper"><a class="site-title" rel="author" href="/">GMIMG</a>
-      <nav class="site-menu">
-        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
-        <label for="menu-trigger">
-          <div class="menu-icon">
-            <i class="fas fa-bars"></i>
-          </div>
-        </label>
-        <div class="trigger">
-            <a class="page-link" href="/about/">about</a>
-            <a class="page-link" href="/posts/">Posts browser</a>
+  <div class="wrapper">
+    <!---->
+    
+    <a class="site-title" rel="author" href="/">GMIMG</a>
+
+    <div class="dark-icon">
+      <a id="theme-toggle" class="page-link" onclick="modeSwitcher()"></a>
+    </div>
+
+
+    <nav class="site-menu">
+      <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+      <label for="menu-trigger">
+        <div class="menu-icon">
+          <i class="fas fa-bars"></i>
         </div>
-      </nav>
-      <nav class="dark-icon">
-        <a id="theme-toggle" class="page-link" onclick="modeSwitcher()"></a>
-      </nav>
-      <nav class="site-search">
-        <div class="search-icon" onclick="location.href='/search';">
-          <i class="fas fa-search"></i>
-        </div>
-      </nav>
+      </label>
+      <div class="trigger">
+          <a class="page-link" href="/about/">about</a>
+          <a class="page-link" href="/posts/">Posts browser</a>
+      </div>
+    </nav>
+    
+    <nav class="site-search">
+      <div class="search-icon" onclick="location.href='/search';">
+        <i class="fas fa-search"></i>
+      </div>
+    </nav>
+
   </div>
 </header>
     <main class="page-content">

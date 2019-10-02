@@ -25,6 +25,8 @@ tag_dir: tag/
 #markdown 설정
 markdown: kramdown
 mathjax : true
+#highlighter 설정
+#highlighter: rouge
 
 #paginate 플러그인 설정
 paginate: 5

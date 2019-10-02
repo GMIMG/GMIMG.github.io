@@ -58,7 +58,7 @@ char c = tolower('A');
 
 # Class string
 
-~~~C++
+~~~c++
 #include <iostream>
 #include <string>
 using namespace std ;
@@ -78,7 +78,7 @@ void newLine() //clear buffer
 	do
 	{
 	cin.get (nextChar );
-	} while (nextChar != ' \n');
+	} while (nextChar != '\n');
 }
 ~~~
 
@@ -92,7 +92,7 @@ void newLine() //clear buffer
 - .find_first_of(str1, pos)
 - =,+=
 
-~~~C++
+~~~c++
 //class string => c-String
 char aCString[]= "my C-string";
 string stringVar;
@@ -100,7 +100,7 @@ stringVar = aCstring;
 strcpy(aCString, stringVar.c_str());
 ~~~
 
-~~~C++
+~~~c++
 int i;
 double d;
 string s;

@@ -93,10 +93,6 @@
 <lastmod>2018-09-09T00:00:00+09:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/posts/elements</loc>
-<lastmod>2018-09-10T00:00:00+09:00</lastmod>
-</url>
-<url>
 <loc>http://localhost:4000/posts/Orientation-data-communication</loc>
 <lastmod>2018-09-11T00:00:00+09:00</lastmod>
 </url>
@@ -126,10 +122,6 @@
 </url>
 <url>
 <loc>http://localhost:4000/posts/study</loc>
-<lastmod>2018-09-29T00:00:00+09:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/posts/Sass</loc>
 <lastmod>2018-09-29T00:00:00+09:00</lastmod>
 </url>
 <url>
@@ -267,6 +259,14 @@
 <url>
 <loc>http://localhost:4000/posts/Project</loc>
 <lastmod>2019-08-26T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/posts/MEMS</loc>
+<lastmod>2019-09-04T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/posts/Blog-tech</loc>
+<lastmod>2019-09-27T00:00:00+09:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/about/</loc>
