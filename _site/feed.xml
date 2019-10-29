@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko" /><updated>2019-10-03T01:23:46+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">GMIMG</title><subtitle>Mechagrammer</subtitle><author><name>Jimin Hwang</name></author><entry><title type="html">Blog tech</title><link href="http://localhost:4000/posts/Blog-tech" rel="alternate" type="text/html" title="Blog tech" /><published>2019-09-27T00:00:00+09:00</published><updated>2019-09-27T00:00:00+09:00</updated><id>http://localhost:4000/posts/Blog%20tech</id><content type="html" xml:base="http://localhost:4000/posts/Blog-tech"></content><author><name>Gmimg</name></author><summary type="html"></summary></entry><entry><title type="html">Mems</title><link href="http://localhost:4000/posts/MEMS" rel="alternate" type="text/html" title="Mems" /><published>2019-09-04T00:00:00+09:00</published><updated>2019-09-04T00:00:00+09:00</updated><id>http://localhost:4000/posts/MEMS</id><content type="html" xml:base="http://localhost:4000/posts/MEMS">&lt;h1 id=&quot;반도체&quot;&gt;반도체&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko" /><updated>2019-10-29T16:05:04+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">GMIMG</title><subtitle>Mechagrammer</subtitle><author><name>Jimin Hwang</name></author><entry><title type="html">Blog tech</title><link href="http://localhost:4000/posts/Blog-tech" rel="alternate" type="text/html" title="Blog tech" /><published>2019-09-27T00:00:00+09:00</published><updated>2019-09-27T00:00:00+09:00</updated><id>http://localhost:4000/posts/Blog%20tech</id><content type="html" xml:base="http://localhost:4000/posts/Blog-tech"></content><author><name>Gmimg</name></author><summary type="html"></summary></entry><entry><title type="html">Mems</title><link href="http://localhost:4000/posts/MEMS" rel="alternate" type="text/html" title="Mems" /><published>2019-09-04T00:00:00+09:00</published><updated>2019-09-04T00:00:00+09:00</updated><id>http://localhost:4000/posts/MEMS</id><content type="html" xml:base="http://localhost:4000/posts/MEMS">&lt;h1 id=&quot;반도체&quot;&gt;반도체&lt;/h1&gt;
 
 &lt;p&gt;먼저 반도체업계에서 흔히 사용하는 용어를 먼저 정리한다.&lt;/p&gt;
 
@@ -144,11 +144,13 @@
 
 &lt;p&gt;실습 과정은 사진과 영상으로 대체한다.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://seoultechackr-my.sharepoint.com/personal/time9300_seoultech_ac_kr/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Ftime9300_seoultech_ac_kr%2FDocuments%2F사진%2F반도체.zip&amp;amp;parent=%2Fpersonal%2Ftime9300_seoultech_ac_kr%2FDocuments%2F사진&amp;amp;originalPath=aHR0cHM6Ly9zZW91bHRlY2hhY2tyLW15LnNoYXJlcG9pbnQuY29tLzp1Oi9nL3BlcnNvbmFsL3RpbWU5MzAwX3Nlb3VsdGVjaF9hY19rci9FWjQwY081N0VQbFBwTXQ5VXdjVkVhOEJHaHlGaVk5ejlaaEUxOUU4VnkyTmxRP3J0aW1lPTRkNVgwN0JFMTBn&quot;&gt;실습과정 클라우드&lt;/a&gt;&lt;/p&gt;</content><author><name>Gmimg</name></author><summary type="html">반도체</summary></entry><entry><title type="html">Project</title><link href="http://localhost:4000/posts/Project" rel="alternate" type="text/html" title="Project" /><published>2019-08-26T00:00:00+09:00</published><updated>2019-08-26T00:00:00+09:00</updated><id>http://localhost:4000/posts/Project</id><content type="html" xml:base="http://localhost:4000/posts/Project"></content><author><name>Gmimg</name></author><summary type="html"></summary></entry><entry><title type="html">Advanced-C</title><link href="http://localhost:4000/posts/Advanced-C" rel="alternate" type="text/html" title="Advanced-C" /><published>2019-08-18T00:00:00+09:00</published><updated>2019-08-18T00:00:00+09:00</updated><id>http://localhost:4000/posts/Advanced-C</id><content type="html" xml:base="http://localhost:4000/posts/Advanced-C">&lt;h1 id=&quot;advenced-c&quot;&gt;Advenced C&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://seoultechackr-my.sharepoint.com/personal/time9300_seoultech_ac_kr/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Ftime9300_seoultech_ac_kr%2FDocuments%2F사진%2F반도체.zip&amp;amp;parent=%2Fpersonal%2Ftime9300_seoultech_ac_kr%2FDocuments%2F사진&amp;amp;originalPath=aHR0cHM6Ly9zZW91bHRlY2hhY2tyLW15LnNoYXJlcG9pbnQuY29tLzp1Oi9nL3BlcnNvbmFsL3RpbWU5MzAwX3Nlb3VsdGVjaF9hY19rci9FWjQwY081N0VQbFBwTXQ5VXdjVkVhOEJHaHlGaVk5ejlaaEUxOUU4VnkyTmxRP3J0aW1lPTRkNVgwN0JFMTBn&quot;&gt;실습과정 클라우드&lt;/a&gt;&lt;/p&gt;</content><author><name>Gmimg</name></author><summary type="html">반도체</summary></entry><entry><title type="html">Project</title><link href="http://localhost:4000/posts/Project" rel="alternate" type="text/html" title="Project" /><published>2019-08-26T00:00:00+09:00</published><updated>2019-08-26T00:00:00+09:00</updated><id>http://localhost:4000/posts/Project</id><content type="html" xml:base="http://localhost:4000/posts/Project"></content><author><name>Gmimg</name></author><summary type="html"></summary></entry><entry><title type="html">Advanced-C</title><link href="http://localhost:4000/posts/Advanced-C" rel="alternate" type="text/html" title="Advanced-C" /><published>2019-08-18T00:00:00+09:00</published><updated>2019-08-18T00:00:00+09:00</updated><id>http://localhost:4000/posts/Advanced-C</id><content type="html" xml:base="http://localhost:4000/posts/Advanced-C">&lt;h2 id=&quot;advenced-c&quot;&gt;Advenced C&lt;/h2&gt;
 
-&lt;h2 id=&quot;데이터타입과-형변환&quot;&gt;데이터타입과 형변환&lt;/h2&gt;
+&lt;h2 id=&quot;c-문법-재정립&quot;&gt;C 문법 재정립&lt;/h2&gt;
 
-&lt;h3 id=&quot;데이터-타입&quot;&gt;데이터 타입&lt;/h3&gt;
+&lt;h3 id=&quot;데이터타입과-형변환&quot;&gt;데이터타입과 형변환&lt;/h3&gt;
+
+&lt;h4 id=&quot;데이터-타입&quot;&gt;데이터 타입&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;int 상수의 크기는 컴파일러 마다 다르다(CPU 의존적) -&amp;gt; 한번에 처리할 수 있는 단위&lt;/li&gt;
@@ -157,7 +159,7 @@
   &lt;li&gt;구조체의 크기는 예측하지말고 sizeof사용&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;##include &amp;lt;stdio.h&amp;gt;
 &lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;st&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -192,7 +194,7 @@
 &lt;span class=&quot;c1&quot;&gt;//데이터 align 때문에 int와 char형 두개의 변수를 포함한 구조체의 크기가 8이다.
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;형변환&quot;&gt;형변환&lt;/h3&gt;
+&lt;h4 id=&quot;형변환&quot;&gt;형변환&lt;/h4&gt;
 
 &lt;p&gt;C에서는 다음 4가지 경우에 형변환이 발생한다&lt;/p&gt;
 
@@ -203,7 +205,7 @@
   &lt;li&gt;Casting : ()안의 타입으로 변경&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;strong&gt;데이터 타입들의 대.소 판정&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;##데이터 타입들의 대.소 판정##&lt;/p&gt;
 
 &lt;p&gt;C에서 데이터 타입들의 크기를 판단하는 기준 : 더 큰수를 표현하는 타입의 크기가 더큼&lt;/p&gt;
 
@@ -232,7 +234,7 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;##include &amp;lt;stdio.h&amp;gt;
 
 int main(void)
 {
@@ -247,7 +249,7 @@ int main(void)
 // 100
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;##include &amp;lt;stdio.h&amp;gt;
 &lt;/span&gt;
 &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -262,7 +264,7 @@ int main(void)
 &lt;span class=&quot;c1&quot;&gt;// fffffffe
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;##include &amp;lt;stdio.h&amp;gt;
 &lt;/span&gt;
 &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -283,7 +285,7 @@ int main(void)
 
 &lt;p&gt;unsigned char, singed char가 더큰 타입의 signed int 와 비교하기위해 signed int 로 승격되는데 unsigned char는 나머지가 0으로 채워지는 반면, 같은 signed형인 signed char는 최상위 바이트로 채워진다.&lt;/p&gt;
 
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;##include &amp;lt;stdio.h&amp;gt;
 &lt;/span&gt;
 &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -302,7 +304,7 @@ int main(void)
 &lt;span class=&quot;c1&quot;&gt;//UNSIGNED SHORT 
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;##include &amp;lt;stdio.h&amp;gt;
 &lt;/span&gt;
 &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -319,7 +321,7 @@ int main(void)
 
 &lt;p&gt;sizeof 연산자 반환값 type은 size_t인데 unsigned int 과 같으므로 왼쪽항은 signed int에서 unsigned int 로 형변환 돼서 비교한다.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;실수형 상수&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;##실수형 상수##&lt;/p&gt;
 
 &lt;p&gt;실수(float, double, long double)는 모두 signed 이다.&lt;/p&gt;
 
@@ -355,7 +357,7 @@ int main(void)
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;참고 &lt;a href=&quot;/posts/embedded-c#C언어의-데이터-타입&quot;&gt;C언어의 데이터 타입&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;참고 &lt;a href=&quot;/posts/embedded-c##C언어의-데이터-타입&quot;&gt;C언어의 데이터 타입&lt;/a&gt;&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -391,9 +393,253 @@ int main(void)
 
 &lt;p&gt;0 100/0000/0 110/0000/… == 0x4060/0000&lt;/p&gt;
 
-&lt;h2 id=&quot;고급포인터&quot;&gt;고급포인터&lt;/h2&gt;
+&lt;h3 id=&quot;포인터와-힙&quot;&gt;포인터와 힙&lt;/h3&gt;
 
-&lt;p&gt;피연산자 - 연산자 - statement - function - file - program&lt;/p&gt;</content><author><name>Gmimg</name></author><category term="Embedded" /><category term="C" /><category term="Embedded" /><summary type="html">Advenced C</summary></entry><entry><title type="html">Algorithm</title><link href="http://localhost:4000/posts/Algorithm" rel="alternate" type="text/html" title="Algorithm" /><published>2019-08-18T00:00:00+09:00</published><updated>2019-08-18T00:00:00+09:00</updated><id>http://localhost:4000/posts/Algorithm</id><content type="html" xml:base="http://localhost:4000/posts/Algorithm">&lt;p&gt;알고리즘 공부&lt;/p&gt;
+&lt;p&gt;C언어에서 힙영역을 사용하기위해 표준라이브러리인 [&lt;stdlib.h&gt;](/posts/Embedded-C##표준라이브러리)의 malloc, calloc 등의 함수를 사용한다.&lt;/stdlib.h&gt;&lt;/p&gt;
+
+&lt;p&gt;힙은 다음과 같은 단점이있다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;linked list로 설계되어있어 할당 시간이 선형적으로 증가&lt;/li&gt;
+  &lt;li&gt;할당 공간 관리를 위한 Header 메모리를 낭비&lt;/li&gt;
+  &lt;li&gt;메모리 단편화(fragmentation)에 의한 누수(leakage)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;void *&lt;/code&gt;는 가급적 다음 경우로만 사용을 제한한다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;함수의 리턴을 어떤 포인터 타입이 대입 받을지 알 수 없을 때&lt;/p&gt;
+
+    &lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ip&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;malloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(...);&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;malloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(...);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;함수를 호출할 때 어떤 타입의 주소를 전달할 지 알 수 없을 때&lt;/p&gt;
+
+    &lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;cp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;고급포인터-분석-및-설계&quot;&gt;고급포인터 분석 및 설계&lt;/h2&gt;
+
+&lt;h3 id=&quot;배열과-메모리-분석&quot;&gt;배열과 메모리 분석&lt;/h3&gt;
+
+&lt;p&gt;버퍼의 데이터 수량 계산&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;sizeof&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;sizeof&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;주소연산&lt;/p&gt;
+
+&lt;p&gt;주소끼리의 뺄셈은 offset 연산이 된다.&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;mh&quot;&gt;0x1008&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;q&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;mh&quot;&gt;0x1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;타입 승계&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;mh&quot;&gt;0x1008&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//0x1004
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//0x100C;
+&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//
+&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;메모리 표현 규칙과 *, &amp;amp; 연산자&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt; : 내용참조 연산사 (indirect or content of)&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&lt;/code&gt; : 주소참조 연산자 (address of)&lt;/p&gt;
+
+&lt;p&gt;선언할 때 선언자 *와 *연산자는 다르다. 선언자 *는 포인터를 선언하기 위해 쓰이고, *연산자는 주소의 내용을 return한다. 또한 &amp;amp;연산자는 변수이름에 붙이면 주소를 return한다.&lt;/p&gt;
+
+&lt;p&gt;1차원 배열의 이해&lt;/p&gt;
+
+&lt;p&gt;배열 a&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;name&lt;/th&gt;
+      &lt;th&gt;value&lt;/th&gt;
+      &lt;th&gt;adress&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;a[0]&lt;/td&gt;
+      &lt;td&gt;10&lt;/td&gt;
+      &lt;td&gt;0x1000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;a[1]&lt;/td&gt;
+      &lt;td&gt;20&lt;/td&gt;
+      &lt;td&gt;0x1004&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;a[2]&lt;/td&gt;
+      &lt;td&gt;30&lt;/td&gt;
+      &lt;td&gt;0x1008&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;a[3]&lt;/td&gt;
+      &lt;td&gt;40&lt;/td&gt;
+      &lt;td&gt;0x100C&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//a[0] -&amp;gt; 10
+//&amp;amp;a[0] -&amp;gt; 0x1000
+//a -&amp;gt; 1000
+&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//a[0]+1 -&amp;gt; 11
+//a+1 -&amp;gt; 0x1004
+//*a -&amp;gt; 
+//*(a+1) -&amp;gt; 
+&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//&amp;amp;a -&amp;gt;
+//*&amp;amp;a -&amp;gt;
+//&amp;amp;a + 1 -&amp;gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;배열-1공식--정의식&quot;&gt;배열 1공식 : 정의식&lt;/h4&gt;
+
+&lt;p&gt;배열명은 배열의 첫 요소의 주소다.&lt;/p&gt;
+
+&lt;p&gt;a == &amp;amp;a[0]&lt;/p&gt;
+
+&lt;p&gt;배열의 양면성 : 배열 이름은 데이터 타입이 무엇일까?&lt;/p&gt;
+
+&lt;p&gt;배열(int [4]) 이면서 포인터(int *)&lt;/p&gt;
+
+&lt;p&gt;-&amp;gt; 배열은 address of(&amp;amp;)와 sizeof 연산을 만날 때만 배열 타입으로 쓰인다.&lt;/p&gt;
+
+&lt;p&gt;sizeof(a) -&amp;gt; 16&lt;/p&gt;
+
+&lt;p&gt;&amp;amp;a -&amp;gt; 0x1000&lt;/p&gt;
+
+&lt;p&gt;함수의 parameter가 배열일때 다음식은 모두 똑같이 작용한다.&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//활용이 쉬움
+&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]);&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//요소수는 무의미하다.
+&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//의미가 적절함
+//매개변수로서 배열은 배열의 주소값이 전달된다.
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;배열-2공식--활용식&quot;&gt;배열 2공식 : 활용식&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;\assets\img\Embedded\array.png&quot; alt=&quot;array&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;a[2] == *(a+2) == 2&lt;/p&gt;
+
+&lt;h4 id=&quot;배열-3공식--특성식&quot;&gt;배열 3공식 : 특성식&lt;/h4&gt;
+
+&lt;p&gt;모든 배열은 배열명과 배열의 주소 값이 같은 특성이 있다.&lt;/p&gt;
+
+&lt;p&gt;int a[4];&lt;/p&gt;
+
+&lt;p&gt;-&amp;gt; a == &amp;amp;a&lt;/p&gt;
+
+&lt;p&gt;단 값만 같고, 타입은 전혀 다르다.&lt;/p&gt;
+
+&lt;p&gt;a의 타입은 int [4] 이므로,&lt;/p&gt;
+
+&lt;p&gt;&amp;amp;a의 타입은 int (*)[4] 이다.&lt;/p&gt;
+
+&lt;h3 id=&quot;무한확장형-변수의-해석&quot;&gt;무한확장형 변수의 해석&lt;/h3&gt;
+
+&lt;p&gt;Modifier : 변수의 원래 기능을 변경하는 것&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt; : 포인터 변수&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;[]&lt;/code&gt; : 집합화&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;()&lt;/code&gt; : 함수화&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;int *(*a[4])(int *);
+// a는 4개짜리 배열이고 주소값을 저장하는데 함수 주소이고,
+// 이 함수는 (int *) 를 인자로하고 int *를 return해준다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;깡통이론과-대처법&quot;&gt;깡통이론과 대처법&lt;/h3&gt;
+
+&lt;p&gt;C에서 자체적으로 주소타입인것은 다음 4가지이다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;배열명&lt;/li&gt;
+  &lt;li&gt;함수명&lt;/li&gt;
+  &lt;li&gt;문자열 상수&lt;/li&gt;
+  &lt;li&gt;포인터 변수&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;주소값의 변경이 가능한 것(좌변에 올 수 있는 수식)은 포인터 변수 뿐이다.&lt;/p&gt;
+
+&lt;p&gt;이 4가지 외에 타입은 &amp;amp;을 붙여야 주소 타입이 된다.&lt;/p&gt;
+
+&lt;p&gt;포인터의 역할 2가지&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;함수,배열, 문자열이 불가능한 것을 가능하게 한다.&lt;/li&gt;
+  &lt;li&gt;Heap 메모리에 접근하게 한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;깡통이론이란 주소성격을 갖는 무한확장형 변수 이해를 돕기 위한 방법이다. 무한확장형 변수는 일반 변수와 달리 스스로 주소화 되고 그 안에 데이터를 넣는다. 그래서 배열,함수, 문자열은 그 자체의 깡통(메모리를 감싸는 박스)을 갖는다.&lt;/p&gt;
+
+&lt;p&gt;배열명과 함수명은 곧 배열, 함수의 주소다.&lt;/p&gt;
+
+&lt;p&gt;문자열은 문자열 자체를 배열의 이름으로 사용한다.&lt;/p&gt;
+
+&lt;p&gt;포인터 깡통은 배열, 문자열, 함수와 달리 가리키는 대상이 깡통이다.&lt;/p&gt;
+
+&lt;p&gt;모든포인터 p가 가리키는 것은 이름이 (*p)이다.&lt;/p&gt;
+
+&lt;h3 id=&quot;배열-등가포인터와-양파이론&quot;&gt;배열 등가포인터와 양파이론&lt;/h3&gt;
+
+&lt;h3 id=&quot;함수-등가포인터와-직관적-코드-설계&quot;&gt;함수 등가포인터와 직관적 코드 설계&lt;/h3&gt;
+
+&lt;h3 id=&quot;힙과-메모리-직접-액세스&quot;&gt;힙과 메모리 직접 액세스&lt;/h3&gt;
+
+&lt;h3 id=&quot;type-qualifier&quot;&gt;Type Qualifier&lt;/h3&gt;
+
+&lt;p&gt;const&lt;/p&gt;
+
+&lt;p&gt;volatile&lt;/p&gt;
+
+&lt;h3 id=&quot;고급-포인터-타입-캐스팅&quot;&gt;고급 포인터 타입 캐스팅&lt;/h3&gt;
+
+&lt;h2 id=&quot;유도형-변수와-데이터-모델링&quot;&gt;유도형 변수와 데이터 모델링&lt;/h2&gt;
+
+&lt;h3 id=&quot;유도형-변수와-포인터&quot;&gt;유도형 변수와 포인터&lt;/h3&gt;
+
+&lt;h3 id=&quot;비트필드-구조체&quot;&gt;비트필드 구조체&lt;/h3&gt;
+
+&lt;p&gt;피연산자 - 연산자 - statement - function - file - program&lt;/p&gt;
+
+&lt;p&gt;심볼릭 상수&lt;/p&gt;
+
+&lt;p&gt;const&lt;/p&gt;
+
+&lt;p&gt;상수의 이름은 모두 대문자로 표시하고 구분은 언더바 사용&lt;/p&gt;</content><author><name>Gmimg</name></author><category term="Embedded" /><category term="C" /><category term="Embedded" /><summary type="html">Advenced C</summary></entry><entry><title type="html">Algorithm</title><link href="http://localhost:4000/posts/Algorithm" rel="alternate" type="text/html" title="Algorithm" /><published>2019-08-18T00:00:00+09:00</published><updated>2019-08-18T00:00:00+09:00</updated><id>http://localhost:4000/posts/Algorithm</id><content type="html" xml:base="http://localhost:4000/posts/Algorithm">&lt;p&gt;알고리즘 공부&lt;/p&gt;
 
 &lt;p&gt;코딩을 하기전에 프로그램 설계를 완벽하게 하기.&lt;/p&gt;
 

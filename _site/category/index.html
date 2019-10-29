@@ -59,9 +59,9 @@
     <nav class="site-menu">
       <input type="checkbox" id="menu-trigger" class="menu-trigger" />
       <label for="menu-trigger">
-        <div class="menu-icon">
+        <span class="menu-icon">
           <i class="fas fa-bars"></i>
-        </div>
+        </span>
       </label>
       <div class="trigger">
           <a class="page-link" href="/about/">about</a>
@@ -357,7 +357,7 @@
 
 <ul id="post-list">
   <h2 id="" class="category-title">{{ hash }}</h2>
-  <li v-for="postjson in posts" v-if="postjson.category.indexOf(hash) != -1" class="post-item">
+  <li v-for="postjson in posts" v-if="postjson.categories.indexOf(hash) != -1" class="post-item">
     <time class="post-date">{{ postjson.date }}</time>
     <a class="post-link" v-bind:href="postjson.url">{{ postjson.title }}</a>
   </li>

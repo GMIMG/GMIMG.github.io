@@ -61,9 +61,9 @@
     <nav class="site-menu">
       <input type="checkbox" id="menu-trigger" class="menu-trigger" />
       <label for="menu-trigger">
-        <div class="menu-icon">
+        <span class="menu-icon">
           <i class="fas fa-bars"></i>
-        </div>
+        </span>
       </label>
       <div class="trigger">
           <a class="page-link" href="/about/">about</a>
@@ -564,28 +564,32 @@ int a = NULL 과 int a = 0 의 의미는 <strong>다름</strong></p>
 
 <p><strong>변수의 선언</strong></p>
 
-<p>specifier + modifier + identifier ;</p>
+<p>Specifier + Modifier + Identifier + Initializer ;</p>
 
 <ul>
-  <li>spcifier : 변수의 모양, 유효범위와 기억클래스 지정해줌
+  <li>Spcifier : 변수의 모양, 유효범위와 기억클래스 지정해줌
     <ul>
       <li>Type specifier : 변수의 모양을 지시(char, short, int, long, float, double, long double)</li>
       <li>Type qualifier : 변수의 기능 제한 (const, volatile)</li>
       <li><strong><a href="#유효범위와-기억클래스">Storage class specifier</a></strong> : 변수가 저장되는 공간(등급)을 지정 (extern, static, auto, resgister, 미지정(default))</li>
     </ul>
   </li>
-  <li>modifier : 변수의 타입을 변경
+  <li>Modifier : 변수의 타입을 변경
     <ul>
       <li><code class="highlighter-rouge">*</code> : 포인터라고 읽으며 기본형 변수를 주소 타입으로 변경</li>
       <li><code class="highlighter-rouge">[]</code> : <a href="#배열">배열(array)</a>이라 읽으며 기본형변수를 집합형으로 변경</li>
       <li><code class="highlighter-rouge">()</code> : 함수(function)라고 읽으며 기본형변수를 함수로 변경</li>
     </ul>
   </li>
+  <li>Identifier : 변수의 이름
+    <ul>
+      <li>영문자(대소구분)</li>
+      <li>0~9 (맨앞X)</li>
+      <li>_</li>
+    </ul>
+  </li>
+  <li>Initializer : 초기화 값</li>
 </ul>
-
-<p>Type 변수이름;</p>
-
-<p>선언과 함께 초기화하는 방법은 다음과 같다.</p>
 
 <p>Type 변수이름 = xxx; //변수가 선언되어있지 않을때만 가능</p>
 

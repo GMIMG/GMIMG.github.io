@@ -61,9 +61,9 @@
     <nav class="site-menu">
       <input type="checkbox" id="menu-trigger" class="menu-trigger" />
       <label for="menu-trigger">
-        <div class="menu-icon">
+        <span class="menu-icon">
           <i class="fas fa-bars"></i>
-        </div>
+        </span>
       </label>
       <div class="trigger">
           <a class="page-link" href="/about/">about</a>
@@ -88,64 +88,67 @@
 </div>
 
 <div class="wrapper">
-    <ul id="notice-list">
-        <span class="list-title"><strong>Notice</strong></span>
-        <li class="post-item">
-            <span class="post-date">27 Jul 2019</span>
-            <span>
-            <a class="post-link" href="/posts/book">추천교재</a>
-            </span>
-        </li>
-        <li class="post-item">
-            <span class="post-date">27 Jul 2019</span>
-            <span class="post-list-category"> [story]</span>
-            <span>
-            <a class="post-link" href="/posts/Plan">Software Study Plan</a>
-            </span>
-        </li>
-        <li class="post-item">
-            <span class="post-date">27 Jul 2019</span>
-            <span class="post-list-category"> [Embedded]</span>
-            <span>
-            <a class="post-link" href="/posts/Embedded-C">Embedded-C</a>
-            </span>
-        </li>
-        <li class="post-item">
-            <span class="post-date">27 Jul 2019</span>
-            <span>
-            <a class="post-link" href="/posts/To-Do">To Do</a>
-            </span>
-        </li></ul>
-
-    <ul id="post-list">
-    <span class="list-title"><strong>Featured Posts</strong></span>
-        <!-- This loops through the paginated posts -->
-        
-        <div class="post-item-container">
+    <div class="notice">
+        <h1 class="list-title"><strong>Notice</strong></h1>
+        <ul id="post-list" class="notice-list">
             <li class="post-item">
-                <a class="post-title" href="/posts/process_thread">Process & Thread</a>
-                <br>
-                <span class="post-date">10 Aug 2018</span>
-                <a class="post-category" href="/category/#Computer_science"> Computer_science</a>
-                <a href="/posts/process_thread#disqus_thread"><i class="fas fa-comment"></i></a>
-                <p class="post-excerpt">process &amp; thread
+                <span class="post-date">27 Jul 2019</span>
+                <span>
+                <a class="post-link" href="/posts/book">추천교재</a>
+                </span>
+            </li>
+            <li class="post-item">
+                <span class="post-date">27 Jul 2019</span>
+                <span class="post-list-category"> [story]</span>
+                <span>
+                <a class="post-link" href="/posts/Plan">Software Study Plan</a>
+                </span>
+            </li>
+            <li class="post-item">
+                <span class="post-date">27 Jul 2019</span>
+                <span class="post-list-category"> [Embedded]</span>
+                <span>
+                <a class="post-link" href="/posts/Embedded-C">Embedded-C</a>
+                </span>
+            </li>
+            <li class="post-item">
+                <span class="post-date">27 Jul 2019</span>
+                <span>
+                <a class="post-link" href="/posts/To-Do">To Do</a>
+                </span>
+            </li></ul>
+    </div>
+
+    <div>
+        <h1 class="list-title"><strong>Featured Posts</strong></h1>
+        <ul id="post-list">
+            <!-- This loops through the paginated posts -->
+            
+            <span class="post-item-container">
+                <li class="post-item">
+                    <a class="post-title" href="/posts/process_thread">Process & Thread</a>
+                    <br>
+                    <span class="post-date">10 Aug 2018</span>
+                    <a class="post-category" href="/category/#Computer_science"> Computer_science</a>
+                    <a href="/posts/process_thread#disqus_thread"><i class="fas fa-comment"></i></a>
+                    <p class="post-excerpt">process &amp; thread
 
 </p>
-                <p class="post-tags">
-                <a class="tag" href="/tag/#Process">Process</a>
-                <a class="tag" href="/tag/#Thread">Thread</a>
-                </p>
-            </li>
-        </div>
-        
-        <div class="post-item-container">
-            <li class="post-item">
-                <a class="post-title" href="/posts/language">Compiler & Interpreter language</a>
-                <br>
-                <span class="post-date">10 Aug 2018</span>
-                <a class="post-category" href="/category/#Programming"> Programming</a>
-                <a href="/posts/language#disqus_thread"><i class="fas fa-comment"></i></a>
-                <p class="post-excerpt">~~~foundation knowledge quiz(nexon)
+                    <p class="post-tags">
+                    <a class="tag" href="/tag/#Process">Process</a>
+                    <a class="tag" href="/tag/#Thread">Thread</a>
+                    </p>
+                </li>
+            </span>
+            
+            <span class="post-item-container">
+                <li class="post-item">
+                    <a class="post-title" href="/posts/language">Compiler & Interpreter language</a>
+                    <br>
+                    <span class="post-date">10 Aug 2018</span>
+                    <a class="post-category" href="/category/#Programming"> Programming</a>
+                    <a href="/posts/language#disqus_thread"><i class="fas fa-comment"></i></a>
+                    <p class="post-excerpt">~~~foundation knowledge quiz(nexon)
 recursion, index, sort, binary, serch
 stack / heap
 process / thread
@@ -156,63 +159,64 @@ Write simple text-based games
 ~~~
 
 </p>
-                <p class="post-tags">
-                <a class="tag" href="/tag/#Compiler">Compiler</a>
-                <a class="tag" href="/tag/#Interpreter">Interpreter</a>
-                </p>
-            </li>
-        </div>
-        
-        <div class="post-item-container">
-            <li class="post-item">
-                <a class="post-title" href="/posts/memory">Memory</a>
-                <br>
-                <span class="post-date">09 Aug 2018</span>
-                <a class="post-category" href="/category/#Hardware"> Hardware</a>
-                <a href="/posts/memory#disqus_thread"><i class="fas fa-comment"></i></a>
-                <p class="post-excerpt">moemory
+                    <p class="post-tags">
+                    <a class="tag" href="/tag/#Compiler">Compiler</a>
+                    <a class="tag" href="/tag/#Interpreter">Interpreter</a>
+                    </p>
+                </li>
+            </span>
+            
+            <span class="post-item-container">
+                <li class="post-item">
+                    <a class="post-title" href="/posts/memory">Memory</a>
+                    <br>
+                    <span class="post-date">09 Aug 2018</span>
+                    <a class="post-category" href="/category/#Hardware"> Hardware</a>
+                    <a href="/posts/memory#disqus_thread"><i class="fas fa-comment"></i></a>
+                    <p class="post-excerpt">moemory
 
 </p>
-                <p class="post-tags">
-                <a class="tag" href="/tag/#Memory">Memory</a>
-                </p>
-            </li>
-        </div>
-        
-        <div class="post-item-container">
-            <li class="post-item">
-                <a class="post-title" href="/posts/CPU">CPU</a>
-                <br>
-                <span class="post-date">09 Aug 2018</span>
-                <a class="post-category" href="/category/#Hardware"> Hardware</a>
-                <a href="/posts/CPU#disqus_thread"><i class="fas fa-comment"></i></a>
-                <p class="post-excerpt">CPU
+                    <p class="post-tags">
+                    <a class="tag" href="/tag/#Memory">Memory</a>
+                    </p>
+                </li>
+            </span>
+            
+            <span class="post-item-container">
+                <li class="post-item">
+                    <a class="post-title" href="/posts/CPU">CPU</a>
+                    <br>
+                    <span class="post-date">09 Aug 2018</span>
+                    <a class="post-category" href="/category/#Hardware"> Hardware</a>
+                    <a href="/posts/CPU#disqus_thread"><i class="fas fa-comment"></i></a>
+                    <p class="post-excerpt">CPU
 
 </p>
-                <p class="post-tags">
-                <a class="tag" href="/tag/#CPU">CPU</a>
-                </p>
-            </li>
-        </div>
-        
-        <div class="post-item-container">
-            <li class="post-item">
-                <a class="post-title" href="/posts/charater">Character(문자)</a>
-                <br>
-                <span class="post-date">08 Aug 2018</span>
-                <a class="post-category" href="/category/#Python"> Python</a>
-                <a href="/posts/charater#disqus_thread"><i class="fas fa-comment"></i></a>
-                <p class="post-excerpt">문자 ASCII, unicode incoding
+                    <p class="post-tags">
+                    <a class="tag" href="/tag/#CPU">CPU</a>
+                    </p>
+                </li>
+            </span>
+            
+            <span class="post-item-container">
+                <li class="post-item">
+                    <a class="post-title" href="/posts/charater">Character(문자)</a>
+                    <br>
+                    <span class="post-date">08 Aug 2018</span>
+                    <a class="post-category" href="/category/#Python"> Python</a>
+                    <a href="/posts/charater#disqus_thread"><i class="fas fa-comment"></i></a>
+                    <p class="post-excerpt">문자 ASCII, unicode incoding
 
 </p>
-                <p class="post-tags">
-                <a class="tag" href="/tag/#Python">Python</a>
-                <a class="tag" href="/tag/#Character">Character</a>
-                </p>
-            </li>
-        </div>
-        
-    </ul>
+                    <p class="post-tags">
+                    <a class="tag" href="/tag/#Python">Python</a>
+                    <a class="tag" href="/tag/#Character">Character</a>
+                    </p>
+                </li>
+            </span>
+            
+        </ul>
+    </div>
 
     <!-- Pagination links -->
     <ul id="pagination" role="navigation">

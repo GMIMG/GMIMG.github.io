@@ -61,9 +61,9 @@
     <nav class="site-menu">
       <input type="checkbox" id="menu-trigger" class="menu-trigger" />
       <label for="menu-trigger">
-        <div class="menu-icon">
+        <span class="menu-icon">
           <i class="fas fa-bars"></i>
-        </div>
+        </span>
       </label>
       <div class="trigger">
           <a class="page-link" href="/about/">about</a>
@@ -88,130 +88,134 @@
 </div>
 
 <div class="wrapper">
-    <ul id="notice-list">
-        <span class="list-title"><strong>Notice</strong></span>
-        <li class="post-item">
-            <span class="post-date">27 Jul 2019</span>
-            <span>
-            <a class="post-link" href="/posts/book">추천교재</a>
-            </span>
-        </li>
-        <li class="post-item">
-            <span class="post-date">27 Jul 2019</span>
-            <span class="post-list-category"> [story]</span>
-            <span>
-            <a class="post-link" href="/posts/Plan">Software Study Plan</a>
-            </span>
-        </li>
-        <li class="post-item">
-            <span class="post-date">27 Jul 2019</span>
-            <span class="post-list-category"> [Embedded]</span>
-            <span>
-            <a class="post-link" href="/posts/Embedded-C">Embedded-C</a>
-            </span>
-        </li>
-        <li class="post-item">
-            <span class="post-date">27 Jul 2019</span>
-            <span>
-            <a class="post-link" href="/posts/To-Do">To Do</a>
-            </span>
-        </li></ul>
-
-    <ul id="post-list">
-    <span class="list-title"><strong>Featured Posts</strong></span>
-        <!-- This loops through the paginated posts -->
-        
-        <div class="post-item-container">
+    <div class="notice">
+        <h1 class="list-title"><strong>Notice</strong></h1>
+        <ul id="post-list" class="notice-list">
             <li class="post-item">
-                <a class="post-title" href="/posts/C++-Polymorphism-and-Virtual-Functions">C++ polymorphism and virtual functions</a>
-                <br>
-                <span class="post-date">04 Dec 2018</span>
-                <a class="post-category" href="/category/#C++"> C++</a>
-                <a href="/posts/C++-Polymorphism-and-Virtual-Functions#disqus_thread"><i class="fas fa-comment"></i></a>
-                <p class="post-excerpt">Virtual function
+                <span class="post-date">27 Jul 2019</span>
+                <span>
+                <a class="post-link" href="/posts/book">추천교재</a>
+                </span>
+            </li>
+            <li class="post-item">
+                <span class="post-date">27 Jul 2019</span>
+                <span class="post-list-category"> [story]</span>
+                <span>
+                <a class="post-link" href="/posts/Plan">Software Study Plan</a>
+                </span>
+            </li>
+            <li class="post-item">
+                <span class="post-date">27 Jul 2019</span>
+                <span class="post-list-category"> [Embedded]</span>
+                <span>
+                <a class="post-link" href="/posts/Embedded-C">Embedded-C</a>
+                </span>
+            </li>
+            <li class="post-item">
+                <span class="post-date">27 Jul 2019</span>
+                <span>
+                <a class="post-link" href="/posts/To-Do">To Do</a>
+                </span>
+            </li></ul>
+    </div>
+
+    <div>
+        <h1 class="list-title"><strong>Featured Posts</strong></h1>
+        <ul id="post-list">
+            <!-- This loops through the paginated posts -->
+            
+            <span class="post-item-container">
+                <li class="post-item">
+                    <a class="post-title" href="/posts/C++-Polymorphism-and-Virtual-Functions">C++ polymorphism and virtual functions</a>
+                    <br>
+                    <span class="post-date">04 Dec 2018</span>
+                    <a class="post-category" href="/category/#C++"> C++</a>
+                    <a href="/posts/C++-Polymorphism-and-Virtual-Functions#disqus_thread"><i class="fas fa-comment"></i></a>
+                    <p class="post-excerpt">Virtual function
 
 </p>
-                <p class="post-tags">
-                <a class="tag" href="/tag/#C++">C++</a>
-                <a class="tag" href="/tag/#Pointer">Pointer</a>
-                <a class="tag" href="/tag/#Polymorphism">Polymorphism</a>
-                </p>
-            </li>
-        </div>
-        
-        <div class="post-item-container">
-            <li class="post-item">
-                <a class="post-title" href="/posts/C++-pointer2">C++ pointer2</a>
-                <br>
-                <span class="post-date">20 Nov 2018</span>
-                <a class="post-category" href="/category/#C++"> C++</a>
-                <a href="/posts/C++-pointer2#disqus_thread"><i class="fas fa-comment"></i></a>
-                <p class="post-excerpt">Pointers and dynamic array
+                    <p class="post-tags">
+                    <a class="tag" href="/tag/#C++">C++</a>
+                    <a class="tag" href="/tag/#Pointer">Pointer</a>
+                    <a class="tag" href="/tag/#Polymorphism">Polymorphism</a>
+                    </p>
+                </li>
+            </span>
+            
+            <span class="post-item-container">
+                <li class="post-item">
+                    <a class="post-title" href="/posts/C++-pointer2">C++ pointer2</a>
+                    <br>
+                    <span class="post-date">20 Nov 2018</span>
+                    <a class="post-category" href="/category/#C++"> C++</a>
+                    <a href="/posts/C++-pointer2#disqus_thread"><i class="fas fa-comment"></i></a>
+                    <p class="post-excerpt">Pointers and dynamic array
 
 </p>
-                <p class="post-tags">
-                <a class="tag" href="/tag/#C++">C++</a>
-                <a class="tag" href="/tag/#Pointer">Pointer</a>
-                </p>
-            </li>
-        </div>
-        
-        <div class="post-item-container">
-            <li class="post-item">
-                <a class="post-title" href="/posts/C++-Inheritance">C++ inheritance</a>
-                <br>
-                <span class="post-date">20 Nov 2018</span>
-                <a class="post-category" href="/category/#C++"> C++</a>
-                <a href="/posts/C++-Inheritance#disqus_thread"><i class="fas fa-comment"></i></a>
-                <p class="post-excerpt">Inheritance
+                    <p class="post-tags">
+                    <a class="tag" href="/tag/#C++">C++</a>
+                    <a class="tag" href="/tag/#Pointer">Pointer</a>
+                    </p>
+                </li>
+            </span>
+            
+            <span class="post-item-container">
+                <li class="post-item">
+                    <a class="post-title" href="/posts/C++-Inheritance">C++ inheritance</a>
+                    <br>
+                    <span class="post-date">20 Nov 2018</span>
+                    <a class="post-category" href="/category/#C++"> C++</a>
+                    <a href="/posts/C++-Inheritance#disqus_thread"><i class="fas fa-comment"></i></a>
+                    <p class="post-excerpt">Inheritance
 class DERIVED_CLASS: public BASE_CLASS
 
 </p>
-                <p class="post-tags">
-                <a class="tag" href="/tag/#C++">C++</a>
-                <a class="tag" href="/tag/#Inheritance">Inheritance</a>
-                </p>
-            </li>
-        </div>
-        
-        <div class="post-item-container">
-            <li class="post-item">
-                <a class="post-title" href="/posts/wireless-LANs">Wireless lans</a>
-                <br>
-                <span class="post-date">20 Nov 2018</span>
-                <a class="post-category" href="/category/#Network"> Network</a>
-                <a href="/posts/wireless-LANs#disqus_thread"><i class="fas fa-comment"></i></a>
-                <p class="post-excerpt">Wireless LANs
+                    <p class="post-tags">
+                    <a class="tag" href="/tag/#C++">C++</a>
+                    <a class="tag" href="/tag/#Inheritance">Inheritance</a>
+                    </p>
+                </li>
+            </span>
+            
+            <span class="post-item-container">
+                <li class="post-item">
+                    <a class="post-title" href="/posts/wireless-LANs">Wireless lans</a>
+                    <br>
+                    <span class="post-date">20 Nov 2018</span>
+                    <a class="post-category" href="/category/#Network"> Network</a>
+                    <a href="/posts/wireless-LANs#disqus_thread"><i class="fas fa-comment"></i></a>
+                    <p class="post-excerpt">Wireless LANs
 
 </p>
-                <p class="post-tags">
-                <a class="tag" href="/tag/#Network">Network</a>
-                </p>
-            </li>
-        </div>
-        
-        <div class="post-item-container">
-            <li class="post-item">
-                <a class="post-title" href="/posts/C++-pointer">C++ pointer</a>
-                <br>
-                <span class="post-date">13 Nov 2018</span>
-                <a class="post-category" href="/category/#C++"> C++</a>
-                <a href="/posts/C++-pointer#disqus_thread"><i class="fas fa-comment"></i></a>
-                <p class="post-excerpt">
+                    <p class="post-tags">
+                    <a class="tag" href="/tag/#Network">Network</a>
+                    </p>
+                </li>
+            </span>
+            
+            <span class="post-item-container">
+                <li class="post-item">
+                    <a class="post-title" href="/posts/C++-pointer">C++ pointer</a>
+                    <br>
+                    <span class="post-date">13 Nov 2018</span>
+                    <a class="post-category" href="/category/#C++"> C++</a>
+                    <a href="/posts/C++-pointer#disqus_thread"><i class="fas fa-comment"></i></a>
+                    <p class="post-excerpt">
   Pointer
   Dynamically allocated array
   delete, Destructor
 
 
 </p>
-                <p class="post-tags">
-                <a class="tag" href="/tag/#C++">C++</a>
-                <a class="tag" href="/tag/#Pointer">Pointer</a>
-                </p>
-            </li>
-        </div>
-        
-    </ul>
+                    <p class="post-tags">
+                    <a class="tag" href="/tag/#C++">C++</a>
+                    <a class="tag" href="/tag/#Pointer">Pointer</a>
+                    </p>
+                </li>
+            </span>
+            
+        </ul>
+    </div>
 
     <!-- Pagination links -->
     <ul id="pagination" role="navigation">

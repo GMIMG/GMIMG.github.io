@@ -61,9 +61,9 @@
     <nav class="site-menu">
       <input type="checkbox" id="menu-trigger" class="menu-trigger" />
       <label for="menu-trigger">
-        <div class="menu-icon">
+        <span class="menu-icon">
           <i class="fas fa-bars"></i>
-        </div>
+        </span>
       </label>
       <div class="trigger">
           <a class="page-link" href="/about/">about</a>
@@ -88,126 +88,130 @@
 </div>
 
 <div class="wrapper">
-    <ul id="notice-list">
-        <span class="list-title"><strong>Notice</strong></span>
-        <li class="post-item">
-            <span class="post-date">27 Jul 2019</span>
-            <span>
-            <a class="post-link" href="/posts/book">추천교재</a>
-            </span>
-        </li>
-        <li class="post-item">
-            <span class="post-date">27 Jul 2019</span>
-            <span class="post-list-category"> [story]</span>
-            <span>
-            <a class="post-link" href="/posts/Plan">Software Study Plan</a>
-            </span>
-        </li>
-        <li class="post-item">
-            <span class="post-date">27 Jul 2019</span>
-            <span class="post-list-category"> [Embedded]</span>
-            <span>
-            <a class="post-link" href="/posts/Embedded-C">Embedded-C</a>
-            </span>
-        </li>
-        <li class="post-item">
-            <span class="post-date">27 Jul 2019</span>
-            <span>
-            <a class="post-link" href="/posts/To-Do">To Do</a>
-            </span>
-        </li></ul>
-
-    <ul id="post-list">
-    <span class="list-title"><strong>Featured Posts</strong></span>
-        <!-- This loops through the paginated posts -->
-        
-        <div class="post-item-container">
+    <div class="notice">
+        <h1 class="list-title"><strong>Notice</strong></h1>
+        <ul id="post-list" class="notice-list">
             <li class="post-item">
-                <a class="post-title" href="/posts/Wired-LANs">Wired LANs Ethernet & Other Wired Networks</a>
-                <br>
-                <span class="post-date">13 Nov 2018</span>
-                <a class="post-category" href="/category/#Network"> Network</a>
-                <a href="/posts/Wired-LANs#disqus_thread"><i class="fas fa-comment"></i></a>
-                <p class="post-excerpt">Ehternet
+                <span class="post-date">27 Jul 2019</span>
+                <span>
+                <a class="post-link" href="/posts/book">추천교재</a>
+                </span>
+            </li>
+            <li class="post-item">
+                <span class="post-date">27 Jul 2019</span>
+                <span class="post-list-category"> [story]</span>
+                <span>
+                <a class="post-link" href="/posts/Plan">Software Study Plan</a>
+                </span>
+            </li>
+            <li class="post-item">
+                <span class="post-date">27 Jul 2019</span>
+                <span class="post-list-category"> [Embedded]</span>
+                <span>
+                <a class="post-link" href="/posts/Embedded-C">Embedded-C</a>
+                </span>
+            </li>
+            <li class="post-item">
+                <span class="post-date">27 Jul 2019</span>
+                <span>
+                <a class="post-link" href="/posts/To-Do">To Do</a>
+                </span>
+            </li></ul>
+    </div>
+
+    <div>
+        <h1 class="list-title"><strong>Featured Posts</strong></h1>
+        <ul id="post-list">
+            <!-- This loops through the paginated posts -->
+            
+            <span class="post-item-container">
+                <li class="post-item">
+                    <a class="post-title" href="/posts/Wired-LANs">Wired LANs Ethernet & Other Wired Networks</a>
+                    <br>
+                    <span class="post-date">13 Nov 2018</span>
+                    <a class="post-category" href="/category/#Network"> Network</a>
+                    <a href="/posts/Wired-LANs#disqus_thread"><i class="fas fa-comment"></i></a>
+                    <p class="post-excerpt">Ehternet
 
 </p>
-                <p class="post-tags">
-                <a class="tag" href="/tag/#Network">Network</a>
-                </p>
-            </li>
-        </div>
-        
-        <div class="post-item-container">
-            <li class="post-item">
-                <a class="post-title" href="/posts/Media-Access-Control(MAC)">Media access control(mac)</a>
-                <br>
-                <span class="post-date">12 Nov 2018</span>
-                <a class="post-category" href="/category/#Network"> Network</a>
-                <a href="/posts/Media-Access-Control(MAC)#disqus_thread"><i class="fas fa-comment"></i></a>
-                <p class="post-excerpt">MAC
+                    <p class="post-tags">
+                    <a class="tag" href="/tag/#Network">Network</a>
+                    </p>
+                </li>
+            </span>
+            
+            <span class="post-item-container">
+                <li class="post-item">
+                    <a class="post-title" href="/posts/Media-Access-Control(MAC)">Media access control(mac)</a>
+                    <br>
+                    <span class="post-date">12 Nov 2018</span>
+                    <a class="post-category" href="/category/#Network"> Network</a>
+                    <a href="/posts/Media-Access-Control(MAC)#disqus_thread"><i class="fas fa-comment"></i></a>
+                    <p class="post-excerpt">MAC
 
 </p>
-                <p class="post-tags">
-                <a class="tag" href="/tag/#Network">Network</a>
-                </p>
-            </li>
-        </div>
-        
-        <div class="post-item-container">
-            <li class="post-item">
-                <a class="post-title" href="/posts/C++-C-string-and-String">C++ c String and string</a>
-                <br>
-                <span class="post-date">06 Nov 2018</span>
-                <a class="post-category" href="/category/#C++"> C++</a>
-                <a href="/posts/C++-C-string-and-String#disqus_thread"><i class="fas fa-comment"></i></a>
-                <p class="post-excerpt">C-String
+                    <p class="post-tags">
+                    <a class="tag" href="/tag/#Network">Network</a>
+                    </p>
+                </li>
+            </span>
+            
+            <span class="post-item-container">
+                <li class="post-item">
+                    <a class="post-title" href="/posts/C++-C-string-and-String">C++ c String and string</a>
+                    <br>
+                    <span class="post-date">06 Nov 2018</span>
+                    <a class="post-category" href="/category/#C++"> C++</a>
+                    <a href="/posts/C++-C-string-and-String#disqus_thread"><i class="fas fa-comment"></i></a>
+                    <p class="post-excerpt">C-String
 
 </p>
-                <p class="post-tags">
-                <a class="tag" href="/tag/#C++">C++</a>
-                <a class="tag" href="/tag/#String">String</a>
-                </p>
-            </li>
-        </div>
-        
-        <div class="post-item-container">
-            <li class="post-item">
-                <a class="post-title" href="/posts/Data-Link-Control">Data link control</a>
-                <br>
-                <span class="post-date">06 Nov 2018</span>
-                <a class="post-category" href="/category/#Network"> Network</a>
-                <a href="/posts/Data-Link-Control#disqus_thread"><i class="fas fa-comment"></i></a>
-                <p class="post-excerpt">Data Link Control
+                    <p class="post-tags">
+                    <a class="tag" href="/tag/#C++">C++</a>
+                    <a class="tag" href="/tag/#String">String</a>
+                    </p>
+                </li>
+            </span>
+            
+            <span class="post-item-container">
+                <li class="post-item">
+                    <a class="post-title" href="/posts/Data-Link-Control">Data link control</a>
+                    <br>
+                    <span class="post-date">06 Nov 2018</span>
+                    <a class="post-category" href="/category/#Network"> Network</a>
+                    <a href="/posts/Data-Link-Control#disqus_thread"><i class="fas fa-comment"></i></a>
+                    <p class="post-excerpt">Data Link Control
 
 </p>
-                <p class="post-tags">
-                <a class="tag" href="/tag/#Network">Network</a>
-                </p>
-            </li>
-        </div>
-        
-        <div class="post-item-container">
-            <li class="post-item">
-                <a class="post-title" href="/posts/C++-Operator-Overloading">C++ operator overloading</a>
-                <br>
-                <span class="post-date">30 Oct 2018</span>
-                <a class="post-category" href="/category/#C++"> C++</a>
-                <a href="/posts/C++-Operator-Overloading#disqus_thread"><i class="fas fa-comment"></i></a>
-                <p class="post-excerpt">
+                    <p class="post-tags">
+                    <a class="tag" href="/tag/#Network">Network</a>
+                    </p>
+                </li>
+            </span>
+            
+            <span class="post-item-container">
+                <li class="post-item">
+                    <a class="post-title" href="/posts/C++-Operator-Overloading">C++ operator overloading</a>
+                    <br>
+                    <span class="post-date">30 Oct 2018</span>
+                    <a class="post-category" href="/category/#C++"> C++</a>
+                    <a href="/posts/C++-Operator-Overloading#disqus_thread"><i class="fas fa-comment"></i></a>
+                    <p class="post-excerpt">
   Operator overloading
   Friend function, friend class
   Reference (&amp;)
 
 
 </p>
-                <p class="post-tags">
-                <a class="tag" href="/tag/#C++">C++</a>
-                <a class="tag" href="/tag/#Overloading">Overloading</a>
-                </p>
-            </li>
-        </div>
-        
-    </ul>
+                    <p class="post-tags">
+                    <a class="tag" href="/tag/#C++">C++</a>
+                    <a class="tag" href="/tag/#Overloading">Overloading</a>
+                    </p>
+                </li>
+            </span>
+            
+        </ul>
+    </div>
 
     <!-- Pagination links -->
     <ul id="pagination" role="navigation">

@@ -61,9 +61,9 @@
     <nav class="site-menu">
       <input type="checkbox" id="menu-trigger" class="menu-trigger" />
       <label for="menu-trigger">
-        <div class="menu-icon">
+        <span class="menu-icon">
           <i class="fas fa-bars"></i>
-        </div>
+        </span>
       </label>
       <div class="trigger">
           <a class="page-link" href="/about/">about</a>
@@ -134,9 +134,9 @@
   <li>문자열, list, tuple</li>
 </ul>
 
-<pre><code class="language-Python">for _ in 'jimin':
-    print(_, end= ' ')
-</code></pre>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="s">'jimin'</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span> <span class="s">' '</span><span class="p">)</span>
+</code></pre></div></div>
 
 <h2 id="str-method">str method</h2>
 
@@ -150,9 +150,9 @@
   <li>find</li>
 </ul>
 
-<pre><code class="language-Python">some_text ="Python is very easy and efficent language."
-some_text.replace('easy','hard')
-</code></pre>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">some_text</span> <span class="o">=</span><span class="s">"Python is very easy and efficent language."</span>
+<span class="n">some_text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">'easy'</span><span class="p">,</span><span class="s">'hard'</span><span class="p">)</span>
+</code></pre></div></div>
 
 <h2 id="list-method">list method</h2>
 
@@ -163,25 +163,25 @@ some_text.replace('easy','hard')
   <li>join</li>
 </ul>
 
-<pre><code class="language-Python">filled_list = ['A','C','E','G']
-filled_list.insert(1,'B')
-filled_list.remove('C')
-filled_list.pop(2)
-</code></pre>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">filled_list</span> <span class="o">=</span> <span class="p">[</span><span class="s">'A'</span><span class="p">,</span><span class="s">'C'</span><span class="p">,</span><span class="s">'E'</span><span class="p">,</span><span class="s">'G'</span><span class="p">]</span>
+<span class="n">filled_list</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">'B'</span><span class="p">)</span>
+<span class="n">filled_list</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s">'C'</span><span class="p">)</span>
+<span class="n">filled_list</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div></div>
 
 <h3 id="list-comprehension">list comprehension</h3>
 
-<pre><code class="language-Python">#list comprehension
-['fizzbuzz' if _i % 15 == 0 else 'fizz' if _i % 3 == 0 else 'buzz' if _i % 5 == 0 else _i for _i in range(1,100+1)]
-</code></pre>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#list comprehension</span>
+<span class="p">[</span><span class="s">'fizzbuzz'</span> <span class="k">if</span> <span class="n">_i</span> <span class="o">%</span> <span class="mi">15</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="s">'fizz'</span> <span class="k">if</span> <span class="n">_i</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="s">'buzz'</span> <span class="k">if</span> <span class="n">_i</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">_i</span> <span class="k">for</span> <span class="n">_i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
+</code></pre></div></div>
 
 <h3 id="lambda">lambda***</h3>
 
-<pre><code class="language-Python">#lambda
-li=[1,2,3,4]
-f= lambda idx: li[idx]
-f(1) # 1 =&gt; idx에 1이 들어가면 li[idx]값
-</code></pre>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#lambda</span>
+<span class="n">li</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">f</span><span class="o">=</span> <span class="k">lambda</span> <span class="n">idx</span><span class="p">:</span> <span class="n">li</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+<span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c"># 1 =&gt; idx에 1이 들어가면 li[idx]값</span>
+</code></pre></div></div>
 
 <h4 id="lazy-evalutioniterator">lazy evalution(iterator)***</h4>
 
@@ -189,31 +189,31 @@ f(1) # 1 =&gt; idx에 1이 들어가면 li[idx]값
   <li>map</li>
 </ul>
 
-<pre><code class="language-Python">#map(순회가능한 인자를 받아서 iterator형성)+lambda
-li=[1,2,3,4]
-m = map(lambda x : x**2, li)
-#=&gt; li에 있는 값을 차례로 앞에 함수에 넣어 반환된 값
-next(m)
-</code></pre>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#map(순회가능한 인자를 받아서 iterator형성)+lambda</span>
+<span class="n">li</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">m</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">li</span><span class="p">)</span>
+<span class="c">#=&gt; li에 있는 값을 차례로 앞에 함수에 넣어 반환된 값</span>
+<span class="nb">next</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+</code></pre></div></div>
 
 <ul>
   <li>filter(조건)</li>
 </ul>
 
-<pre><code class="language-Python">#filter+lambda
-f= filter(func,순환 객체)
-f= filter(lambda a: a &gt;0,li)
-# =&gt; 조건에 맞는 값만 골라서 대입해줌
-next(f)
-</code></pre>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#filter+lambda</span>
+<span class="n">f</span><span class="o">=</span> <span class="nb">filter</span><span class="p">(</span><span class="n">func</span><span class="p">,</span><span class="err">순환</span> <span class="err">객체</span><span class="p">)</span>
+<span class="n">f</span><span class="o">=</span> <span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">a</span><span class="p">:</span> <span class="n">a</span> <span class="o">&gt;</span><span class="mi">0</span><span class="p">,</span><span class="n">li</span><span class="p">)</span>
+<span class="c"># =&gt; 조건에 맞는 값만 골라서 대입해줌</span>
+<span class="nb">next</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</code></pre></div></div>
 
 <p>문제. 양수만 제곱한 값을 출력하시오.</p>
 
-<pre><code class="language-Python">#map+filter+lambda
-li=[2,6,-7,3,-5]
-result=[4,36,9]
-m= map(lambda a: a**2, filter(lambda b: b&gt;0,li))
-</code></pre>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#map+filter+lambda</span>
+<span class="n">li</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="o">-</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">5</span><span class="p">]</span>
+<span class="n">result</span><span class="o">=</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">36</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span>
+<span class="n">m</span><span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">a</span><span class="p">:</span> <span class="n">a</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">b</span><span class="p">:</span> <span class="n">b</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">,</span><span class="n">li</span><span class="p">))</span>
+</code></pre></div></div>
 
 <ul>
   <li>reduce</li>
@@ -221,39 +221,39 @@ m= map(lambda a: a**2, filter(lambda b: b&gt;0,li))
 
 <p>순환객체의 앞에서부터 두개씩 하나를 제거해가며 계산해감</p>
 
-<pre><code class="language-Python">#reduce
-li=[2,6,-7,3,-5]
-from functools import reduce
-print(reduce(lambda a ,b: b if a&lt;b else a , li)) 
-# =&gt; 최대값구하기
-</code></pre>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#reduce</span>
+<span class="n">li</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="o">-</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">5</span><span class="p">]</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="nb">reduce</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">a</span> <span class="p">,</span><span class="n">b</span><span class="p">:</span> <span class="n">b</span> <span class="k">if</span> <span class="n">a</span><span class="o">&lt;</span><span class="n">b</span> <span class="k">else</span> <span class="n">a</span> <span class="p">,</span> <span class="n">li</span><span class="p">))</span> 
+<span class="c"># =&gt; 최대값구하기</span>
+</code></pre></div></div>
 
 <h4 id="삼항연산자">삼항연산자</h4>
 
-<pre><code class="language-Python">#삼항연산자
-s='abcd'
-print('ok' if s=='abcd' else 'not ok')
-</code></pre>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#삼항연산자</span>
+<span class="n">s</span><span class="o">=</span><span class="s">'abcd'</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'ok'</span> <span class="k">if</span> <span class="n">s</span><span class="o">==</span><span class="s">'abcd'</span> <span class="k">else</span> <span class="s">'not ok'</span><span class="p">)</span>
+</code></pre></div></div>
 
 <p>python False –&gt; {}, (), ‘’, [], None</p>
 
-<pre><code class="language-Python">#삼항연산자2(어려움)
-from functools import reduce
-li=['a','b','a','c','b','a'] #=&gt; dic={'a' : 3, 'b' : 2, 'c' : 1}
-print(reduce(lambda dic, a: dic.update({a: int(dic.get(a,0))+1}) or dic , li, {})) 
-# D.update의 반환값은 None이기 때문에 or dic을 붙여줌
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#삼항연산자2(어려움)</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="nb">reduce</span>
+<span class="n">li</span><span class="o">=</span><span class="p">[</span><span class="s">'a'</span><span class="p">,</span><span class="s">'b'</span><span class="p">,</span><span class="s">'a'</span><span class="p">,</span><span class="s">'c'</span><span class="p">,</span><span class="s">'b'</span><span class="p">,</span><span class="s">'a'</span><span class="p">]</span> <span class="c">#=&gt; dic={'a' : 3, 'b' : 2, 'c' : 1}</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">dic</span><span class="p">,</span> <span class="n">a</span><span class="p">:</span> <span class="n">dic</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">a</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">dic</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span><span class="o">+</span><span class="mi">1</span><span class="p">})</span> <span class="ow">or</span> <span class="n">dic</span> <span class="p">,</span> <span class="n">li</span><span class="p">,</span> <span class="p">{}))</span> 
+<span class="c"># D.update의 반환값은 None이기 때문에 or dic을 붙여줌</span>
 
-#설명
-#dic.get(a,0)
-#dic이라는 dictionary의 키가 a인 값의 value를 불러옴(단, 없을경우 0반환))
-#dic.update({a: int(dic.get(a,0))+1})
-#dic이라는 dictionary에서 a라는 키의 value를 int(dic.get(a,0))+1) 로 바꿔준다(기존 value에서 1을 더해줌)
-#lambda dic, a: dic.update({a: int(dic.get(a,0))+1}) or dic
-#(dic, a)를 호출하는 익명함수를 생성한다.
-#reduce(lambda dic, a: dic.update({a: int(dic.get(a,0))+1}) or dic , li, {})
-#dic에는 초기값 {} (빈 dictionary)가 들어가고, a에는 list의 처음인자인 'a'가 입력된다.
-#다음에는 dic에 {'a' : 1}, a에 'b' 가 입력된다.
-</code></pre>
+<span class="c">#설명</span>
+<span class="c">#dic.get(a,0)</span>
+<span class="c">#dic이라는 dictionary의 키가 a인 값의 value를 불러옴(단, 없을경우 0반환))</span>
+<span class="c">#dic.update({a: int(dic.get(a,0))+1})</span>
+<span class="c">#dic이라는 dictionary에서 a라는 키의 value를 int(dic.get(a,0))+1) 로 바꿔준다(기존 value에서 1을 더해줌)</span>
+<span class="c">#lambda dic, a: dic.update({a: int(dic.get(a,0))+1}) or dic</span>
+<span class="c">#(dic, a)를 호출하는 익명함수를 생성한다.</span>
+<span class="c">#reduce(lambda dic, a: dic.update({a: int(dic.get(a,0))+1}) or dic , li, {})</span>
+<span class="c">#dic에는 초기값 {} (빈 dictionary)가 들어가고, a에는 list의 처음인자인 'a'가 입력된다.</span>
+<span class="c">#다음에는 dic에 {'a' : 1}, a에 'b' 가 입력된다.</span>
+</code></pre></div></div>
 
       </div>
         

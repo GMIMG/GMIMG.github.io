@@ -60,9 +60,9 @@
     <nav class="site-menu">
       <input type="checkbox" id="menu-trigger" class="menu-trigger" />
       <label for="menu-trigger">
-        <div class="menu-icon">
+        <span class="menu-icon">
           <i class="fas fa-bars"></i>
-        </div>
+        </span>
       </label>
       <div class="trigger">
           <a class="page-link" href="/about/">about</a>
@@ -87,103 +87,107 @@
 </div>
 
 <div class="wrapper">
-    <ul id="notice-list">
-        <span class="list-title"><strong>Notice</strong></span>
-        <li class="post-item">
-            <span class="post-date">27 Jul 2019</span>
-            <span>
-            <a class="post-link" href="/posts/book">추천교재</a>
-            </span>
-        </li>
-        <li class="post-item">
-            <span class="post-date">27 Jul 2019</span>
-            <span class="post-list-category"> [story]</span>
-            <span>
-            <a class="post-link" href="/posts/Plan">Software Study Plan</a>
-            </span>
-        </li>
-        <li class="post-item">
-            <span class="post-date">27 Jul 2019</span>
-            <span class="post-list-category"> [Embedded]</span>
-            <span>
-            <a class="post-link" href="/posts/Embedded-C">Embedded-C</a>
-            </span>
-        </li>
-        <li class="post-item">
-            <span class="post-date">27 Jul 2019</span>
-            <span>
-            <a class="post-link" href="/posts/To-Do">To Do</a>
-            </span>
-        </li></ul>
+    <div class="notice">
+        <h1 class="list-title"><strong>Notice</strong></h1>
+        <ul id="post-list" class="notice-list">
+            <li class="post-item">
+                <span class="post-date">27 Jul 2019</span>
+                <span>
+                <a class="post-link" href="/posts/book">추천교재</a>
+                </span>
+            </li>
+            <li class="post-item">
+                <span class="post-date">27 Jul 2019</span>
+                <span class="post-list-category"> [story]</span>
+                <span>
+                <a class="post-link" href="/posts/Plan">Software Study Plan</a>
+                </span>
+            </li>
+            <li class="post-item">
+                <span class="post-date">27 Jul 2019</span>
+                <span class="post-list-category"> [Embedded]</span>
+                <span>
+                <a class="post-link" href="/posts/Embedded-C">Embedded-C</a>
+                </span>
+            </li>
+            <li class="post-item">
+                <span class="post-date">27 Jul 2019</span>
+                <span>
+                <a class="post-link" href="/posts/To-Do">To Do</a>
+                </span>
+            </li></ul>
+    </div>
 
-    <ul id="post-list">
-    <span class="list-title"><strong>Featured Posts</strong></span>
-        <!-- This loops through the paginated posts -->
-        
-        <div class="post-item-container">
-            <li class="post-item">
-                <a class="post-title" href="/posts/Blog-tech">Blog tech</a>
-                <br>
-                <span class="post-date">27 Sep 2019</span>
-                <a href="/posts/Blog-tech#disqus_thread"><i class="fas fa-comment"></i></a>
-                <p class="post-excerpt">
+    <div>
+        <h1 class="list-title"><strong>Featured Posts</strong></h1>
+        <ul id="post-list">
+            <!-- This loops through the paginated posts -->
+            
+            <span class="post-item-container">
+                <li class="post-item">
+                    <a class="post-title" href="/posts/Blog-tech">Blog tech</a>
+                    <br>
+                    <span class="post-date">27 Sep 2019</span>
+                    <a href="/posts/Blog-tech#disqus_thread"><i class="fas fa-comment"></i></a>
+                    <p class="post-excerpt">
 </p>
-            </li>
-        </div>
-        
-        <div class="post-item-container">
-            <li class="post-item">
-                <a class="post-title" href="/posts/MEMS">Mems</a>
-                <br>
-                <span class="post-date">04 Sep 2019</span>
-                <a href="/posts/MEMS#disqus_thread"><i class="fas fa-comment"></i></a>
-                <p class="post-excerpt">반도체
-
-</p>
-            </li>
-        </div>
-        
-        <div class="post-item-container">
-            <li class="post-item">
-                <a class="post-title" href="/posts/Project">Project</a>
-                <br>
-                <span class="post-date">26 Aug 2019</span>
-                <a href="/posts/Project#disqus_thread"><i class="fas fa-comment"></i></a>
-                <p class="post-excerpt">
-</p>
-            </li>
-        </div>
-        
-        <div class="post-item-container">
-            <li class="post-item">
-                <a class="post-title" href="/posts/Algorithm">Algorithm</a>
-                <br>
-                <span class="post-date">18 Aug 2019</span>
-                <a href="/posts/Algorithm#disqus_thread"><i class="fas fa-comment"></i></a>
-                <p class="post-excerpt">알고리즘 공부
+                </li>
+            </span>
+            
+            <span class="post-item-container">
+                <li class="post-item">
+                    <a class="post-title" href="/posts/MEMS">Mems</a>
+                    <br>
+                    <span class="post-date">04 Sep 2019</span>
+                    <a href="/posts/MEMS#disqus_thread"><i class="fas fa-comment"></i></a>
+                    <p class="post-excerpt">반도체
 
 </p>
-            </li>
-        </div>
-        
-        <div class="post-item-container">
-            <li class="post-item">
-                <a class="post-title" href="/posts/Advanced-C">Advanced-C</a>
-                <br>
-                <span class="post-date">18 Aug 2019</span>
-                <a class="post-category" href="/category/#Embedded"> Embedded</a>
-                <a href="/posts/Advanced-C#disqus_thread"><i class="fas fa-comment"></i></a>
-                <p class="post-excerpt">Advenced C
+                </li>
+            </span>
+            
+            <span class="post-item-container">
+                <li class="post-item">
+                    <a class="post-title" href="/posts/Project">Project</a>
+                    <br>
+                    <span class="post-date">26 Aug 2019</span>
+                    <a href="/posts/Project#disqus_thread"><i class="fas fa-comment"></i></a>
+                    <p class="post-excerpt">
+</p>
+                </li>
+            </span>
+            
+            <span class="post-item-container">
+                <li class="post-item">
+                    <a class="post-title" href="/posts/Algorithm">Algorithm</a>
+                    <br>
+                    <span class="post-date">18 Aug 2019</span>
+                    <a href="/posts/Algorithm#disqus_thread"><i class="fas fa-comment"></i></a>
+                    <p class="post-excerpt">알고리즘 공부
 
 </p>
-                <p class="post-tags">
-                <a class="tag" href="/tag/#C">C</a>
-                <a class="tag" href="/tag/#Embedded">Embedded</a>
-                </p>
-            </li>
-        </div>
-        
-    </ul>
+                </li>
+            </span>
+            
+            <span class="post-item-container">
+                <li class="post-item">
+                    <a class="post-title" href="/posts/Advanced-C">Advanced-C</a>
+                    <br>
+                    <span class="post-date">18 Aug 2019</span>
+                    <a class="post-category" href="/category/#Embedded"> Embedded</a>
+                    <a href="/posts/Advanced-C#disqus_thread"><i class="fas fa-comment"></i></a>
+                    <p class="post-excerpt">Advenced C
+
+</p>
+                    <p class="post-tags">
+                    <a class="tag" href="/tag/#C">C</a>
+                    <a class="tag" href="/tag/#Embedded">Embedded</a>
+                    </p>
+                </li>
+            </span>
+            
+        </ul>
+    </div>
 
     <!-- Pagination links -->
     <ul id="pagination" role="navigation">

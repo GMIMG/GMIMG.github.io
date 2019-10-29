@@ -61,9 +61,9 @@
     <nav class="site-menu">
       <input type="checkbox" id="menu-trigger" class="menu-trigger" />
       <label for="menu-trigger">
-        <div class="menu-icon">
+        <span class="menu-icon">
           <i class="fas fa-bars"></i>
-        </div>
+        </span>
       </label>
       <div class="trigger">
           <a class="page-link" href="/about/">about</a>
@@ -88,109 +88,113 @@
 </div>
 
 <div class="wrapper">
-    <ul id="notice-list">
-        <span class="list-title"><strong>Notice</strong></span>
-        <li class="post-item">
-            <span class="post-date">27 Jul 2019</span>
-            <span>
-            <a class="post-link" href="/posts/book">추천교재</a>
-            </span>
-        </li>
-        <li class="post-item">
-            <span class="post-date">27 Jul 2019</span>
-            <span class="post-list-category"> [story]</span>
-            <span>
-            <a class="post-link" href="/posts/Plan">Software Study Plan</a>
-            </span>
-        </li>
-        <li class="post-item">
-            <span class="post-date">27 Jul 2019</span>
-            <span class="post-list-category"> [Embedded]</span>
-            <span>
-            <a class="post-link" href="/posts/Embedded-C">Embedded-C</a>
-            </span>
-        </li>
-        <li class="post-item">
-            <span class="post-date">27 Jul 2019</span>
-            <span>
-            <a class="post-link" href="/posts/To-Do">To Do</a>
-            </span>
-        </li></ul>
-
-    <ul id="post-list">
-    <span class="list-title"><strong>Featured Posts</strong></span>
-        <!-- This loops through the paginated posts -->
-        
-        <div class="post-item-container">
+    <div class="notice">
+        <h1 class="list-title"><strong>Notice</strong></h1>
+        <ul id="post-list" class="notice-list">
             <li class="post-item">
-                <a class="post-title" href="/posts/JOB">Job</a>
-                <br>
-                <span class="post-date">17 Aug 2019</span>
-                <a href="/posts/JOB#disqus_thread"><i class="fas fa-comment"></i></a>
-                <p class="post-excerpt">먼저 기업의 채용공고를 보고 지원자격과 우대사항에대해 정리한다.
-</p>
-            </li>
-        </div>
-        
-        <div class="post-item-container">
-            <li class="post-item">
-                <a class="post-title" href="/posts/Cause_Embedded">임베디드 개발자가 되려고 하는 이유</a>
-                <br>
-                <span class="post-date">17 Aug 2019</span>
-                <a class="post-category" href="/category/#Embedded"> Embedded</a>
-                <a href="/posts/Cause_Embedded#disqus_thread"><i class="fas fa-comment"></i></a>
-                <p class="post-excerpt">내 전공과의 연계성
-
-</p>
-            </li>
-        </div>
-        
-        <div class="post-item-container">
-            <li class="post-item">
-                <a class="post-title" href="/posts/OS">Os</a>
-                <br>
-                <span class="post-date">02 Aug 2019</span>
-                <a href="/posts/OS#disqus_thread"><i class="fas fa-comment"></i></a>
-                <p class="post-excerpt">RTOS
-
-</p>
-            </li>
-        </div>
-        
-        <div class="post-item-container">
-            <li class="post-item">
-                <a class="post-title" href="/posts/RTOS">Rtos</a>
-                <br>
-                <span class="post-date">29 Jul 2019</span>
-                <a class="post-category" href="/category/#Embedded"> Embedded</a>
-                <a href="/posts/RTOS#disqus_thread"><i class="fas fa-comment"></i></a>
-                <p class="post-excerpt">RTOS Porting &amp; Programming
-
-</p>
-                <p class="post-tags">
-                <a class="tag" href="/tag/#Embedded">Embedded</a>
-                <a class="tag" href="/tag/#RTOS">RTOS</a>
-                </p>
-            </li>
-        </div>
-        
-        <div class="post-item-container">
-            <li class="post-item">
-                <a class="post-title" href="/posts/book">추천교재</a>
-                <br>
                 <span class="post-date">27 Jul 2019</span>
-                <a href="/posts/book#disqus_thread"><i class="fas fa-comment"></i></a>
-                <p class="post-excerpt">
+                <span>
+                <a class="post-link" href="/posts/book">추천교재</a>
+                </span>
+            </li>
+            <li class="post-item">
+                <span class="post-date">27 Jul 2019</span>
+                <span class="post-list-category"> [story]</span>
+                <span>
+                <a class="post-link" href="/posts/Plan">Software Study Plan</a>
+                </span>
+            </li>
+            <li class="post-item">
+                <span class="post-date">27 Jul 2019</span>
+                <span class="post-list-category"> [Embedded]</span>
+                <span>
+                <a class="post-link" href="/posts/Embedded-C">Embedded-C</a>
+                </span>
+            </li>
+            <li class="post-item">
+                <span class="post-date">27 Jul 2019</span>
+                <span>
+                <a class="post-link" href="/posts/To-Do">To Do</a>
+                </span>
+            </li></ul>
+    </div>
+
+    <div>
+        <h1 class="list-title"><strong>Featured Posts</strong></h1>
+        <ul id="post-list">
+            <!-- This loops through the paginated posts -->
+            
+            <span class="post-item-container">
+                <li class="post-item">
+                    <a class="post-title" href="/posts/JOB">Job</a>
+                    <br>
+                    <span class="post-date">17 Aug 2019</span>
+                    <a href="/posts/JOB#disqus_thread"><i class="fas fa-comment"></i></a>
+                    <p class="post-excerpt">먼저 기업의 채용공고를 보고 지원자격과 우대사항에대해 정리한다.
+</p>
+                </li>
+            </span>
+            
+            <span class="post-item-container">
+                <li class="post-item">
+                    <a class="post-title" href="/posts/Cause_Embedded">임베디드 개발자가 되려고 하는 이유</a>
+                    <br>
+                    <span class="post-date">17 Aug 2019</span>
+                    <a class="post-category" href="/category/#Embedded"> Embedded</a>
+                    <a href="/posts/Cause_Embedded#disqus_thread"><i class="fas fa-comment"></i></a>
+                    <p class="post-excerpt">내 전공과의 연계성
+
+</p>
+                </li>
+            </span>
+            
+            <span class="post-item-container">
+                <li class="post-item">
+                    <a class="post-title" href="/posts/OS">Os</a>
+                    <br>
+                    <span class="post-date">02 Aug 2019</span>
+                    <a href="/posts/OS#disqus_thread"><i class="fas fa-comment"></i></a>
+                    <p class="post-excerpt">RTOS
+
+</p>
+                </li>
+            </span>
+            
+            <span class="post-item-container">
+                <li class="post-item">
+                    <a class="post-title" href="/posts/RTOS">Rtos</a>
+                    <br>
+                    <span class="post-date">29 Jul 2019</span>
+                    <a class="post-category" href="/category/#Embedded"> Embedded</a>
+                    <a href="/posts/RTOS#disqus_thread"><i class="fas fa-comment"></i></a>
+                    <p class="post-excerpt">RTOS Porting &amp; Programming
+
+</p>
+                    <p class="post-tags">
+                    <a class="tag" href="/tag/#Embedded">Embedded</a>
+                    <a class="tag" href="/tag/#RTOS">RTOS</a>
+                    </p>
+                </li>
+            </span>
+            
+            <span class="post-item-container">
+                <li class="post-item">
+                    <a class="post-title" href="/posts/book">추천교재</a>
+                    <br>
+                    <span class="post-date">27 Jul 2019</span>
+                    <a href="/posts/book#disqus_thread"><i class="fas fa-comment"></i></a>
+                    <p class="post-excerpt">
   Clean Code
   윤성우의 열혈 자료구조
   C로 배우는 알고리즘 1
 
 
 </p>
-            </li>
-        </div>
-        
-    </ul>
+                </li>
+            </span>
+            
+        </ul>
+    </div>
 
     <!-- Pagination links -->
     <ul id="pagination" role="navigation">

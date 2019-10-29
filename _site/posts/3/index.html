@@ -61,9 +61,9 @@
     <nav class="site-menu">
       <input type="checkbox" id="menu-trigger" class="menu-trigger" />
       <label for="menu-trigger">
-        <div class="menu-icon">
+        <span class="menu-icon">
           <i class="fas fa-bars"></i>
-        </div>
+        </span>
       </label>
       <div class="trigger">
           <a class="page-link" href="/about/">about</a>
@@ -88,76 +88,79 @@
 </div>
 
 <div class="wrapper">
-    <ul id="notice-list">
-        <span class="list-title"><strong>Notice</strong></span>
-        <li class="post-item">
-            <span class="post-date">27 Jul 2019</span>
-            <span>
-            <a class="post-link" href="/posts/book">추천교재</a>
-            </span>
-        </li>
-        <li class="post-item">
-            <span class="post-date">27 Jul 2019</span>
-            <span class="post-list-category"> [story]</span>
-            <span>
-            <a class="post-link" href="/posts/Plan">Software Study Plan</a>
-            </span>
-        </li>
-        <li class="post-item">
-            <span class="post-date">27 Jul 2019</span>
-            <span class="post-list-category"> [Embedded]</span>
-            <span>
-            <a class="post-link" href="/posts/Embedded-C">Embedded-C</a>
-            </span>
-        </li>
-        <li class="post-item">
-            <span class="post-date">27 Jul 2019</span>
-            <span>
-            <a class="post-link" href="/posts/To-Do">To Do</a>
-            </span>
-        </li></ul>
-
-    <ul id="post-list">
-    <span class="list-title"><strong>Featured Posts</strong></span>
-        <!-- This loops through the paginated posts -->
-        
-        <div class="post-item-container">
+    <div class="notice">
+        <h1 class="list-title"><strong>Notice</strong></h1>
+        <ul id="post-list" class="notice-list">
             <li class="post-item">
-                <a class="post-title" href="/posts/Plan">Software Study Plan</a>
-                <br>
                 <span class="post-date">27 Jul 2019</span>
-                <a class="post-category" href="/category/#story"> story</a>
-                <a href="/posts/Plan#disqus_thread"><i class="fas fa-comment"></i></a>
-                <p class="post-excerpt">‘소프트웨어를 쉽게 배우는 방법은 없을까?’
+                <span>
+                <a class="post-link" href="/posts/book">추천교재</a>
+                </span>
+            </li>
+            <li class="post-item">
+                <span class="post-date">27 Jul 2019</span>
+                <span class="post-list-category"> [story]</span>
+                <span>
+                <a class="post-link" href="/posts/Plan">Software Study Plan</a>
+                </span>
+            </li>
+            <li class="post-item">
+                <span class="post-date">27 Jul 2019</span>
+                <span class="post-list-category"> [Embedded]</span>
+                <span>
+                <a class="post-link" href="/posts/Embedded-C">Embedded-C</a>
+                </span>
+            </li>
+            <li class="post-item">
+                <span class="post-date">27 Jul 2019</span>
+                <span>
+                <a class="post-link" href="/posts/To-Do">To Do</a>
+                </span>
+            </li></ul>
+    </div>
+
+    <div>
+        <h1 class="list-title"><strong>Featured Posts</strong></h1>
+        <ul id="post-list">
+            <!-- This loops through the paginated posts -->
+            
+            <span class="post-item-container">
+                <li class="post-item">
+                    <a class="post-title" href="/posts/Plan">Software Study Plan</a>
+                    <br>
+                    <span class="post-date">27 Jul 2019</span>
+                    <a class="post-category" href="/category/#story"> story</a>
+                    <a href="/posts/Plan#disqus_thread"><i class="fas fa-comment"></i></a>
+                    <p class="post-excerpt">‘소프트웨어를 쉽게 배우는 방법은 없을까?’
 
 </p>
-            </li>
-        </div>
-        
-        <div class="post-item-container">
-            <li class="post-item">
-                <a class="post-title" href="/posts/Embedded-C">Embedded-C</a>
-                <br>
-                <span class="post-date">27 Jul 2019</span>
-                <a class="post-category" href="/category/#Embedded"> Embedded</a>
-                <a href="/posts/Embedded-C#disqus_thread"><i class="fas fa-comment"></i></a>
-                <p class="post-excerpt">이 포스팅은 2019년 여름 멀티캠퍼스에서 ‘청년취업아카데미 스마트 디바이스 프로그래밍’ 과정을 수강하며 배운것을 정리하는 것을 목적으로 합니다. 임베디드 회사 윌텍(Willtek)에서 강사님을 모셔서 배웠습니다. IDE는 visual stdio 2005 입니다.
+                </li>
+            </span>
+            
+            <span class="post-item-container">
+                <li class="post-item">
+                    <a class="post-title" href="/posts/Embedded-C">Embedded-C</a>
+                    <br>
+                    <span class="post-date">27 Jul 2019</span>
+                    <a class="post-category" href="/category/#Embedded"> Embedded</a>
+                    <a href="/posts/Embedded-C#disqus_thread"><i class="fas fa-comment"></i></a>
+                    <p class="post-excerpt">이 포스팅은 2019년 여름 멀티캠퍼스에서 ‘청년취업아카데미 스마트 디바이스 프로그래밍’ 과정을 수강하며 배운것을 정리하는 것을 목적으로 합니다. 임베디드 회사 윌텍(Willtek)에서 강사님을 모셔서 배웠습니다. IDE는 visual stdio 2005 입니다.
 
 </p>
-                <p class="post-tags">
-                <a class="tag" href="/tag/#Embedded">Embedded</a>
-                <a class="tag" href="/tag/#C">C</a>
-                </p>
-            </li>
-        </div>
-        
-        <div class="post-item-container">
-            <li class="post-item">
-                <a class="post-title" href="/posts/To-Do">To Do</a>
-                <br>
-                <span class="post-date">27 Jul 2019</span>
-                <a href="/posts/To-Do#disqus_thread"><i class="fas fa-comment"></i></a>
-                <p class="post-excerpt">
+                    <p class="post-tags">
+                    <a class="tag" href="/tag/#Embedded">Embedded</a>
+                    <a class="tag" href="/tag/#C">C</a>
+                    </p>
+                </li>
+            </span>
+            
+            <span class="post-item-container">
+                <li class="post-item">
+                    <a class="post-title" href="/posts/To-Do">To Do</a>
+                    <br>
+                    <span class="post-date">27 Jul 2019</span>
+                    <a href="/posts/To-Do#disqus_thread"><i class="fas fa-comment"></i></a>
+                    <p class="post-excerpt">
   
     
       우선순위
@@ -235,39 +238,40 @@
 
 
 </p>
-            </li>
-        </div>
-        
-        <div class="post-item-container">
-            <li class="post-item">
-                <a class="post-title" href="/posts/Term">Term</a>
-                <br>
-                <span class="post-date">27 Jul 2019</span>
-                <a href="/posts/Term#disqus_thread"><i class="fas fa-comment"></i></a>
-                <p class="post-excerpt">Modem : Modulator + Demodulator
+                </li>
+            </span>
+            
+            <span class="post-item-container">
+                <li class="post-item">
+                    <a class="post-title" href="/posts/Term">Term</a>
+                    <br>
+                    <span class="post-date">27 Jul 2019</span>
+                    <a href="/posts/Term#disqus_thread"><i class="fas fa-comment"></i></a>
+                    <p class="post-excerpt">Modem : Modulator + Demodulator
 
 </p>
-            </li>
-        </div>
-        
-        <div class="post-item-container">
-            <li class="post-item">
-                <a class="post-title" href="/posts/C++-Discrete-mathematics">Discrete mathematics(이산수학)</a>
-                <br>
-                <span class="post-date">29 Mar 2019</span>
-                <a class="post-category" href="/category/#C++"> C++</a>
-                <a href="/posts/C++-Discrete-mathematics#disqus_thread"><i class="fas fa-comment"></i></a>
-                <p class="post-excerpt">이산수학을 들으면서 까먹었던 c++ 사용법을 다시 공부하게 됐다. 1차 과제는 생각한 숫자를 n장의 카드에서 있나 없나 확인으로 맞추는 과제였는데 배열의 동적할당 정도 사용한것 같다.
+                </li>
+            </span>
+            
+            <span class="post-item-container">
+                <li class="post-item">
+                    <a class="post-title" href="/posts/C++-Discrete-mathematics">Discrete mathematics(이산수학)</a>
+                    <br>
+                    <span class="post-date">29 Mar 2019</span>
+                    <a class="post-category" href="/category/#C++"> C++</a>
+                    <a href="/posts/C++-Discrete-mathematics#disqus_thread"><i class="fas fa-comment"></i></a>
+                    <p class="post-excerpt">이산수학을 들으면서 까먹었던 c++ 사용법을 다시 공부하게 됐다. 1차 과제는 생각한 숫자를 n장의 카드에서 있나 없나 확인으로 맞추는 과제였는데 배열의 동적할당 정도 사용한것 같다.
 
 </p>
-                <p class="post-tags">
-                <a class="tag" href="/tag/#C++">C++</a>
-                <a class="tag" href="/tag/#이산수학">이산수학</a>
-                </p>
-            </li>
-        </div>
-        
-    </ul>
+                    <p class="post-tags">
+                    <a class="tag" href="/tag/#C++">C++</a>
+                    <a class="tag" href="/tag/#이산수학">이산수학</a>
+                    </p>
+                </li>
+            </span>
+            
+        </ul>
+    </div>
 
     <!-- Pagination links -->
     <ul id="pagination" role="navigation">
