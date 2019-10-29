@@ -9,9 +9,9 @@ layout: default
 </div>
 
 <div class="wrapper">
-    <div class="notice">
+    <div id="notice-post">
         <h1 class="list-title"><strong>Notice</strong></h1>
-        <ul id="post-list" class="notice-list">
+        <ul class="post-list">
             {%- for post in site.posts -%}
             {%- if post.notice %}
             <li class="post-item">
@@ -30,30 +30,28 @@ layout: default
         </ul>
     </div>
 
-    <div>
+    <div id="featured-post">
         <h1 class="list-title"><strong>Featured Posts</strong></h1>
-        <ul id="post-list">
+        <ul class="post-list">
             <!-- This loops through the paginated posts -->
             {% for post in paginator.posts %}
-            <span class="post-item-container">
-                <li class="post-item">
-                    <a class="post-title" href="{{ post.url }}">{{ post.title }}</a>
-                    <br>
-                    <span class="post-date">{{ post.date | date_to_string }}</span>
-                    {%- if post.categories != empty %}
-                    <a class="post-category" href="/{{ site.category_dir }}#{{ post.categories | first }}"> {{post.categories}}</a>
-                    {%- endif %}
-                    <a href="{{ post.url | relative_url }}#disqus_thread"><i class="fas fa-comment"></i></a>
-                    <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 75 }}</p>
-                    {%- if post.tags != empty %}
-                    <p class="post-tags">
-                    {%- for tag in post.tags %}
-                    <a class="tag" href="/{{ site.tag_dir }}#{{tag|slugize}}">{{-tag-}}</a>
-                    {%- endfor %}
-                    </p>
-                    {%- endif %}
-                </li>
-            </span>
+            <li class="post-item">
+                <a class="post-title" href="{{ post.url }}">{{ post.title }}</a>
+                <br>
+                <span class="post-date">{{ post.date | date_to_string }}</span>
+                {%- if post.categories != empty %}
+                <a class="post-category" href="/{{ site.category_dir }}#{{ post.categories | first }}"> {{post.categories}}</a>
+                {%- endif %}
+                <a href="{{ post.url | relative_url }}#disqus_thread"><i class="fas fa-comment"></i></a>
+                <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 75 }}</p>
+                {%- if post.tags != empty %}
+                <p class="post-tag-list">
+                {%- for tag in post.tags %}
+                <a class="post-tag" href="/{{ site.tag_dir }}#{{tag|slugize}}">{{-tag-}}</a>
+                {%- endfor %}
+                </p>
+                {%- endif %}
+            </li>
             {% endfor %}
         </ul>
     </div>

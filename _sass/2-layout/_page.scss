@@ -1,0 +1,21 @@
+/*
+ * page
+ */
+ .page-content {
+    flex: 1 0 auto;
+  }
+  
+  .post-meta {
+    font-size: $small-font-size;
+    color: $grey-color;
+  }
+  
+  #post-list {
+    margin-left: 0;
+    list-style: none;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+  }
+  
+  
