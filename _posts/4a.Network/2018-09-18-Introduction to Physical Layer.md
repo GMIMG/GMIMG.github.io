@@ -3,7 +3,6 @@ title: Introduction to Physical Layer
 category: Network
 tags:
   - Network
-  - Physical Layer
 ---
 
 # Introduction to Physical Layer

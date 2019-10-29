@@ -1,11 +1,11 @@
 <div class="post-header">
-    <span class="post-title" itemprop="name headline">{{ page.title | escape }}</span>
+    <span class="post-title">{{ page.title | escape }}</span>
     <p class="post-meta">
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}">
         {{ page.date | date_to_string }}
       </time>
       {%- if page.author %}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
+        • <span class="p-author h-card">{{ page.author }}</span>
       {%- endif %}
     </p>
     <div class="post-header-categories">

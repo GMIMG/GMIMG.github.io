@@ -2,7 +2,6 @@
 category: Network
 tags:
   - Network
-  - Data-link layer
 ---
 
 links and nodes

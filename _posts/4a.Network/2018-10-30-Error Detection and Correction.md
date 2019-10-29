@@ -2,8 +2,6 @@
 category: Network
 tags:
   - Network
-  - Error Detection
-  - Error Correction
 ---
 
 - Block coding
