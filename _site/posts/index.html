@@ -48,15 +48,12 @@
     <header class="site-header">
   <div class="wrapper">
     <!---->
-    
     <a class="site-title" rel="author" href="/">GMIMG</a>
-
     <div class="dark-icon">
       <a id="theme-toggle" class="page-link" onclick="modeSwitcher()"></a>
     </div>
 
-
-    <nav class="site-menu">
+    <nav class="site-nav">
       <input type="checkbox" id="menu-trigger" class="menu-trigger" />
       <label for="menu-trigger">
         <span class="menu-icon">
@@ -66,15 +63,14 @@
       <div class="trigger">
           <a class="page-link" href="/about/">about</a>
           <a class="page-link" href="/posts/">Posts browser</a>
+        <a class="page-link" href="/search">
+          <i class="fas fa-search"></i>
+        </a>
       </div>
+      <!--div class="site-search search-icon" onclick="location.href='/search';"-->
+      <!--/div-->
     </nav>
     
-    <nav class="site-search">
-      <div class="search-icon" onclick="location.href='/search';">
-        <i class="fas fa-search"></i>
-      </div>
-    </nav>
-
   </div>
 </header>
     <main class="page-content">
@@ -86,7 +82,7 @@
   <!--category list-->
   <div class="sidebar-item">
     <div id="sidebar-item-category">
-      <a href="/categories" class="sidebar-item-tltle">Categories</a><nav class="nav__list">
+      <a href="/categories" class="sidebar-item-tltle">Categories</a><aside class="nav__list">
 
   <ul class="nav__items">
       <li>
@@ -217,7 +213,7 @@
         </a>
       </li>
   </ul>
-</nav></div>
+</aside></div>
   </div>
   <!--tag list-->
   <div class="sidebar-item">
@@ -346,6 +342,9 @@
   <div class="wrapper">
     
 <ul id="post-list"><li class="post-item">
+    <span class="post-date">30 Oct 2019</span>
+    <a class="post-link" href="/posts/HTML">Html</a>
+  </li><li class="post-item">
     <span class="post-date">27 Sep 2019</span>
     <a class="post-link" href="/posts/Blog-tech">Blog tech</a>
   </li><li class="post-item">

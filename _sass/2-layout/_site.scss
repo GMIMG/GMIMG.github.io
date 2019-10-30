@@ -3,23 +3,28 @@ $site-header-icon-size: 36px;
 
 .site-header {
   height: $site-header-line-height;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
   width: 100%;
   border-bottom: 1px solid $grey-color-light;
-  position: relative;
 }
 
 .site-title {
+  float: left;
   @include relative-font-size(1.625);
   font-weight: 300;
   line-height: $site-header-line-height;
-  margin-bottom: 0;
-  float: left;
+  //margin-bottom: 0;
 }
 
 /**
  * navigation bar
  */
 
+ /*
 .site-search {
   position: absolute;
   top: ($site-header-line-height - $site-header-icon-size) / 2;
@@ -28,7 +33,7 @@ $site-header-icon-size: 36px;
   border-radius: 5px;
 }
 
-.search-icon, .menu-icon {
+.search-icon,*/ .menu-icon {
   position: relative;
   width: $site-header-icon-size;
   height: $site-header-icon-size;
@@ -41,12 +46,13 @@ $site-header-icon-size: 36px;
   float: left;
 }
 
-.site-menu {
+.site-nav {
   float: right;
-
+  //height: $site-header-line-height;
   //line-height: $site-header-line-height;
-  margin-top: ($site-header-line-height / 2) - ($base-font-size * $base-line-height /2);
-  margin-right:  $spacing-unit / 2 + $site-header-icon-size;
+  //margin-top: ($site-header-line-height / 2) - ($base-font-size * $base-line-height /2);
+  padding-top: ($site-header-line-height / 2) - ($base-font-size * $base-line-height /2);
+  //margin-right:  $spacing-unit / 2 + $site-header-icon-size;
   //max-height: $site-header-line-height;
 
   .menu-trigger, .menu-icon {
@@ -68,6 +74,8 @@ $site-header-icon-size: 36px;
     border: 1px solid $grey-color-light;
     border-radius: 5px;
     z-index: 1; /* Stay on top */
+
+    padding-top: 0;
 
     label[for="menu-trigger"] {
       display: block;

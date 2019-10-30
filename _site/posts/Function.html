@@ -50,15 +50,12 @@
     <header class="site-header">
   <div class="wrapper">
     <!---->
-    
     <a class="site-title" rel="author" href="/">GMIMG</a>
-
     <div class="dark-icon">
       <a id="theme-toggle" class="page-link" onclick="modeSwitcher()"></a>
     </div>
 
-
-    <nav class="site-menu">
+    <nav class="site-nav">
       <input type="checkbox" id="menu-trigger" class="menu-trigger" />
       <label for="menu-trigger">
         <span class="menu-icon">
@@ -68,44 +65,43 @@
       <div class="trigger">
           <a class="page-link" href="/about/">about</a>
           <a class="page-link" href="/posts/">Posts browser</a>
+        <a class="page-link" href="/search">
+          <i class="fas fa-search"></i>
+        </a>
       </div>
+      <!--div class="site-search search-icon" onclick="location.href='/search';"-->
+      <!--/div-->
     </nav>
     
-    <nav class="site-search">
-      <div class="search-icon" onclick="location.href='/search';">
-        <i class="fas fa-search"></i>
-      </div>
-    </nav>
-
   </div>
 </header>
     <main class="page-content">
       <div class="wrapper">
   <div class="page">
-    <div class="wrapper">
+    <!--div class="wrapper"-->
   <div class="post-content">
     <article class="post">
       <div class="post-header">
-    <span class="post-title">Function</span>
-    <p class="post-meta">
-      <time class="dt-published" datetime="2018-08-07T00:00:00+09:00">
-        07 Aug 2018
-      </time>
-        • <span class="p-author h-card">Gmimg</span>
-    </p>
-    <div class="post-header-categories">
-      <span>Category: </span><a href="/category/#Python">Python</a>
-    </div>
-    <div class="post-header-tags">
-      <span>Tags: </span>
-        <a href="/tag/#Python">Python</a><span>, </span>
-        <a href="/tag/#Function">Function</a><span>, </span>
-        <a href="/tag/#First_class_function">First_class_function</a><span>, </span>
-        <a href="/tag/#Closure">Closure</a><span>, </span>
-        <a href="/tag/#Variable">Variable</a><span>, </span>
-        <a href="/tag/#Decorator">Decorator</a>
-    </div>
+  <span class="post-title">Function</span>
+  <p class="post-meta">
+    <time class="dt-published" datetime="2018-08-07T00:00:00+09:00">
+      07 Aug 2018
+    </time>
+      • <span class="p-author h-card">Gmimg</span>
+  </p>
+  <div class="post-header-categories">
+    <span>Category: </span><a href="/category/#Python">Python</a>
   </div>
+  <div class="post-header-tags">
+    <span>Tags: </span>
+      <a href="/tag/#Python">Python</a><span>, </span>
+      <a href="/tag/#Function">Function</a><span>, </span>
+      <a href="/tag/#First_class_function">First_class_function</a><span>, </span>
+      <a href="/tag/#Closure">Closure</a><span>, </span>
+      <a href="/tag/#Variable">Variable</a><span>, </span>
+      <a href="/tag/#Decorator">Decorator</a>
+  </div>
+</div>
       <div class="post-content">
         <h1 id="function">function</h1>
 
@@ -295,7 +291,7 @@ s.setAttribute('data-timestamp', +new Date());
       <a class="u-url" href="/posts/Function" hidden></a>
     </article>
   </div>
-</div>
+<!--/div-->
   </div>
 </div>
       <a href="#" id="back-to-top"><i class="fas fa-arrow-circle-up"></i></a>

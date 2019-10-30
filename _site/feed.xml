@@ -1,4 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko" /><updated>2019-10-29T17:21:30+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">GMIMG</title><subtitle>Mechagrammer</subtitle><author><name>Jimin Hwang</name></author><entry><title type="html">Blog tech</title><link href="http://localhost:4000/posts/Blog-tech" rel="alternate" type="text/html" title="Blog tech" /><published>2019-09-27T00:00:00+09:00</published><updated>2019-09-27T00:00:00+09:00</updated><id>http://localhost:4000/posts/Blog%20tech</id><content type="html" xml:base="http://localhost:4000/posts/Blog-tech"></content><author><name>Gmimg</name></author><summary type="html"></summary></entry><entry><title type="html">Mems</title><link href="http://localhost:4000/posts/MEMS" rel="alternate" type="text/html" title="Mems" /><published>2019-09-04T00:00:00+09:00</published><updated>2019-09-04T00:00:00+09:00</updated><id>http://localhost:4000/posts/MEMS</id><content type="html" xml:base="http://localhost:4000/posts/MEMS">&lt;h1 id=&quot;반도체&quot;&gt;반도체&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko" /><updated>2019-10-30T13:08:35+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">GMIMG</title><subtitle>Mechagrammer</subtitle><author><name>Jimin Hwang</name></author><entry><title type="html">Html</title><link href="http://localhost:4000/posts/HTML" rel="alternate" type="text/html" title="Html" /><published>2019-10-30T00:00:00+09:00</published><updated>2019-10-30T00:00:00+09:00</updated><id>http://localhost:4000/posts/HTML</id><content type="html" xml:base="http://localhost:4000/posts/HTML">&lt;h1 id=&quot;web&quot;&gt;WEB&lt;/h1&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;서버/클라이언트&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;서버와 클라이언트는 꽤 애매한 용어입니다. 영어로 이해하면 좀 더 쉬워집니다. 두대의 컴퓨터가있다면 필요한 정보를 요청하는 컴퓨터는 클라이언트(고객)이고, 정보를 제공해주는 컴퓨터가 서버(종업원)입니다. 즉 내가 크롬에서 어떤 버튼을 클릭하면 정보를 요청하는 신호가 랜선 혹은 무선으로 서버에 전달되고, 서버컴퓨터는 요청받은 정보를 다시 클라이언트에 전송해줍니다. 대표적인 웹클라이언트는 Internet exprore와 크롬, 파이어폭스 등이 있고, 웹서버는 아파치, IIS, NGINGX가 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;프로토콜&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;이때 전송되는 정보의 형식을 정해놓은 약속(규약)을 프로토콜이라고 합니다. 웹은 전체적으로 HTML이라는 형식으로 이루어져있고 이를 전달할때 주로사용하는 프로토콜은 HTTP/HTTPS 입니다. 전송방식은&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;동적 웹&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;최근에는 웹에서 할일이 많아지면서 정적인 HTML에 변수를 사용해야 하는 일이 많아졌습니다. 그래서 스크립트로 실행되는 여러 언어의 사용이 증가하고 있습니다. 이러한 언어는 스크립트 코드라고 하며 대표적으로 자바스크립트, PHP, ASP, JSP 가 많이 사용되고있습니다. 이렇게 사용자의 반응에 따라 변화하는 웹을 동적 웹이라고 합니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;html&quot;&gt;HTML&lt;/h2&gt;
+
+&lt;p&gt;html은 웹문서를 구성하는 뼈대라고 생각하면 쉽습니다. 크게 head와 body라는 태그로 구성되어있고 head에는 웹문서의 정보, body는 실제 웹문서에서 보여줄 내용을 포함합니다. 이외에 다양한 태그들로 구성되어있습니다. 웹을 공부하기 위해서 자주사용하는 태그 위주로 공부하면 접근하기 쉽습니다.&lt;/p&gt;
+
+&lt;p&gt;다음은 html을 구성하는 기본 코드입니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;en&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;UTF-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;viewport&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;width=device-width, initial-scale=1.0&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;http-equiv=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;X-UA-Compatible&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ie=edge&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Document&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+    
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;HTML5에서 표준에서 HTML 문서에서 구조적인 의미를 담당하는 태그를 시맨틱 태그라고하며 다음과 같이 구성되어있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;C:\Users\student\OneDrive - seoultech.ac.kr\GitHub\GMIMG.github.io\assets\img\semantic_tag.png&quot; alt=&quot;semantic_tag&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;css&quot;&gt;CSS&lt;/h2&gt;
+
+&lt;p&gt;html이 뼈대라면 css는 장식입니다. 웹문서의 시각적인 요소를 위해 위치와 크기 색 등 태그들의 속성을 정해줍니다. 태그들에 id와 class를 정해주어 그룹으로 css를 설정할수도 있습니다.&lt;/p&gt;</content><author><name>Gmimg</name></author><summary type="html">WEB</summary></entry><entry><title type="html">Blog tech</title><link href="http://localhost:4000/posts/Blog-tech" rel="alternate" type="text/html" title="Blog tech" /><published>2019-09-27T00:00:00+09:00</published><updated>2019-09-27T00:00:00+09:00</updated><id>http://localhost:4000/posts/Blog%20tech</id><content type="html" xml:base="http://localhost:4000/posts/Blog-tech"></content><author><name>Gmimg</name></author><summary type="html"></summary></entry><entry><title type="html">Mems</title><link href="http://localhost:4000/posts/MEMS" rel="alternate" type="text/html" title="Mems" /><published>2019-09-04T00:00:00+09:00</published><updated>2019-09-04T00:00:00+09:00</updated><id>http://localhost:4000/posts/MEMS</id><content type="html" xml:base="http://localhost:4000/posts/MEMS">&lt;h1 id=&quot;반도체&quot;&gt;반도체&lt;/h1&gt;
 
 &lt;p&gt;먼저 반도체업계에서 흔히 사용하는 용어를 먼저 정리한다.&lt;/p&gt;
 
@@ -643,7 +683,7 @@ int main(void)
 
 &lt;p&gt;코딩을 하기전에 프로그램 설계를 완벽하게 하기.&lt;/p&gt;
 
-&lt;p&gt;여러 알고리즘을 짜기보단 하나를 짜더라도 내가 짠 코드를 철저하게 분석한다.&lt;/p&gt;</content><author><name>Gmimg</name></author><summary type="html">알고리즘 공부</summary></entry><entry><title type="html">임베디드 개발자가 되려고 하는 이유</title><link href="http://localhost:4000/posts/Cause_Embedded" rel="alternate" type="text/html" title="임베디드 개발자가 되려고 하는 이유" /><published>2019-08-17T00:00:00+09:00</published><updated>2019-08-17T00:00:00+09:00</updated><id>http://localhost:4000/posts/Cause_Embedded</id><content type="html" xml:base="http://localhost:4000/posts/Cause_Embedded">&lt;p&gt;내 전공과의 연계성&lt;/p&gt;
+&lt;p&gt;여러 알고리즘을 짜기보단 하나를 짜더라도 내가 짠 코드를 철저하게 분석한다.&lt;/p&gt;</content><author><name>Gmimg</name></author><summary type="html">알고리즘 공부</summary></entry><entry><title type="html">Job</title><link href="http://localhost:4000/posts/JOB" rel="alternate" type="text/html" title="Job" /><published>2019-08-17T00:00:00+09:00</published><updated>2019-08-17T00:00:00+09:00</updated><id>http://localhost:4000/posts/JOB</id><content type="html" xml:base="http://localhost:4000/posts/JOB">&lt;p&gt;먼저 기업의 채용공고를 보고 지원자격과 우대사항에대해 정리한다.&lt;/p&gt;</content><author><name>Gmimg</name></author><summary type="html">먼저 기업의 채용공고를 보고 지원자격과 우대사항에대해 정리한다.</summary></entry><entry><title type="html">임베디드 개발자가 되려고 하는 이유</title><link href="http://localhost:4000/posts/Cause_Embedded" rel="alternate" type="text/html" title="임베디드 개발자가 되려고 하는 이유" /><published>2019-08-17T00:00:00+09:00</published><updated>2019-08-17T00:00:00+09:00</updated><id>http://localhost:4000/posts/Cause_Embedded</id><content type="html" xml:base="http://localhost:4000/posts/Cause_Embedded">&lt;p&gt;내 전공과의 연계성&lt;/p&gt;
 
 &lt;p&gt;전문성에대한 매력&lt;/p&gt;
 
@@ -651,7 +691,7 @@ int main(void)
 
 &lt;p&gt;주니어와의 차이&lt;/p&gt;
 
-&lt;p&gt;소주가 아닌 위스키&lt;/p&gt;</content><author><name>Gmimg</name></author><category term="Embedded" /><summary type="html">내 전공과의 연계성</summary></entry><entry><title type="html">Job</title><link href="http://localhost:4000/posts/JOB" rel="alternate" type="text/html" title="Job" /><published>2019-08-17T00:00:00+09:00</published><updated>2019-08-17T00:00:00+09:00</updated><id>http://localhost:4000/posts/JOB</id><content type="html" xml:base="http://localhost:4000/posts/JOB">&lt;p&gt;먼저 기업의 채용공고를 보고 지원자격과 우대사항에대해 정리한다.&lt;/p&gt;</content><author><name>Gmimg</name></author><summary type="html">먼저 기업의 채용공고를 보고 지원자격과 우대사항에대해 정리한다.</summary></entry><entry><title type="html">Os</title><link href="http://localhost:4000/posts/OS" rel="alternate" type="text/html" title="Os" /><published>2019-08-02T00:00:00+09:00</published><updated>2019-08-02T00:00:00+09:00</updated><id>http://localhost:4000/posts/OS</id><content type="html" xml:base="http://localhost:4000/posts/OS">&lt;h1 id=&quot;rtos&quot;&gt;RTOS&lt;/h1&gt;
+&lt;p&gt;소주가 아닌 위스키&lt;/p&gt;</content><author><name>Gmimg</name></author><category term="Embedded" /><summary type="html">내 전공과의 연계성</summary></entry><entry><title type="html">Os</title><link href="http://localhost:4000/posts/OS" rel="alternate" type="text/html" title="Os" /><published>2019-08-02T00:00:00+09:00</published><updated>2019-08-02T00:00:00+09:00</updated><id>http://localhost:4000/posts/OS</id><content type="html" xml:base="http://localhost:4000/posts/OS">&lt;h1 id=&quot;rtos&quot;&gt;RTOS&lt;/h1&gt;
 
 &lt;p&gt;펌웨어 기반의 MICOM은 Polling과 Interrupt기반으로 동작하여 기능별로 응답시간에 영향을 주고 우선순위가 없다.&lt;/p&gt;
 
@@ -962,10 +1002,4 @@ int main(void)
   &lt;li&gt;타임아웃을 지정&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Interrupts&lt;/p&gt;</content><author><name>Gmimg</name></author><category term="Embedded" /><category term="Embedded" /><category term="RTOS" /><summary type="html">RTOS Porting &amp;amp; Programming</summary></entry><entry><title type="html">Term</title><link href="http://localhost:4000/posts/Term" rel="alternate" type="text/html" title="Term" /><published>2019-07-27T00:00:00+09:00</published><updated>2019-07-27T00:00:00+09:00</updated><id>http://localhost:4000/posts/Term</id><content type="html" xml:base="http://localhost:4000/posts/Term">&lt;p&gt;Modem : Modulator + Demodulator&lt;/p&gt;
-
-&lt;p&gt;Codec : Coder + Decoder&lt;/p&gt;
-
-&lt;p&gt;비메모리&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://ko.wikipedia.org/wiki/후킹&quot;&gt;후킹&lt;/a&gt;&lt;/p&gt;</content><author><name>Gmimg</name></author><summary type="html">Modem : Modulator + Demodulator</summary></entry></feed>
+&lt;p&gt;Interrupts&lt;/p&gt;</content><author><name>Gmimg</name></author><category term="Embedded" /><category term="Embedded" /><category term="RTOS" /><summary type="html">RTOS Porting &amp;amp; Programming</summary></entry></feed>

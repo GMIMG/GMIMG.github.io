@@ -50,15 +50,12 @@
     <header class="site-header">
   <div class="wrapper">
     <!---->
-    
     <a class="site-title" rel="author" href="/">GMIMG</a>
-
     <div class="dark-icon">
       <a id="theme-toggle" class="page-link" onclick="modeSwitcher()"></a>
     </div>
 
-
-    <nav class="site-menu">
+    <nav class="site-nav">
       <input type="checkbox" id="menu-trigger" class="menu-trigger" />
       <label for="menu-trigger">
         <span class="menu-icon">
@@ -68,41 +65,39 @@
       <div class="trigger">
           <a class="page-link" href="/about/">about</a>
           <a class="page-link" href="/posts/">Posts browser</a>
+        <a class="page-link" href="/search">
+          <i class="fas fa-search"></i>
+        </a>
       </div>
+      <!--div class="site-search search-icon" onclick="location.href='/search';"-->
+      <!--/div-->
     </nav>
     
-    <nav class="site-search">
-      <div class="search-icon" onclick="location.href='/search';">
-        <i class="fas fa-search"></i>
-      </div>
-    </nav>
-
   </div>
 </header>
     <main class="page-content">
       <div class="wrapper">
   <div class="page">
-    <div class="wrapper">
+    <!--div class="wrapper"-->
   <div class="post-content">
     <article class="post">
       <div class="post-header">
-    <span class="post-title">Embedded-C</span>
-    <p class="post-meta">
-      <time class="dt-published" datetime="2019-07-27T00:00:00+09:00">
-        27 Jul 2019
-      </time>
-        • <span class="p-author h-card">Gmimg</span>
-    </p>
-    <div class="post-header-categories">
-      <span>Category: </span><a href="/category/#Embedded">Embedded</a>
-    </div>
-    <div class="post-header-tags">
-      <span>Tags: </span>
-        <a href="/tag/#Embedded">Embedded</a><span>, </span>
-        <a href="/tag/#C">C</a>
-    </div>
+  <span class="post-title">Embedded-C</span>
+  <p class="post-meta">
+    <time class="dt-published" datetime="2019-07-27T00:00:00+09:00">
+      27 Jul 2019
+    </time>
+      • <span class="p-author h-card">Gmimg</span>
+  </p>
+  <div class="post-header-categories">
+    <span>Category: </span><a href="/category/#Embedded">Embedded</a>
   </div>
-      <aside>
+  <div class="post-header-tags">
+    <span>Tags: </span>
+      <a href="/tag/#Embedded">Embedded</a><span>, </span>
+      <a href="/tag/#C">C</a>
+  </div>
+</div>
         <div class="toc_container">
           <div class="toc_title">
             <span><strong>Index</strong></span>
@@ -170,7 +165,6 @@
   </li>
 </ul>
         </div>
-      </aside>
       <div class="post-content">
         <p>이 포스팅은 2019년 여름 멀티캠퍼스에서 ‘청년취업아카데미 스마트 디바이스 프로그래밍’ 과정을 수강하며 배운것을 정리하는 것을 목적으로 합니다. 임베디드 회사 윌텍(Willtek)에서 강사님을 모셔서 배웠습니다. IDE는 visual stdio 2005 입니다.</p>
 
@@ -1214,7 +1208,7 @@ s.setAttribute('data-timestamp', +new Date());
       <a class="u-url" href="/posts/Embedded-C" hidden></a>
     </article>
   </div>
-</div>
+<!--/div-->
   </div>
 </div>
       <a href="#" id="back-to-top"><i class="fas fa-arrow-circle-up"></i></a>

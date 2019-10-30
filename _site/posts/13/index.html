@@ -50,15 +50,12 @@
     <header class="site-header">
   <div class="wrapper">
     <!---->
-    
     <a class="site-title" rel="author" href="/">GMIMG</a>
-
     <div class="dark-icon">
       <a id="theme-toggle" class="page-link" onclick="modeSwitcher()"></a>
     </div>
 
-
-    <nav class="site-menu">
+    <nav class="site-nav">
       <input type="checkbox" id="menu-trigger" class="menu-trigger" />
       <label for="menu-trigger">
         <span class="menu-icon">
@@ -68,15 +65,14 @@
       <div class="trigger">
           <a class="page-link" href="/about/">about</a>
           <a class="page-link" href="/posts/">Posts browser</a>
+        <a class="page-link" href="/search">
+          <i class="fas fa-search"></i>
+        </a>
       </div>
+      <!--div class="site-search search-icon" onclick="location.href='/search';"-->
+      <!--/div-->
     </nav>
     
-    <nav class="site-search">
-      <div class="search-icon" onclick="location.href='/search';">
-        <i class="fas fa-search"></i>
-      </div>
-    </nav>
-
   </div>
 </header>
     <main class="page-content">
@@ -123,6 +119,21 @@
         <h1 class="list-title"><strong>Featured Posts</strong></h1>
         <ul class="post-list">
             <!-- This loops through the paginated posts -->
+            
+            <li class="post-item">
+                <a class="post-title" href="/posts/charater">Character(문자)</a>
+                <br>
+                <span class="post-date">08 Aug 2018</span>
+                <a class="post-category" href="/category/#Python"> Python</a>
+                <a href="/posts/charater#disqus_thread"><i class="fas fa-comment"></i></a>
+                <p class="post-excerpt">문자 ASCII, unicode incoding
+
+</p>
+                <p class="post-tag-list">
+                <a class="post-tag" href="/tag/#Python">Python</a>
+                <a class="post-tag" href="/tag/#Character">Character</a>
+                </p>
+            </li>
             
             <li class="post-item">
                 <a class="post-title" href="/posts/Number">Number(실수)</a>
@@ -183,21 +194,6 @@
                 <a class="post-tag" href="/tag/#Closure">Closure</a>
                 <a class="post-tag" href="/tag/#Variable">Variable</a>
                 <a class="post-tag" href="/tag/#Decorator">Decorator</a>
-                </p>
-            </li>
-            
-            <li class="post-item">
-                <a class="post-title" href="/posts/writing-jekyll-posts">Writing jekyll posts</a>
-                <br>
-                <span class="post-date">05 Aug 2018</span>
-                <a class="post-category" href="/category/#Blog"> Blog</a>
-                <a href="/posts/writing-jekyll-posts#disqus_thread"><i class="fas fa-comment"></i></a>
-                <p class="post-excerpt">Blog 생성
-github pages + jekyll 을 이용
-
-</p>
-                <p class="post-tag-list">
-                <a class="post-tag" href="/tag/#Jekyll">Jekyll</a>
                 </p>
             </li>
             

@@ -50,15 +50,12 @@
     <header class="site-header">
   <div class="wrapper">
     <!---->
-    
     <a class="site-title" rel="author" href="/">GMIMG</a>
-
     <div class="dark-icon">
       <a id="theme-toggle" class="page-link" onclick="modeSwitcher()"></a>
     </div>
 
-
-    <nav class="site-menu">
+    <nav class="site-nav">
       <input type="checkbox" id="menu-trigger" class="menu-trigger" />
       <label for="menu-trigger">
         <span class="menu-icon">
@@ -68,15 +65,14 @@
       <div class="trigger">
           <a class="page-link" href="/about/">about</a>
           <a class="page-link" href="/posts/">Posts browser</a>
+        <a class="page-link" href="/search">
+          <i class="fas fa-search"></i>
+        </a>
       </div>
+      <!--div class="site-search search-icon" onclick="location.href='/search';"-->
+      <!--/div-->
     </nav>
     
-    <nav class="site-search">
-      <div class="search-icon" onclick="location.href='/search';">
-        <i class="fas fa-search"></i>
-      </div>
-    </nav>
-
   </div>
 </header>
     <main class="page-content">
@@ -125,6 +121,21 @@
             <!-- This loops through the paginated posts -->
             
             <li class="post-item">
+                <a class="post-title" href="/posts/Advanced-C">Advanced-C</a>
+                <br>
+                <span class="post-date">18 Aug 2019</span>
+                <a class="post-category" href="/category/#Embedded"> Embedded</a>
+                <a href="/posts/Advanced-C#disqus_thread"><i class="fas fa-comment"></i></a>
+                <p class="post-excerpt">Advenced C
+
+</p>
+                <p class="post-tag-list">
+                <a class="post-tag" href="/tag/#C">C</a>
+                <a class="post-tag" href="/tag/#Embedded">Embedded</a>
+                </p>
+            </li>
+            
+            <li class="post-item">
                 <a class="post-title" href="/posts/JOB">Job</a>
                 <br>
                 <span class="post-date">17 Aug 2019</span>
@@ -167,20 +178,6 @@
                 <a class="post-tag" href="/tag/#Embedded">Embedded</a>
                 <a class="post-tag" href="/tag/#RTOS">RTOS</a>
                 </p>
-            </li>
-            
-            <li class="post-item">
-                <a class="post-title" href="/posts/book">추천교재</a>
-                <br>
-                <span class="post-date">27 Jul 2019</span>
-                <a href="/posts/book#disqus_thread"><i class="fas fa-comment"></i></a>
-                <p class="post-excerpt">
-  Clean Code
-  윤성우의 열혈 자료구조
-  C로 배우는 알고리즘 1
-
-
-</p>
             </li>
             
         </ul>

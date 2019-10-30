@@ -50,15 +50,12 @@
     <header class="site-header">
   <div class="wrapper">
     <!---->
-    
     <a class="site-title" rel="author" href="/">GMIMG</a>
-
     <div class="dark-icon">
       <a id="theme-toggle" class="page-link" onclick="modeSwitcher()"></a>
     </div>
 
-
-    <nav class="site-menu">
+    <nav class="site-nav">
       <input type="checkbox" id="menu-trigger" class="menu-trigger" />
       <label for="menu-trigger">
         <span class="menu-icon">
@@ -68,15 +65,14 @@
       <div class="trigger">
           <a class="page-link" href="/about/">about</a>
           <a class="page-link" href="/posts/">Posts browser</a>
+        <a class="page-link" href="/search">
+          <i class="fas fa-search"></i>
+        </a>
       </div>
+      <!--div class="site-search search-icon" onclick="location.href='/search';"-->
+      <!--/div-->
     </nav>
     
-    <nav class="site-search">
-      <div class="search-icon" onclick="location.href='/search';">
-        <i class="fas fa-search"></i>
-      </div>
-    </nav>
-
   </div>
 </header>
     <main class="page-content">
@@ -123,6 +119,20 @@
         <h1 class="list-title"><strong>Featured Posts</strong></h1>
         <ul class="post-list">
             <!-- This loops through the paginated posts -->
+            
+            <li class="post-item">
+                <a class="post-title" href="/posts/data_communication">Data communication</a>
+                <br>
+                <span class="post-date">04 Sep 2018</span>
+                <a class="post-category" href="/category/#Network"> Network</a>
+                <a href="/posts/data_communication#disqus_thread"><i class="fas fa-comment"></i></a>
+                <p class="post-excerpt">Orientation
+
+</p>
+                <p class="post-tag-list">
+                <a class="post-tag" href="/tag/#Network">Network</a>
+                </p>
+            </li>
             
             <li class="post-item">
                 <a class="post-title" href="/posts/crawling">Crawling</a>
@@ -178,20 +188,6 @@
 </p>
                 <p class="post-tag-list">
                 <a class="post-tag" href="/tag/#Argorism">Argorism</a>
-                </p>
-            </li>
-            
-            <li class="post-item">
-                <a class="post-title" href="/posts/recursion">Recursion(재귀)</a>
-                <br>
-                <span class="post-date">12 Aug 2018</span>
-                <a class="post-category" href="/category/#Python"> Python</a>
-                <a href="/posts/recursion#disqus_thread"><i class="fas fa-comment"></i></a>
-                <p class="post-excerpt">data structure
-
-</p>
-                <p class="post-tag-list">
-                <a class="post-tag" href="/tag/#Python">Python</a>
                 </p>
             </li>
             

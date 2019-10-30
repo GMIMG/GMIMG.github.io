@@ -50,15 +50,12 @@
     <header class="site-header">
   <div class="wrapper">
     <!---->
-    
     <a class="site-title" rel="author" href="/">GMIMG</a>
-
     <div class="dark-icon">
       <a id="theme-toggle" class="page-link" onclick="modeSwitcher()"></a>
     </div>
 
-
-    <nav class="site-menu">
+    <nav class="site-nav">
       <input type="checkbox" id="menu-trigger" class="menu-trigger" />
       <label for="menu-trigger">
         <span class="menu-icon">
@@ -68,15 +65,14 @@
       <div class="trigger">
           <a class="page-link" href="/about/">about</a>
           <a class="page-link" href="/posts/">Posts browser</a>
+        <a class="page-link" href="/search">
+          <i class="fas fa-search"></i>
+        </a>
       </div>
+      <!--div class="site-search search-icon" onclick="location.href='/search';"-->
+      <!--/div-->
     </nav>
     
-    <nav class="site-search">
-      <div class="search-icon" onclick="location.href='/search';">
-        <i class="fas fa-search"></i>
-      </div>
-    </nav>
-
   </div>
 </header>
     <main class="page-content">
@@ -123,6 +119,21 @@
         <h1 class="list-title"><strong>Featured Posts</strong></h1>
         <ul class="post-list">
             <!-- This loops through the paginated posts -->
+            
+            <li class="post-item">
+                <a class="post-title" href="/posts/Switching">Switching</a>
+                <br>
+                <span class="post-date">16 Oct 2018</span>
+                <a class="post-category" href="/category/#Network"> Network</a>
+                <a href="/posts/Switching#disqus_thread"><i class="fas fa-comment"></i></a>
+                <p class="post-excerpt">Switching
+
+</p>
+                <p class="post-tag-list">
+                <a class="post-tag" href="/tag/#Network">Network</a>
+                <a class="post-tag" href="/tag/#Switching">Switching</a>
+                </p>
+            </li>
             
             <li class="post-item">
                 <a class="post-title" href="/posts/Transmission-Media">Transmission media</a>
@@ -186,21 +197,6 @@
                 <a class="post-tag" href="/tag/#Call-by-value">Call-by-value</a>
                 <a class="post-tag" href="/tag/#Call-by-reference">Call-by-reference</a>
                 <a class="post-tag" href="/tag/#Overloading">Overloading</a>
-                </p>
-            </li>
-            
-            <li class="post-item">
-                <a class="post-title" href="/posts/Analog-Transmission">Analog Transmission</a>
-                <br>
-                <span class="post-date">02 Oct 2018</span>
-                <a class="post-category" href="/category/#Network"> Network</a>
-                <a href="/posts/Analog-Transmission#disqus_thread"><i class="fas fa-comment"></i></a>
-                <p class="post-excerpt">Analog Transmission
-
-</p>
-                <p class="post-tag-list">
-                <a class="post-tag" href="/tag/#Network">Network</a>
-                <a class="post-tag" href="/tag/#Transmission">Transmission</a>
                 </p>
             </li>
             

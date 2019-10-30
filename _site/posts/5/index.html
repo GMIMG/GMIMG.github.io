@@ -50,15 +50,12 @@
     <header class="site-header">
   <div class="wrapper">
     <!---->
-    
     <a class="site-title" rel="author" href="/">GMIMG</a>
-
     <div class="dark-icon">
       <a id="theme-toggle" class="page-link" onclick="modeSwitcher()"></a>
     </div>
 
-
-    <nav class="site-menu">
+    <nav class="site-nav">
       <input type="checkbox" id="menu-trigger" class="menu-trigger" />
       <label for="menu-trigger">
         <span class="menu-icon">
@@ -68,15 +65,14 @@
       <div class="trigger">
           <a class="page-link" href="/about/">about</a>
           <a class="page-link" href="/posts/">Posts browser</a>
+        <a class="page-link" href="/search">
+          <i class="fas fa-search"></i>
+        </a>
       </div>
+      <!--div class="site-search search-icon" onclick="location.href='/search';"-->
+      <!--/div-->
     </nav>
     
-    <nav class="site-search">
-      <div class="search-icon" onclick="location.href='/search';">
-        <i class="fas fa-search"></i>
-      </div>
-    </nav>
-
   </div>
 </header>
     <main class="page-content">
@@ -123,6 +119,25 @@
         <h1 class="list-title"><strong>Featured Posts</strong></h1>
         <ul class="post-list">
             <!-- This loops through the paginated posts -->
+            
+            <li class="post-item">
+                <a class="post-title" href="/posts/C++-pointer">C++ pointer</a>
+                <br>
+                <span class="post-date">13 Nov 2018</span>
+                <a class="post-category" href="/category/#C++"> C++</a>
+                <a href="/posts/C++-pointer#disqus_thread"><i class="fas fa-comment"></i></a>
+                <p class="post-excerpt">
+  Pointer
+  Dynamically allocated array
+  delete, Destructor
+
+
+</p>
+                <p class="post-tag-list">
+                <a class="post-tag" href="/tag/#C++">C++</a>
+                <a class="post-tag" href="/tag/#Pointer">Pointer</a>
+                </p>
+            </li>
             
             <li class="post-item">
                 <a class="post-title" href="/posts/Wired-LANs">Wired LANs Ethernet & Other Wired Networks</a>
@@ -178,25 +193,6 @@
 </p>
                 <p class="post-tag-list">
                 <a class="post-tag" href="/tag/#Network">Network</a>
-                </p>
-            </li>
-            
-            <li class="post-item">
-                <a class="post-title" href="/posts/C++-Operator-Overloading">C++ operator overloading</a>
-                <br>
-                <span class="post-date">30 Oct 2018</span>
-                <a class="post-category" href="/category/#C++"> C++</a>
-                <a href="/posts/C++-Operator-Overloading#disqus_thread"><i class="fas fa-comment"></i></a>
-                <p class="post-excerpt">
-  Operator overloading
-  Friend function, friend class
-  Reference (&amp;)
-
-
-</p>
-                <p class="post-tag-list">
-                <a class="post-tag" href="/tag/#C++">C++</a>
-                <a class="post-tag" href="/tag/#Overloading">Overloading</a>
                 </p>
             </li>
             

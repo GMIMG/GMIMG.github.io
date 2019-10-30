@@ -1,19 +1,17 @@
 ---
 layout: page
 ---
-<div class="wrapper">
+<!--div class="wrapper"-->
   <div class="post-content">
     <article class="post">
       {% include post-header.html %}
       {%- if page.toc %}
-      <aside>
         <div class="toc_container">
           <div class="toc_title">
             <span><strong>Index</strong></span>
           </div>
           {% include toc.html html=content %}
         </div>
-      </aside>
       {%- endif %}
       <div class="post-content">
         {{ content }}
@@ -24,4 +22,4 @@ layout: page
       <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
     </article>
   </div>
-</div>
+<!--/div-->

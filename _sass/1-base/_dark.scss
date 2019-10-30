@@ -2,9 +2,17 @@ html, html[data-theme="light"]{
   body {
     background-color: $light-background-color;
     color: $light-on-background-color;
+    header {
+      background-color: $white;
+    }
   }
   a {
     color: $light-primary-variant-color;
+  }
+  @media screen and (max-width: $on-palm) {
+    .site-nav {
+      background-color: $dark-primary-color;
+    }
   }
   .toc_container {
     background: $light-toc-container-color;
@@ -24,9 +32,17 @@ html[data-theme="dark"]{
   body {
     background-color: $dark-background-color;
     color: $dark-on-background-color;
+    header {
+      background-color: $black;
+    }
   }
   a {
     color: $dark-secondary-color;
+  }
+  @media screen and (max-width: $on-palm) {
+    .site-nav {
+      background-color: $light-primary-color;
+    }
   }
   .toc_container {
     background: $dark-toc-container-color;

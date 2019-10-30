@@ -1,32 +1,32 @@
 <div class="post-header">
-    <span class="post-title">{{ page.title | escape }}</span>
-    <p class="post-meta">
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}">
-        {{ page.date | date_to_string }}
-      </time>
-      {%- if page.author %}
-        • <span class="p-author h-card">{{ page.author }}</span>
-      {%- endif %}
-    </p>
-    <div class="post-header-categories">
-      {%- if page.categories != empty %}
-      <span>Category: </span>
-      {%- assign category = page.categories -%}
-      <a href="/{{ site.category_dir }}#{{ category | first }}">{{category}}</a>
-      {%- endif %}
-    </div>
-    <div class="post-header-tags">
-      {%- if page.tags != empty %}
-      <span>Tags: </span>
-      {%- for tag in page.tags %}
-        <a href="/{{ site.tag_dir }}#{{tag|slugize}}">{{-tag-}}</a>
-        {%- unless forloop.last -%}<span>, </span>{%- endunless -%}
-      {%- endfor %}
-      {%- endif %}
-    </div>
-    {%- if page.last_modified %}
-    <div class="post-last-modified">
-        <span>last_modified : {{ page.last_modified | date_to_string }}</span>
-    </div>
+  <span class="post-title">{{ page.title | escape }}</span>
+  <p class="post-meta">
+    <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}">
+      {{ page.date | date_to_string }}
+    </time>
+    {%- if page.author %}
+      • <span class="p-author h-card">{{ page.author }}</span>
+    {%- endif %}
+  </p>
+  <div class="post-header-categories">
+    {%- if page.categories != empty %}
+    <span>Category: </span>
+    {%- assign category = page.categories -%}
+    <a href="/{{ site.category_dir }}#{{ category | first }}">{{category}}</a>
     {%- endif %}
   </div>
+  <div class="post-header-tags">
+    {%- if page.tags != empty %}
+    <span>Tags: </span>
+    {%- for tag in page.tags %}
+      <a href="/{{ site.tag_dir }}#{{tag|slugize}}">{{-tag-}}</a>
+      {%- unless forloop.last -%}<span>, </span>{%- endunless -%}
+    {%- endfor %}
+    {%- endif %}
+  </div>
+  {%- if page.last_modified %}
+  <div class="post-last-modified">
+      <span>last_modified : {{ page.last_modified | date_to_string }}</span>
+  </div>
+  {%- endif %}
+</div>
