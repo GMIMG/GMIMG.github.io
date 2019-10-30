@@ -1,5 +1,5 @@
 {%- assign navigation = site.data.navigation[include.nav] -%}
-<aside class="nav__list">
+<div class="nav__list">
   {%- if page.sidebar.title %}
   <h3 class="nav__title">{{- page.sidebar.title -}}</h3>
   {%- endif %}
@@ -95,4 +95,4 @@
       </li>
     {%- endfor %}
   </ul>
-</aside>
+</div>
