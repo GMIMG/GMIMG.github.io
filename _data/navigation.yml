@@ -1,22 +1,19 @@
 # main links
 # enable sub_sub_category(two children)
 main:
+  - title: "ComputerScience"
+    children:
+      - title: "Database"
+      - title: "Network"
   - title: "Programming"
     #url: /terms/
     children:
-      - title: "Computer_science"
-      - title: "Git"
-      - title: "Python"
-  - title: "Hardware"
-  - title: "Blog"
-  - title: "Class"
-    children:
-      - title: "Network"
+      - title: "C"
       - title: "C++"
-      - title: "Database"
-      - title: "Robot_Design"
-  - title: "Embedded"
+      - title: "Python"
+      - title: "Java"
+  - title: "Hardware"
+  - title: "Web"
+  - title: "Class"
   - title: "Story"
-  - title: "NEWS"
   - title: "etc"
-  #- title: "None"

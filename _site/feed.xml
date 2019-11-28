@@ -1,8 +1,911 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko" /><updated>2019-10-30T13:11:25+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">GMIMG</title><subtitle>Mechagrammer</subtitle><author><name>Jimin Hwang</name></author><entry><title type="html">Html</title><link href="http://localhost:4000/posts/HTML" rel="alternate" type="text/html" title="Html" /><published>2019-10-30T00:00:00+09:00</published><updated>2019-10-30T00:00:00+09:00</updated><id>http://localhost:4000/posts/HTML</id><content type="html" xml:base="http://localhost:4000/posts/HTML">&lt;h1 id=&quot;web&quot;&gt;WEB&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko" /><updated>2019-11-25T21:52:12+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">GMIMG</title><subtitle>Mechagrammer</subtitle><author><name>Jimin Hwang</name></author><entry><title type="html">Java</title><link href="http://localhost:4000/posts/JAVA" rel="alternate" type="text/html" title="Java" /><published>2019-11-15T00:00:00+09:00</published><updated>2019-11-15T00:00:00+09:00</updated><id>http://localhost:4000/posts/JAVA</id><content type="html" xml:base="http://localhost:4000/posts/JAVA">&lt;h1 id=&quot;java&quot;&gt;JAVA&lt;/h1&gt;
+
+&lt;h2 id=&quot;특징&quot;&gt;특징&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;JVM&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;자바는 ‘Write once, run anywhere’라는 슬로건을 내새우며 플랫폼에 종속되지 않는 프로그램을 개발합니다. c/c++은 같은소스라도 윈도우, 리눅스 등 OS(플랫폼)에 따라 실행파일을 다르게 컴파일해서 배포해야한다. 반면, 자바는 자바 가상 머신(JVM)이라는 스택기반의 가상머신이 존재한다. JVM은 자바와 OS사이의 중개자 역할을 하여 자바 컴파일러가 생성한 바이트 코드를 OS에 영향을 받지 않고  실행가능하게 해줍니다. 또한, 메모리관리와 Garbage collection을 수행합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;\assets\img\JVM.png&quot; alt=&quot;JVM&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://asfirstalways.tistory.com/158&quot;&gt;참고&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://ko.wikipedia.org/wiki/자바_가상_머신&quot;&gt;위키&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;자바는 클래스 기반의 객체 지향 언어이며, c와 달리 동적 메모리에 직접 접근을 할수 없고, 메모리 수거를 자동으로 해주는 Garbage Collector를 이용한다.&lt;/p&gt;
+
+&lt;h2 id=&quot;변수와-자료형&quot;&gt;변수와 자료형&lt;/h2&gt;
+
+&lt;h3 id=&quot;변수&quot;&gt;변수&lt;/h3&gt;
+
+&lt;p&gt;변수는 &lt;type&gt; &lt;variableName&gt;( = &lt;초기값&gt;); 으로 선언한다&lt;/초기값&gt;&lt;/variableName&gt;&lt;/type&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;이름규칙&quot;&gt;이름규칙&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;클래스 이름/인터페이스 이름
+    &lt;ul&gt;
+      &lt;li&gt;첫 글자는 대문자로 표기합니다.&lt;/li&gt;
+      &lt;li&gt;연결된 단어의 첫 글자도 대문자로 표기합니다.&lt;/li&gt;
+      &lt;li&gt;나머지 문자는 소문자로 표기합니다.&lt;/li&gt;
+      &lt;li&gt;”$”(dollar sign) 은 내부 클래스에서 특별한 의미가 있기 때문에 사용을 권장하지 않습니다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;변수 이름
+    &lt;ul&gt;
+      &lt;li&gt;첫 글자는 소문자, 연결 단어의 첫 글자는 대문자로 표기합니다.&lt;/li&gt;
+      &lt;li&gt;일반적으로 변수 이름에서는 “_“(underscore character) 를 사용하지 않습니다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;메서드 이름
+    &lt;ul&gt;
+      &lt;li&gt;동사적 의미를 갖게 합니다.&lt;/li&gt;
+      &lt;li&gt;첫 글자는 소문자, 연결 단어의 첫 글자는 대문자로 표기합니다.&lt;/li&gt;
+      &lt;li&gt;일반적으로 메서드 이름에서는 “_“(underscore character) 를 사용하지 않습니다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;자료형&quot;&gt;자료형&lt;/h3&gt;
+
+&lt;h4 id=&quot;기본-데이터-타입&quot;&gt;기본 데이터 타입&lt;/h4&gt;
+
+&lt;p&gt;C와 달리 unsigned  자료형이 없음, 음수는 2의 보수를 이용.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt;유형&lt;/th&gt;
+      &lt;th&gt;크기&lt;/th&gt;
+      &lt;th&gt;범위&lt;/th&gt;
+      &lt;th&gt;초기값&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;정수형&lt;br /&gt;Integral&lt;/td&gt;
+      &lt;td&gt;byte&lt;/td&gt;
+      &lt;td&gt;1 byte&lt;/td&gt;
+      &lt;td&gt;-2^7 ~ 2^7-1&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;short&lt;/td&gt;
+      &lt;td&gt;2 byte&lt;/td&gt;
+      &lt;td&gt;-2^15 ~ 2^15-1&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;int&lt;/td&gt;
+      &lt;td&gt;4 byte&lt;/td&gt;
+      &lt;td&gt;-2^31 ~ 2^31-1&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;long&lt;/td&gt;
+      &lt;td&gt;8 byte&lt;/td&gt;
+      &lt;td&gt;-2^63 ~ 2^63-1&lt;/td&gt;
+      &lt;td&gt;0L&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;실수형&lt;br /&gt;Floating - point&lt;/td&gt;
+      &lt;td&gt;float&lt;/td&gt;
+      &lt;td&gt;4 byte&lt;/td&gt;
+      &lt;td&gt;(7자리의 소수)&lt;/td&gt;
+      &lt;td&gt;0.0F&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;double&lt;/td&gt;
+      &lt;td&gt;8 byte&lt;/td&gt;
+      &lt;td&gt;(15자리의 소수)&lt;/td&gt;
+      &lt;td&gt;0.0D&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;논리형 &lt;br /&gt;Logical&lt;/td&gt;
+      &lt;td&gt;boolean&lt;/td&gt;
+      &lt;td&gt;1 bit&lt;/td&gt;
+      &lt;td&gt;true 또는 false (소문자)&lt;/td&gt;
+      &lt;td&gt;false&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;문자형&lt;br /&gt;Textual&lt;/td&gt;
+      &lt;td&gt;char&lt;/td&gt;
+      &lt;td&gt;2 byte&lt;/td&gt;
+      &lt;td&gt;\u0000 ~ \uFFFF&lt;/td&gt;
+      &lt;td&gt;‘\u0000’&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;String&lt;/td&gt;
+      &lt;td&gt;variable&lt;/td&gt;
+      &lt;td&gt;각 위치에서 \0x0000 ~ \0xFFFF&lt;/td&gt;
+      &lt;td&gt;null&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// &amp;lt;type&amp;gt; &amp;lt;variableName&amp;gt;;&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;one&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;two&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;'A'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;three&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;ABCDEFG&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;생성된 String 값(문자열)은 불변(immutable)입니다. 문자열은 힙메모리에 저장되고 다른 문자열을 대입하면 기존의 문자열은 그대로 남아있는채로 새로운 문자열 인스턴스가 생성 됩니다. 문자열 연결을 계속하면 메모리에 garbage가 많이 생길 수 있습니다. 반복문안에서는 StringBuilder와 StringBuffer 클래스를 사용해주는게 좋다.&lt;/p&gt;
+
+&lt;p&gt;10버전 부터 사용가능한 var 타입 선언은 초기값을 입력해주면 추론하여 적당한 변수타입을 지정해줍니다. 즉, 초기값이 없으면 에러가 발생합니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Variable1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;c1&quot;&gt;// TODO Auto-generated method stub&lt;/span&gt;
+		&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;level&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;level&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;abc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;10&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bbc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;'1'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;level&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;escape type&lt;/th&gt;
+      &lt;th&gt;의미&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\n&lt;/td&gt;
+      &lt;td&gt;New Line(\u000A)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\t&lt;/td&gt;
+      &lt;td&gt;Tab(\u0009)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\b&lt;/td&gt;
+      &lt;td&gt;Backspace(\u0008)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\r&lt;/td&gt;
+      &lt;td&gt;Return(\u000D)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\f&lt;/td&gt;
+      &lt;td&gt;Form Feed(\u000C)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\\&lt;/td&gt;
+      &lt;td&gt;Backslash(\u005C)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\’&lt;/td&gt;
+      &lt;td&gt;Single Quote(\u0027)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\”&lt;/td&gt;
+      &lt;td&gt;Double Quote(\u0022)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;BinaryTest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+			
+		&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bNum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mb&quot;&gt;0B1010&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;oNum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mo&quot;&gt;012&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hNum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0XA&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+		
+
+		&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bNum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;oNum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hNum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		
+		&lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bs1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;128&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bs2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;127&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bs1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bs2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		
+		
+		&lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dnum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;3.14&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fnum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;3.14&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;F&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+		
+		&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dnum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fnum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		
+		&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;65&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;66&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+		
+		&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;65&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ch1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;'한'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+		
+		&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ch1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;cm&quot;&gt;/*
+10
+10
+10
+10
+-128
+127
+3.14
+3.14
+A
+ﾾ
+A
+한
+*/&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;상수&quot;&gt;상수&lt;/h3&gt;
+
+&lt;p&gt;상수 : 변하지 않는 값 (cf 변수 : 변하는 값)&lt;/p&gt;
+
+&lt;p&gt;상수 선언은 final 키워드를 사용한다.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PI&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;3.14&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MAX_NUM&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;리터럴literal&quot;&gt;리터럴(literal)&lt;/h3&gt;
+
+&lt;p&gt;자바에서 기본적으로 정수는 int, 실수는 double형이므로 원하는 타입으로 저장하고 싶을때엔 상수뒤에 리터럴 문자를 써줘야한다.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;'A'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PI&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;3.14&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;F&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12345678900L&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;형변환type-conversion&quot;&gt;형변환(Type conversion)&lt;/h3&gt;
+
+&lt;p&gt;형변환에는 묵시적 형변환과 명시적 형변환이 있다. 더 정밀한 자료형으로 대입하거나 연산할 때 묵시적 형변환이 일이나고, 프로그래머가 의도적으로 크기가 작은 자료형이나, 덜 정밀한 자료형에 대입하는 경우 명시적 형변환을 사용한다. 이때 자료 손실일 발생할 수 있다.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Variable1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+		
+		&lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bNum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;iNum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bNum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+		
+		&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bNum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;iNum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		
+		&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;iNum2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fNum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;iNum2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+		
+		&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;iNum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fNum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		
+		&lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dNum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;dNum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fNum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;iNum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dNum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;연산자&quot;&gt;연산자&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Precedence&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Type&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Operator&lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;15&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;일차식&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;()&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;[]&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;.&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Parentheses, Array subscript, Member selection&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;14&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;단항&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;++&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;--&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Unary post-increment, Unary post-decrement&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;13&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;단항&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;++&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;--&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;+&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;-&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;!&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;~&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;(type)&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Unary pre-increment, Unary pre-decrement, Unary plus, Unary minus, Unary logical negation, Unary bitwise complement, Unary type cast&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;12&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;산술&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;/&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;%&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Multiplication, Division, Moduls&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;11&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;산술&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;+&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;-&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Addition, Subtraction&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;10&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;비트 이동&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;&amp;lt;&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&amp;gt;&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Bitwise left shift, Bitwise right shift with sign extension, Bitwise right shift with zero extension&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;9&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;관계&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;=&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;=&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;instanceof&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Relational less than,Relational less than or equial, Relational greater than, Relational greater than or equal, Type comparison (objects only)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;8&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;관계&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;==&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;!=&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Relational is equial to, Relational is not equal to&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;7&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;비트 곱&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Bitwise AND&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;6&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;비트 차&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;^&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Bitwise exclusive OR&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;비트 합&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Bitwise inclusive OR&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;논리 곱&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&amp;amp;&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Logical AND&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;논리 합&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;||&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Logical OR&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;조건&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;? : &lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Temary conditional&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;대입&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;=&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;+=&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;-=&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;*=&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;/=&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;%=&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Assignment, Addition aaignment, Subtraction assignment, Multiplication assignment, Division assignment, Modulus assignment&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;단락 회로 평가 (short circuit evaluation)&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;논리 AND(&amp;amp;&amp;amp;) 앞의 항이 false 이면 뒤 항의 결과 값과 상관없이 false&lt;/li&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;논리 곱(&lt;/td&gt;
+          &lt;td&gt; &lt;/td&gt;
+          &lt;td&gt;) 앞의 항이 true 이면 뒤 항의 결과 값과 상관없이 true&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;OperationEx3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+		
+		&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+		
+		&lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flag1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;num1 : &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;num2 : &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;flag1 : &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flag1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;c1&quot;&gt;// 거짓 || 참&lt;/span&gt;
+		
+		&lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flag2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;num1 : &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;num2 : &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;flag2 : &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flag2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;c1&quot;&gt;// 거짓 &amp;amp;&amp;amp; (참 : 실행안함)&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;조건문과-반복문&quot;&gt;조건문과 반복문&lt;/h2&gt;
+
+&lt;h2 id=&quot;클래스와-객체&quot;&gt;클래스와 객체&lt;/h2&gt;
+
+&lt;p&gt;클래스는 멤버변수와 메서드로 이루어진 하나의 &lt;strong&gt;도면&lt;/strong&gt;이다. 이러한 클래스기반의 프로그래밍을 객체지향 프로그래밍이라고한다.&lt;/p&gt;
+
+&lt;p&gt;클래스를 사용하기위해 생성하는 방법&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//클래스형 변수이름 = new 생성자;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Student&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;studentJimin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Student&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;이 때 실제로 사용할 수 있도록 생성된 클래스를 &lt;code class=&quot;highlighter-rouge&quot;&gt;인스턴스&lt;/code&gt;라고 한다. Student 클래스 자료형으로 studentJimin 변수를 선언하고 new Student();로 Student 클래스를 생성하여 studentJimin에 대입한다는 뜻이다. studentJimin을 참조변수라고 하고, 이변수가 생성된 인스턴스를 가리킨다.&lt;/p&gt;
+
+&lt;p&gt;인스턴스는 힙영역에 생성된다. 힙은 동적으로 할당되며 자바는 가비지 컬렉터가 자동으로 메모리를 해제해 준다.&lt;/p&gt;
+
+&lt;p&gt;생성자&lt;/p&gt;
+
+&lt;p&gt;자바컴파일러는 다음과같이 디폴트 생성자를 자동으로 만들어준다.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;weight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  
+
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{}&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//자바 컴파일러가 제공하는 디폴트 생성자&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;프로그래머가 직접 생성자를 구현하려면 다음과같다. 단, 생성자를 하나이상 구현하면 디폴트 생성자는 만들어지지 않는다. 생성자는 오버로드가 가능하다.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;weight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  
+
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pname&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pname&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;참조자료형&lt;/p&gt;
+
+&lt;p&gt;크기가 정해진 기본자료형(int,char, float, double 등)으로 선언하는 변수가 있고, 클래스 자료형으로 선언하는 참조 자료형 변수가 있다.&lt;/p&gt;
+
+&lt;p&gt;정보은닉&lt;/p&gt;
+
+&lt;p&gt;public&lt;/p&gt;
+
+&lt;p&gt;protected&lt;/p&gt;
+
+&lt;p&gt;private&lt;/p&gt;
+
+&lt;p&gt;this예약어&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;자신의 메몰를 가리키는 this&lt;/li&gt;
+  &lt;li&gt;생성자에서 다른 생성자를 호출하는 this&lt;/li&gt;
+  &lt;li&gt;자신의 주솔르 반환하는 this&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;static 변수&lt;/p&gt;
+
+&lt;p&gt;클래스에서 공통으로 사용하는 변수를 &lt;code class=&quot;highlighter-rouge&quot;&gt;static&lt;/code&gt;으로 선언한다. 이변수는 다른멤버 변수처럼 인스턴스가 생성될 때마다 새로 생성되는 변수가 아니고, 딱 한번 메모리 공간이 할당되고 모든 인스턴스가 공유한다.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;변수 유형&lt;/th&gt;
+      &lt;th&gt;선언 위치&lt;/th&gt;
+      &lt;th&gt;사용 범위&lt;/th&gt;
+      &lt;th&gt;메모리&lt;/th&gt;
+      &lt;th&gt;생성과 소멸&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;지역 변수&lt;br /&gt;(로컬 변수)&lt;/td&gt;
+      &lt;td&gt;함수 내부에 선언&lt;/td&gt;
+      &lt;td&gt;함수 내부에서만 사용&lt;/td&gt;
+      &lt;td&gt;스택&lt;/td&gt;
+      &lt;td&gt;함수가 호출될 때 생성되고 함수가 끝나면 소멸함&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;멤버 변수&lt;br /&gt;(인스턴스 변수)&lt;/td&gt;
+      &lt;td&gt;클래스 멤버 변수로 선언&lt;/td&gt;
+      &lt;td&gt;클래스 내부에서 사용하고 private이 아니면 참조 변수로 다른 클래스에서 사용 가능&lt;/td&gt;
+      &lt;td&gt;힙&lt;/td&gt;
+      &lt;td&gt;인스턴스가 생성될 때 힙에 생성되고, 가비지 컬렉터가 메모리를 수거할 때 소멸됨&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;static 변수&lt;br /&gt;(클래스 변수)&lt;/td&gt;
+      &lt;td&gt;static 예약어를 사용하여 클래스 내부에 선언&lt;/td&gt;
+      &lt;td&gt;클래스 내부에서 사용하고 private이 아니면 클래스 이름으로 다른 클래스에서 사용 가능&lt;/td&gt;
+      &lt;td&gt;데이터 영역&lt;/td&gt;
+      &lt;td&gt;프로그램이 처음 시작할 때 상수와 함께 데이터 영역에 생성되고 프로그램이 끝나고 메모리를 해제할 때 소멸됨&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;static 변수는 라이프타임이 길다. 그러므로 인스턴스로 생성하면 가비지 컬렉터(사용하지 않는 메모리를 회수하는 기능)가 소멸시키기 때문에 메모리가 절약된다.&lt;/p&gt;
+
+&lt;p&gt;싱글톤 패턴?&lt;/p&gt;
+
+&lt;h2 id=&quot;배열&quot;&gt;배열&lt;/h2&gt;
+
+&lt;p&gt;배열의 선언 방법은 다음과 같다.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;studentID&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// 또는 int student[] = new int[3];&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;studentScore&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;70&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// 또는 itn[] studnetScore = {100, 50, 70};&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;studentGrade&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;studentGrade&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;[]&lt;/code&gt; 는 인덱스 연산자이다. 배열요소가 저장된 메모리 위치를 찾아주는 역할을 한다.&lt;/p&gt;
+
+&lt;p&gt;배열은 처음 설정한 값이 전체 배열 길이이다. 실제로 유효한 값의 배열의 크기를 측정하기 위해서는 초기화 할때마다 size를 1씩 증가 시키는 방법이있다.&lt;/p&gt;
+
+&lt;p&gt;객체도 마찬가지로 배열로 만들수 있다.&lt;/p&gt;
+
+&lt;p&gt;기존 배열은 항상 배열 길이를 정하고 프로그래밍을 해야하기 때문에 동적인 배열을 다루기 힘들었다. 그래서 자바는 객체 배열 클래스 ArrayList 를 제공한다.&lt;/p&gt;
+
+&lt;p&gt;ArrayList 클래스의 주요 메서드&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;메서드&lt;/th&gt;
+      &lt;th&gt;설명&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;boolean add(E e)&lt;/td&gt;
+      &lt;td&gt;요소(객체) 하나를 배열에 추가합니다. E는 요소의 자료형을 의미합니다.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;int size()&lt;/td&gt;
+      &lt;td&gt;배열에 추가된 요소 전체 개수를 반환합니다.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;E get(int index)&lt;/td&gt;
+      &lt;td&gt;배열의 index 위치에 있는 요소 값을 반환합니다.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;E remove(int index)&lt;/td&gt;
+      &lt;td&gt;배열의 index 위치에 있는 요소 값을 제거하고 그 값을 반환합니다.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;boolean isEmpty()&lt;/td&gt;
+      &lt;td&gt;배열이 비어 있는지 확인합니다.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;상속과-다형성&quot;&gt;상속과 다형성&lt;/h2&gt;
+
+&lt;p&gt;상속(inheritance)란 유사한 클래스 간의 관계다. 기본베이스가 되는 클래스(상위 클래스)(부모 클래스)가 멤버 변수(속성)이나 메서드(기능)을 추가한 클래스(하위 클래스)(자식 클래스)에게 상속한다고 한다.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;B&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;위 코드는 B클래스는 A클래스의 멤버 변수와 메소드를 상속받는다. …에 B클래스만의 멤버 변수와 메소드를 정의할 수 있다. 단 private 변수는 상속된 클래스에서 접근할 수 없기 때문에 &lt;code class=&quot;highlighter-rouge&quot;&gt;protected&lt;/code&gt; 예약어 변수를 사용한다. protected는 상속된 하위 클래스를 제외한 나머지 외부 클래스에서는 private와 동일한 역할을 한다.&lt;/p&gt;
+
+&lt;p&gt;하위 클래스가 생성될 때는 상위 클래스의 생성자가 먼저 호출된다. &lt;code class=&quot;highlighter-rouge&quot;&gt;super&lt;/code&gt; 예약어는 하위 클래스에서 상위 클래스로 접근할 때 사용한다.&lt;/p&gt;
+
+&lt;p&gt;다음과 같이 하위 클래스는 상위 클래스로 묵시적 형변환이 가능하다. 이러한 형변환을 &lt;code class=&quot;highlighter-rouge&quot;&gt;업캐스팅&lt;/code&gt;이라고 한다. 업캐스팅된 클래스의 원래 인스턴스의 멤버 변수는 접근이 불가능 하다.(가상 메서드로 접근은 가능)&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Customer vc = new VIPCustomer();
+//선언된 클래스형 = 생성된 인스턴스의 클래스형
+//(상위 클래스형) = (하위 클래스형)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;반대는 묵시적 형변환이 불가하고 명시적 형변환이 가능하다.&lt;/p&gt;
+
+&lt;p&gt;메서드 오버라이딩&lt;/p&gt;
+
+&lt;p&gt;상위 클래스에서 정의된 메서드를 하위 클래스에서 재정의 하는 것을 &lt;code class=&quot;highlighter-rouge&quot;&gt;메서드 오버라이딩&lt;/code&gt;이라고 한다. 이때 오버라이드할 메서드 앞에 @Override 애노테이션을 붙여서 재정의된 메서드임을 알린다. 메서드 오버라이딩을 통해 업캐스팅된 클래스에서 원래 인스턴스의 메서드를 접근할 수 있다. 이때 이를 &lt;code class=&quot;highlighter-rouge&quot;&gt;가상 메서드&lt;/code&gt;라고한다. 이는 클래스를 생성하여 인스턴스가 만들어질 때 멤버변수는 힙 메모리에 위치하는 반면 메서드는 메서드 영역(코드 영역)에 위치한고, 메서드를 호출하면 메서드 영역의 주소를 참조하여 명령이 실행된다. 그래서 업캐스팅 된 클래스는 원래 인스턴스의 가상메서드를 그대로 가져와서 사용한다.&lt;/p&gt;
+
+&lt;p&gt;다형성&lt;/p&gt;
+
+&lt;p&gt;이런 묵시적 형변환(업캐스팅)과 가상 메서드를 통해 객체지향의 특성 &lt;code class=&quot;highlighter-rouge&quot;&gt;다형성&lt;/code&gt;을 이룬다. 유사한 클래스를 하나의 상위 클래스에서 상속받아서 하나의 자료형으로 쉽게 관리할 수 있다. 이때문에 유지보수한는 데 매우 편리하다.&lt;/p&gt;
+
+&lt;p&gt;다운캐스팅&lt;/p&gt;
+
+&lt;p&gt;상위 클래스로 형변환(업캐스팅)된 인스턴스의 자료형을 원래 자료형으로 돌아갈때 사용하는것이 다운캐스팅입니다. 업캐스팅된 상태에서는 원래 인스턴스만의 멤버변수에 접근할 수 없기 때문에&lt;/p&gt;
+
+&lt;p&gt;instanceof&lt;/p&gt;
+
+&lt;p&gt;추상 클래스(abstract)&lt;/p&gt;
+
+&lt;p&gt;실제로 사용하지 않는(완전하지 않은) 상위클래스를 생성하여 메서드를 정의한뒤 하위클래스에 상속하는 방법을 추상클래스라고 합니다. 구현하지 않은 메서드를 상위클래스에 선언하여 하위클래스에서 정의하게 합니다.&lt;/p&gt;
+
+&lt;p&gt;이런 추상 클래스를 구현하기 위해 &lt;code class=&quot;highlighter-rouge&quot;&gt;인터페이스&lt;/code&gt;를 사용합니다. 인터페이스는 모든 메서드가 추상 메서드로만 이루어져 있습니다. 이런 인터페이스를 클래스에서 구현하기위해 implements 를 사용합니다. 이 implements 예약어는 상속하는 예약어 depends와 유사하게 사용합니다. 이때 상속받은 클래스에 추상메서드를 구현하지 않으면 오류가 발생됩니다. 즉 인터페이스를 상속받은 클래스의 메서드는 인터페이스에서 선언된 추상메서드를 모두 오버라이팅 해야합니다. 그래서 인터페이스만 보면 클래스가 어떤 매개변수가 사용되고, 어떤 자료형 값이 반환되는지 알 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;인터페이스에서 기본적으로 제공할 메서드를 default 예약어를 통해 작성합니다. default 메서드는 재정의 할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;private 메서드는 인터페이스를 구현한 클래스에서 사용하거나 재정의 할 수 없습니다. 단지 default 메서드에서 사용할 메서드를 private 예약어로 정의해서 코드의 재사용성을 높입니다.&lt;/p&gt;
+
+&lt;p&gt;static 예약어를 사용해 정적 메서드를 사용하면 인터페이스 이름으로 직접 참조하여 사용해야합니다.&lt;/p&gt;
+
+&lt;p&gt;제너릭&lt;/p&gt;
+
+&lt;p&gt;ArrayList&lt;E&gt; 에서 &lt;E&gt; 를 제너릭이라고 합니다. 받아들이는 쪽에서 형을 지정해서 형 변환이 되지 않도록 안정성을 보장해줍니다.&lt;/E&gt;&lt;/E&gt;&lt;/p&gt;
+
+&lt;p&gt;Collection 인터페이스&lt;/p&gt;
+
+&lt;p&gt;하나의 객체를 관리하기 위한 메서드가 정의된 인터페이스입니다. 하위에 List와 Set, Map 인터페이스가 있습니다.&lt;/p&gt;
+
+&lt;p&gt;List는 순서가 있는자료, 중복 허용하며 ArrayList, Vector 클래스가 있습니다.&lt;/p&gt;
+
+&lt;p&gt;에러가 나는것을 잡아내는것을 Exception이라고 한다.&lt;/p&gt;
+
+&lt;p&gt;csv : 구분자로 나누어진 데이터를 저장하는 형식&lt;/p&gt;
+
+&lt;p&gt;Point of View&lt;/p&gt;
+
+&lt;p&gt;시점&lt;/p&gt;
+
+&lt;p&gt;문제가 뭐였고, 해결&lt;/p&gt;
+
+&lt;p&gt;테크니컬한 강점 키워드를 내세워도 기업에서는 별거아닌것&lt;/p&gt;
+
+&lt;p&gt;이 게시물은 Do it! 자바 프로그래밍 입문(박은종) 을 공부한 내용으로 쓰였습니다.&lt;/p&gt;</content><author><name>Gmimg</name></author><summary type="html">JAVA</summary></entry><entry><title type="html">Python</title><link href="http://localhost:4000/posts/python" rel="alternate" type="text/html" title="Python" /><published>2019-11-15T00:00:00+09:00</published><updated>2019-11-15T00:00:00+09:00</updated><id>http://localhost:4000/posts/python</id><content type="html" xml:base="http://localhost:4000/posts/python">&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Operator&lt;/th&gt;
+      &lt;th&gt;Description&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;**&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;지수&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;~&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;+&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;-&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;보수 연산,  (단항) +, -&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;/&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;%&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;//&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;곱, 나누기, 나머지, 몫&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;+&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;-&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;덧셈, 뺄셈&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&amp;gt;&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;&amp;lt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;비트 시프트&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;비트 AND&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;^&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;비트 XOR, 비트 OR&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;=&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;=&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;비교 연산자&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;&amp;gt;&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;==&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;!=&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;비교 연산자&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;=&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;%=&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;/=&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;//=&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;-=&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;+=&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;*=&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;**=&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;할당연산자&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;is&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;is not&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;식별 연산자&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;in&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;not in&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;멤버 연산자&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;not&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;or&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;and&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;논리 연산자&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Pandas&lt;/p&gt;
+
+&lt;p&gt;테이블을 읽어서 처리해주는 파이썬 라이브러리&lt;/p&gt;
+
+&lt;p&gt;matplotlib&lt;/p&gt;
+
+&lt;p&gt;자료를 그래프에 시각화 해서 보여주는 파이썬 라이브러리&lt;/p&gt;
+
+&lt;p&gt;Term Frequency (TF)
+단어 빈도(tf)는 특정 단어 t가 특정 문서 d내에 등장하는 빈도&lt;/p&gt;
+
+&lt;p&gt;tf 값이 클수록 문서에 많이 등장하는 단어, 정보가 부족한 단어 -&amp;gt; 문서를 구분하는 척도로 사용하기에 부적절&lt;/p&gt;
+
+&lt;p&gt;드물게 등장하는 단어(tf가 적은 단어)가 중요한 정보를 가지고있음 (back-propagation)&lt;/p&gt;
+
+&lt;p&gt;Inverse Document Frequency(IDF)&lt;/p&gt;
+
+&lt;p&gt;df는 document frequency로 단어 t가 등장한 문장의 수&lt;/p&gt;
+
+&lt;p&gt;df는 단어 t의 중요도의 역수와 같음&lt;/p&gt;
+
+&lt;p&gt;즉, df 값이 낮은 단어가 중요함&lt;/p&gt;
+
+&lt;p&gt;idf는 단어t의 중요도를 나타내는 척도&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{align*}
+idf(t) &amp;= \log \Big( \frac{1+n}{1+df(t)} \Big)  + 1 \\
+\end{align*} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;n : 모든문장수&lt;/p&gt;
+
+&lt;p&gt;df(t) : 단어나온문장수&lt;/p&gt;
+
+&lt;p&gt;TF-IDF (Term Frequency - Inverse Document Frequency)&lt;/p&gt;
+
+&lt;p&gt;tf와 idf의 곱&lt;/p&gt;
+
+&lt;p&gt;문서군 내에서 특정 단어의 중요도를 수치화한 값&lt;/p&gt;
+
+&lt;p&gt;tf-idf값은 단어의 빈도가 높아질 수록, 희박하게 등장할 수록 커짐&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{align*}
+{tf - idf}_{term1} = tf \times idf
+\end{align*}&lt;/script&gt;
+
+&lt;p&gt;정규화&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{align*}
+v_{norm} = \frac{v}{||v||_2} = \frac{v}{\sqrt{ {v_1}^2 + {v_2}^2 + \dots + {v_n}^2} } \\ 
+\end{align*}&lt;/script&gt;
+
+&lt;h2 id=&quot;machine-learning&quot;&gt;Machine learning&lt;/h2&gt;
+
+&lt;h3 id=&quot;지도학습supervised-learning&quot;&gt;지도학습(supervised learning)&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;의사결정 나무&lt;/p&gt;
+
+    &lt;p&gt;의사결정 규칙을 나무구조 표현을 통해 분류와 예측을 수행&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Decision Tree의 분리기준(Split Criterion)은 생성된 자식 노드에 속하는 자료의 순수도(Purity)를 가장 크게 증가하도록 트리를 형성&lt;/p&gt;
+
+&lt;p&gt;입력 변수를 이용해 목표 변수의 분포를 얼마나 잘 구별하는 정도를 파악해 자식 마디가 형성되는데, 목표 변수의 구별 정도를 불순도(Impurity, 다양한 범주들의 개체들이 포함되어 있는 정도)에 의해 측정&lt;/p&gt;
+
+&lt;p&gt;지니 지수(Gini Index)&lt;/p&gt;
+
+&lt;p&gt;데이터 집합의 불순도를 측정&lt;/p&gt;
+
+&lt;p&gt;0~1 사이의 값이며, 어떤 데이터 집합에 속한 개체(레코드)들이 같은 범주(클래스)로 구성되어 있으면 지니지수는 0, 지니 지수가 작을수록 잘 분류된 것&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{align*}
+G &amp;= 1 - \Sigma_{j=1}^c P(j)^2 \\
+  &amp;= 1 - \Sigma_{j=1}^c \big( \frac{n_j}{n} \big)^2 \\
+\end{align*} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;C	: 범주(클래스)의 수&lt;/p&gt;
+
+&lt;p&gt;P(j)	: j번째 범주(클래스)에 분류될 확률&lt;/p&gt;
+
+&lt;p&gt;n	: 노드에 속하는 개체 수&lt;/p&gt;
+
+&lt;p&gt;$n_j$	: 노드에 속하는 수 중 j번째 범주(클래스)에 속하는 개체 수&lt;/p&gt;</content><author><name>Gmimg</name></author><summary type="html">Operator Description ** 지수 ~ + - 보수 연산, (단항) +, - * / % // 곱, 나누기, 나머지, 몫 + - 덧셈, 뺄셈 &amp;gt;&amp;gt; &amp;lt;&amp;lt; 비트 시프트 &amp;amp; 비트 AND ^ | 비트 XOR, 비트 OR &amp;lt;= &amp;lt; &amp;gt; &amp;gt;= 비교 연산자 &amp;lt;&amp;gt; == != 비교 연산자 = %= /= //= -= += *= **= 할당연산자 is is not 식별 연산자 in not in 멤버 연산자 not or and 논리 연산자    </summary></entry><entry><title type="html">Spring</title><link href="http://localhost:4000/posts/Spring" rel="alternate" type="text/html" title="Spring" /><published>2019-11-04T00:00:00+09:00</published><updated>2019-11-04T00:00:00+09:00</updated><id>http://localhost:4000/posts/Spring</id><content type="html" xml:base="http://localhost:4000/posts/Spring">&lt;h3 id=&quot;di&quot;&gt;DI&lt;/h3&gt;
+
+&lt;p&gt;Dependency injection&lt;/p&gt;
+
+&lt;p&gt;간결한 구조와 다르게&lt;/p&gt;
+
+&lt;p&gt;Spring 인코딩 설정&lt;/p&gt;
+
+&lt;p&gt;Windows 탭 - preferences - Workspace - text file encoding - UTF-8&lt;/p&gt;
+
+&lt;p&gt;File - New - project - Spring legacy project - Spring MVC Project(ex001) - Package (com.multicampus.ex01)&lt;/p&gt;
+
+&lt;p&gt;pom.xml - 11,141,142 line 1.8 버전으로 바꾸기&lt;/p&gt;
+
+&lt;p&gt;project - maven -update project&lt;/p&gt;
+
+&lt;p&gt;windows - show view - other -server&lt;/p&gt;
+
+&lt;p&gt;new - server - Apache tomcat 9.0&lt;/p&gt;
+
+&lt;p&gt;오류날때&lt;/p&gt;
+
+&lt;p&gt;프로젝트 - property - java build path - libraries -JRE System Library - Edit - Alternate JRE -Installed JREs - ADD - jdk 경로 체크 확인&lt;/p&gt;
+
+&lt;p&gt;리플렉션 동적 로딩&lt;/p&gt;
+
+&lt;p&gt;new라는 키워드를 쓰지않음 (변수를 먼저 설정하고 나중에 할당 가능)&lt;/p&gt;
+
+&lt;p&gt;AOP&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://ko.wikipedia.org/wiki/%EB%AA%A8%EB%8D%B8-%EB%B7%B0-%EC%BB%A8%ED%8A%B8%EB%A1%A4%EB%9F%AC&quot;&gt;MVC 패턴&lt;/a&gt; : 사용자 인터페이스와 비즈니스 로직을 분리하여 서로 영향 없이 고칠수 있는 어플리캐이션 구현 패턴&lt;/p&gt;
+
+&lt;p&gt;서버는 데이터베이스를 다루기위해 보통 MVC 패턴을 이용하는데 이때 모두 구현할 필요 없이 Serlet이나 JSP에서&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://ko.wikipedia.org/wiki/%EC%9E%90%EB%B0%94_%EC%84%9C%EB%B8%94%EB%A6%BF&quot;&gt;자바서블릿 (servlet)&lt;/a&gt; : 웹에서 MVC패턴을 이용해 클라이언트의 요청을 처리하고 결과를 다시 클라이언트에게 전송하는 자바 프로그래밍 기술&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://ko.wikipedia.org/wiki/%EC%9E%90%EB%B0%94%EC%84%9C%EB%B2%84_%ED%8E%98%EC%9D%B4%EC%A7%80&quot;&gt;JSP&lt;/a&gt; : servlet과 마찬가지의 기능을 구현&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://gmlwjd9405.github.io/2018/11/04/servlet-vs-jsp.html&quot;&gt;Servlet과 JSP 차이&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://ko.wikipedia.org/wiki/JDBC&quot;&gt;JDBC&lt;/a&gt; : 자바에서 데이터 베이스에 접속할 수 있도록 하는 자바&lt;a href=&quot;https://ko.wikipedia.org/wiki/API&quot;&gt;API&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;DB&lt;/p&gt;
+
+&lt;p&gt;connection pool&lt;/p&gt;
+
+&lt;p&gt;hikari CP&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://ko.wikipedia.org/wiki/AspectJ&quot;&gt;AspectJ&lt;/a&gt; : 자바에서 &lt;a href=&quot;https://ko.wikipedia.org/wiki/%EA%B4%80%EC%A0%90_%EC%A7%80%ED%96%A5_%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D&quot;&gt;관점지향 프로그래밍 (AOP)&lt;/a&gt; 확장기능&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://ko.wikipedia.org/wiki/%EC%9D%98%EC%A1%B4%EC%84%B1_%EC%A3%BC%EC%9E%85&quot;&gt;의존성 주입(DI)&lt;/a&gt; : 객체지향 프로그래밍에서 객체가 다른객체를 참조하면서 의존성이 생긴다. 이러한 의존성은 동적프로그래밍을 힘들게한다. 프레임워크에서 컨테이너에 객체를 등록해서 동적으로 의존관계를 설정해 주는것을 Dependency Injection 또는 Inversion of Control이라고한다.&lt;/p&gt;
+
+&lt;p&gt;AOP : 개발자가 핵심 비즈니스 기능만 프로그래밍 할 수 있게 공통 기능을 분리해서 불필요한 코드의 반복을 줄이고 코드 가시성을 높이는 기술&lt;/p&gt;
+
+&lt;p&gt;docker pull mrsono0/base_project:oraxe11g_bionic&lt;/p&gt;
+
+&lt;p&gt;docker run –name oraxe11g -itd -p 1521:1521 -e ORACLE_ALLOW_REMOTE=true mrsono0/base_project:oraxe11g_bionic&lt;/p&gt;
+
+&lt;p&gt;hostname: localhost&lt;/p&gt;
+
+&lt;p&gt;port: 1521&lt;/p&gt;
+
+&lt;p&gt;sid: xe&lt;/p&gt;
+
+&lt;p&gt;username: system&lt;/p&gt;
+
+&lt;p&gt;password: oracle&lt;/p&gt;
+
+&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;alter&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hr&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;account&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;unlock&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;identified&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;by&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Gmimg</name></author><summary type="html"></summary></entry><entry><title type="html">Web</title><link href="http://localhost:4000/posts/WEB" rel="alternate" type="text/html" title="Web" /><published>2019-10-30T00:00:00+09:00</published><updated>2019-10-30T00:00:00+09:00</updated><id>http://localhost:4000/posts/WEB</id><content type="html" xml:base="http://localhost:4000/posts/WEB">&lt;h1 id=&quot;web&quot;&gt;WEB&lt;/h1&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;서버/클라이언트&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;서버와 클라이언트는 꽤 애매한 용어입니다. 영어로 이해하면 좀 더 쉬워집니다. 두대의 컴퓨터가있다면 필요한 정보를 요청하는 컴퓨터는 클라이언트(고객)이고, 정보를 제공해주는 컴퓨터가 서버(종업원)입니다. 즉 내가 크롬에서 어떤 버튼을 클릭하면 정보를 요청하는 신호가 랜선 혹은 무선으로 서버에 전달되고, 서버컴퓨터는 요청받은 정보를 다시 클라이언트에 전송해줍니다. 대표적인 웹클라이언트는 Internet exprore와 크롬, 파이어폭스 등이 있고, 웹서버는 아파치, IIS, NGINGX가 있습니다.&lt;/p&gt;
+&lt;p&gt;서버와 클라이언트는 꽤 애매한 용어입니다. 영어로 이해하면 좀 더 쉬워집니다. 두대의 컴퓨터가있다면 필요한 정보를 요청하는 컴퓨터는 클라이언트(고객)이고, 정보를 제공해주는 컴퓨터가 서버(종업원)입니다. 즉 내(클라이언트)가 크롬에서 어떤 버튼을 클릭하면 정보를 요청하는 신호가 랜선 혹은 무선으로 서버에 전달되고, 서버컴퓨터는 요청받은 정보를 다시 클라이언트에 전송해줍니다. 대표적인 웹클라이언트는 Internet exprore와 크롬, 파이어폭스 등이 있고, 웹서버는 아파치, IIS, NGINGX가 있습니다.&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;프로토콜&lt;/code&gt;&lt;/p&gt;
 
@@ -38,7 +941,196 @@
 
 &lt;h2 id=&quot;css&quot;&gt;CSS&lt;/h2&gt;
 
-&lt;p&gt;html이 뼈대라면 css는 장식입니다. 웹문서의 시각적인 요소를 위해 위치와 크기 색 등 태그들의 속성을 정해줍니다. 태그들에 id와 class를 정해주어 그룹으로 css를 설정할수도 있습니다.&lt;/p&gt;</content><author><name>Gmimg</name></author><summary type="html">WEB</summary></entry><entry><title type="html">Blog tech</title><link href="http://localhost:4000/posts/Blog-tech" rel="alternate" type="text/html" title="Blog tech" /><published>2019-09-27T00:00:00+09:00</published><updated>2019-09-27T00:00:00+09:00</updated><id>http://localhost:4000/posts/Blog%20tech</id><content type="html" xml:base="http://localhost:4000/posts/Blog-tech"></content><author><name>Gmimg</name></author><summary type="html"></summary></entry><entry><title type="html">Mems</title><link href="http://localhost:4000/posts/MEMS" rel="alternate" type="text/html" title="Mems" /><published>2019-09-04T00:00:00+09:00</published><updated>2019-09-04T00:00:00+09:00</updated><id>http://localhost:4000/posts/MEMS</id><content type="html" xml:base="http://localhost:4000/posts/MEMS">&lt;h1 id=&quot;반도체&quot;&gt;반도체&lt;/h1&gt;
+&lt;p&gt;html이 뼈대라면 css는 장식입니다. 웹문서의 시각적인 요소를 위해 위치와 크기 색 등 태그들의 속성을 정해줍니다. 태그들에 id와 class를 정해주어 그룹으로 css를 설정할수도 있습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;javascript&quot;&gt;JavaScript&lt;/h2&gt;
+
+&lt;p&gt;웹을 공부하다보면 너무나 방대한 기술들이 있고, 매해 새로운 기술들이 생겨나고 도태된 기술들이 사라짐을 뼈저리게 느낄 수 있습니다. 웹개발자는 최신 기술을 빨리 수용하고 배워야하며 대중성있는 기술을 선별할 수 있는 통찰력이 있다면 필드에서 더욱 경쟁력 있을겁니다. 또한 이 기술의 능숙한 사용법 뿐만아니라 최소한의 아키텍쳐를 알아야 합니다.&lt;/p&gt;
+
+&lt;p&gt;사용성만을 위한 철학이 없는 기술과 간결함과 표준화를 갖추지 못해 호환성이 없는 기술은 쉽게 도태됩니다.&lt;/p&gt;
+
+&lt;p&gt;웹을 공부하기전에 먼저 최소한의 용어를 알면 검색에 혼란을 덜 수 있으므로 먼저 용어를 정리하겠습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;ajax&quot;&gt;Ajax&lt;/h3&gt;
+
+&lt;p&gt;Ajax(Aynchronous JavaScript and XML)는 비동기적인 웹 애플리케이션의 제작을 위해&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;표현정보를 위한 &lt;strong&gt;HTML, CSS&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;동적인 화면 출력 및 표시 정보와의 상호작용을 위한 &lt;strong&gt;자바스크립트&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;데이터 교환을 조작하기 위한 &lt;strong&gt;XML, JSON&lt;/strong&gt; 등&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;을 종합하는 웹 개발 기법입니다.&lt;/p&gt;
+
+&lt;p&gt;즉, 동적웹을 이루는 기술의 묶음입니다. 기존과 큰 차이는 필요한 정보만을 요청해서 받아 처리할수 있다는 것입니다. 즉 불필요한 패킷교환을 줄여서 페이지 이동없이 고속으로 화면을 전환할 수 있습니다. 단, 브라우저에서 지원을 해야하므로 제약이 있습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;jquery&quot;&gt;jQuery&lt;/h3&gt;
+
+&lt;p&gt;제이쿼리는 가장 많이 쓰는 자바스크립트의 라이브러리입니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;기타&quot;&gt;기타&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;PHP&lt;/p&gt;
+
+    &lt;p&gt;대표적인 서버 사이드 스크립트 언어입니다. 쉬운 문법 때문에 많은 웹개발자들이 알고있고 사용하지만 예전버전의 문제, 안정성, 일관성 때문에 논란이 있습니다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Bootstrap&lt;/p&gt;
+
+    &lt;p&gt;부트스트랩은 웹사이트 제작을 쉽게 도와주는 CSS와 자바스크립트의 라이브러리입니다. 브라우저 호환성을 높여주며 그리드레이아웃 기반으로 반응형 웹 제작을 쉽게해줍니다. 웹디자이너가 부족한 환경에서 사용합니다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;DOM&lt;/p&gt;
+
+    &lt;p&gt;DOM(Document Object Model)은 웹문서를 객체 지향 모델화해 구조화하는 형식입니다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;maven - xml&lt;/p&gt;
+
+&lt;p&gt;servlet&lt;/p&gt;
+
+&lt;p&gt;, gradle - json&lt;/p&gt;
+
+&lt;p&gt;maven 설치&lt;/p&gt;
+
+&lt;p&gt;환경변수에서 M2_HOME에 maven 설치경로, path에 mave 설치경로/bin 추가&lt;/p&gt;
+
+&lt;p&gt;vs code(재시작) 해서&lt;/p&gt;
+
+&lt;p&gt;ctrl + shift + p -&amp;gt; more&lt;/p&gt;
+
+&lt;p&gt;maven : create maven project&lt;/p&gt;
+
+&lt;p&gt;more..&lt;/p&gt;
+
+&lt;p&gt;servlet31-archetype&lt;/p&gt;
+
+&lt;p&gt;버전선택&lt;/p&gt;
+
+&lt;p&gt;com.gmimg(보통 도메인 거꾸로)&lt;/p&gt;
+
+&lt;p&gt;projectname&lt;/p&gt;
+
+&lt;p&gt;com.gmimg&lt;/p&gt;
+
+&lt;p&gt;-&amp;gt; 폴더 생성&lt;/p&gt;
+
+&lt;p&gt;폴더를 vs code에서 열어서&lt;/p&gt;
+
+&lt;p&gt;pom.xml -&amp;gt; maven compiler-plugin version 3.8.1, source,target 1.8(한글때문에)&lt;/p&gt;
+
+&lt;p&gt;ctrl + ` -&amp;gt; mvn compile -&amp;gt; mvn package&lt;/p&gt;
+
+&lt;p&gt;/target/(project name).war 오른쪽버튼 눌러서 tomcat server 실행 해서 tomcat이 있는 폴더 선택하면&lt;/p&gt;
+
+&lt;p&gt;localhost:8080 -&amp;gt; /src/webapp/index.jsp 실행됨&lt;/p&gt;
+
+&lt;p&gt;문자 집합&lt;/p&gt;
+
+&lt;p&gt;영어 대소문자 구별, 하나 이상의 공백 무시, UTP-8, 영어 1byte, 한글 3byte&lt;/p&gt;
+
+&lt;p&gt;consol.log();&lt;/p&gt;
+
+&lt;p&gt;onclick&lt;/p&gt;
+
+&lt;p&gt;over&lt;/p&gt;
+
+&lt;p&gt;기존 var 키워드는 함수 scope를 가지고 있고 중복선언이 가능했습니다. ES 2015 (ES 6) 부터는 block scope를 가진 let, const 키워드 추가하여 let은 변수, const는 상수를 저장합니다. 즉, let은 한번 선언한뒤에(중복선언 안됨) 값을 변경해서 저장할 수 있습니다. 반면 const는 한번 값을 설정하면 변경 할 수 없습니다. var은 더이상 안쓰는걸 권장합니다.&lt;/p&gt;
+
+&lt;p&gt;연산자&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;+,-,*,/,++,–,! &amp;amp;&amp;amp;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;== 타입이 다른 값도 비교가능&lt;/p&gt;
+
+&lt;p&gt;=== 타입이 같은 값비교&lt;/p&gt;
+
+&lt;p&gt;!=&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;,&amp;lt;=.&amp;gt;,&amp;gt;=&lt;/p&gt;
+
+&lt;p&gt;+문자열 붙이기 가능&lt;/p&gt;
+
+&lt;p&gt;배열에 타입과 상관 없이 넣을 수 있음&lt;/p&gt;
+
+&lt;p&gt;index named : 인덱스에 이름을 붙일 수 있음.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;namearray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;지민&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;황지민&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;namearray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+	&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;namearray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;funcname&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+	&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;익명함수,콜백함수&lt;/p&gt;
+
+&lt;p&gt;객체생성 방법&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;객체 상수를 이용 -&amp;gt; 한개, 메서드가 필요없을떄 좋습니다.&lt;/p&gt;
+
+    &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;person&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;jimin&quot;&lt;/span&gt;
+	&lt;span class=&quot;na&quot;&gt;birth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;930530&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Object() 객체생성자 함수를 이용&lt;/p&gt;
+
+    &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;person&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//빈객체생성&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;jimin&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;birth&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;930530&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;내장 객체생성자 함수 이용 -&amp;gt; Number(), String(), Array(), Date() 등 내장되어있는 객체를 생성할 수 있습니다. 이 객체들은 각자 내장 함수를 제공합니다.&lt;/p&gt;
+
+    &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;사용자정의 객체 생성자 사용&lt;/p&gt;
+
+    &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;person&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;birth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;birth&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;birth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;person1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;jimin&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;930530&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;객체생성자를 이용해서 객체를 생성하면, 각 객체는 메모리들을 개별적으로 확보한다. 자바 스크립트는 사용되지 않는 객체들을 자동으로 수거하는 가비지 컬렉션 기능을 제공합니다.&lt;/p&gt;
+
+&lt;p&gt;jQuery의 일반적인 사용 구조&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ready&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;//document가 준비되고&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'#b1'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'click'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;//id='b1'인 태그에서 click 이벤트가 발생했을때&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'#t1'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'jQuery 프로그래밍'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;//id='t1'인 태그의 요소내용을 'jQuery 프로그래밍'으로 변경&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Gmimg</name></author><summary type="html">WEB</summary></entry><entry><title type="html">Blog tech</title><link href="http://localhost:4000/posts/Blog-tech" rel="alternate" type="text/html" title="Blog tech" /><published>2019-09-27T00:00:00+09:00</published><updated>2019-09-27T00:00:00+09:00</updated><id>http://localhost:4000/posts/Blog%20tech</id><content type="html" xml:base="http://localhost:4000/posts/Blog-tech"></content><author><name>Gmimg</name></author><summary type="html"></summary></entry><entry><title type="html">Mems</title><link href="http://localhost:4000/posts/MEMS" rel="alternate" type="text/html" title="Mems" /><published>2019-09-04T00:00:00+09:00</published><updated>2019-09-04T00:00:00+09:00</updated><id>http://localhost:4000/posts/MEMS</id><content type="html" xml:base="http://localhost:4000/posts/MEMS">&lt;h1 id=&quot;반도체&quot;&gt;반도체&lt;/h1&gt;
 
 &lt;p&gt;먼저 반도체업계에서 흔히 사용하는 용어를 먼저 정리한다.&lt;/p&gt;
 
@@ -683,7 +1775,7 @@ int main(void)
 
 &lt;p&gt;코딩을 하기전에 프로그램 설계를 완벽하게 하기.&lt;/p&gt;
 
-&lt;p&gt;여러 알고리즘을 짜기보단 하나를 짜더라도 내가 짠 코드를 철저하게 분석한다.&lt;/p&gt;</content><author><name>Gmimg</name></author><summary type="html">알고리즘 공부</summary></entry><entry><title type="html">Job</title><link href="http://localhost:4000/posts/JOB" rel="alternate" type="text/html" title="Job" /><published>2019-08-17T00:00:00+09:00</published><updated>2019-08-17T00:00:00+09:00</updated><id>http://localhost:4000/posts/JOB</id><content type="html" xml:base="http://localhost:4000/posts/JOB">&lt;p&gt;먼저 기업의 채용공고를 보고 지원자격과 우대사항에대해 정리한다.&lt;/p&gt;</content><author><name>Gmimg</name></author><summary type="html">먼저 기업의 채용공고를 보고 지원자격과 우대사항에대해 정리한다.</summary></entry><entry><title type="html">임베디드 개발자가 되려고 하는 이유</title><link href="http://localhost:4000/posts/Cause_Embedded" rel="alternate" type="text/html" title="임베디드 개발자가 되려고 하는 이유" /><published>2019-08-17T00:00:00+09:00</published><updated>2019-08-17T00:00:00+09:00</updated><id>http://localhost:4000/posts/Cause_Embedded</id><content type="html" xml:base="http://localhost:4000/posts/Cause_Embedded">&lt;p&gt;내 전공과의 연계성&lt;/p&gt;
+&lt;p&gt;여러 알고리즘을 짜기보단 하나를 짜더라도 내가 짠 코드를 철저하게 분석한다.&lt;/p&gt;</content><author><name>Gmimg</name></author><summary type="html">알고리즘 공부</summary></entry><entry><title type="html">임베디드 개발자가 되려고 하는 이유</title><link href="http://localhost:4000/posts/Cause_Embedded" rel="alternate" type="text/html" title="임베디드 개발자가 되려고 하는 이유" /><published>2019-08-17T00:00:00+09:00</published><updated>2019-08-17T00:00:00+09:00</updated><id>http://localhost:4000/posts/Cause_Embedded</id><content type="html" xml:base="http://localhost:4000/posts/Cause_Embedded">&lt;p&gt;내 전공과의 연계성&lt;/p&gt;
 
 &lt;p&gt;전문성에대한 매력&lt;/p&gt;
 
@@ -691,315 +1783,4 @@ int main(void)
 
 &lt;p&gt;주니어와의 차이&lt;/p&gt;
 
-&lt;p&gt;소주가 아닌 위스키&lt;/p&gt;</content><author><name>Gmimg</name></author><category term="Embedded" /><summary type="html">내 전공과의 연계성</summary></entry><entry><title type="html">Os</title><link href="http://localhost:4000/posts/OS" rel="alternate" type="text/html" title="Os" /><published>2019-08-02T00:00:00+09:00</published><updated>2019-08-02T00:00:00+09:00</updated><id>http://localhost:4000/posts/OS</id><content type="html" xml:base="http://localhost:4000/posts/OS">&lt;h1 id=&quot;rtos&quot;&gt;RTOS&lt;/h1&gt;
-
-&lt;p&gt;펌웨어 기반의 MICOM은 Polling과 Interrupt기반으로 동작하여 기능별로 응답시간에 영향을 주고 우선순위가 없다.&lt;/p&gt;
-
-&lt;p&gt;OS의 Kernel이 하는 일중 하나는 Task(Process)라는 일의 단위에 우선순위를 관리하고 스케쥴링하는 것 이다. (Kernel은 OS에서 하드웨어를 동작시키기위한 기본적인 서비스이다.) 즉, 작동이 복잡할수록 OS를 사용하는 것이 유리하다.&lt;/p&gt;
-
-&lt;p&gt;OS는 범용으로 사용하는 GPOS(Heneral Purpose OS) 와, 임베디드 시스템에서 주로 사용하는 RTOS(Real-Time OS)로 나뉜다.&lt;/p&gt;
-
-&lt;p&gt;여러 유/무료 RTOS가 있지만 간단하고 배우기 쉬운 micrium 사의 uC/OS-II에 대해서 배우고자한다.&lt;/p&gt;
-
-&lt;p&gt;uC/OS-II&lt;/p&gt;
-
-&lt;p&gt;RTOS는 다음과 같은 특성과 이슈가 있다.&lt;/p&gt;
-
-&lt;h2 id=&quot;task&quot;&gt;Task&lt;/h2&gt;
-
-&lt;h3 id=&quot;태스크-스택&quot;&gt;태스크 스택&lt;/h3&gt;
-
-&lt;p&gt;태스크는 일의 단위이다. 태스크마다 독립된 스택영역을 가지며, 다른 태스크들은 이 영역을 액세스 할 수 없다.&lt;/p&gt;
-
-&lt;p&gt;태스크가 잠시동안 저장공간을 사용할 경우 기본적으로 스택공간을 사용한다. 주로 함수 내에서 선언한 지역변수, 함수의 argument, 함수 수행 후 돌아갈 return 주소같은 태스크에서 사용하는 레지스터를 가지고 있다. 태스크가 실행되면서 함수를 호출하는 과정에서 사용한다.&lt;/p&gt;
-
-&lt;h3 id=&quot;태스크의-우선순위&quot;&gt;태스크의 우선순위&lt;/h3&gt;
-
-&lt;p&gt;태스크들은 각자 우선순위(Priority)를 가지고있다.&lt;/p&gt;
-
-&lt;h3 id=&quot;태스크-상태&quot;&gt;태스크 상태&lt;/h3&gt;
-
-&lt;p&gt;OS는 태스크들의 상태를 바꿔주면서 실행하는 태스크를 결정하는 Scheduler역할을 한다.&lt;/p&gt;
-
-&lt;h4 id=&quot;dormant수면&quot;&gt;DORMANT(수면)&lt;/h4&gt;
-
-&lt;p&gt;Memory에는 있으나 실행할 수 없는 상태&lt;/p&gt;
-
-&lt;h4 id=&quot;ready준비&quot;&gt;READY(준비)&lt;/h4&gt;
-
-&lt;p&gt;CPU에서 실행중인 태스크보다 우선순위가 낮아서 대기하는 상태&lt;/p&gt;
-
-&lt;h4 id=&quot;running실행&quot;&gt;RUNNING(실행)&lt;/h4&gt;
-
-&lt;p&gt;CPU를 점유하고 있는 상태&lt;/p&gt;
-
-&lt;h4 id=&quot;wating이벤트-발생-대기&quot;&gt;WATING(이벤트 발생 대기)&lt;/h4&gt;
-
-&lt;p&gt;특정 이벤트를 대기하는 상태&lt;/p&gt;
-
-&lt;p&gt;기다리고 있던 이벤트가 발생하면 Ready상태가 됨&lt;/p&gt;
-
-&lt;h2 id=&quot;preemptive-kernel선점-커널&quot;&gt;Preemptive Kernel(선점 커널)&lt;/h2&gt;
-
-&lt;p&gt;커널은 선점형 커널(Preemptive Kernel)과 비선점형(Non-preemptive Kernel)이 있다.&lt;/p&gt;
-
-&lt;p&gt;비선점형 커널은 실행중인 태스크를 강제로 중단시키고 다른 태스크를 실행시킬 수 없는 커널이다. 단위시간당 처리능력이 중요한 범용 OS에서 사용한다.&lt;/p&gt;
-
-&lt;p&gt;선점형 커널은 특정 태스크의 수행을 (우선순위에 따라) 중단 시키고 다른 태스크를 수행시킬 수 있는 커널이다. 임베디드시스템의 Deterministic(같은입력 같은결과)한 특성때문에 적합하다.&lt;/p&gt;
-
-&lt;h2 id=&quot;reentrancy-재진입성&quot;&gt;Reentrancy (재진입성)&lt;/h2&gt;
-
-&lt;p&gt;코드를 중단후 재실행 가능하다는 것을 의미한다.&lt;/p&gt;
-
-&lt;h2 id=&quot;concurrency-동시성-문제&quot;&gt;Concurrency (동시성 문제)&lt;/h2&gt;
-
-&lt;p&gt;다른 태스크가 동시에 공유자원에 액세스 했을 때 발생할 수 있는 문제를 의미한다.&lt;/p&gt;
-
-&lt;p&gt;예를 들어 Task1이 어떤 변수를 연산중일 때 우선순위가 더높은 Task 2가 실행되어 그 변수의 메모리를 사용하면 의도한 연산에 문제가 발생 할 수 있다.&lt;/p&gt;
-
-&lt;h3 id=&quot;mutual-exclusion-상호-배제&quot;&gt;Mutual Exclusion (상호 배제)&lt;/h3&gt;
-
-&lt;p&gt;이러한 동시성 문제를 해결하기 위해 여러방법의 테크닉을 이용한다.&lt;/p&gt;
-
-&lt;h4 id=&quot;critical-sectionregion&quot;&gt;Critical Section(Region)&lt;/h4&gt;
-
-&lt;p&gt;실행이 중단되면 안 되는 코드 영역을 만들어 (인터럽트를 포함한) 다른 코드의 수행을 막는다.&lt;/p&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;Disable&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;interrupts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;Access&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wirte&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;shared&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;resource&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Enable&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;interrupts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;scheduling-금지&quot;&gt;Scheduling 금지&lt;/h4&gt;
-
-&lt;p&gt;공유자원을 사용하는 동안 스케쥴링을 막는다&lt;/p&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;Disable&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scheduling&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;Access&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;shared&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;resource&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Enable&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scheduling&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;semaphore&quot;&gt;Semaphore&lt;/h4&gt;
-
-&lt;p&gt;일반적을 사용되는 효율적인 방법이다.&lt;/p&gt;
-
-&lt;p&gt;[]&lt;/p&gt;
-
-&lt;p&gt;공유 자원을 액세스하기 위한 KEY라고 생각하면 이해하기 쉽다. 어떤 태스크가 세마포어를 가지고 작동중 일때 더 높은 우선순위의 태스크가 실행되어도 세마포어를 요구하면, 세마포어를 가진 태스크를 같거나 더높은 우선순위를 부여해서 이전 태스크가 세마포어를 반납 할 때 까지 WATING한다.&lt;/p&gt;
-
-&lt;p&gt;[]&lt;/p&gt;
-
-&lt;p&gt;또, 신호 전달 용도로 사용할 수 있다. 어떠한 작동이 필요한 높은 우선순위의 태스크를 WATING 상태로 두고, 작동이 되었을 때 세마포어를 증가시켜 스케쥴링 하는 방식이 가능하다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;ITC(InterTask Communication)&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;비슷한 원리로 태스크간 자원을 공유하는 Mailbox나 Message Queue같은 방식이있다.&lt;/p&gt;
-
-&lt;h2 id=&quot;interrupt&quot;&gt;Interrupt&lt;/h2&gt;
-
-&lt;p&gt;프로그램의 진행과 상관없이 Exception이 발생했을 때 하드웨어적인 Mechanism으로 어떤 동작을 실행시킨다. 주변장치가 CPU에게 Asynchronous Events를 알리는데 사용한다. (예를 들면 reset) . 인터럽트가 발생하면 ISR(Interrupt Service Routine)이라는 인터럽트가 발생했을 때 실행할 Service가 실행되고 종료한다.&lt;/p&gt;
-
-&lt;p&gt;인터럽트 종료 후 동작은 커널의 종류에 따라 다르다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;비선점형 커널&lt;/p&gt;
-
-    &lt;p&gt;ISR 전의 태스크 수행&lt;/p&gt;
-
-    &lt;p&gt;[]&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;선점형 커널은&lt;/p&gt;
-
-    &lt;p&gt;ISR 종료 후 Scheduling&lt;/p&gt;
-
-    &lt;p&gt;[]&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;인터럽트의 시간분류&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Interrupt Latency(인터럽트 지연시간)&lt;/p&gt;
-
-    &lt;p&gt;인터럽트가 Disable된 최대시간 + ISR로 분기가 시작되는데 걸리는 시간(ISR로 분기가 시작될 때 까지의 소요시간)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Interrupt Response(인터럽트 응답시간)&lt;/p&gt;
-
-    &lt;p&gt;Interrupt Latency + CPU의 context를 저장하는 시간 + Kernel ISR entry funciton 실행시간(preemptive kernel only)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Interrupt Recovery(인터럽트 복귀시간)&lt;/p&gt;
-
-    &lt;p&gt;Higher priority task ready 여부 검토시간(preemptive only) + Running될 task의 context 복구시간 + 인터럽트로부터 복귀되는 명령 실행시간&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://ko.wikipedia.org/wiki/%EC%9D%B8%ED%84%B0%EB%9F%BD%ED%8A%B8&quot;&gt;Interrupt&lt;/a&gt;&lt;/p&gt;</content><author><name>Gmimg</name></author><summary type="html">RTOS</summary></entry><entry><title type="html">Rtos</title><link href="http://localhost:4000/posts/RTOS" rel="alternate" type="text/html" title="Rtos" /><published>2019-07-29T00:00:00+09:00</published><updated>2019-07-29T00:00:00+09:00</updated><id>http://localhost:4000/posts/RTOS</id><content type="html" xml:base="http://localhost:4000/posts/RTOS">&lt;h1 id=&quot;rtos-porting--programming&quot;&gt;RTOS Porting &amp;amp; Programming&lt;/h1&gt;
-
-&lt;h2 id=&quot;임베디드-시스템-및-rtos-개요&quot;&gt;임베디드 시스템 및 RTOS 개요&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;임베디드 시스템&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;특정한 목적을 수행하기 위해 필요한 하드웨어와 소프트웨어를 가지고 있는 시스템.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Real-Time(실시간) 시스템&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;주어진 입력 조건을 정해진 &lt;em&gt;시간 내에&lt;/em&gt; 처리하는 시스템&lt;/p&gt;
-
-&lt;h3 id=&quot;arm-프로세서&quot;&gt;&lt;a href=&quot;https://ko.wikipedia.org/wiki/ARM_%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98&quot;&gt;ARM 프로세서&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Advanced RISC Machine&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;arm-보드의-최대강점&quot;&gt;ARM 보드의 최대강점&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;저전력 프로세서&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;많은 반도체 회사들과 License를 맺고 ARM 기반 프로세서 생산&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;cortex-profile-종류별-특성&quot;&gt;Cortex Profile 종류별 특성&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Cortex-A : Application용 - 스마트폰&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Cortex-R : Real time용 (Embedded) - 자동차, 항공, 산업용&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Cortex-M : Microcontroller(MICOM) - 저가 시스템&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;arm-프로세서의-구조&quot;&gt;ARM 프로세서의 구조&lt;/h4&gt;
-
-&lt;p&gt;ALU를 포함하는 CPU 격의 &lt;strong&gt;ARM CORE&lt;/strong&gt;,&lt;/p&gt;
-
-&lt;p&gt;Cache, NVIC 등 Coprocessors를 포함하는 &lt;strong&gt;ARM Processor&lt;/strong&gt;,&lt;/p&gt;
-
-&lt;p&gt;제조사에서 만드는 I.C, DMA, UART, LCD, Timer, RTC 등 Peripherals을 포함하는 &lt;strong&gt;SoC&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;임베디드-시스템에서의-운영체제-필요성&quot;&gt;임베디드 시스템에서의 운영체제 필요성&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;개발자가 직접 작성하는 펌웨어로 구현이 어려운 기능
-    &lt;ul&gt;
-      &lt;li&gt;네트워크&lt;/li&gt;
-      &lt;li&gt;멀티미디어&lt;/li&gt;
-      &lt;li&gt;다른 시스템과 호환성을 위한 기능(File system)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;리얼타임의 필요성 부각(정해진 시간내에 처리)&lt;/li&gt;
-  &lt;li&gt;멀티태스킹 기능 필요&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;운영체제&quot;&gt;운영체제&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;제한된 시스템 자원을 효율적으로 사용할 수 있도록 관리&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;컴퓨터 시스템과 사용자간의 인터페이스 기능을 담당하여 사용자에게 편의 제공&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;컴퓨터 시스템의 전반적인 동작을 제어하고 조정하는 시스템 프로그램들의 집합&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;실시간-시스템-개념&quot;&gt;실시간 시스템 개념&lt;/h2&gt;
-
-&lt;p&gt;펌웨어로 처리시 단점 1. 응답시간에 영향을 줌 2. 우선순위가 없음.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;RTOS 사용 이유&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;실시간 이벤트에 대한 응답시간 향상&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;운선순위 부여하여 중요한 처리를 우선적으로 진행&lt;/li&gt;
-  &lt;li&gt;시스템 확장 편의성&lt;/li&gt;
-  &lt;li&gt;개발 효율성&lt;/li&gt;
-  &lt;li&gt;커널이 제공하는 추가기능&lt;/li&gt;
-  &lt;li&gt;유지보수&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;태스크&quot;&gt;태스크&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;태스크 우선순위&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;태스크 스택&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;잠시동안 저장공간 사용&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;태스크에서 사용하는 레지스터 등 보존&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;태스크 상태(Dormant, Ready, Running, Wating)&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;\assets\img\Embedded\task_diagram.jpg&quot; alt=&quot;task_diagram&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Scheduler : 가장 높은 우선순위의 태스크를 선택하는 방식&lt;/p&gt;
-
-&lt;p&gt;preemptive Kernel(선점형 커널) : 특정 태스크의 수행을 중단 시키고 다른 태스크를 수행시킬 수 있는 커널&lt;/p&gt;
-
-&lt;p&gt;Reentrancy(재진입성) : 코드의 재진입이 가능(중단 후 재실행 가능)&lt;/p&gt;
-
-&lt;p&gt;Concurrency(동시성 문제) : 동시에 공유자원에 액세스 했을 때 발생할 수 있는 문제&lt;/p&gt;
-
-&lt;p&gt;동시성 문제 해결법 -&amp;gt; Mutual Exclusion&lt;/p&gt;
-
-&lt;p&gt;Mutual Exclusion&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Critical Section(Region)&lt;/p&gt;
-
-    &lt;p&gt;인터럽트를 포함한 다른 코드의 수행에 의해 중단 되어서는 안되는 영역&lt;/p&gt;
-
-    &lt;p&gt;간단하지만 인터럽트 금지 시간이 길어지면 문제 발생&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;공유자원 사용하는 동안 Scheduling 금지&lt;/p&gt;
-
-    &lt;p&gt;높은 우선순위의 태스크가 CPU를 점유하는 시점이 지연될 수 있음&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Semaphore(공용키) 사용&lt;/p&gt;
-
-    &lt;p&gt;우선순위가 높아도 Semaphore를 다른 태스크가 가지고 있으면 Wait상태가 됨&lt;/p&gt;
-
-    &lt;p&gt;공유자원의 access time이 짧은 경우 위의 두 방법이 더 효과적일 수 있음&lt;/p&gt;
-
-    &lt;p&gt;멀티코어에서는 위미가 없음, (스핀락 사용)&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Deadlock : 다른 태스크에서 사용 중인 자원을 무한히 기다리는 상태&lt;/p&gt;
-
-&lt;p&gt;Deadlock방지&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;순서대로 자원 획득, 역순으로 자원 양도&lt;/li&gt;
-  &lt;li&gt;타임아웃을 지정&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Interrupts&lt;/p&gt;</content><author><name>Gmimg</name></author><category term="Embedded" /><category term="Embedded" /><category term="RTOS" /><summary type="html">RTOS Porting &amp;amp; Programming</summary></entry></feed>
+&lt;p&gt;소주가 아닌 위스키&lt;/p&gt;</content><author><name>Gmimg</name></author><category term="Embedded" /><summary type="html">내 전공과의 연계성</summary></entry></feed>

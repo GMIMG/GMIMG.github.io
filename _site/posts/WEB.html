@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-125422008-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-125422008-2');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Web | GMIMG</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Web" />
+<meta name="author" content="Gmimg" />
+<meta property="og:locale" content="ko" />
+<meta name="description" content="WEB" />
+<meta property="og:description" content="WEB" />
+<link rel="canonical" href="http://localhost:4000/posts/WEB" />
+<meta property="og:url" content="http://localhost:4000/posts/WEB" />
+<meta property="og:site_name" content="GMIMG" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-10-30T00:00:00+09:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","url":"http://localhost:4000/posts/WEB","headline":"Web","dateModified":"2019-10-30T00:00:00+09:00","datePublished":"2019-10-30T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/WEB"},"author":{"@type":"Person","name":"Gmimg"},"description":"WEB","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<!--github pages nomalize css-->
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!--custom css-->
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <!--icon-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="GMIMG" />
+  <!--vue.js & axios for categories generator-->
+  <script src="/assets/js/vue.min.js"></script>
+  <script src="/assets/js/axios.min.js"></script>
+  <!--jquery for back-to-top in index-->
+  <script src="/assets/js/jquery-3.3.1.min.js"></script>
+  <script src="/assets/js/index.js"></script>
+  <!--dark theme-->
+  <script>
+  const theme = localStorage.getItem('theme');
+	if (theme === "dark") {
+		document.documentElement.setAttribute('data-theme', 'dark');
+	}
+  </script>
+</head>
+  <body>
+    <header class="site-header">
+  <div class="wrapper">
+    <!---->
+    <a class="site-title" rel="author" href="/">GMIMG</a>
+    <div class="dark-icon">
+      <a id="theme-toggle" class="page-link" onclick="modeSwitcher()"></a>
+    </div>
+
+    <nav class="site-nav">
+      <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+      <label for="menu-trigger">
+        <span class="menu-icon">
+          <i class="fas fa-bars"></i>
+        </span>
+      </label>
+      <div class="trigger">
+          <a class="page-link" href="/about/">about</a>
+          <a class="page-link" href="/posts/">Posts browser</a>
+        <a class="page-link" href="/search">
+          <i class="fas fa-search"></i>
+        </a>
+      </div>
+      <!--div class="site-search search-icon" onclick="location.href='/search';"-->
+      <!--/div-->
+    </nav>
+    
+  </div>
+</header>
+    <main class="page-content">
+      <div class="wrapper">
+  <div class="page">
+    <!--div class="wrapper"-->
+  <div class="post-content">
+    <article class="post">
+      <div class="post-header">
+  <span class="post-title">Web</span>
+  <p class="post-meta">
+    <time class="dt-published" datetime="2019-10-30T00:00:00+09:00">
+      30 Oct 2019
+    </time>
+      • <span class="p-author h-card">Gmimg</span>
+  </p>
+  <div class="post-header-categories">
+  </div>
+  <div class="post-header-tags">
+  </div>
+</div>
+      <div class="post-content">
+        <h1 id="web">WEB</h1>
+
+<p><code class="highlighter-rouge">서버/클라이언트</code></p>
+
+<p>서버와 클라이언트는 꽤 애매한 용어입니다. 영어로 이해하면 좀 더 쉬워집니다. 두대의 컴퓨터가있다면 필요한 정보를 요청하는 컴퓨터는 클라이언트(고객)이고, 정보를 제공해주는 컴퓨터가 서버(종업원)입니다. 즉 내(클라이언트)가 크롬에서 어떤 버튼을 클릭하면 정보를 요청하는 신호가 랜선 혹은 무선으로 서버에 전달되고, 서버컴퓨터는 요청받은 정보를 다시 클라이언트에 전송해줍니다. 대표적인 웹클라이언트는 Internet exprore와 크롬, 파이어폭스 등이 있고, 웹서버는 아파치, IIS, NGINGX가 있습니다.</p>
+
+<p><code class="highlighter-rouge">프로토콜</code></p>
+
+<p>이때 전송되는 정보의 형식을 정해놓은 약속(규약)을 프로토콜이라고 합니다. 웹은 전체적으로 HTML이라는 형식으로 이루어져있고 이를 전달할때 주로사용하는 프로토콜은 HTTP/HTTPS 입니다. 전송방식은</p>
+
+<p><code class="highlighter-rouge">동적 웹</code></p>
+
+<p>최근에는 웹에서 할일이 많아지면서 정적인 HTML에 변수를 사용해야 하는 일이 많아졌습니다. 그래서 스크립트로 실행되는 여러 언어의 사용이 증가하고 있습니다. 이러한 언어는 스크립트 코드라고 하며 대표적으로 자바스크립트, PHP, ASP, JSP 가 많이 사용되고있습니다. 이렇게 사용자의 반응에 따라 변화하는 웹을 동적 웹이라고 합니다.</p>
+
+<h2 id="html">HTML</h2>
+
+<p>html은 웹문서를 구성하는 뼈대라고 생각하면 쉽습니다. 크게 head와 body라는 태그로 구성되어있고 head에는 웹문서의 정보, body는 실제 웹문서에서 보여줄 내용을 포함합니다. 이외에 다양한 태그들로 구성되어있습니다. 웹을 공부하기 위해서 자주사용하는 태그 위주로 공부하면 접근하기 쉽습니다.</p>
+
+<p>다음은 html을 구성하는 기본 코드입니다.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"ie=edge"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Document<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<p>HTML5에서 표준에서 HTML 문서에서 구조적인 의미를 담당하는 태그를 시맨틱 태그라고하며 다음과 같이 구성되어있습니다.</p>
+
+<p><img src="C:\Users\student\OneDrive - seoultech.ac.kr\GitHub\GMIMG.github.io\assets\img\semantic_tag.png" alt="semantic_tag" /></p>
+
+<h2 id="css">CSS</h2>
+
+<p>html이 뼈대라면 css는 장식입니다. 웹문서의 시각적인 요소를 위해 위치와 크기 색 등 태그들의 속성을 정해줍니다. 태그들에 id와 class를 정해주어 그룹으로 css를 설정할수도 있습니다.</p>
+
+<h2 id="javascript">JavaScript</h2>
+
+<p>웹을 공부하다보면 너무나 방대한 기술들이 있고, 매해 새로운 기술들이 생겨나고 도태된 기술들이 사라짐을 뼈저리게 느낄 수 있습니다. 웹개발자는 최신 기술을 빨리 수용하고 배워야하며 대중성있는 기술을 선별할 수 있는 통찰력이 있다면 필드에서 더욱 경쟁력 있을겁니다. 또한 이 기술의 능숙한 사용법 뿐만아니라 최소한의 아키텍쳐를 알아야 합니다.</p>
+
+<p>사용성만을 위한 철학이 없는 기술과 간결함과 표준화를 갖추지 못해 호환성이 없는 기술은 쉽게 도태됩니다.</p>
+
+<p>웹을 공부하기전에 먼저 최소한의 용어를 알면 검색에 혼란을 덜 수 있으므로 먼저 용어를 정리하겠습니다.</p>
+
+<h3 id="ajax">Ajax</h3>
+
+<p>Ajax(Aynchronous JavaScript and XML)는 비동기적인 웹 애플리케이션의 제작을 위해</p>
+
+<ol>
+  <li>표현정보를 위한 <strong>HTML, CSS</strong></li>
+  <li>동적인 화면 출력 및 표시 정보와의 상호작용을 위한 <strong>자바스크립트</strong></li>
+  <li>데이터 교환을 조작하기 위한 <strong>XML, JSON</strong> 등</li>
+</ol>
+
+<p>을 종합하는 웹 개발 기법입니다.</p>
+
+<p>즉, 동적웹을 이루는 기술의 묶음입니다. 기존과 큰 차이는 필요한 정보만을 요청해서 받아 처리할수 있다는 것입니다. 즉 불필요한 패킷교환을 줄여서 페이지 이동없이 고속으로 화면을 전환할 수 있습니다. 단, 브라우저에서 지원을 해야하므로 제약이 있습니다.</p>
+
+<h3 id="jquery">jQuery</h3>
+
+<p>제이쿼리는 가장 많이 쓰는 자바스크립트의 라이브러리입니다.</p>
+
+<h3 id="기타">기타</h3>
+
+<ul>
+  <li>
+    <p>PHP</p>
+
+    <p>대표적인 서버 사이드 스크립트 언어입니다. 쉬운 문법 때문에 많은 웹개발자들이 알고있고 사용하지만 예전버전의 문제, 안정성, 일관성 때문에 논란이 있습니다.</p>
+  </li>
+  <li>
+    <p>Bootstrap</p>
+
+    <p>부트스트랩은 웹사이트 제작을 쉽게 도와주는 CSS와 자바스크립트의 라이브러리입니다. 브라우저 호환성을 높여주며 그리드레이아웃 기반으로 반응형 웹 제작을 쉽게해줍니다. 웹디자이너가 부족한 환경에서 사용합니다.</p>
+  </li>
+  <li>
+    <p>DOM</p>
+
+    <p>DOM(Document Object Model)은 웹문서를 객체 지향 모델화해 구조화하는 형식입니다.</p>
+  </li>
+</ul>
+
+<p>maven - xml</p>
+
+<p>servlet</p>
+
+<p>, gradle - json</p>
+
+<p>maven 설치</p>
+
+<p>환경변수에서 M2_HOME에 maven 설치경로, path에 mave 설치경로/bin 추가</p>
+
+<p>vs code(재시작) 해서</p>
+
+<p>ctrl + shift + p -&gt; more</p>
+
+<p>maven : create maven project</p>
+
+<p>more..</p>
+
+<p>servlet31-archetype</p>
+
+<p>버전선택</p>
+
+<p>com.gmimg(보통 도메인 거꾸로)</p>
+
+<p>projectname</p>
+
+<p>com.gmimg</p>
+
+<p>-&gt; 폴더 생성</p>
+
+<p>폴더를 vs code에서 열어서</p>
+
+<p>pom.xml -&gt; maven compiler-plugin version 3.8.1, source,target 1.8(한글때문에)</p>
+
+<p>ctrl + ` -&gt; mvn compile -&gt; mvn package</p>
+
+<p>/target/(project name).war 오른쪽버튼 눌러서 tomcat server 실행 해서 tomcat이 있는 폴더 선택하면</p>
+
+<p>localhost:8080 -&gt; /src/webapp/index.jsp 실행됨</p>
+
+<p>문자 집합</p>
+
+<p>영어 대소문자 구별, 하나 이상의 공백 무시, UTP-8, 영어 1byte, 한글 3byte</p>
+
+<p>consol.log();</p>
+
+<p>onclick</p>
+
+<p>over</p>
+
+<p>기존 var 키워드는 함수 scope를 가지고 있고 중복선언이 가능했습니다. ES 2015 (ES 6) 부터는 block scope를 가진 let, const 키워드 추가하여 let은 변수, const는 상수를 저장합니다. 즉, let은 한번 선언한뒤에(중복선언 안됨) 값을 변경해서 저장할 수 있습니다. 반면 const는 한번 값을 설정하면 변경 할 수 없습니다. var은 더이상 안쓰는걸 권장합니다.</p>
+
+<p>연산자</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>+,-,*,/,++,–,! &amp;&amp;</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>== 타입이 다른 값도 비교가능</p>
+
+<p>=== 타입이 같은 값비교</p>
+
+<p>!=</p>
+
+<p>&lt;,&lt;=.&gt;,&gt;=</p>
+
+<p>+문자열 붙이기 가능</p>
+
+<p>배열에 타입과 상관 없이 넣을 수 있음</p>
+
+<p>index named : 인덱스에 이름을 붙일 수 있음.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">namearray</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="s2">"지민"</span><span class="p">,</span><span class="s2">"황지민"</span><span class="p">)</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">index</span> <span class="k">in</span> <span class="nx">namearray</span><span class="p">){</span>
+	<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">namearray</span><span class="p">[</span><span class="nx">index</span><span class="p">]);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">funcname</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">){</span>
+	<span class="kd">let</span> <span class="nx">c</span><span class="p">;</span>
+	<span class="nx">c</span> <span class="o">=</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span>
+	<span class="k">return</span> <span class="p">(</span><span class="nx">c</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>익명함수,콜백함수</p>
+
+<p>객체생성 방법</p>
+
+<ul>
+  <li>
+    <p>객체 상수를 이용 -&gt; 한개, 메서드가 필요없을떄 좋습니다.</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="na">name</span><span class="p">:</span> <span class="s2">"jimin"</span>
+	<span class="na">birth</span><span class="p">:</span> <span class="mi">930530</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Object() 객체생성자 함수를 이용</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">person</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Object</span><span class="p">();</span> <span class="c1">//빈객체생성</span>
+<span class="nx">person</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="s2">"jimin"</span><span class="p">;</span>
+<span class="nx">person</span><span class="p">.</span><span class="nx">birth</span> <span class="o">=</span> <span class="mi">930530</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>내장 객체생성자 함수 이용 -&gt; Number(), String(), Array(), Date() 등 내장되어있는 객체를 생성할 수 있습니다. 이 객체들은 각자 내장 함수를 제공합니다.</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">x1</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">String</span><span class="p">();</span>
+<span class="kd">let</span> <span class="nx">x2</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">();</span>
+<span class="kd">let</span> <span class="nx">x3</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>사용자정의 객체 생성자 사용</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">person</span> <span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">birth</span><span class="p">){</span>
+	<span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
+	<span class="k">this</span><span class="p">.</span><span class="nx">birth</span> <span class="o">=</span> <span class="nx">birth</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kd">let</span> <span class="nx">person1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">person</span><span class="p">(</span><span class="s2">"jimin"</span><span class="p">,</span><span class="mi">930530</span><span class="p">);</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>객체생성자를 이용해서 객체를 생성하면, 각 객체는 메모리들을 개별적으로 확보한다. 자바 스크립트는 사용되지 않는 객체들을 자동으로 수거하는 가비지 컬렉션 기능을 제공합니다.</p>
+
+<p>jQuery의 일반적인 사용 구조</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>	<span class="c1">//document가 준비되고</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">'#b1'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span><span class="kd">function</span><span class="p">(){</span>	<span class="c1">//id='b1'인 태그에서 click 이벤트가 발생했을때</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s1">'#t1'</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="s1">'jQuery 프로그래밍'</span><span class="p">);</span>	<span class="c1">//id='t1'인 태그의 요소내용을 'jQuery 프로그래밍'으로 변경</span>
+    <span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+
+      </div>
+        
+<div id="disqus_thread"><p></p></div>
+<script>
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://gmimg.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      <a class="u-url" href="/posts/WEB" hidden></a>
+    </article>
+  </div>
+<!--/div-->
+  </div>
+</div>
+      <a href="#" id="back-to-top"><i class="fas fa-arrow-circle-up"></i></a>
+    </main>
+    <footer id="footer" class="site-footer h-card">
+  <div class="wrapper">
+    <h2 class="footer-heading">GMIMG</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Jimin Hwang</li>
+          <li><a class="u-email" href="mailto:gming7281@gmail.com">gming7281@gmail.com</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list"><li><a href="https://github.com/GMIMG"><i class="fab fa-github"></i> <span class="username">GMIMG</span></a></li><li><a href="/feed.xml"><i class="fas fa-rss"></i> <span>Subscribe</span></a></li></ul>
+      </div>
+      <div class="footer-col footer-col-3">
+        <p>Hello. I&#39;m Seoultech univesity student in South Korea. My english is so terrible but trying ;) I&#39;m majoring in mechanical engineering system. and my minor is computer engineering. I am dreaming to be a good developer. This blog is writing that today I learned.</p>
+      </div>
+    </div>
+    <p class="copyright">
+      All content copyright 
+      <a href="mailto://gming7281@gmail.com">Jimin Hwang</a>.
+      © 2018 • All rights reserved.<br>
+      Made with 
+      <a href="https://jekyllrb.com/">Jekyll</a>.
+    </p>
+  </div>
+</footer>
+  <!--simple-jekyll-search-->
+  <script src="/assets/js/simple-jekyll-search.min.js"></script>
+  <!--mathjax-->
+  <!--script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script-->
+  <!--dark-mode-->
+  <script src="/assets/js/dark.js"></script>
+  </body>
+</html>
