@@ -61,10 +61,6 @@ User process(client)에서 source code(SQL)를 이용해서 server에 보내면 
     4. tablespace
         system, sysAux, undo, Temp, Users
 
-
-
-
-
 # 데이터베이스 구조
 
 환경 : 오라클 데이터베이스 11g

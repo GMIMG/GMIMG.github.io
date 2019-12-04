@@ -704,7 +704,7 @@ void main(void)
 - 전체를 괄호로 묶는다.
 - 과도한 사용은 코드 가독성을 떨어뜨리며, typecasting 문제때문에 웬만하면 매크로사용을 자제하는것이 권장됨.
 
-```
+```c
 #define ARR_SIZE(x) (sizeof(x) / sizeof(x[0]))
 #define PRT(x) printf("%d\n",x)
 #define SQR(x) ((x)*(x))

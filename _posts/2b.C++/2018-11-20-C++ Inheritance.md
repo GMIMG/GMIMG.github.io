@@ -13,7 +13,6 @@ class DERIVED_CLASS: public BASE_CLASS
 NOT inherited
 
 - Constructor
-- 
 
 ~~~C++
 //construct

@@ -75,7 +75,7 @@ sys.getrefcount(a)
 1. 메모리 할당
 2. 복사
 
-## Linked_list(double)(연결리스트)
+## (double)Linked_list(연결리스트)
 
 - 붙어있지 않음
 - cache miss가 많이날 수 있음
@@ -138,7 +138,7 @@ worst case
 - 중위 순회 - 왼쪽부터 오른쪽으로 엣지를 따라서
 - 후위 순회 - 맨아래 왼쪽부터 오른쪽으로
 
-### BST **
+### BST 
 
 - 규칙
   - key의 중복 X (key : BST의 index같은 느낌 organizing)
