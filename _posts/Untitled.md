@@ -1,0 +1,66 @@
+
+
+### Numpy
+
+파이썬의 추가 라이브러리중 하나로, 수치계산에 유용하게 쓰인다. 특히 벡터나 행렬 연산에 매우 편리하다. 파이썬의 라이브러리중 pandas나 matplotlib 등 여러 라이브러리가 numpy를 기반으로 만들어졌다.
+
+numpy에서 자료형으로 array를 기본적으로 쓰는데 c언어의 배열과 유사하다.
+
+
+
+```python
+import numpy as np
+# array 만들기
+arr1 = np.array([1,2,3])
+# => array([1, 2, 3])
+
+arr1.shape
+# => (5,)
+
+arr1.dtype
+# => dtype('int32')
+
+np.zeros((3,5))
+# => array([[0., 0., 0., 0., 0.], 
+#		   [0., 0., 0., 0., 0.], 
+# 		   [0., 0., 0., 0., 0.]])
+
+np.ones(9)
+# => array([1., 1., 1., 1., 1., 1., 1., 1., 1.])
+```
+
+
+
+array는 조건을 사용한 boolean 인덱싱(마스크)가 가능하다. 
+
+```python
+num = np.array([1,1,2,3,4,5,2,1,1,2,1])
+num == 1
+# => array([ True,  True, False, False, False, False, False,  True,  True, False,  True])
+num[num != 1] = 0
+num
+# array([1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1])
+```
+
+
+
+| 함수                                       | 설명              |
+| ------------------------------------------ | ----------------- |
+| abs                                        | 절대값            |
+| sqrt                                       | 루트              |
+| square                                     | 제곱              |
+| log, log2. log10                           | 로그              |
+| sign                                       | 부호              |
+| ceil                                       | 반올림            |
+| add, subtract, multiply, divide(arr1,arr2) |                   |
+| random                                     |                   |
+| maximum                                    |                   |
+| sum, mean, std, min                        |                   |
+| argmin, argamx                             | 최소, 최대값 위치 |
+| cumsum, cumprod                            | 누적합, 누적곱    |
+| sort                                       |                   |
+|                                            |                   |
+
+
+
+출처 : https://doorbw.tistory.com/171
