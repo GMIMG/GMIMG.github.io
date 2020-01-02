@@ -49,7 +49,7 @@ ADT(Abstract Data Type) 추상데이터타입
 python은 Reference count 을 사용해서 가비지 컬렉션을 구현함.
 Reference count는 참조하는 값이 0이되면 삭제.
 
-```
+```python
 import sys
 a="i'm jimin"
 sys.getrefcount(a)
@@ -152,9 +152,4 @@ worst case
     - leaf node
     - 자식노드가 1개인 노드
     - 자식노드가 2개일 때
-
-## bubble sort
-
-## quick sort
-
 
