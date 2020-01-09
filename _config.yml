@@ -65,6 +65,7 @@ defaults:
     values:
       sidebar: "main"
 
+
 # 사이트 설명
 # _data
 # 사이트 전반에 대한 데이터

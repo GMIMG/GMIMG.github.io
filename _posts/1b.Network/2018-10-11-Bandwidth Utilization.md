@@ -3,8 +3,6 @@ title: Bandwidth Utilization
 category: Network
 tags:
   - Network
-  - Multiplexing
-  - Spectrum_spreading
 ---
 
 # Multiplexing
