@@ -17,7 +17,7 @@
         {%- if nav_url %}
         <a href="{{ nav_url }}" class="{{ active }}" onClick="top.location='javascript:location.reload()'">
         {%- else %}
-        <a href="{{ root_url }}/{{ site.category_dir }}#{{ nav.title }}" onClick="top.location='javascript:location.reload()'">
+        <a href="{{ root_url }}/category/#{{ nav.title }}" onClick="top.location='javascript:location.reload()'">
         {%- endif %}
         {{- nav.title -}} 
         {%- assign count = site.categories[nav.title] | size -%}
@@ -48,7 +48,7 @@
               {%- if child_url %}
               <a href="{{ child_url }}" class="{{ active }}" onClick="top.location='javascript:location.reload()'">
               {%- else %}
-              <a href="{{ root_url }}/{{ site.category_dir }}#{{ child.title }}" onClick="top.location='javascript:location.reload()'">
+              <a href="{{ root_url }}/category/#{{ child.title }}" onClick="top.location='javascript:location.reload()'">
               {%- endif %}
               {{ child.title }}
               {%- assign count = site.categories[child.title] | size -%}
@@ -74,9 +74,9 @@
                     {%- endif %}
                     <li>
                     {%- if childchild_url %}
-                    <a href="{{ childchild_url }}" class="{{ active }}"onClick="top.location='javascript:location.reload()'">
+                    <a href="{{ childchild_url }}" class="{{ active }}" onClick="top.location='javascript:location.reload()'">
                     {%- else %}
-                    <a href="{{ root_url }}/{{ site.category_dir }}#{{ childchild.title }}" class="{{ active }}" onClick="top.location='javascript:location.reload()'">
+                    <a href="{{ root_url }}/category/#{{ childchild.title }}" class="{{ active }}" onClick="top.location='javascript:location.reload()'">
                     {%- endif %}
                     {{ childchild.title }}
                     {%- assign count = site.categories[childchild.title] | size -%}

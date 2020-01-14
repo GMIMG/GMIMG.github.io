@@ -1,0 +1,19 @@
+---
+layout: browser
+permalink: /category/
+sidebar: "main"
+---
+<ul id="post-list">
+{% for category in site.categories %}
+    {% assign category_name = category|first %}
+    <div class="archive-group" style="display:none" id="{{category_name}}">
+        <h2 id="{{category_name}}" class="category-title">{{ category_name }}</h2>
+        {% for post in site.categories[category_name] %}
+        <li class="post-item">
+            <time class="post-date">{{ post.date | date_to_string }}</time>
+            <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </article>
+        {% endfor %}
+    </div>
+{% endfor %}
+</div>

@@ -1,7 +1,7 @@
 ---
-category : C++
+category : Cpp
 tags:
-  - C++
+  - Cpp
   - Pointer
   - Polymorphism
 ---

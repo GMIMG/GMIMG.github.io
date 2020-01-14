@@ -1,8 +1,8 @@
 ---
 title: C++ Function
-category: C++
+category: Cpp
 tags:
-    - C++
+    - Cpp
 ---
 
 # Flow of Control

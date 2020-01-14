@@ -1,8 +1,8 @@
 ---
 title: Discrete mathematics(이산수학)
-category: C++
+category: Cpp
 tags:
-    - C++
+    - Cpp
     - 이산수학
 ##toc : true
 ---

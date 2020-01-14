@@ -1,8 +1,8 @@
 ---
 title: C++ Structure and Classs
-category: C++
+category: Cpp
 tags:
-  - C++
+  - Cpp
   - Structure
   - Class
 ---

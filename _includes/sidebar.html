@@ -3,13 +3,14 @@
   <div class="sidebar-item">
     <div id="sidebar-item-category">
       <a href="/categories" class="sidebar-item-tltle">Categories</a>
-      {%- include nav_list.html nav=page.sidebar -%}
+      {%- include category_lst.html nav=page.sidebar -%}
     </div>
   </div>
   <!--tag list-->
   <div class="sidebar-item">
     <div id="sidebar-item-tag">
       <a href="/tags" class="sidebar-item-tltle">Tags</a>
+      <!--가장 포스트가 많은 태그의 포스트수 구함 max_size-->
       {%- assign max_size = 0 -%}
       {%- for tag in site.tags %}
       {%- assign tag_last_size = tag | last | size -%}
@@ -22,10 +23,13 @@
         {%- for tag in sorted_tags %}
         {%- assign percent_for_size = tag | last | size | times: 50 | divided_by: max_size -%}
         {%- assign tag-font-size = percent_for_size | plus: 75 -%}
-        {%- assign percent_for_color = tag | last | size | times: 9 | divided_by: max_size -%}
-        {%- assign tag-font-color = 9 | minus: percent_for_color -%}
+        <!---->
+        {%- assign percent_for_color = tag | last | size | times: 50 | divided_by: max_size -%}
+        {%- assign tag-font-opacity = 49 | plus: percent_for_color -%}
         <span style="font-size: {{ tag-font-size }}%;">
-          <a href="{{ root_url }}/tag#{{ tag | first | slugize }}" onclick="location.reload()" style="color: #{{tag-font-color}}{{tag-font-color}}{{tag-font-color}};">
+          <a href="/tag/#{{tag | first }}" onclick="showTag('#{{tag | first }}');" 
+             style="opacity: 0.{{tag-font-opacity}};">
+          <!--style="color: #{{tag-font-color}}{{tag-font-color}}{{tag-font-color}}; opacity: 0.1;"-->
             {{- tag | first -}}
           </a>
         </span>
@@ -34,3 +38,20 @@
     </div>
   </div>
 </div>
+
+<script>
+  $(document).ready(function init(){
+      var url = window.location.href;
+      var req = /#([^\s]+)$/.exec(url);
+      if(!Array.isArray(req)) {
+          return false;
+      }
+      var selector = '#' + req.pop();
+      showTag(selector);
+  });
+
+  function showTag(selector) {
+      $('.archive-group').hide();
+      $(selector).show();
+  }
+</script>

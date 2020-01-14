@@ -1,8 +1,8 @@
 ---
 title: C++ Constructor and Other tools
-category: C++
+category: Cpp
 tags:
-  - C++
+  - Cpp
   - Constructor
 ---
 

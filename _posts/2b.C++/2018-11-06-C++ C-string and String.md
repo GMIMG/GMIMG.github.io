@@ -1,7 +1,7 @@
 ---
-category : C++
+category : Cpp
 tags:
-  - C++
+  - Cpp
   - String
 ---
 
@@ -109,7 +109,7 @@ d = stod("2.5");
 s = to_string(d*2);
 ~~~
 
- 
+
 ~~~c++
 //Demonstrates getline and cin.get.
 #include <iostream>

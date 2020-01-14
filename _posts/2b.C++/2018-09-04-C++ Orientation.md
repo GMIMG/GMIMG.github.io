@@ -1,8 +1,9 @@
 ---
 title: C++ Orientation
-category: C++
+category: Cpp
 tags:
-    - C++
+    - Cpp
+    - C
 ---
 
 # C++

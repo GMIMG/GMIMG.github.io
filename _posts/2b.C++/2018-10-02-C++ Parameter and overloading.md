@@ -1,8 +1,8 @@
 ---
 title: C++ Parameter and overloading
-category: C++
+category: Cpp
 tags:
-  - C++
+  - Cpp
   - Call-by-value
   - Call-by-reference
   - Overloading
@@ -107,7 +107,7 @@ void foo(const int& par1);
 ## Resolving Overloading
 
 1. Exact match
-  실인수의 갯수와 type이 정의와 정확하게 match하는지 판단하고
+    실인수의 갯수와 type이 정의와 정확하게 match하는지 판단하고
 2. 맞지 않으면 type conversion을 통해 맞춘다.
 
 # Debugging

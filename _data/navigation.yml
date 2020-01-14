@@ -9,7 +9,7 @@ main:
     #url: /terms/
     children:
       - title: "C"
-      - title: "C++"
+      - title: "Cpp"
       - title: "Python"
       - title: "Java"
   - title: "Hardware"
