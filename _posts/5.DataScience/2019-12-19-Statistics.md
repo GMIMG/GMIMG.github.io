@@ -1,4 +1,9 @@
-
+---
+category : DataScience
+tags:
+- statistics
+- DataScience
+---
 
 # 통계
 
