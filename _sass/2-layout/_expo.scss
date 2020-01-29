@@ -9,15 +9,15 @@
   }
   .post-tag {
     display: inline-block;
-    background: rgba($blue, 0.15);
+    background: $dark-primary-color;
     padding: 0 .5rem;
     margin: .2em .3em;
     border-radius: 4px;
-    color: $blue;
+    color: $dark-on-primary-color;
     &:hover {
       text-decoration: none;
-      background: $blue;
-      color: $white;
+      background: $dark-primary-variant-color;
+      color: $dark-on-primary-color;
     }
   }
   .expo-section {

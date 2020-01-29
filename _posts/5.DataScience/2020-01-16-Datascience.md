@@ -4,6 +4,7 @@ tags :
 - AI
 - Machinlearning
 - DataScience
+toc : True
 ---
 
 # Machine learning
@@ -28,6 +29,30 @@ tags :
 
 
 ### 선형회귀분석
+
+ 연속적으로 존재하는(실수인) 데이터의 경향을 분석하고 예측하기위해서 선형회귀분석 방법을 쓴다. 다양하게 산포하는 데이터의 경향을 찾기위해 각 데이터들과의 차이를 최소화 하는 선을 찾는다.
+
+
+
+선형회귀는 단순하게 생각하면 다음 그림과같이 데이터를 1차다항식으로 회귀하는 방법을 생각할 수 있다.
+
+![linear_regression1](../../assets/img/linear_regression1.png)
+
+하지만 1차 다항식 외에도 다차원 다항식을 여러 독립변수(예를 들면 , $$ y = a x^2 + b x +c$$ 에서 $$x^2$$ 를 하나의 독립변수 $$x_2$$)로 변환해서 생각하면 결국 **다중선형회귀분석**으로 바꿀 수 있다. 이러한 방법을 다항회귀(Polynomial regression)이라 한다. 단, 다항회귀의 차수를 높일 수록 overfitting이 일어날 가능성이 높아진다.
+
+참고 : https://brunch.co.kr/@gimmesilver/18
+
+이처럼 여러 독립변수로 나누거나 로그를 씌우는 등의 방법으로 식을 변환해서 1차 다항식으로 만들 수 있으면 선형회귀가 가능하다. 그렇지 못할 때 비선형회귀 방법을 사용하는데 보통 딥러닝을 이용한다.
+
+참고 : https://brunch.co.kr/@gimmesilver/38
+
+참고 : [선형 회귀 위키](https://ko.wikipedia.org/wiki/%EC%84%A0%ED%98%95_%ED%9A%8C%EA%B7%80)
+
+
+
+### 분석
+
+
 
 #### 데이터 셋 구성방법
 
@@ -123,7 +148,6 @@ $$ SSR = \sum(\hat y_i - \bar y)^2$$
 $$SSE = \sum (y_i - \hat{y}_i)^2$$
 
 SST는 다음과 같은 과정을 통해
-
 $$
 \begin{align}
 (y_i - \bar y)^2 &= (y_i - \hat y_i + \hat y_i - \bar y )^2 \\
@@ -133,21 +157,18 @@ $$
 				&(\because 2 (y_i - y) (\hat y_i - \bar y) \approx 0)
 \end{align}
 $$
-
 아래와 같이 나타낼 수 있다.
-
 
 $$
 \begin{align}
 SST = SSE + SSR
 \end{align}
 $$
-
 즉, 총제곱합(SST) = 회귀제곱합(SSR) + 잔차제곱합(SSE)
 
 SST 는 항상 SSE보다 크거나 같다
 
-![SSESSR](../assets/img/SSESSR.png)
+![SSESSR](/assets/img/SSESSR.png)
 
 $$Rsqure = \frac{SSR}{SST} = \frac{(예측 - 진짜평균)^2}{(진짜-진짜평균)^2}$$
 
@@ -171,7 +192,6 @@ R_a^2 = 1 - (1 - R^2) (\frac{n-1}{n-k-1})
 $$
 
 
-
 #### 상관계수와 상관관계
 
 
@@ -180,7 +200,9 @@ $$
 
 학습데이터를 과다하게 최적화 시킬 경우 새로운 데이터를 예측하기 힘듦
 
-![overfitting](../assets/img/overfitting.png)
+
+
+![overfitting](/assets/img/overfitting.png)
 
 > 보다 적은 수의 논리로 설명이 가능한 경우, 많은 수의 논리를 세우지말라 -Occam's razor
 
@@ -230,8 +252,6 @@ PCA를 구하기 위해서 공분산과 고유벡터, 고유값을 이용하면 
 
 
 
-
-
 ### 분류 알고리즘
 
 - K-최근접 이웃 알고리즘(KNN)
@@ -256,7 +276,6 @@ Decision Tree의 분리기준(Split Criterion)은 생성된 자식 노드에 속
 데이터 집합의 불순도를 측정
 
 0~1 사이의 값이며, 어떤 데이터 집합에 속한 개체(레코드)들이 같은 범주(클래스)로 구성되어 있으면 지니지수는 0, 지니 지수가 작을수록 잘 분류된 것
-
 
 $$
 \begin{align*}

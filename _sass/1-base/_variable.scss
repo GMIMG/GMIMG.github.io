@@ -22,6 +22,7 @@ $table-text-align: left !default;
     }
 }
 
+// custom
 @mixin background-color-opacity($background-color,$ratio) {
     background-color: $background-color;
     opacity: $ratio;

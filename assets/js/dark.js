@@ -1,3 +1,4 @@
+// dark인지 확인
 const userPrefers = getComputedStyle(document.documentElement).getPropertyValue('content');
 if (theme === "dark") {
     document.getElementById("theme-toggle").innerHTML = '<i class="fas fa-sun"></i>';
@@ -13,6 +14,7 @@ if (theme === "dark") {
     document.getElementById("theme-toggle").innerHTML = '<i class="fas fa-moon"></i>';
 }
 
+// 버튼눌렀을때 다크모드 바꿈
 function modeSwitcher() {
     let currentMode = document.documentElement.getAttribute('data-theme');
     if (currentMode === "dark") {
