@@ -3,36 +3,28 @@
  */
 
 .img{
-    //border-top: 1px solid $grey-color-light;
-    border-bottom: 1px solid $grey-color-light;
+    border-bottom: 1px solid $grey-light;
     display: table;
     background-image: url(/assets/img/home.jpg);
     height: 460px;
     width: 100%;
-    padding: 0;
     background-position: center;
     background-size: cover;
     @media screen and (max-width: $on-palm) {
         height: 300px;
-      }
-}
-
-.img-cover{
-    display: table-cell;
-    position: relative;
-    vertical-align: middle;
-    text-align: center;
-    background-color: rgba(12, 12, 48, 0.3);
-    overflow: hidden;
-    h1, p{
-        width: 80%;
-        max-width: 780px;
-        margin: 0 auto;
-        color: #fff;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
-    };
+    }
+    .img-cover{
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        background-color: rgba(12, 12, 48, 0.3);
+        h1, p{
+            width: 80%;
+            max-width: 780px;
+            margin: 0 auto;
+            color: #fff;
+        }
+    }
 }
 
 /**
@@ -40,7 +32,7 @@
  */
 
 #notice-post {
-    margin: $spacing-unit 0 $spacing-unit 0;
+    margin: 0 0 $spacing-unit 0;
     ul{
         list-style: none;
     }
@@ -61,7 +53,6 @@
         max-width: 620px;
     }
     .post-item {
-
         border-bottom: 1px solid #e6e6e6;
     }
     .post-title{
@@ -71,7 +62,7 @@
     }
     .post-excerpt {
         padding-top: 22px;
-        font-size: 0.825rem;
+        font-size: 14px;
         line-height: 24px; /* 24px = 14(font-size) + 10(line-spacing) */
         display: block;
         max-height: 48px; /* 2 lines */

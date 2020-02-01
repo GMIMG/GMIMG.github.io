@@ -1,29 +1,30 @@
 //@import url('https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css');
-//@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css');
 
 /**
  * CSS Reset
  */
 
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
-  margin: 0;
-  padding: 0;
-}
+// body, h1, h2, h3, h4, h5, h6,
+// p, blockquote, pre, hr,
+// dl, dd, ol, ul, figure {
+//   margin: 0;
+//   padding: 0;
+// }
 
 /**
  * HTML Elements
  */
 
 body {
+  //font-family: $base-font-family;
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
   color: $text-color;
   background-color: $background-color;
-  font-kerning: normal;
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
+  // font-kerning: normal;
+  // display: flex;
+  // min-height: 100vh;
+  // flex-direction: column;
 }
 
 /**
@@ -59,13 +60,13 @@ img {
  * Figures
  */
 
-figure > img {
-  display: block;
-}
+// figure > img {
+//   display: block;
+// }
 
-figcaption {
-  font-size: $small-font-size;
-}
+// figcaption {
+//   font-size: $small-font-size;
+// }
 
 /**
  * Lists
@@ -75,9 +76,7 @@ ul, ol {
   margin-left: $spacing-unit;
 }
 
-li {
-  > ul,
-  > ol {
+li { > ul, > ol {
     margin-bottom: 0;
   }
 }
@@ -86,9 +85,9 @@ li {
  * Headings
  */
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: $base-font-weight;
-}
+// h1, h2, h3, h4, h5, h6 {
+//   font-weight: $base-font-weight;
+// }
 
 /**
  * Links
@@ -97,16 +96,13 @@ h1, h2, h3, h4, h5, h6 {
 a {
   color: $link-color;
   text-decoration: none;
-/*
-  &:visited {
-    color: darken($link-color, 30%);
-  }
-
-  &:hover {
-    color: $text-color;
-    text-decoration: underline;
-  }
-*/
+  // &:visited {
+  //   color: darken($link-color, 30%);
+  // }
+  // &:hover {
+  //   color: $text-color;
+  //   text-decoration: underline;
+  // }
 }
 
 /**
@@ -114,8 +110,8 @@ a {
  */
 
 blockquote {
-  color: $grey-color;
-  border-left: 4px solid $grey-color-light;
+  color: $grey;
+  border-left: 4px solid $grey-light;
   padding-left: $spacing-unit / 2;
   @include relative-font-size(1.125);
   letter-spacing: -1px;
@@ -129,18 +125,15 @@ blockquote {
 /**
  * Code formatting
  */
-pre,
-code {
-  @include relative-font-size(0.9375);
+
+.highlight,pre.highlight{
   font-family: $code-font-family;
 }
 .highlight {
   border-radius: 5px;
 }
-.highlight,.highlight pre,.highlight .hll,pre.highlight {
-  background-color: $highlight-background-color;
-}
 pre {
+  @include relative-font-size(0.9375);
   padding: 8px 12px;
   overflow-x: auto;
   max-height: 550px;
@@ -215,15 +208,15 @@ table {
   width: 100%;
   text-align: $table-text-align;
   border-collapse: collapse;
-  border: 1px solid $grey-color-light;
+  border: 1px solid $grey;
   th, td {
     padding: ($spacing-unit / 3) ($spacing-unit / 2);
   }
   th {
-    border: 1px solid darken($grey-color-light, 4%);
-    border-bottom-color: darken($grey-color-light, 12%);
+    border: 1px solid darken($grey, 4%);
+    border-bottom-color: darken($grey, 12%);
   }
   td {
-    border: 1px solid $grey-color-light;
+    border: 1px solid $grey;
   }
 }

@@ -1,59 +1,63 @@
-html, html[data-theme="light"]{
-  body {
-    background-color: $light-background-color;
-    color: $light-on-background-color;
-    header {
-      background-color: $white;
-    }
-  }
-  a {
-    color: $light-primary-variant-color;
-  }
-  @media screen and (max-width: $on-palm) {
-    .site-nav {
-      background-color: $dark-primary-color;
-    }
-  }
-  .toc_container {
-    background: $light-toc-container-color;
-  }
-  .site-title {
-    color: $light-on-background-color;
-  }
-  .site-menu {
-    background-color: $light-background-color;
-    .page-link {
-      color: $light-on-background-color;
-    }
-  }
+:root {
+  --primary-color: #6200EE;
+  --primary-variant-color: #3700B3;
+  --secondary-color: #03DAC6;
+  --secondary-variant-color: #018786;
+  --background-color: #FFFFFF;
+  --surface-color: #FFFFFF;
+  --error-color: #B00020;
+  --on-primary-color: #FFFFFF;
+  --on-secondary-color: #000000;
+  --on-background-color: #000000;
+  --on-surface-color: #000000;
+  --on-error-color: #FFFFFF;
+
+  --link-color: #3700B3;
+  --toc-container-color: #f1f1f1;
+  --background-color-1: 0,0,0;
+
+  --header: 230,230,230;
 }
 
-html[data-theme="dark"]{
-  body {
-    background-color: $dark-background-color;
-    color: $dark-on-background-color;
-    header {
-      background-color: $black;
-    }
+[data-theme="dark"] {
+  --primary-color: #BB86FC;
+  --primary-variant-color: #3700B3;
+  --secondary-color: #03DAC6;
+  //--background-color: #282c35;
+  --background-color: #121212;
+  --surface-color: #121212;
+  --error-color: #CF6679;
+  --on-primary-color: #000000;
+  --on-secondary-color: #000000;
+  --on-background-color: #FFFFFF;
+  --on-surface-color: #FFFFFF;
+  --on-error-color: #000000;
+
+  --link-color: #03DAC6;
+  --toc-container-color: #424242;
+  --background-color-1: 255, 255, 255;
+
+  --header: 25,25,25;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--on-surface-color);
+}
+a {
+  color: var(--link-color);
+}
+.site-title {
+  color: var(--on-background-color);
+}
+.site-menu {
+  background-color: var(--background-color);
+  .page-link {
+    color: var(--on-background-color);
   }
-  a {
-    color: $dark-secondary-color;
-  }
-  @media screen and (max-width: $on-palm) {
-    .site-nav {
-      background-color: $light-primary-color;
-    }
-  }
-  .toc_container {
-    background: $dark-toc-container-color;
-  }
-  .site-title {
-    color: $dark-on-background-color;
-  }
-  .site-menu {
-    background-color: $dark-background-color;
-    .page-link {
-      color: $dark-on-background-color;
-    }
+}
+@media screen and (max-width: $on-palm) {
+  .site-nav {
+    background-color: var(--primary-color);
   }
 }

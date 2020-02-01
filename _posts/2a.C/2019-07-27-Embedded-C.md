@@ -443,12 +443,11 @@ int main(void)
 	printf("a=%d, b=%d\n", a, b);
     return 0;
 }
-/*
-a=2, b=21
-a=3, b=22
-a=3, b=11
-*/
 ```
+
+    a=2, b=21
+    a=3, b=22
+    a=3, b=11
 
 
 

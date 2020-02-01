@@ -6,7 +6,7 @@
   margin-bottom: $spacing-unit;
 }
 .post-date {
-  color: $grey-color;
+  color: $grey;
 }
 .post-header-categories, .post-header-tags {
   @include relative-font-size(0.935);
@@ -16,13 +16,9 @@
   text-align: right;
   font-size: 50%;
 }
-
-
 .post-title {
   @include relative-font-size(2.5);
-  letter-spacing: -1px;
 }
-
 .post-content {
   h1 {
     @include relative-font-size(2.25);
@@ -37,14 +33,15 @@
     @include relative-font-size(1.25);
   }
 }
-
 .toc_container {
   width: 100%;
   font-size: 80%;
   padding-top: $spacing-unit/2;
   padding-bottom: $spacing-unit/2;
   margin-bottom: $spacing-unit/2;
-  border-radius: 15px;
+  //border-radius: 15px;
+
+
   ul ul{
       margin-left: 15px;
   }
@@ -52,17 +49,28 @@
       padding-bottom: $spacing-unit/2;
       text-align: center;
   }
-}
-@media screen and (min-width: $toc-relative) {
-  .toc_container {
-      position: fixed;
-      top: 10%;
-      right: 20px;
-      padding: 10px 10px 10px 0px;
-      max-width: 220px;
+  @media screen and (min-width: $toc-relative) {
+    position: fixed;
+
+    transform: translateX(0);
+    
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    padding-top: $site-header-line-height;
+    width: 400px;
+    height: 100%;
+    overflow-y: auto;
+
+
+    //top: 10%;
+    
+    //padding: 10px 10px 10px 0px;
+
+    max-width: 220px;
   }
 }
-
 
 
 /*

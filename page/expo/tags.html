@@ -22,9 +22,6 @@ permalink: /tags/
         <small class="post-date">{{- post.date | date_to_string -}}</small>
       </li>
       {%- endfor %}
-      <div class="back-to-top">
-        <a href="#">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
-      </div>
       </ul>
     {%- endfor %}
   </div>
