@@ -2,7 +2,7 @@
 
 ---
 
-# 러닝
+# 딥러닝
 
 
 
@@ -27,6 +27,7 @@ Cost(W,b) &= \frac{1}{2m} \sum_{i=1}^{m} (H(x_i) - y_i)^2 \\
 $$
 
 행렬을 사용해서 다음과 같이 나타낼 수 있다. (계산 편의상 2m으로 나눔)
+
 $$
 \begin{align}
 Cost(W,b) &= \frac{1}{2m} (H(x) - y)^2 \\
@@ -35,7 +36,9 @@ Cost(W,b) &= \frac{1}{2m} (H(x) - y)^2 \\
 &= \frac 1 {2m} ((W^2x^2 + 2Wxb + b^2) - 2Wxy+2by + y^2) \\
 \end{align}
 $$
+
 W에 대한 편미분
+
 $$
 \begin{align}
 \frac {\partial E} {\partial w} &= \frac 1 {2m} (2Wx^2 + 2xb - 2xy) \\
@@ -43,10 +46,11 @@ $$
 &= \frac 1 {2m} 2(Wx^2 + xb - xy) \\
 &= \frac 1 {m} (Wx + b - y)x \\
 &= \frac 1 {m} (H(x) - y)x
-
 \end{align}
 $$
+
 b에 대한 편미분
+
 $$
 \begin{align}
 \frac {\partial E} {\partial b} &= \frac 1 {2m} (2Wx + 2b - 2y) \\
@@ -54,7 +58,9 @@ $$
 &= \frac 1 {m} (H(x) - y)
 \end{align}
 $$
+
 즉 다음과 같다.
+
 $$
 W_{update} = W - \frac {\part E}{\part w} \\
 b_{update} = b - \frac {\part E}{\part b}
@@ -71,6 +77,7 @@ $$
 인공신경망 종류 중 하나로 각 노드의 가중치와 입력치를 곱한 것을 모두 합한 값이 활성함수에 의해 판단된다.
 
 이진 분류할때 log를 이용해서 Cost함수를 구현한다. 
+
 $$
 C(H(x),y) = \left\{
 \begin{array}{ll}
@@ -79,7 +86,9 @@ C(H(x),y) = \left\{
 \end{array}
 \right.
 $$
+
 간단하게 나타내면 다음과 같다.
+
 $$
 C(H(x),y) = -y log(H(x)) - (1-y)log(1-H(x))
 $$
@@ -97,9 +106,11 @@ $$
 #### 시그모이드
 
 ![sigmoid](\assets\img\sigmoid.png)
+
 $$
 S(t) = \frac 1 {1 + e^{-t}}
 $$
+
 활성화 함수중 하나인 시그모이드이다.
 
 #### tanh
