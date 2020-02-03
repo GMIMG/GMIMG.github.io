@@ -50,6 +50,12 @@ toc : True
 
 
 
+**다중 선형 회귀 분석 모델**
+
+$$ f(x) = w_0 + w_1 x_1 + w_2 x_2 + \dots $$
+
+
+
 ### 분석
 
 
@@ -318,12 +324,14 @@ $$ entropy = - p_1 log(p_1) - p_2 log(p_2) - \dots $$
 
 
 **정보 증가량(Information Gain)**
-
-$$ IG(parents, children) = entropy(parents) - [p(c_1) x entropy(c_1) + p(c_2) x entropy(c_2) + \dots] $$
+$$
+\begin{align}
+IG(parents, children) = &entropy(parents) \\
+&- [p(c_1) * entropy(c_1) + p(c_2) * entropy(c_2) + \dots]
+\end{align}
+$$
 
 어떤 속성의 순서에 따라 분류할 때 엔트로피가 감소할지 수치화함.
-
-
 
 
 
@@ -335,13 +343,9 @@ $$ IG(parents, children) = entropy(parents) - [p(c_1) x entropy(c_1) + p(c_2) x 
 
 $$y = ax$$
 
-
-
 목표 값은 다음과 같음
 
 $$t = (a + \Delta a )x$$
-
-
 
 오차(E)와 기울기(a)와의 관계
 
@@ -362,68 +366,49 @@ $$y = (a + \frac E x ) x$$ 으로 업데이트 할 수 있다.
 
 이와 같은 방법은 마지막 데이터의 영향력이 너무 강해지기 때문에 학습률(Learing rate)를 적용하여 다음과 같이 학습한다.
 
-$$ t = \eta (a + \Delta) x $$
+$$ t = \eta (a + \Delta a) x $$
 
 
 
+#### 로지스틱 회귀모델
 
+**From Linear regression**
 
-
-
-
-
-선형 회귀 분석 모델
+다중선형회귀분석모델의 함수는 다음과 같다.
 
 $$ f(x) = w_0 + w_1 x_1 + w_2 x_2 + \dots $$
 
-
-
-$$ \hat Y = a + b X $$
-
-- $$ \hat Y $$ : 종속변수 Y의 추정치
-- X : 독립변수
-- a : $$ \hat Y $$ 축 절편
-- b  : 직선의 기울기
-
-$$
-b = \frac{n \sum_{i=1}^n X_i Y_i - (\sum_{i=1}^n X_i)(\sum_{i=1}^n Y_i)}{n\sum_{i=1}^n X_i^2 - (\sum_{i=1}^n X)^2}
-$$
-
-$$
-a = \frac {\sum_{i=1}^n Y_i - b \sum_{i=1}^n X_i} {n}
-$$
+각각의 데이터를 분류하는 직선들의 합으로 볼 수 있음. 
 
 
 
+**To Logistic regression**
 
+**범주형 종속 변수**에 다중선형회귀 모델을 적용하기 위해서 y를 변형하여 로지스틱 회귀모델을 만들수 있다.
 
+로지스틱 함수에 대해 이해하기 위해 승산(Odds)에 대해 알고 로짓을 알아야한다. 확률의 비율인 **승산(odds)**이라는 개념은 사건 A가 발생하지 않을 확률 대비 일어날 확률의 비율이다.
 
+$$ odds = \frac {P(A)}{P(A^c)} = \frac {P(A)}{1-P(A)}$$
 
+승산의 범위는 $$(0,\infty)$$ 이기 때문에 로그를 취해서 범위가 $$ (-\infty, \infty) $$ 인 **로짓**으로 조정한다.
 
+$$ logit(p) = log_e(Odds) $$
 
-선형 판별 함수
+이러한 로짓을 다중선형회귀의 좌항으로 놓으면 다음과 같다.
 
-$$ f(x) = w_0 + w_1 x_1 + w_2 x_2 + \dots $$
+$$ logit(p) = \beta_i X_i $$
 
-각각의 데이터를 불류하는 직선들의 합으로 볼 수 있음.
+위 식을 확률(P)에 대해 풀면 다음과 같다.
 
+$$ logistic function = \frac {e^{\beta_i X_i}}{1 + e^{\beta_i X_i}}  $$
 
+로지스틱 함수는 독립변수 X가 주어졌을 때 종속 변수가 1인 범주에 속할 확률을 의미한다.
 
-이때, 새로운 데이터가 어느 계층에 속하는지에 대한 확률을 추정하는 방법은 로지스틱 회귀 분석이다. 선에 가까울 수록 확률은 0.5에 가까워진다.
+![Logistic-curve](../../assets/img/Logistic-curve.png)
 
-$$f(x)$$ 는 $$ - \infty \sim \infty $$ 의 범위 이므로
+이러한 로지스틱 함수는 인공신경망에서 활성화함수인 **sigmoid**라고도 불립니다.
 
-승산(odds)라는 개념을 도입하여 
+참고 : [https://ratsgo.github.io/machine%20learning/2017/04/02/logistic/](https://ratsgo.github.io/machine learning/2017/04/02/logistic/)
 
-$$ odds = e^{w_0 + w_1 x_1 + w_2 x_2 + \dots} = e^{f(x)}$$
-
-
-
-승산에 로그를 씌우면 범위가 
-
-
-
-
-
-
+참고 : [https://ko.wikipedia.org/wiki/%EB%A1%9C%EC%A7%80%EC%8A%A4%ED%8B%B1_%ED%9A%8C%EA%B7%80](https://ko.wikipedia.org/wiki/로지스틱_회귀)
 

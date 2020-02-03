@@ -23,13 +23,11 @@
         {%- for tag in sorted_tags %}
         {%- assign percent_for_size = tag | last | size | times: 50 | divided_by: max_size -%}
         {%- assign tag-font-size = percent_for_size | plus: 75 -%}
-        <!---->
         {%- assign percent_for_color = tag | last | size | times: 50 | divided_by: max_size -%}
         {%- assign tag-font-opacity = 49 | plus: percent_for_color -%}
         <span style="font-size: {{ tag-font-size }}%;">
           <a href="/tag/#{{tag | first }}" onclick="showTag('#{{tag | first }}');" 
              style="opacity: 0.{{tag-font-opacity}};">
-          <!--style="color: #{{tag-font-color}}{{tag-font-color}}{{tag-font-color}}; opacity: 0.1;"-->
             {{- tag | first -}}
           </a>
         </span>

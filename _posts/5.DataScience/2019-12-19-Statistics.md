@@ -494,6 +494,27 @@ $$
 
 #### 적합값
 
+$$ \hat Y = a + b X $$
+
+- $$ \hat Y $$ : 종속변수 Y의 추정치
+- X : 독립변수
+- a : $$ \hat Y $$ 축 절편
+- b  : 직선의 기울기
+
+$$
+b = \frac{n \sum_{i=1}^n X_i Y_i - (\sum_{i=1}^n X_i)(\sum_{i=1}^n Y_i)}{n\sum_{i=1}^n X_i^2 - (\sum_{i=1}^n X)^2}
+$$
+
+$$
+a = \frac {\sum_{i=1}^n Y_i - b \sum_{i=1}^n X_i} {n}
+$$
+
+
+
+
+
+
+
 $$\hat{Y}_i = \hat{b}_0 + \hat{b}_1 X_i$$
 
 $$\hat{Y}_i$$ : 적합값, 예측값
