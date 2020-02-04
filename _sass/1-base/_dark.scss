@@ -58,6 +58,7 @@ a {
 }
 @media screen and (max-width: $on-palm) {
   .site-nav {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
+    a{color: var(--on-background-color);}
   }
 }
