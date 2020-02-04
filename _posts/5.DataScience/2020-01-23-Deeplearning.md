@@ -105,6 +105,8 @@ $$
 
 #### 스텝함수
 
+![stepfunc](/assets/img/stepfunc.png)
+
 보통 1층의 퍼셉트론에서는 망을 깊게 할 필요가 없으므로 스텝함수를 사용한다.
 
 #### 시그모이드
@@ -119,11 +121,11 @@ $$
 
 #### tanh
 
-
+![tanhfunc](/assets/img/tanhfunc.png)
 
 #### ReLU
 
-
+![ReLufunc](/assets/img/ReLufunc.png)
 
 참고 : https://sacko.tistory.com/10
 
