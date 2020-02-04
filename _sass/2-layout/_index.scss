@@ -116,8 +116,6 @@
     vertical-align: middle;
 }
 
-/* pagination */
-
 #pagination > li + li {
     margin-left: 10px;
 }
@@ -135,4 +133,8 @@
 
 #page-prev, #page-next {
     font-size: 20px;
+}
+
+.page-number.active {
+    color: black
 }
