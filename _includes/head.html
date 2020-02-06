@@ -20,4 +20,13 @@
 		document.documentElement.setAttribute('data-theme', 'dark');
 	}
   </script>
+  <script>
+  $(document).ready(function(){
+    $('pre.highlight').prepend('<span class="codeshow"> Code (show/hide) </span>')
+        $('.codeshow').on('click',(function(){
+          //$(this).text('숨기기')
+          $(this).parent().children('code').slideToggle();
+        }));
+  });
+  </script>
 </head>

@@ -128,10 +128,23 @@ blockquote {
 
 .highlight,pre.highlight{
   font-family: $code-font-family;
+  span.codeshow {
+    display : none;
+  }
+  @media screen and (max-width: $on-palm) {
+    span.codeshow {
+      display : block;
+    }
+    code { 
+      max-height: 50vh;
+      display : none;
+    }
+  }
 }
 .highlight {
   border-radius: 5px;
 }
+
 pre {
   @include relative-font-size(0.9375);
   padding: 8px 12px;
