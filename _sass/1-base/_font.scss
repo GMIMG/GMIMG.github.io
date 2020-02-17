@@ -11,3 +11,8 @@ $base-line-height: 1.5 !default;
 @mixin relative-font-size($ratio) {
   font-size: $base-font-size * $ratio;
 }
+//@include relative-font-size(1.875); //30px
+//@include relative-font-size(1.5); //24px
+//@include relative-font-size(1.125); //18px
+//@include relative-font-size(0.875); //14px
+//@include relative-font-size(0.75); //12px

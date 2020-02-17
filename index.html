@@ -10,7 +10,7 @@ layout: default
 
 <div class="wrapper">
     <div id="notice-post">
-        <h1 class="list-title"><strong>Notice</strong></h1>
+        <h1 class="list-title">Notice</h1>
         <ul class="post-list">
             {%- for post in site.posts -%}
             {%- if post.notice %}
@@ -44,7 +44,7 @@ layout: default
                 {%- if post.categories != empty %}
                 <a class="post-category" href="/{{ site.category_dir }}#{{ post.categories | first }}"> {{post.categories}}</a>
                 {%- endif %}
-                <a href="{{ post.url | relative_url }}#disqus_thread"><i class="fas fa-comment"></i></a>
+                <a class="comment-icon" href="{{ post.url | relative_url }}#disqus_thread"><i class="fas fa-comment"></i></a>
                 <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 75 }}</p>
                 {%- if post.tags != empty %}
                 <p class="post-tag-list">
