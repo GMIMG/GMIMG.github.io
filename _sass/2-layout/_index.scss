@@ -56,13 +56,13 @@
         border-bottom: 1px solid #e6e6e6;
     }
     .post-title{
-        font-size: @include relative-font-size(1.5);
+        @include relative-font-size(1.5);
         text-overflow: ellipsis;
         overflow: hidden;
     }
     .post-excerpt {
+        @include relative-font-size(0.875);
         padding-top: 22px;
-        font-size: @include relative-font-size(0.875);
         line-height: 24px; /* 24px = 14(font-size) + 10(line-spacing) */
         display: block;
         max-height: 48px; /* 2 lines */
@@ -87,16 +87,16 @@
         line-height: 24px;
     }
     .post-date {
-        font-size: @include relative-font-size(0.875);
+        @include relative-font-size(0.875);
     }
     .post-category {
-        font-size: @include relative-font-size(0.875);
+        @include relative-font-size(0.875);
     }
     .comment-icon {
         // position: relative;
         // display: inline-block;
         // text-align: center;
-        font-size: @include relative-font-size(0.875);
+        @include relative-font-size(0.875);
       }
 }
 
