@@ -29,7 +29,7 @@ mathjax : true
 #highlighter: rouge
 
 #paginate 플러그인 설정
-paginate: 5
+paginate: 10
 paginate_path: "/posts/:num/"
 
 #footer에 SNS 넣기
