@@ -271,69 +271,8 @@ PCA를 구하기 위해서 공분산과 고유벡터, 고유값을 이용하면 
 - K-최근접 이웃 알고리즘(KNN)
 - 나이브 베이즈 분류
 - 서포트 벡터 머신(SVM)
-- 결정 트리 학습
+- 결정 트리 학습(Decision Tree)
 - 랜텀 포레스트
-
-
-
-#### 의사결정 나무
-
-의사결정 규칙을 나무구조 표현을 통해 분류와 예측을 수행
-
-
-Decision Tree의 분리기준(Split Criterion)은 생성된 자식 노드에 속하는 자료의 순수도(Purity)를 가장 크게 증가하도록 트리를 형성. 입력 변수를 이용해 목표 변수의 분포를 얼마나 잘 구별하는 정도를 파악해 자식 마디가 형성되는데, 목표 변수의 구별 정도를 불순도(Impurity, 다양한 범주들의 개체들이 포함되어 있는 정도)에 의해 측정.
-
-
-
-##### 불순도 측정
-
-- 지니 지수
-- 엔트로피
-
-
-
-**지니 지수(Gini Index)**
-
-데이터 집합의 불순도를 측정
-
-0~1 사이의 값이며, 어떤 데이터 집합에 속한 개체(레코드)들이 같은 범주(클래스)로 구성되어 있으면 지니지수는 0, 지니 지수가 작을수록 잘 분류된 것
-
-$$
-\begin{align*}
-G &= 1 - \Sigma_{j=1}^c P(j)^2 \\
-  &= 1 - \Sigma_{j=1}^c \big( \frac{n_j}{n} \big)^2 \\
-\end{align*}
-$$
-
-C	: 범주(클래스)의 수
-
-P(j)	: j번째 범주(클래스)에 분류될 확률
-
-n	: 노드에 속하는 개체 수
-
-$$n_j$$	: 노드에 속하는 수 중 j번째 범주(클래스)에 속하는 개체 수
-
-
-
-**엔트로피(Entropy)**
-
-$$ entropy = - p_1 log(p_1) - p_2 log(p_2) - \dots $$
-
-어떤 집합에 대한 무질서 정도를 측정 하기 위해서 물리학의 엔트로피 개념 도입. 잘섞여있을 수록 1(stable)에 가깝고, 잘 분류될수록 0에 가까워짐. 
-
-
-
-**정보 증가량(Information Gain)**
-$$
-\begin{align}
-IG(parents, children) = &entropy(parents) \\
-&- [p(c_1) * entropy(c_1) + p(c_2) * entropy(c_2) + \dots]
-\end{align}
-$$
-
-어떤 속성의 순서에 따라 분류할 때 엔트로피가 감소할지 수치화함.
-
-
 
 
 
@@ -411,4 +350,97 @@ $$ logistic function = \frac {e^{\beta_i X_i}}{1 + e^{\beta_i X_i}}  $$
 참고 : [https://ratsgo.github.io/machine%20learning/2017/04/02/logistic/](https://ratsgo.github.io/machine learning/2017/04/02/logistic/)
 
 참고 : [https://ko.wikipedia.org/wiki/%EB%A1%9C%EC%A7%80%EC%8A%A4%ED%8B%B1_%ED%9A%8C%EA%B7%80](https://ko.wikipedia.org/wiki/로지스틱_회귀)
+
+
+
+#### 의사결정 나무
+
+의사결정 규칙을 나무구조 표현을 통해 분류와 예측을 수행
+
+
+Decision Tree의 분리기준(Split Criterion)은 생성된 자식 노드에 속하는 자료의 순수도(Purity)를 가장 크게 증가하도록 트리를 형성. 입력 변수를 이용해 목표 변수의 분포를 얼마나 잘 구별하는 정도를 파악해 자식 마디가 형성되는데, 목표 변수의 구별 정도를 불순도(Impurity, 다양한 범주들의 개체들이 포함되어 있는 정도)에 의해 측정.
+
+
+
+##### 불순도 측정
+
+- 지니 지수
+- 엔트로피
+
+
+
+**지니 지수(Gini Index)**
+
+데이터 집합의 불순도를 측정
+
+0~1 사이의 값이며, 어떤 데이터 집합에 속한 개체(레코드)들이 같은 범주(클래스)로 구성되어 있으면 지니지수는 0, 지니 지수가 작을수록 잘 분류된 것
+
+$$
+\begin{align*}
+G &= 1 - \Sigma_{j=1}^c P(j)^2 \\
+  &= 1 - \Sigma_{j=1}^c \big( \frac{n_j}{n} \big)^2 \\
+\end{align*}
+$$
+
+C	: 범주(클래스)의 수
+
+P(j)	: j번째 범주(클래스)에 분류될 확률
+
+n	: 노드에 속하는 개체 수
+
+$$n_j$$	: 노드에 속하는 수 중 j번째 범주(클래스)에 속하는 개체 수
+
+
+
+**엔트로피(Entropy)**
+
+$$ entropy = - p_1 log(p_1) - p_2 log(p_2) - \dots $$
+
+어떤 집합에 대한 무질서 정도를 측정 하기 위해서 물리학의 엔트로피 개념 도입. 잘섞여있을 수록 1(stable)에 가깝고, 잘 분류될수록 0에 가까워짐. 
+
+
+
+**정보 증가량(Information Gain)**
+$$
+\begin{align}
+IG(parents, children) = &entropy(parents) \\
+&- [p(c_1) * entropy(c_1) + p(c_2) * entropy(c_2) + \dots]
+\end{align}
+$$
+
+어떤 속성의 순서에 따라 분류할 때 엔트로피가 감소할지 수치화함.
+
+
+
+
+
+#### Random Forest
+
+Decision Tree의 확장
+
+특징
+
+- 여러개의 Deciesion 트리를 결합
+- Over-fitting 문제가 적음
+- 구현이 간단
+- 병렬 계산 간편
+
+부트스트랩 기법으로 샘플 데이터 선택은 중복가능한 n개, feature 선택 개수는 Sqrt 또는 Log2 등 중 하나로 뽑아 여러개의 decision트리를 만든다. 그러고 어떤 데이터를 생성한 decision트리에 넣어서 가장 많이 voting된 결과값이 최종 분류값으로 추정하는 방법이다.
+
+[앙상블(Ensengbles)](https://bkshin.tistory.com/entry/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-11-%EC%95%99%EC%83%81%EB%B8%94-%ED%95%99%EC%8A%B5-Ensemble-Learning-%EB%B0%B0%EA%B9%85Bagging%EA%B3%BC-%EB%B6%80%EC%8A%A4%ED%8C%85Boosting) : 여러개의 분류기를 생성하여 예측한 결과를 결합해서 정확한 예측을 도출 (정형데이터 분류에 좋음)
+
+- 배깅
+- 부스팅
+
+배깅 : 부트스트랩을 이용해서 나온 여러 모델을 종합해서 추론하는 방법
+
+![bagging](\assets\img\bagging.png)
+
+[부트스트랩](https://bkshin.tistory.com/entry/DATA-12?category=1042793) : 표본을 복원추출하여 여러개의 표본을 만드는 방법
+
+
+
+#### XGBoost
+
+분류 문제에서 오차(Residual)를 가중치를 두고 부스팅 방법으로 줄여가는 방법
 
