@@ -24,7 +24,7 @@
 
 .copyright {
   text-align: center;
-  font-size: 70%;
+  @include relative-font-size(0.875);
 }
 
 .footer-col {

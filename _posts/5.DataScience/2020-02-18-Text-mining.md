@@ -111,3 +111,28 @@ $$
 
 
 
+
+RNN (Recurrent Neural Network)
+
+앞서 나온 입력에 대한 결과가 뒤에 나오는 입력값에 영향
+
+
+
+-> Vanishing Gradient Problem 발생
+
+: Weight가 업데이트 되는 과정에서 gradient가 1보다 작은 값이 계속 곱해져서, gradient가 사라지는 현상
+
+
+
+- LSTM(Long Short Term Memory)
+- GRU(Gated Recurrent Unit)
+
+
+
+LSTM
+
+입력 기억 출력의 정도를 조절하는 세개의 게이트로 구성된 Cell이 추가돼있음
+
+- Forget Gate
+- Input Gate
+- Output Gate

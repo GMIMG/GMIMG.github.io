@@ -43,3 +43,6 @@ process 우선순위
 
 - race condition (경쟁조건) => mutual ~~~ 상호
 - 교착상태
+
+
+
