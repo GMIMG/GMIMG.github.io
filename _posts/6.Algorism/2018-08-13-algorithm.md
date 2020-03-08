@@ -1,8 +1,9 @@
 ---
 category: ComputerScience
 tags:
-  - Argorism
+  - algorithm
 ---
+
 ## binary_search
 
 ~~~python
@@ -14,6 +15,7 @@ def linear_search(li,target):
 ~~~
 
 알고리즘 성능 평가시 최악의 경우 몇번의 연산(비교)를 하는가?, 평균의 경우?
+
 최악의 경우 연산횟수 T(n) = n
 
 ~~~python
@@ -60,34 +62,7 @@ O(1) > O(logn) > O(n) >> O(nlogn) >>>>> O(n^2)
   - ex) 버블 소트 포함 단순정렬
 
 **big O는 상대시간 비교**
+
 _이 알고리즘은 데이터 갯수가 늘어날 때 연산횟수가 O를 보장한다_
 
 
-
-
-
-
-
-
-
-
-
-
-
-외판원
-
-
-
-비트마스크
-
-
-
-dfs
-
-
-
-back tracking
-
-
-
-DP
