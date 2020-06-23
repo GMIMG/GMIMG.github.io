@@ -15,18 +15,18 @@
   <script src="/assets/js/scroll.js"></script>
   <!--dark theme-->
   <script>
-  const theme = localStorage.getItem('theme');
-	if (theme === "dark") {
-		document.documentElement.setAttribute('data-theme', 'dark');
-	}
+    const theme = localStorage.getItem('theme');
+    if (theme === "dark") {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
   </script>
   <script>
-  $(document).ready(function(){
-    $('pre.highlight').prepend('<span class="codeshow"> Code (show/hide) </span>')
-        $('.codeshow').on('click',(function(){
-          //$(this).text('숨기기')
-          $(this).parent().children('code').slideToggle();
-        }));
-  });
+    $(document).ready(function(){
+      $('pre.highlight').prepend('<span class="codeshow"> Code (show/hide) </span>')
+          $('.codeshow').on('click',(function(){
+            //$(this).text('숨기기')
+            $(this).parent().children('code').slideToggle();
+          }));
+    });
   </script>
 </head>
