@@ -1,19 +1,22 @@
 # main links
-# enable sub_sub_category(two children)
+# enable sub_sub_category
 main:
-  - title: "ComputerScience"
+  - title: "WIKI"
     children:
-      - title: "Database"
-      - title: "Network"
-  - title: "Programming"
-    #url: /terms/
-    children:
-      - title: "C"
-      - title: "Cpp"
-      - title: "Python"
-      - title: "Java"
-  - title: "Hardware"
-  - title: "Web"
-  - title: "Class"
-  - title: "Story"
-  - title: "etc"
+      - title: "CS"
+        children:
+          - title: DataStructure
+          - title: Algorism
+          - title: OperatingSystem
+          - title: Database
+          - title: Network
+      - title: "WEB"
+      - title: "Language"
+      - title: "Tool"
+      - title: "Windows"
+      - title: "Linux"
+      - title: "DataScience"
+  - title: "stdout.log"
+  - title: "error.log"
+  - title: "Review"
+  - title: "ETC"
