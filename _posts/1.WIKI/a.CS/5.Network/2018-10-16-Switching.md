@@ -23,6 +23,7 @@ connected by physical links
 단점 : 효율적이지 않음. 빈데이터가 있어도 연결돼있음.
 
 ![image0_Untitled](/assets/img/2018-10-16-Switching/Untitled.png)
+
 ## Packet-switched network
 
 - No resource allocation
@@ -44,6 +45,7 @@ Every packet in a datagram network carries a header that contains the destinatio
 virtual-circuit network보단 delay가 적다.
 
 ![image1_Untitled 1](/assets/img/2018-10-16-Switching/Untitled 1.png)
+
 ### Virtual-Circuit Networks
 
 Setup and teardown phases + Data transfer phase

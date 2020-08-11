@@ -127,6 +127,7 @@ int main(void)
 ```
 
 ![image0_Untitled](/assets/img/2019-08-18-Advanced-C/Untitled.png)
+
 casting_extention
 
 unsigned char, singed char가 더큰 타입의 signed int 와 비교하기위해 signed int 로 승격되는데 unsigned char는 나머지가 0으로 채워지는 반면, 같은 signed형인 signed char는 최상위 바이트로 채워진다.
@@ -322,6 +323,7 @@ int sum(int * b); //의미가 적절함
 ### 배열 2공식 : 활용식
 
 ![image1_Untitled 1](/assets/img/2019-08-18-Advanced-C/Untitled 1.png)
+
 array
 
 a[2] == *(a+2) == 2

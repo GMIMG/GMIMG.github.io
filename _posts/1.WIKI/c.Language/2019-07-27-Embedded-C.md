@@ -337,9 +337,11 @@ while(조건식) 실행문;
 **컴파일과정**
 
 ![image0_Untitled](/assets/img/2019-07-27-Embedded-C/Untitled.png)
+
 그림에서 알 수 있다시피 헤더(.h)파일과 c(.c)파일은 전처리기와 컴파일러에 의해 어셈블리어로 변환되고 어셈블리어는 어셈블러에의해 이진파일(.obj)로 바뀐다. 이 이진파일은 링커로 합쳐져서 하나의 파일이 된다.
 
 ![image1_Untitled 1](/assets/img/2019-07-27-Embedded-C/Untitled 1.png)
+
 extern : 변수를 다른 공간을 공유, 여러 .c 파일간 같은 함수나, 변수를 호출할 때 사용.
 
 static : 지역변수에서 사용했을 때 전역변수와 이름이 같더라도 다른 변수를 생성. 또한 static 변수가 선언된 함수가 두번이상 사용되었을 때 두번째 부터는 초기화를 하지않고, 전에 사용했던 값을 불러옴(초기화 안했을때 0). 전역변수로 사용했을 때 해당 소스파일 내에서만 사용 가능.
@@ -387,6 +389,7 @@ sizeof(a)/sizeof(a[0]);
 ```
 
 ![image2_Untitled 2](/assets/img/2019-07-27-Embedded-C/Untitled 2.png)
+
 a 는 배열의 이름이면서, 배열의 첫번째 데이터의 주소를 가르키는 포인터이기도 하다. 즉, a == &a[0]
 
 ## 포인터
@@ -511,6 +514,7 @@ int main(void)
 ```
 
 ![image3_Untitled 3](/assets/img/2019-07-27-Embedded-C/Untitled 3.png)
+
 구조체의 멤버에 접근하는 방법은 .(dot)연산자를 이용한다.
 
 구조체의 포인터는 Advanced-C 에서 다루기로한다.
@@ -542,7 +546,9 @@ int main(void)
 ```
 
 ![image4_Untitled 4](/assets/img/2019-07-27-Embedded-C/Untitled 4.png)
+
 ![image5_Untitled 5](/assets/img/2019-07-27-Embedded-C/Untitled 5.png)
+
 공용체(union)의 선언은 구조체와 거의 동일하다.
 
 공용체 활용
@@ -575,6 +581,7 @@ int main(void)
 ```
 
 ![image6_Untitled 6](/assets/img/2019-07-27-Embedded-C/Untitled 6.png)
+
 ## 기타
 
 ### 열거형

@@ -10,6 +10,7 @@
 6. 
 
 ![image0_Untitled](/assets/img/2018-09-19-define_database/Untitled.png)
+
 ## 테이블 스페이스 정의
 
 ```sql

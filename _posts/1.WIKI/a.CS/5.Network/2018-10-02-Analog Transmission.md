@@ -26,6 +26,7 @@ Carrier signal을 (진폭, 주파수, 위상)중 하나이상을 변조한 Modul
 디지털 신호에 Carrier signal을 Multiplier 해줘서 보낸다.
 
 ![image0_Untitled](/assets/img/2018-10-02-Analog Transmission/Untitled.png)
+
 ### Frequency shift keying (FSK)
 
 주파수가 여러개 필요. 안정적이지만 느림.

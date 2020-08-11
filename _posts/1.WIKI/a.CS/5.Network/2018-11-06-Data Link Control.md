@@ -70,9 +70,11 @@ Protocol을 표현하는 방법은 다음과 같다.
 Using both flow and error control. Sender sends one frame at a time and waits for an acknowledgment before sending the next one.
 
 ![image0_Untitled](/assets/img/2018-11-06-Data Link Control/Untitled.png)
+
 StopAndWaitFSM
 
 ![image1_Untitled 1](/assets/img/2018-11-06-Data Link Control/Untitled 1.png)
+
 StopAndWaitFSM2
 
 Sequence and ACK에 Numbering을 하여 duplicate packets을 방지 한다.

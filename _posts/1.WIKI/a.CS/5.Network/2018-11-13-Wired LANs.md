@@ -12,6 +12,7 @@ IEEE Project 802
 IEEE standard for LANs
 
 ![image0_Untitled](/assets/img/2018-11-13-Wired LANs/Untitled.png)
+
 ## Standard Ehternet
 
 : data rate of 10 Mbps

@@ -27,4 +27,5 @@ HourlyEmployee :: HourlyEmployee(string theName, string theNumber, double theWag
 # Protected
 
 ![image0_Untitled](/assets/img/2018-11-20-C++ Inheritance/Untitled.png)
+
 img

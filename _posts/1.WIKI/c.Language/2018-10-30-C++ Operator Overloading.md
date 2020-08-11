@@ -25,6 +25,7 @@ unary operation(단항 연산자) : y= -x, x++ 같은 항이 하나인 연산을
 멤버 함수가 아니다. private 멤버에 직접적인 접근을 가진다. overhead 없어서 더욱 효율적이다. 모든 함수에 사용할 수 있고, Operator overload에 주로 사용한다. Avoids need to call accessor/mutator member functions
 
 ![image0_Untitled](/assets/img/2018-10-30-C++ Operator Overloading/Untitled.png)
+
 Friend function
 
 ## References(참조)

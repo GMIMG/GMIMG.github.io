@@ -28,6 +28,7 @@ Data => ‘incoding’ => Line coding => ‘decoding’ => Data
 Define a ratio `r` which is the `number of data elements carried by each signal element` (1개의 signal element로 몇개의 bit를 표현할 수 있는지)
 
 ![image0_Untitled](/assets/img/2018-10-01-Digital Transmission/Untitled.png)
+
 Relationship between data rate (N) and signal rate (S)
 
 `S = N/r`
@@ -117,6 +118,7 @@ DC component는 없으나 동기화문제가 있음.
 line coding summary
 
 ![image1_Untitled 8](/assets/img/2018-10-01-Digital Transmission/Untitled 8.png)
+
 ### block coding
 
 ### Scrambling
