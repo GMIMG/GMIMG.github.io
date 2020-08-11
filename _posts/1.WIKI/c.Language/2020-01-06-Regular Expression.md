@@ -14,6 +14,7 @@ regular expression
 | finditer  | findall과 기능은 동일, iterator 반환       |
 | sub       | 첫 번째 인자로 전달한 값을 두번째 인자로 전달한 값으로 교체 |
 | compile   | 패턴 객체를 만들어줌                        |
+
 | ﻿문법   | 예제                  | 설명                                  |
 | ----- | ------------------- | ----------------------------------- |
 | .     | .a                  | 문자 1개                               |
@@ -28,4 +29,5 @@ regular expression
 | [ ]   | [cfh]all            | c, f, h 중 1개를 포함하고 나머지 문자열이 all인 패턴 |
 | |     | apple | application | apple이나 application 중 하나만 있는 패턴(OR) |
 | ( )   | ()-()-()            | ( )에 지정한 패턴                         |
+
 [특수 문자](2020-01-06-Regular%20Expression%20de36da17f595472ca9460cf2782a51f9/%E1%84%90%E1%85%B3%E1%86%A8%E1%84%89%E1%85%AE%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8C%E1%85%A1%2017d437bbeff9408383d3172e36a23e43.csv)

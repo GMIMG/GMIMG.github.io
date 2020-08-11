@@ -6,12 +6,12 @@
 
 - frequency-division ultiplexing (FDM) 여러 주파수 합쳐서(mux) 보낸뒤 filter로 demux한다.예제(No Guard band)
 
-![image0_Untitled](2018-10-11-Bandwidth Utilization/Untitled.png)
-![image1_Untitled 1](2018-10-11-Bandwidth Utilization/Untitled 1.png)
+![image0_Untitled](/assets/img/2018-10-11-Bandwidth Utilization/Untitled.png)
+![image1_Untitled 1](/assets/img/2018-10-11-Bandwidth Utilization/Untitled 1.png)
 - wavelength division multiplexing (WDM)
 광케이블을 프리즘으로 합치고 나눠서 multiplexing 한다. (FDM과 유사)
 
-![image2_Untitled 2](2018-10-11-Bandwidth Utilization/Untitled 2.png)
+![image2_Untitled 2](/assets/img/2018-10-11-Bandwidth Utilization/Untitled 2.png)
 - time-division multiplexing (TDM)
 시간단위로 나눠서 -> 단일코어 멀티프로세싱과 유사
     - Synchronous TDM

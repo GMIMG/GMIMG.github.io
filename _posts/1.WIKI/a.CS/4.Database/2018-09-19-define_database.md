@@ -9,7 +9,7 @@
 5. 데이터 사전
 6. 
 
-![image0_Untitled](2018-09-19-define_database/Untitled.png)
+![image0_Untitled](/assets/img/2018-09-19-define_database/Untitled.png)
 ## 테이블 스페이스 정의
 
 ```sql
@@ -83,4 +83,4 @@ SQL> CREATE TABLE customer(
 
 desc table로 테이블 속성 확인
 
-![image1_Untitled 1](2018-09-19-define_database/Untitled 1.png)
+![image1_Untitled 1](/assets/img/2018-09-19-define_database/Untitled 1.png)

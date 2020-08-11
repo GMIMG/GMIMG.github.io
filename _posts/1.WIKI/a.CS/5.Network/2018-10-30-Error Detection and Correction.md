@@ -38,10 +38,10 @@ detect an odd number of errors
 
 ## CRC
 
-![image0_Untitled](2018-10-30-Error Detection and Correction/Untitled.png)
+![image0_Untitled](/assets/img/2018-10-30-Error Detection and Correction/Untitled.png)
 CRC
 
-![image1_Untitled 1](2018-10-30-Error Detection and Correction/Untitled 1.png)
+![image1_Untitled 1](/assets/img/2018-10-30-Error Detection and Correction/Untitled 1.png)
 CRC2
 
 어떤값을 나눠서 남은 나머지를 붙여서 보냄

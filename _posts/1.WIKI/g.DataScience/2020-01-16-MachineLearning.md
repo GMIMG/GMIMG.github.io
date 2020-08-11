@@ -23,7 +23,7 @@
 
 선형회귀는 단순하게 생각하면 다음 그림과같이 데이터를 1차다항식으로 회귀하는 방법을 생각할 수 있다.
 
-![image0_Untitled](2020-01-16-MachineLearning/Untitled.png)
+![image0_Untitled](/assets/img/2020-01-16-MachineLearning/Untitled.png)
 linear_regression1
 
 하지만 1차 다항식 외에도 다차원 다항식을 여러 독립변수(예를 들면 , *y* = *ax*2 + *bx* + *c* 에서 *x*2 를 하나의 독립변수 *x*2)로 변환해서 생각하면 결국 **다중선형회귀분석**으로 바꿀 수 있다. 이러한 방법을 다항회귀(Polynomial regression)이라 한다. 단, 다항회귀의 차수를 높일 수록 overfitting이 일어날 가능성이 높아진다.
@@ -147,7 +147,7 @@ $$
 
 SST 는 항상 SSE보다 크거나 같다
 
-![image1_Untitled 1](2020-01-16-MachineLearning/Untitled 1.png)
+![image1_Untitled 1](/assets/img/2020-01-16-MachineLearning/Untitled 1.png)
 SSESSR
 
 $$Rsqure = \frac{SSR}{SST} = \frac{(예측 - 진짜평균)^2}{(진짜-진짜평균)^2}$$
@@ -176,7 +176,7 @@ $$
 
 학습데이터를 과다하게 최적화 시킬 경우 새로운 데이터를 예측하기 힘듦
 
-![image2_Untitled 2](2020-01-16-MachineLearning/Untitled 2.png)
+![image2_Untitled 2](/assets/img/2020-01-16-MachineLearning/Untitled 2.png)
 overfitting
 
 > 보다 적은 수의 논리로 설명이 가능한 경우, 많은 수의 논리를 세우지말라 -Occam’s razor
@@ -211,7 +211,7 @@ Principal component analysis 는 서로 연관 가능성이 있는 고차원 공
 
 예를 들면, 2차원을 1차원으로 줄일때 점들의 분산이 가장 넓은 곳을 직선으로 표시하고, 점들을 직선에 투영하면 각 점들이 퍼져 있는 정도를 확인 할 수 있다. 고차원에서는 이러한 단계를 반복해서 직교하는 축들을 차원만큼 찾는다.
 
-![image3_Uv2dlsH](2020-01-16-MachineLearning/Uv2dlsH.gif)
+![image3_Uv2dlsH](/assets/img/2020-01-16-MachineLearning/Uv2dlsH.gif)
 참고 이미지 : https://imgur.com/Uv2dlsH
 
 PCA를 구하기 위해서 공분산과 고유벡터, 고유값을 이용하면 쉽게 구할 수 있다.
@@ -289,7 +289,7 @@ $$ logistic function = \frac {e^{\beta_i X_i}}{1 + e^{\beta_i X_i}} $$
 
 로지스틱 함수는 독립변수 X가 주어졌을 때 종속 변수가 1인 범주에 속할 확률을 의미한다.
 
-![image4_Untitled 3](2020-01-16-MachineLearning/Untitled 3.png)
+![image4_Untitled 3](/assets/img/2020-01-16-MachineLearning/Untitled 3.png)
 Logistic-curve
 
 이러한 로지스틱 함수는 인공신경망에서 활성화함수인 **sigmoid**라고도 불립니다.
@@ -364,7 +364,7 @@ Decision Tree의 확장
 
 배깅 : 부트스트랩을 이용해서 나온 여러 모델을 종합해서 추론하는 방법
 
-![image5_Untitled 4](2020-01-16-MachineLearning/Untitled 4.png)
+![image5_Untitled 4](/assets/img/2020-01-16-MachineLearning/Untitled 4.png)
 bagging
 
 [부트스트랩](https://bkshin.tistory.com/entry/DATA-12?category=1042793) : 표본을 복원추출하여 여러개의 표본을 만드는 방법

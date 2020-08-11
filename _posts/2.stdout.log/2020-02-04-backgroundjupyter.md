@@ -10,7 +10,7 @@ windows10, anaconda3, jupyter lab
 
 항목 위치 입력 란에 다음과 같이 입력해준다.
 
-![image0_Untitled](2020-02-04-backgroundjupyter/Untitled.png)
+![image0_Untitled](/assets/img/2020-02-04-backgroundjupyter/Untitled.png)
 link
 
 ```bash
@@ -41,17 +41,17 @@ taskkill /pid pythonw.exe /f
 
 작업 스케줄러 라이브러리에서 ’새작업 만들기’를 누른다.
 
-![image1_Untitled 1](2020-02-04-backgroundjupyter/Untitled 1.png)
+![image1_Untitled 1](/assets/img/2020-02-04-backgroundjupyter/Untitled 1.png)
 taskscheduler
 
 일반 탭에서 이름을 입력한다.
 
-![image2_Untitled 2](2020-02-04-backgroundjupyter/Untitled 2.png)
+![image2_Untitled 2](/assets/img/2020-02-04-backgroundjupyter/Untitled 2.png)
 taskscheduler1
 
 트리거 탭에서 새로만들기를 누르고 작업시작은 ’로그온 할때’로 하고, 고급설정에서 사용을 체크한다.
 
-![image3_Untitled 3](2020-02-04-backgroundjupyter/Untitled 3.png)
+![image3_Untitled 3](/assets/img/2020-02-04-backgroundjupyter/Untitled 3.png)
 taskscheduler2
 
 동작 탭에서 새로만들기를 누르고 동작은 프로그램 시작, 프로그램/스크립트는 다음과 같고,
@@ -66,7 +66,7 @@ taskscheduler2
 %USERPROFILE%\Anaconda3\cwp.py %USERPROFILE%\Anaconda3 %USERPROFILE%\Anaconda3\pythonw.exe %USERPROFILE%\Anaconda3\Scripts\jupyter-lab-script.py --no-browser --notebook-dir="%USERPROFILE%\jupyter notebook" --port=8889
 ```
 
-![image4_Untitled 4](2020-02-04-backgroundjupyter/Untitled 4.png)
+![image4_Untitled 4](/assets/img/2020-02-04-backgroundjupyter/Untitled 4.png)
 taskscheduler3
 
 이렇게 하면 윈도우 시작하고 주피터 lab이 자동으로 실행된다. (시작하고 조금 있어야 실행)

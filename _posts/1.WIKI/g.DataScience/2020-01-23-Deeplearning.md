@@ -90,14 +90,14 @@ $$
 
 ### 스텝함수
 
-![image0_Untitled](2020-01-23-Deeplearning/Untitled.png)
+![image0_Untitled](/assets/img/2020-01-23-Deeplearning/Untitled.png)
 stepfunc
 
 보통 1층의 퍼셉트론에서는 망을 깊게 할 필요가 없으므로 스텝함수를 사용한다.
 
 ### 시그모이드
 
-![image1_Untitled 1](2020-01-23-Deeplearning/Untitled 1.png)
+![image1_Untitled 1](/assets/img/2020-01-23-Deeplearning/Untitled 1.png)
 sigmoid
 
 $$
@@ -108,12 +108,12 @@ $$
 
 ### tanh
 
-![image2_Untitled 2](2020-01-23-Deeplearning/Untitled 2.png)
+![image2_Untitled 2](/assets/img/2020-01-23-Deeplearning/Untitled 2.png)
 tanhfunc
 
 ### ReLU
 
-![image3_Untitled 3](2020-01-23-Deeplearning/Untitled 3.png)
+![image3_Untitled 3](/assets/img/2020-01-23-Deeplearning/Untitled 3.png)
 ReLufunc
 
 참고 : https://sacko.tistory.com/10
