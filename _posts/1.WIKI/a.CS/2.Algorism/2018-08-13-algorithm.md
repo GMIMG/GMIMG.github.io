@@ -1,3 +1,11 @@
+---
+# title: 
+# tags : -
+category: Algorism
+toc: false
+notice: false
+---
+
 # 2018-08-13-algorithm
 
 ## binary_search

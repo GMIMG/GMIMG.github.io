@@ -1,3 +1,11 @@
+---
+# title: 
+# tags : -
+category: Database
+toc: false
+notice: false
+---
+
 # 2018-09-05-database_structure
 
 # 데이터베이스 프로그래밍

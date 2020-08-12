@@ -1,3 +1,11 @@
+---
+# title: 
+# tags : -
+category: ETC
+toc: false
+notice: false
+---
+
 # 2018-09-11-Applied Robot Design
 
 [www.hrrlab.com](www.hrrlab.com) 

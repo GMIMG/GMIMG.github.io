@@ -1,3 +1,11 @@
+---
+# title: 
+# tags : -
+category: Windows
+toc: false
+notice: false
+---
+
 # 2020-08-11-Wake on Lan
 
 ## Bios 설정

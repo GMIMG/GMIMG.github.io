@@ -1,3 +1,11 @@
+---
+# title: 
+# tags : -
+category: Language
+toc: false
+notice: false
+---
+
 # 2018-11-20-C++ Inheritance
 
 # Inheritance

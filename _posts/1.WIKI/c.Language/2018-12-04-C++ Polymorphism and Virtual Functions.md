@@ -1,3 +1,11 @@
+---
+# title: 
+# tags : -
+category: Language
+toc: false
+notice: false
+---
+
 # 2018-12-04-C++ Polymorphism and Virtual Functions
 
 # Virtual function

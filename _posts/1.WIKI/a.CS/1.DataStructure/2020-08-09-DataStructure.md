@@ -1,3 +1,11 @@
+---
+# title: 
+# tags : -
+category: DataStructure
+toc: false
+notice: false
+---
+
 # 2020-08-09-DataStructure
 
 # 자료구조

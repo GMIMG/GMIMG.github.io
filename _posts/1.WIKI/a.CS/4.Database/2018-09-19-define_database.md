@@ -1,3 +1,11 @@
+---
+# title: 
+# tags : -
+category: Database
+toc: false
+notice: false
+---
+
 # 2018-09-19-define_database
 
 # 데이터베이스 정의

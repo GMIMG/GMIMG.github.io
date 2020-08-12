@@ -1,3 +1,11 @@
+---
+# title: 
+# tags : -
+category: stdout.log
+toc: false
+notice: false
+---
+
 # 2020-02-04-backgroundjupyter
 
 # 콘솔창없이 jupyter notebook(Lab) 사용하기

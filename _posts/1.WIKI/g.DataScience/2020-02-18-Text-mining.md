@@ -1,3 +1,11 @@
+---
+# title: 
+# tags : -
+category: DataScience
+toc: false
+notice: false
+---
+
 # 2020-02-18-Text-mining
 
 # 텍스트 분석 (텍스트 마이닝)

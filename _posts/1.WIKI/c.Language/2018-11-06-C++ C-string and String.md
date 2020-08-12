@@ -1,3 +1,11 @@
+---
+# title: 
+# tags : -
+category: Language
+toc: false
+notice: false
+---
+
 # 2018-11-06-C++ C-string and String
 
 # C-String

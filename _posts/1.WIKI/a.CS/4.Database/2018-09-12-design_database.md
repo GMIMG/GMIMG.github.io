@@ -1,3 +1,11 @@
+---
+# title: 
+# tags : -
+category: Database
+toc: false
+notice: false
+---
+
 # 2018-09-12-design_database
 
 # 프로젝트 분석 및 데이터베이스 설계

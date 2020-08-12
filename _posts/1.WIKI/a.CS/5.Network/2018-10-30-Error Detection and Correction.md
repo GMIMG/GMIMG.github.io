@@ -1,3 +1,11 @@
+---
+# title: 
+# tags : -
+category: Network
+toc: false
+notice: false
+---
+
 # 2018-10-30-Error Detection and Correction
 
 - Block coding

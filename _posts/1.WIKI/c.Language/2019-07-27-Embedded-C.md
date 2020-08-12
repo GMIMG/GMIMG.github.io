@@ -1,3 +1,11 @@
+---
+# title: 
+# tags : -
+category: Language
+toc: false
+notice: false
+---
+
 # 2019-07-27-Embedded-C
 
 이 포스팅은 2019년 멀티캠퍼스에서 ‘청년취업아카데미 스마트 디바이스 프로그래밍’ 과정을 수강하며 배운것을 정리하는 것을 목적으로 합니다. 임베디드 회사 윌텍(Willtek) 강사님께 배웠습니다.

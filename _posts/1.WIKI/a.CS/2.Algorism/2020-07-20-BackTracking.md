@@ -1,3 +1,11 @@
+---
+# title: 
+# tags : -
+category: Algorism
+toc: false
+notice: false
+---
+
 # 2020-07-20-BackTracking
 
 1. 상태 공간 트리에 대한 깊이 우선 탐색

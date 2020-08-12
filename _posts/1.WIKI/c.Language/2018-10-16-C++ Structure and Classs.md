@@ -1,3 +1,11 @@
+---
+# title: 
+# tags : -
+category: Language
+toc: false
+notice: false
+---
+
 # 2018-10-16-C++ Structure and Classs
 
 # Structure

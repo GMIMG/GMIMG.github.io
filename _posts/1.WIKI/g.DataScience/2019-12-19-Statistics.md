@@ -1,3 +1,11 @@
+---
+# title: 
+# tags : -
+category: DataScience
+toc: false
+notice: false
+---
+
 # 2019-12-19-Statistics
 
 # 통계

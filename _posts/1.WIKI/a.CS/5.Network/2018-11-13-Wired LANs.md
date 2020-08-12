@@ -1,3 +1,11 @@
+---
+# title: 
+# tags : -
+category: Network
+toc: false
+notice: false
+---
+
 # 2018-11-13-Wired LANs
 
 # Ehternet

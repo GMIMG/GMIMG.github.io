@@ -1,3 +1,11 @@
+---
+# title: 
+# tags : -
+category: DataScience
+toc: false
+notice: false
+---
+
 # 2020-01-23-Deeplearning
 
 # 딥러닝

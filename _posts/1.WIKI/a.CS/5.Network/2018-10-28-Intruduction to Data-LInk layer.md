@@ -1,3 +1,11 @@
+---
+# title: 
+# tags : -
+category: Network
+toc: false
+notice: false
+---
+
 # 2018-10-28-Intruduction to Data-LInk layer
 
 links and nodes
