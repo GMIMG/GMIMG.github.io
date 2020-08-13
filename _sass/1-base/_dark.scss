@@ -57,10 +57,8 @@ a {
     color: var(--on-background-color);
   }
 }
-code {
-  .language-plaintext {
-    background-color: var(--secondary-variant-color);
-  }
+.language-plaintext {
+  background-color: var(--secondary-variant-color);
 }
 
 @media screen and (max-width: $on-palm) {
