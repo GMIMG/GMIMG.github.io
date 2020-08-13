@@ -5,18 +5,18 @@ main:
     children:
       - title: "CS"
         children:
-          - title: DataStructure
-          - title: Algorism
-          - title: OperatingSystem
-          - title: Database
-          - title: Network
+          - title: "DataStructure"
+          - title: "Algorism"
+          - title: "OperatingSystem"
+          - title: "Database"
+          - title: "Network"
       - title: "WEB"
       - title: "Language"
       - title: "Tool"
       - title: "Windows"
       - title: "Linux"
       - title: "DataScience"
-  - title: "stdout.log"
-  - title: "error.log"
+  - title: "stdout"
+  - title: "error"
   - title: "Review"
   - title: "ETC"
